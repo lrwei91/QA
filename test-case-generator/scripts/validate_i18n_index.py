@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate testcase-index.json for the test-case-generator skill."""
+"""Validate i18n-index.json for the test-case-generator skill."""
 
 from __future__ import annotations
 
@@ -7,11 +7,13 @@ import json
 import sys
 from pathlib import Path
 
+from validate_i18n_json import analyze_i18n_json
+
 REQUIRED_ROOT_KEYS = {
     'version',
     'store_name',
     'root_dir',
-    'cases_dir',
+    'i18n_dir',
     'updated_at',
     'entries',
 }
@@ -23,7 +25,7 @@ REQUIRED_ENTRY_KEYS = {
     'module',
     'module_ids',
     'topic',
-    'platform_scope',
+    'language_codes',
     'format',
     'rel_path',
     'template',
@@ -34,7 +36,6 @@ REQUIRED_ENTRY_KEYS = {
     'updated_at',
 }
 
-VALID_FORMATS = {'md', 'xlsx', 'docx', 'csv', 'txt'}
 VALID_STATUS = {'draft', 'active', 'archived'}
 
 
@@ -57,7 +58,7 @@ def ensure_string_list(value: object, key: str, allow_empty: bool = False) -> No
 
 def main() -> int:
     if len(sys.argv) != 2:
-        print('Usage: validate_testcase_index.py <path/to/testcases/testcase-index.json>')
+        print('Usage: validate_i18n_index.py <path/to/testcases/i18n-index.json>')
         return 1
 
     index_path = Path(sys.argv[1]).resolve()
@@ -70,7 +71,7 @@ def main() -> int:
         return fail(f'invalid json: {exc}')
 
     if not isinstance(data, dict):
-        return fail('testcase index must be a JSON object')
+        return fail('i18n index must be a JSON object')
 
     missing_root = REQUIRED_ROOT_KEYS - set(data.keys())
     if missing_root:
@@ -83,7 +84,7 @@ def main() -> int:
     if data['version'] != 1:
         return fail("root field 'version' must equal 1")
 
-    for key in ['store_name', 'root_dir', 'cases_dir', 'updated_at']:
+    for key in ['store_name', 'root_dir', 'i18n_dir', 'updated_at']:
         try:
             ensure_non_empty_string(data[key], key)
         except ValueError as exc:
@@ -95,7 +96,7 @@ def main() -> int:
 
     seen_ids: set[str] = set()
     root_dir = index_path.parent.resolve()
-    cases_prefix = f"{data['cases_dir']}/"
+    i18n_prefix = f"{data['i18n_dir']}/"
 
     for idx, entry in enumerate(entries, start=1):
         if not isinstance(entry, dict):
@@ -128,7 +129,7 @@ def main() -> int:
 
         try:
             ensure_string_list(entry['module_ids'], 'module_ids')
-            ensure_string_list(entry['platform_scope'], 'platform_scope', allow_empty=True)
+            ensure_string_list(entry['language_codes'], 'language_codes')
             ensure_string_list(entry['source_refs'], 'source_refs', allow_empty=True)
             ensure_string_list(entry['tags'], 'tags', allow_empty=True)
         except ValueError as exc:
@@ -142,8 +143,8 @@ def main() -> int:
             return fail(f'duplicate id: {entry_id}')
         seen_ids.add(entry_id)
 
-        if entry['format'] not in VALID_FORMATS:
-            return fail(f"entry '{entry_id}' has invalid format: {entry['format']}")
+        if entry['format'] != 'json':
+            return fail(f"entry '{entry_id}' i18n rel_path must use json format")
 
         if entry['status'] not in VALID_STATUS:
             return fail(f"entry '{entry_id}' has invalid status: {entry['status']}")
@@ -161,10 +162,21 @@ def main() -> int:
         if not target.exists():
             return fail(f"entry '{entry_id}' points to missing file: {entry['rel_path']}")
 
-        if not entry['rel_path'].startswith(cases_prefix):
-            return fail(f"entry '{entry_id}' testcase rel_path must be under {cases_prefix}")
+        if not entry['rel_path'].startswith(i18n_prefix):
+            return fail(f"entry '{entry_id}' i18n rel_path must be under {i18n_prefix}")
 
-    print(f'OK: validated testcase index with {len(entries)} entries')
+        try:
+            analysis = analyze_i18n_json(target)
+        except ValueError as exc:
+            return fail(f"entry '{entry_id}' invalid i18n json: {exc}")
+
+        if entry['language_codes'] != analysis['language_codes']:
+            return fail(f"entry '{entry_id}' language_codes must match i18n json file")
+
+        if analysis['is_draft'] and entry['status'] != 'draft':
+            return fail(f"entry '{entry_id}' draft i18n json must use draft status")
+
+    print(f'OK: validated i18n index with {len(entries)} entries')
     return 0
 
 

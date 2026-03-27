@@ -7,13 +7,14 @@
 默认只做下面四件事：
 
 - 生成结构化测试用例
+- 在信息完整时生成多语言校验 JSON
 - 输出关联补充用例
 - 给出 `索引增量建议`
 - 给出 `模块文档增量建议`
-- 若用户明确要求保存或导出，可写入工作区 `testcases/` 并更新 `testcases/index.json`
+- 若用户明确要求保存或导出，可写入工作区 `testcases/` / `testcases/i18n/` 并更新 `testcases/testcase-index.json` 或 `testcases/i18n-index.json`
 
 生成模式下不要直接改写 skill 文件。
-工作区 `testcases/` 和 `testcases/index.json` 属于项目产物仓位，不属于 skill 资源文件。
+工作区 `testcases/`、`testcases/i18n/`、`testcases/testcase-index.json` 和 `testcases/i18n-index.json` 属于项目产物仓位，不属于 skill 资源文件。
 
 ### 1.2 维护模式（显式触发）
 
@@ -67,6 +68,7 @@
 ## 6. 不要自动做的事情
 
 - 不要在普通生成任务里偷偷修改资源文件
-- 不要在用户没有要求保存、导出或纳入历史库时修改 `testcases/index.json`
+- 不要在用户没有要求保存、导出或纳入历史库时修改 `testcases/testcase-index.json` 或 `testcases/i18n-index.json`
+- 不要在语言值不完整时伪造多语言 JSON
 - 不要为了追求完整而复制整套客户端/账服双份索引
 - 不要把一次性需求细节直接写进索引，除非它已经具备可复用价值
