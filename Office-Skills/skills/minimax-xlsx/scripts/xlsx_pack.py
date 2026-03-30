@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
+from __future__ import annotations
+
 """
 xlsx_pack.py — Pack a working directory back into a valid xlsx file.
 

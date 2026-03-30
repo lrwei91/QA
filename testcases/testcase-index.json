@@ -3,7 +3,7 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-03-28T01:27:49+08:00",
+  "updated_at": "2026-03-30T19:50:42+08:00",
   "entries": [
     {
       "id": "tc-generated-xlsx-e6c7bbe8",
@@ -23,10 +23,64 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T01:07:16+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "平台",
         "后端",
+        "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-2026-03-30-xlsx-98c0cbd1",
+      "group_key": "group-2026-03-30-73519006",
+      "title": "帐服报表 - 免费旋转数据优化_2026-03-30",
+      "module": "帐服报表",
+      "module_ids": [
+        "module-34585dba"
+      ],
+      "topic": "帐服报表 - 免费旋转数据优化_2026-03-30",
+      "format": "xlsx",
+      "rel_path": "generated/帐服报表/帐服报表 - 免费旋转数据优化_2026-03-30.xlsx",
+      "source_refs": [],
+      "tags": [
+        "帐服报表",
+        "免费旋转数据",
+        "2026",
+        "03",
+        "30"
+      ],
+      "status": "active",
+      "created_at": "2026-03-30T13:45:25+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260330-xlsx-ab9b21d9",
+      "group_key": "group-20260330-e1b7e6bd",
+      "title": "世界杯竞猜活动_冒烟用例_20260330",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "世界杯竞猜活动_冒烟用例_20260330",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_20260330.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "世界杯竞猜活动",
+        "冒烟用例",
+        "20260330"
+      ],
+      "status": "active",
+      "created_at": "2026-03-30T19:18:43+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服",
         "客户端"
       ],
       "template": ""
@@ -49,7 +103,7 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "客户端",
         "账服"
@@ -74,7 +128,7 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "平台",
         "客户端",
@@ -100,7 +154,7 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "平台",
         "客户端"
@@ -125,7 +179,7 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "平台",
         "客户端",
@@ -152,7 +206,7 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "平台",
         "账服",
@@ -178,7 +232,7 @@
       ],
       "status": "active",
       "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-28T01:27:49+08:00",
+      "updated_at": "2026-03-30T19:50:42+08:00",
       "platform_scope": [
         "平台",
         "运营活动",

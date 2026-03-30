@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
+from __future__ import annotations
+
 """
 xlsx_insert_row.py — Insert a new data row into a worksheet in an unpacked xlsx.
 

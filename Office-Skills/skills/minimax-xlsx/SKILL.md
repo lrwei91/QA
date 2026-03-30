@@ -20,6 +20,7 @@ Handle the request directly. Do NOT spawn sub-agents. Always write the output fi
 |------|--------|-------|
 | **READ** — analyze existing data | `xlsx_reader.py` + pandas | `references/read-analyze.md` |
 | **CREATE** — new xlsx from scratch | XML template | `references/create.md` + `references/format.md` |
+| **TESTCASE** — fixed testcase workbook | `testcase_template.xlsx` + XML fill | `references/testcase-template.md` |
 | **EDIT** — modify existing xlsx | XML unpack→edit→pack | `references/edit.md` (+ `format.md` if styling needed) |
 | **FIX** — repair broken formulas in existing xlsx | XML unpack→fix `<f>` nodes→pack | `references/fix.md` |
 | **VALIDATE** — check formulas | `formula_check.py` | `references/validate.md` |
@@ -35,6 +36,8 @@ Start with `xlsx_reader.py` for structure discovery, then pandas for custom anal
 ## CREATE — XML template (read `references/create.md` + `references/format.md`)
 
 Copy `templates/minimal_xlsx/` → edit XML directly → pack with `xlsx_pack.py`. Every derived value MUST be an Excel formula (`<f>SUM(B2:B9)</f>`), never a hardcoded number. Apply font colors per `format.md`.
+
+If the workbook is a testcase sheet with a fixed team template, colored summary rows, dropdowns, or wrapped multi-line cells, do **NOT** use `minimal_xlsx/`. Switch to the `TESTCASE` path and follow `references/testcase-template.md`.
 
 ## EDIT — XML direct-edit (read `references/edit.md` first)
 
@@ -123,6 +126,7 @@ Run `formula_check.py` for static validation. Use `libreoffice_recalc.py` for dy
 3. **EDIT → XML**: Never openpyxl round-trip. Use unpack/edit/pack scripts
 4. **Always produce the output file** — this is the #1 priority
 5. **Validate before delivery**: `formula_check.py` exit code 0 = safe
+6. **For testcase workbooks, preserve the template exactly**: no extra rows, no extra columns, no invented summary blocks
 
 ## Utility Scripts
 
@@ -130,6 +134,7 @@ Run `formula_check.py` for static validation. Use `libreoffice_recalc.py` for dy
 python3 SKILL_DIR/scripts/xlsx_reader.py input.xlsx                 # structure discovery
 python3 SKILL_DIR/scripts/formula_check.py file.xlsx --json         # formula validation
 python3 SKILL_DIR/scripts/formula_check.py file.xlsx --report      # standardized report
+python3 SKILL_DIR/scripts/xlsx_fill_testcase_template.py rows.json out.xlsx  # fill testcase template
 python3 SKILL_DIR/scripts/xlsx_unpack.py in.xlsx /tmp/work/         # unpack for XML editing
 python3 SKILL_DIR/scripts/xlsx_pack.py /tmp/work/ out.xlsx          # repack after editing
 python3 SKILL_DIR/scripts/xlsx_shift_rows.py /tmp/work/ insert 5 1  # shift rows for insertion

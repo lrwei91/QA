@@ -14,6 +14,7 @@ Use this document when the user wants:
 - Any "create / build / generate / make" request
 
 If the user provides an existing file to modify, switch to `edit.md` instead.
+If the user wants a testcase workbook that must follow a fixed team template, switch to `references/testcase-template.md` instead.
 
 ---
 
@@ -36,6 +37,8 @@ Before touching any file, internalize these four rules:
 
 4. **Validate before delivery**: Run `formula_check.py` and fix all errors before
    handing the file to the user.
+
+5. **Do not invent structure outside the template**: if the required output is template-driven, keep the template rows and columns exactly as provided.
 
 ---
 

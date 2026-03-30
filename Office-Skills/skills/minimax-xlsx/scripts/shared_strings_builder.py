@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
+from __future__ import annotations
+
 """
 shared_strings_builder.py — Generate a valid sharedStrings.xml from a list of strings.
 

@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1774871259377,
+  "projectRoot": "/Users/lanye/Library/CloudStorage/OneDrive-个人/Project/QA",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "Office-Skills": {
+      "path": "Office-Skills",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1774871259353,
+      "keyFiles": [
+        "CONTRIBUTING.md",
+        "LICENSE",
+        "README.md",
+        "README_zh.md"
+      ]
+    },
+    "html": {
+      "path": "html",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1774871259354,
+      "keyFiles": []
+    },
+    "pic": {
+      "path": "pic",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1774871259356,
+      "keyFiles": [
+        "PixPin_2026-03-30_18-10-50.png",
+        "PixPin_2026-03-30_18-11-33.png",
+        "PixPin_2026-03-30_18-12-05.png"
+      ]
+    },
+    "test-case-generator": {
+      "path": "test-case-generator",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1774871259356,
+      "keyFiles": [
+        "SKILL.md"
+      ]
+    },
+    "testcases": {
+      "path": "testcases",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1774871259356,
+      "keyFiles": [
+        "i18n-index.json",
+        "testcase-index.json"
+      ]
+    },
+    "test-case-generator/scripts": {
+      "path": "test-case-generator/scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 5,
+      "lastAccessed": 1774871259357,
+      "keyFiles": [
+        "upsert_testcase_index.py",
+        "validate_i18n_index.py",
+        "validate_i18n_json.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1774871346573,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1774871346623,
+      "type": "file"
+    },
+    {
+      "path": "testcases/i18n-index.json",
+      "accessCount": 1,
+      "lastAccessed": 1774871355186,
+      "type": "file"
+    },
+    {
+      "path": "testcases/testcase-index.json",
+      "accessCount": 1,
+      "lastAccessed": 1774871355238,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/module-index.json",
+      "accessCount": 1,
+      "lastAccessed": 1774871368879,
+      "type": "file"
+    },
+    {
+      "path": "Office-Skills/skills/minimax-xlsx/SKILL.md",
+      "accessCount": 1,
+      "lastAccessed": 1774871388896,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

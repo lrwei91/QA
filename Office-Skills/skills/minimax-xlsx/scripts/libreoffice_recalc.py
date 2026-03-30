@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: MIT
+from __future__ import annotations
+
 """
 libreoffice_recalc.py — Tier 2 dynamic formula recalculation via LibreOffice headless.
 
