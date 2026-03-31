@@ -17,20 +17,87 @@ from openpyxl import load_workbook
 from openpyxl.styles import PatternFill, Alignment
 
 
-def append_rows(existing_xlsx: str, new_rows_json: str, output_xlsx: str,
-                start_row: int = None, highlight: bool = True, highlight_color: str = "FFFF00") -> None:
-    """Append new rows to existing xlsx file using openpyxl."""
+REQUIRED_KEYS = {"平台", "模块", "功能点", "前置条件（测试点）", "操作步骤", "预期结果", "备注"}
 
-    # Load new rows from JSON
-    with open(new_rows_json, 'r', encoding='utf-8') as f:
-        new_rows = json.load(f)
+
+def validate_inputs(existing_xlsx: str, new_rows_json: str, output_xlsx: str) -> tuple:
+    """Validate input files exist and JSON structure is correct."""
+    errors = []
+
+    # Check file existence
+    if not os.path.exists(existing_xlsx):
+        errors.append(f"Existing xlsx file not found: {existing_xlsx}")
+
+    if not os.path.exists(new_rows_json):
+        errors.append(f"JSON file not found: {new_rows_json}")
+
+    # Validate output directory exists
+    output_dir = os.path.dirname(output_xlsx)
+    if output_dir and not os.path.exists(output_dir):
+        errors.append(f"Output directory not found: {output_dir}")
+
+    if errors:
+        return False, errors
+
+    # Validate JSON structure
+    try:
+        with open(new_rows_json, 'r', encoding='utf-8') as f:
+            new_rows = json.load(f)
+    except json.JSONDecodeError as e:
+        return False, [f"Invalid JSON format: {e}"]
+    except PermissionError:
+        return False, [f"Permission denied reading JSON file: {new_rows_json}"]
+    except OSError as e:
+        return False, [f"Error reading JSON file: {e}"]
+
+    if not isinstance(new_rows, list):
+        return False, ["JSON must contain a list of rows"]
+
+    # Validate each row has required keys
+    for i, row in enumerate(new_rows):
+        if not isinstance(row, dict):
+            return False, [f"Row {i+1} must be an object, got {type(row).__name__}"]
+        missing = REQUIRED_KEYS - set(row.keys())
+        if missing:
+            return False, [f"Row {i+1} missing required keys: {', '.join(sorted(missing))}"]
+
+    return True, new_rows
+
+
+def append_rows(existing_xlsx: str, new_rows_json: str, output_xlsx: str,
+                start_row: int = None, highlight: bool = True, highlight_color: str = "FFFF00") -> int:
+    """Append new rows to existing xlsx file using openpyxl.
+
+    Returns:
+        0 on success, 1 on error
+    """
+
+    # Validate inputs
+    valid, result = validate_inputs(existing_xlsx, new_rows_json, output_xlsx)
+    if not valid:
+        for error in result:
+            print(f"ERROR: {error}", file=sys.stderr)
+        return 1
+
+    new_rows = result
 
     if not new_rows:
         print("No new rows to append")
-        return
+        return 0
 
     # Load existing workbook
-    wb = load_workbook(existing_xlsx)
+    try:
+        wb = load_workbook(existing_xlsx)
+    except PermissionError:
+        print(f"ERROR: Permission denied reading Excel file: {existing_xlsx}", file=sys.stderr)
+        return 1
+    except OSError as e:
+        print(f"ERROR: Failed to load Excel file: {e}", file=sys.stderr)
+        return 1
+    except Exception as e:
+        print(f"ERROR: Invalid Excel file format: {e}", file=sys.stderr)
+        return 1
+
     ws = wb.active
 
     # Find last data row (data starts at row 8)
@@ -88,10 +155,18 @@ def append_rows(existing_xlsx: str, new_rows_json: str, output_xlsx: str,
         seq_number += 1
 
     # Save workbook
-    wb.save(output_xlsx)
+    try:
+        wb.save(output_xlsx)
+    except PermissionError:
+        print(f"ERROR: Permission denied writing to Excel file: {output_xlsx}", file=sys.stderr)
+        return 1
+    except OSError as e:
+        print(f"ERROR: Failed to save Excel file: {e}", file=sys.stderr)
+        return 1
 
     print(f"Successfully appended {len(new_rows)} rows to {output_xlsx}")
     print(f"Data rows: 8 to {row_number - 1} (total: {row_number - 8} data rows)")
+    return 0
 
 
 def main():
@@ -105,7 +180,7 @@ def main():
 
     args = parser.parse_args()
 
-    append_rows(
+    exit_code = append_rows(
         args.existing_xlsx,
         args.new_rows_json,
         args.output_xlsx,
@@ -113,6 +188,8 @@ def main():
         highlight=args.highlight,
         highlight_color=args.highlight_color
     )
+
+    sys.exit(exit_code)
 
 
 if __name__ == "__main__":

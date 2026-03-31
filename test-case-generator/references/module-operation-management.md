@@ -9,8 +9,6 @@
 - `partner-agent`
 - `channel-management`
 - `vendor-activities`
-- `finance-system`
-- `player-management`
 - `game-golden-flow`
 
 ## 2. Common business objects
@@ -21,8 +19,6 @@
 - 全民代、合伙人、代理、佣金、团队层级、ROI、排行榜
 - 渠道列表、渠道类型、渠道数据、Telegram 渠道、新玩家跟踪
 - 厂商活动（FC/FG/TADA/YELLOWBAT）、锦标赛、免费旋转、抽红包、礼包码
-- 充值、提现、代付、转账、出款、通道设置
-- 玩家列表、分层、VIP、标签、回归玩家、账号注销
 - 游戏记录、金币变化、充提记录汇总
 
 ## 3. High-risk test concerns
@@ -35,7 +31,6 @@
 - 全民代列表、团队层级展示、佣金详情、数据图表
 - 渠道列表、数据图表、筛选条件
 - 活动记录列表、筛选导出
-- 玩家列表、详情页、编辑弹窗、筛选条件
 - 游戏记录列表、筛选、详情展示
 
 ### 3.2 账服
@@ -46,8 +41,6 @@
 - 佣金计算逻辑、团队关系查询、ROI 统计、金币转换、排行榜聚合
 - 渠道数据聚合、玩家归属关联、汇总统计、Telegram 接口对接
 - 活动数据同步、奖励发放、状态更新、厂商回调处理
-- 充值回调处理、提现审核接口、代付通道调用、金币修正写库、转账事务处理
-- 玩家查询接口、玩家信息更新、分层逻辑计算、VIP 等级变更、标签关联处理
 - 记录查询接口、金币流水写入、聚合统计、数据同步
 
 ## 4. Common regression expansion rules
@@ -58,8 +51,6 @@
 - 佣金规则或团队关系变化 -> 补查 `finance-system`、`affiliate-management`、`partner-agent`
 - 渠道数据变化 -> 补查 `report-system`、`affiliate-management`
 - 厂商活动奖励变化 -> 补查 `finance-system`、`player-management`、`report-system`
-- 充值提现规则变化 -> 补查 `risk-management`、`report-system`、`player-management`
-- 玩家分层或 VIP 规则变化 -> 补查 `report-system`、`finance-system`、`operation-management`
 
 ## 5. Typical case ideas
 
@@ -111,20 +102,6 @@
 - 锦标赛、免费旋转、抽红包、礼包码兑换
 - 客户端关注列表、详情、筛选、导出
 - 账服关注数据同步、奖励发放、状态更新、厂商回调
-
-### 财务系统
-
-- 充值记录、提现记录、代付订单重置、人工金币修正
-- 出款设置、人工转账、通道设置、代付银行配置
-- 客户端关注列表页、审核按钮、配置表单、筛选条件
-- 账服关注充值回调、提现审核、代付通道调用、金币修正、转账事务
-
-### 玩家管理
-
-- 玩家列表、机器人列表、在线列表、玩家分层
-- 会员分组、标签管理、VIP 等级、回归玩家、账号注销
-- 客户端关注列表页、详情页、编辑弹窗、筛选条件、批量操作
-- 账服关注玩家查询、信息更新、分层计算、VIP 变更、标签关联
 
 ### 游戏及金流记录
 

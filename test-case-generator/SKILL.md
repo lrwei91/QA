@@ -494,6 +494,11 @@ python3 scripts/xlsx_append_and_highlight.py \
 - `scripts/validate_i18n_json.py`：多语言校验 JSON 结构校验脚本。
 - `scripts/validate_testcase_index.py`：测试用例索引校验脚本。
 - `scripts/validate_i18n_index.py`：多语言索引校验脚本。
+- `scripts/generate_testcase_from_template.py`：测试用例模板生成脚本（减少跨技能依赖）。
+- `scripts/cleanup_testcase_store.py`：清理过期用例和孤立索引条目。
+- `scripts/diff_testcase_indexes.py`：比较两个索引文件的差异。
+- `scripts/export_testcase_report.py`：生成测试用例覆盖率统计报告。
+- `references/domain-template.md`：领域文档编写模板。
 
 ## Failure handling
 
