@@ -22,7 +22,7 @@ REQUIRED_KEYS = {
     'server_signals',
     'reference_file',
 }
-VALID_DOMAINS = {'account-access', 'commerce-ops', 'platform-ops'}
+VALID_DOMAINS = {'account-access', 'commerce-ops', 'platform-ops', 'operation-management'}
 VALID_PLATFORMS = {'客户端', '账服'}
 
 

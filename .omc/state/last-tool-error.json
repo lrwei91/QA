@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"python3 /Users/lanye/Library/CloudStorage/OneDrive-个人/Project/QA/test-case-generator/scripts/validate_index.py /Users/lanye/Library/CloudStorage/OneDrive-个人/Project/QA/test-case-generator/...",
+  "error": "Exit code 1\nERROR: entry 'config-management' has unknown impacted_modules: all",
+  "timestamp": "2026-03-31T05:18:02.207Z",
+  "retry_count": 2
+}

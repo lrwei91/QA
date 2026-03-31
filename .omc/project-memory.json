@@ -92,33 +92,135 @@
   },
   "hotPaths": [
     {
-      "path": "README.md",
-      "accessCount": 1,
-      "lastAccessed": 1774871346573,
+      "path": ".claude/commands/qa.md",
+      "accessCount": 16,
+      "lastAccessed": 1774934654206,
       "type": "file"
     },
     {
-      "path": "test-case-generator/SKILL.md",
-      "accessCount": 1,
-      "lastAccessed": 1774871346623,
+      "path": "",
+      "accessCount": 10,
+      "lastAccessed": 1774934658030,
+      "type": "directory"
+    },
+    {
+      "path": "test-case-generator/references/system-map.md",
+      "accessCount": 10,
+      "lastAccessed": 1774934675014,
       "type": "file"
     },
     {
-      "path": "testcases/i18n-index.json",
-      "accessCount": 1,
-      "lastAccessed": 1774871355186,
+      "path": "test-case-generator/scripts/xlsx_append_and_highlight.py",
+      "accessCount": 8,
+      "lastAccessed": 1774934654092,
       "type": "file"
     },
     {
       "path": "testcases/testcase-index.json",
-      "accessCount": 1,
-      "lastAccessed": 1774871355238,
+      "accessCount": 7,
+      "lastAccessed": 1774932230575,
       "type": "file"
     },
     {
       "path": "test-case-generator/references/module-index.json",
+      "accessCount": 6,
+      "lastAccessed": 1774934662743,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/test-case-generator/SKILL.md",
+      "accessCount": 5,
+      "lastAccessed": 1774932389392,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/SKILL.md",
+      "accessCount": 5,
+      "lastAccessed": 1774934654052,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/module-operation-management.md",
+      "accessCount": 5,
+      "lastAccessed": 1774934662729,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts/validate_index.py",
+      "accessCount": 4,
+      "lastAccessed": 1774934654115,
+      "type": "file"
+    },
+    {
+      "path": "testcases/i18n-index.json",
+      "accessCount": 3,
+      "lastAccessed": 1774929043517,
+      "type": "file"
+    },
+    {
+      "path": "testcases/generated/运营活动/new_rows.json",
+      "accessCount": 3,
+      "lastAccessed": 1774932091991,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/testcase-store.md",
+      "accessCount": 3,
+      "lastAccessed": 1774934657430,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts/manual_merge.py",
+      "accessCount": 2,
+      "lastAccessed": 1774932204829,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/test-case-generator/references/testcase-store.md",
+      "accessCount": 2,
+      "lastAccessed": 1774932370482,
+      "type": "file"
+    },
+    {
+      "path": ".claude/settings.local.json",
+      "accessCount": 2,
+      "lastAccessed": 1774932486543,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/testcase-taxonomy.md",
+      "accessCount": 2,
+      "lastAccessed": 1774934619892,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/output-template.md",
+      "accessCount": 2,
+      "lastAccessed": 1774934657483,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/module-account-access.md",
+      "accessCount": 2,
+      "lastAccessed": 1774934662677,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/module-commerce-ops.md",
+      "accessCount": 2,
+      "lastAccessed": 1774934662706,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/references/module-platform-ops.md",
+      "accessCount": 2,
+      "lastAccessed": 1774934662797,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
       "accessCount": 1,
-      "lastAccessed": 1774871368879,
+      "lastAccessed": 1774871346573,
       "type": "file"
     },
     {
@@ -126,6 +228,90 @@
       "accessCount": 1,
       "lastAccessed": 1774871388896,
       "type": "file"
+    },
+    {
+      "path": "testcases/generated/运营活动/锦标赛 - 站内信奖励领取补充用例_20260331.md",
+      "accessCount": 1,
+      "lastAccessed": 1774931506449,
+      "type": "file"
+    },
+    {
+      "path": "testcases/generated/运营活动/rows.json",
+      "accessCount": 1,
+      "lastAccessed": 1774931556096,
+      "type": "file"
+    },
+    {
+      "path": "Office-Skills/skills/minimax-xlsx/scripts/xlsx_fill_testcase_template.py",
+      "accessCount": 1,
+      "lastAccessed": 1774931793536,
+      "type": "file"
+    },
+    {
+      "path": "Office-Skills/skills/minimax-xlsx/scripts/xlsx_insert_row.py",
+      "accessCount": 1,
+      "lastAccessed": 1774931798130,
+      "type": "file"
+    },
+    {
+      "path": ".claude/skills/test-case-generator",
+      "accessCount": 1,
+      "lastAccessed": 1774932288021,
+      "type": "directory"
+    },
+    {
+      "path": "test-case-generator/references/platform-rules.md",
+      "accessCount": 1,
+      "lastAccessed": 1774934619996,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts/upsert_testcase_index.py",
+      "accessCount": 1,
+      "lastAccessed": 1774934654103,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts/validate_testcase_index.py",
+      "accessCount": 1,
+      "lastAccessed": 1774934654148,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts/validate_i18n_json.py",
+      "accessCount": 1,
+      "lastAccessed": 1774934654168,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts/validate_i18n_index.py",
+      "accessCount": 1,
+      "lastAccessed": 1774934654222,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator/scripts",
+      "accessCount": 1,
+      "lastAccessed": 1774934657467,
+      "type": "directory"
+    },
+    {
+      "path": "test-case-generator/references",
+      "accessCount": 1,
+      "lastAccessed": 1774934657524,
+      "type": "directory"
+    },
+    {
+      "path": "test-case-generator/references/update-governance.md",
+      "accessCount": 1,
+      "lastAccessed": 1774934657540,
+      "type": "file"
+    },
+    {
+      "path": "test-case-generator",
+      "accessCount": 1,
+      "lastAccessed": 1774934669170,
+      "type": "directory"
     }
   ],
   "userDirectives": []

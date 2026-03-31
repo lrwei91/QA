@@ -1,0 +1,8 @@
+{"t":0,"agent":"system","event":"skill_invoked","skill_name":"test-case-generator"}
+{"t":0,"agent":"a361bf2","agent_type":"unknown","event":"agent_stop","success":true}
+{"t":0,"agent":"a9e1be8","agent_type":"Explore","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a3c2f84","agent_type":"Explore","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"aae4691","agent_type":"Explore","event":"agent_start","parent_mode":"none"}
+{"t":0,"agent":"a9e1be8","agent_type":"Explore","event":"agent_stop","success":true,"duration_ms":42644}
+{"t":0,"agent":"aae4691","agent_type":"Explore","event":"agent_stop","success":true,"duration_ms":57727}
+{"t":0,"agent":"a3c2f84","agent_type":"Explore","event":"agent_stop","success":true,"duration_ms":57878}
