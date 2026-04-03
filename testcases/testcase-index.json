@@ -3,7 +3,7 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-03-31T12:43:40+08:00",
+  "updated_at": "2026-04-03T16:34:31+08:00",
   "entries": [
     {
       "id": "tc-generated-xlsx-e6c7bbe8",
@@ -25,9 +25,39 @@
       "created_at": "2026-03-28T01:07:16+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "平台",
-        "后端",
+        "账服",
+        "账服",
         "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260403-xlsx-6fe3e976",
+      "group_key": "group-31-5ea1dab0",
+      "title": "免费旋转报表与活动记录优化",
+      "module": "厂商活动记录",
+      "module_ids": [
+        "module-37a0db47"
+      ],
+      "topic": "免费旋转数据统计、活动记录净输赢、31 天查询限制",
+      "format": "xlsx",
+      "rel_path": "generated/厂商活动记录/免费旋转报表与活动记录优化_20260403.xlsx",
+      "source_refs": [
+        "需求图片：免费旋转数据统计与活动记录优化"
+      ],
+      "tags": [
+        "厂商活动记录",
+        "免费旋转报表与活动记录",
+        "免费旋转",
+        "一般用户报表",
+        "净输赢",
+        "活动记录"
+      ],
+      "status": "active",
+      "created_at": "2026-04-03T14:19:00+08:00",
+      "updated_at": "2026-04-03T14:19:00+08:00",
+      "platform_scope": [
+        "账服"
       ],
       "template": ""
     },
@@ -130,7 +160,7 @@
       "created_at": "2026-03-28T00:08:03+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "平台",
+        "账服",
         "客户端",
         "账服"
       ],
@@ -156,7 +186,7 @@
       "created_at": "2026-03-28T00:08:03+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "平台",
+        "账服",
         "客户端"
       ],
       "template": ""
@@ -181,7 +211,7 @@
       "created_at": "2026-03-28T00:08:03+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "平台",
+        "账服",
         "客户端",
         "账服"
       ],
@@ -208,9 +238,9 @@
       "created_at": "2026-03-28T00:08:03+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "平台",
         "账服",
-        "大厅"
+        "账服",
+        "客户端"
       ],
       "template": ""
     },
@@ -234,8 +264,40 @@
       "created_at": "2026-03-28T00:08:03+08:00",
       "updated_at": "2026-03-31T12:43:40+08:00",
       "platform_scope": [
-        "平台",
+        "账服",
+        "账服",
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260403-xlsx-supplement",
+      "group_key": "group-world-cup-smoke",
+      "title": "世界杯竞猜活动_冒烟用例_补充",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "世界杯竞猜客户端冒烟测试用例补充",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_补充.xlsx",
+      "source_refs": [
+        "需求页面：世界杯 - 客户端.html"
+      ],
+      "tags": [
         "运营活动",
+        "世界杯竞猜",
+        "冒烟用例",
+        "客户端",
+        "赛程查看",
+        "比赛预测",
+        "排行榜"
+      ],
+      "status": "active",
+      "created_at": "2026-04-03T16:34:31+08:00",
+      "updated_at": "2026-04-03T16:34:31+08:00",
+      "platform_scope": [
         "客户端",
         "账服"
       ],
