@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -37,11 +38,16 @@ def ensure_string_list(value, key: str, entry_id: str):
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print('Usage: validate_index.py <path/to/module-index.json>')
-        return 1
+    parser = argparse.ArgumentParser(
+        description='Validate module-index.json structure and references.'
+    )
+    parser.add_argument(
+        'index_path',
+        help='Path to module index file (references/module-index.json)'
+    )
+    args = parser.parse_args()
 
-    index_path = Path(sys.argv[1]).resolve()
+    index_path = Path(args.index_path).resolve()
     if not index_path.exists():
         return fail(f'file not found: {index_path}')
 

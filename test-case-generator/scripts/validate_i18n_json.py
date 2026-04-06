@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -117,11 +118,16 @@ def analyze_i18n_json(path: Path) -> dict:
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print('Usage: validate_i18n_json.py <path/to/file.json>')
-        return 1
+    parser = argparse.ArgumentParser(
+        description='Validate a single i18n JSON file against the schema.'
+    )
+    parser.add_argument(
+        'file_path',
+        help='Path to i18n JSON file'
+    )
+    args = parser.parse_args()
 
-    path = Path(sys.argv[1]).resolve()
+    path = Path(args.file_path).resolve()
     if not path.exists():
         return fail(f'file not found: {path}')
 

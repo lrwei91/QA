@@ -1747,5 +1747,63 @@
       "公告发布"
     ],
     "reference_file": "references/module-platform-ops.md"
+  },
+  {
+    "id": "personal-center",
+    "name": "个人中心",
+    "domain": "account-access",
+    "aliases": [
+      "个人中心",
+      "用户中心",
+      "个人资料",
+      "账户设置"
+    ],
+    "trigger_words": [
+      "个人资料",
+      "修改密码",
+      "绑定手机",
+      "绑定邮箱",
+      "免费旋转",
+      "旋转记录"
+    ],
+    "core_functions": [
+      "个人资料管理",
+      "修改密码",
+      "绑定手机",
+      "绑定邮箱",
+      "免费旋转记录",
+      "账户安全设置"
+    ],
+    "depends_on": [
+      "auth-center",
+      "player-management"
+    ],
+    "impacted_modules": [
+      "notification-center",
+      "operation-log"
+    ],
+    "always_check": [
+      "permission",
+      "security",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "客户端",
+      "账服"
+    ],
+    "client_signals": [
+      "个人资料页",
+      "修改密码弹窗",
+      "绑定手机/邮箱表单",
+      "旋转记录列表",
+      "安全设置页"
+    ],
+    "server_signals": [
+      "资料更新接口",
+      "密码修改接口",
+      "绑定验证码发送",
+      "记录查询接口"
+    ],
+    "reference_file": "references/module-account-access.md"
   }
 ]
