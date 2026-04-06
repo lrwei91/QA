@@ -12,6 +12,10 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
+# Add script directory to path for sibling imports when running from workspace root
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validate_i18n_json import analyze_i18n_json
 
 VALID_EXTENSIONS = {
@@ -25,6 +29,7 @@ VALID_EXTENSIONS = {
 VALID_STATUSES = {'draft', 'active', 'archived'}
 GENERIC_TAG_STOPWORDS = {'测试', '测试用例', '测试案例', '用例'}
 GENERIC_SUFFIXES = ['汇总', '优化', '改造', '功能', '前后端']
+GENERIC_DATE_PATTERN = re.compile(r'^\d{4}[-_]?(\d{2})?[-_]?(\d{2})?$')
 CASES_DIR = 'generated'
 I18N_DIR = 'i18n'
 LEGACY_INDEX_NAME = 'index.json'
@@ -188,6 +193,9 @@ def derive_tags(module: str, title: str, extra_tags: list[str]) -> list[str]:
         if cleaned in GENERIC_TAG_STOPWORDS:
             continue
         if len(cleaned) < 2:
+            continue
+        # Filter out date-like patterns (e.g., "2026", "03", "30", "2026-03-30")
+        if GENERIC_DATE_PATTERN.match(cleaned):
             continue
         candidates.append(cleaned)
     candidates.extend(extra_tags)

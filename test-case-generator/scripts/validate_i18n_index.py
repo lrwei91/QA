@@ -3,10 +3,15 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
 
+# Add script directory to path for sibling imports when running from workspace root
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validate_i18n_json import analyze_i18n_json
 
 REQUIRED_ROOT_KEYS = {
@@ -57,11 +62,16 @@ def ensure_string_list(value: object, key: str, allow_empty: bool = False) -> No
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print('Usage: validate_i18n_index.py <path/to/testcases/i18n-index.json>')
-        return 1
+    parser = argparse.ArgumentParser(
+        description='Validate i18n-index.json structure and file references.'
+    )
+    parser.add_argument(
+        'index_path',
+        help='Path to i18n index file (testcases/i18n-index.json)'
+    )
+    args = parser.parse_args()
 
-    index_path = Path(sys.argv[1]).resolve()
+    index_path = Path(args.index_path).resolve()
     if not index_path.exists():
         return fail(f'file not found: {index_path}')
 

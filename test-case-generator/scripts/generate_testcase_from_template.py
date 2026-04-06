@@ -6,8 +6,8 @@ generate_testcase_from_template.py - Generate test cases from template without c
 Usage:
     python3 generate_testcase_from_template.py template.xlsx requirements.json output.xlsx
 
-This script reduces dependency on Office-Skills/minimax-xlsx by providing
-a standalone testcase generation utility.
+This script provides standalone testcase generation capability,
+using the local templates/testcase_template.xlsx file.
 """
 
 import argparse
@@ -100,19 +100,19 @@ def generate_from_template(template_xlsx: str, requirements_json: str, output_xl
     ws = wb.active
 
     # Fill metadata if present
+    # Mapping: metadata key -> (row, column)
     metadata_mapping = {
-        "测试平台": 2,  # B2
-        "系统&版本": 4,  # D2
-        "文档编写人": 2,  # B4
-        "参考档": 4,  # D4
-        "测试日期": 2,  # B6
-        "最后更新": 4,  # D6
+        "测试平台": (2, 2),      # B2
+        "系统&版本": (3, 2),     # B3
+        "文档编写人": (4, 2),    # B4
+        "参考档": (6, 2),        # B6 (merged B6:F6)
+        "测试日期": (2, 5),      # E2
+        "最后更新": (3, 5),      # E3
     }
 
-    for meta_key, cell_col in metadata_mapping.items():
+    for meta_key, (cell_row, cell_col) in metadata_mapping.items():
         if meta_key in metadata:
-            cell_row = (metadata_mapping[meta_key] // 2) * 2  # Rows 2, 4, 6
-            cell = ws.cell(row=cell_row, column=cell_col, value=str(metadata[meta_key]))
+            ws.cell(row=cell_row, column=cell_col, value=str(metadata[meta_key]))
 
     # Column mapping
     column_map = {

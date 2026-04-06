@@ -1,0 +1,7 @@
+node_modules/
+.git/
+*.lock
+.DS_Store
+*.xlsx
+*.jsonl
+.omc/
