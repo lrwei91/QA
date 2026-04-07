@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"python3 << 'PYEOF'\\nimport os\\nimport re\\n\\n# 使用绝对路径\\nbase = '/Users/lanye/Library/CloudStorage/OneDrive-个人/Project/QA'\\nfilepath = os.path.join(base, 'tmp/html/世界杯 - 客户端.html')\\n\\nprint(f...",
-  "error": "Exit code 1\n文件存在：False\nTraceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/genericpath.py\", line 50, in getsize\n    return os.stat(filename).st_size\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/lanye/Library/CloudStorage/OneDrive-个人/Project/QA/tmp/html/世界杯 - 客户端.html'",
-  "timestamp": "2026-04-03T08:28:07.425Z",
-  "retry_count": 5
-}
