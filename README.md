@@ -6,14 +6,52 @@
 
 ## 快速开始
 
-### 1. 安装 Claude Code
+### 步骤概览
 
-**macOS (Homebrew):**
+1. 安装 Node.js（运行环境）
+2. 安装 Claude Code（AI 工具）
+3. 配置 API（使用 cc-switch）
+4. 安装 Python 依赖
+5. 开始生成测试用例
+
+**可选**：安装 AionUi 图形化界面
+
+---
+
+### 1. 安装 Node.js
+
+Node.js 是运行 Claude Code 的必要环境。
+
+**检查是否已安装:**
 ```bash
-brew install claude-code
+node --version
+```
+如果显示版本号（如 v20.x.x），说明已安装，可跳过此步骤。
+
+**macOS 用户（推荐）:**
+```bash
+# 使用 Homebrew 安装
+brew install node@20
 ```
 
-**npm 全局安装:**
+**Windows 用户:**
+1. 访问 https://nodejs.org/
+2. 下载并安装 LTS 版本（推荐）
+
+**验证安装:**
+```bash
+node --version
+npm --version
+```
+两个命令都显示版本号即表示安装成功。
+
+---
+
+### 2. 安装 Claude Code
+
+Claude Code 是基于命令行的 AI 编程工具。
+
+**全局安装:**
 ```bash
 npm install -g @anthropic/claude-code
 ```
@@ -22,52 +60,39 @@ npm install -g @anthropic/claude-code
 ```bash
 claude --version
 ```
-
-**登录认证:**
-```bash
-claude login
-```
-
-详细文档：[Claude Code 官方文档](https://docs.anthropic.com/claude-code/)
+显示版本号即表示安装成功。
 
 ---
 
-### 2. 安装 AionUi Skills
+### 3. 配置 API（使用 cc-switch）
 
-AionUi 是 Claude Code 的技能管理平台，用于加载和管理 QA 测试用例生成器技能。
+Claude Code 需要配置 API 才能使用。
 
-**方法一：通过 AionUi CLI（推荐）**
+**下载 cc-switch:**
+1. 访问 [cc-switch GitHub 仓库](https://github.com/farion1231/cc-switch)
+2. 下载并安装 cc-switch 应用
+3. 在 cc-switch 中加载你的 API 密钥
+4. 启动 Claude Code
+
+**启动 Claude Code:**
 ```bash
-# 安装 AionUi CLI
-npm install -g @aionui/cli
-
-# 登录 AionUi
-aionui login
-
-# 安装 QA 技能包
-aionui skill install test-case-generator
+claude
 ```
-
-**方法二：手动配置**
-
-1. 在 Claude Code 工作区创建 `.aionui/skills` 目录
-2. 将本项目的 `test-case-generator` 目录复制或 symlink 到该目录
-3. 重启 Claude Code
-
-**方法三：使用内置 skill-creator**
-```bash
-# 在 Claude Code 中运行
-/skill-creator
-```
-
-详细文档：[AionUi Skills 平台](https://aionui.com/docs)
 
 ---
 
-### 3. 安装 Python 依赖
+### 4. 安装 Python 依赖
 
+QA 技能包需要 Python 依赖来处理 Excel 文件。
+
+**进入项目目录:**
 ```bash
-cd test-case-generator
+cd /path/to/QA/test-case-generator
+```
+> 提示：将 `/path/to/QA` 替换为你实际的项目路径
+
+**安装依赖:**
+```bash
 pip3 install -r requirements.txt
 ```
 
@@ -75,12 +100,16 @@ pip3 install -r requirements.txt
 ```bash
 python3 -c "import openpyxl, pandas; print('✓ 依赖安装成功')"
 ```
+显示"依赖安装成功"即表示安装完成。
 
 ---
 
-### 4. 生成第一个测试用例
+### 5. 生成第一个测试用例
 
-**准备需求文档** `demo_requirement.md`:
+**准备需求文档**
+
+创建一个新文件 `demo_requirement.md`，内容示例：
+
 ```markdown
 # 需求：用户登录功能优化
 
@@ -95,21 +124,39 @@ python3 -c "import openpyxl, pandas; print('✓ 依赖安装成功')"
 ```
 
 **在 Claude Code 中运行:**
-```
-/qa 生成测试用例
-```
 
-粘贴需求文档内容，选择「生成测试用例」选项。
+1. 打开终端，进入 QA 项目目录
+2. 启动 Claude Code:
+   ```bash
+   claude
+   ```
+3. 输入命令:
+   ```
+   /qa 生成测试用例
+   ```
+4. 粘贴你的需求文档内容
+5. 选择「生成测试用例」选项
 
 **导出 Excel:**
 ```
 /qa 导出 Excel
 ```
 
-生成的用例会保存到：
+生成的用例将保存到：
 ```
 testcases/generated/认证中心/用户登录功能优化_YYYYMMDD.xlsx
 ```
+
+---
+
+## 可选：安装 AionUi 图形化界面
+
+AionUi 是 Claude Code 的技能管理平台，提供图形化界面。
+
+**下载安装:**
+1. 访问 [AionUi GitHub 仓库](https://github.com/iOfficeAI/AionUi)
+2. 下载并安装 AionUi 应用
+3. 启动 AionUi 并加载 QA 技能包
 
 ---
 
@@ -206,6 +253,26 @@ QA/
 
 ---
 
+## 遇到问题？
+
+**常见问题排查:**
+
+1. **Node.js 未安装**: 执行 `node --version` 检查，未安装请参考步骤 1
+2. **Claude Code 无法启动**: 执行 `claude --version` 检查，未安装请参考步骤 2
+3. **API 配置问题**: 确认 cc-switch 已正确配置 API 密钥
+4. **Python 依赖缺失**: 重新执行步骤 4 安装依赖
+
+**更多帮助:**
+
+1. 查看 [故障排查指南](docs/troubleshooting.md)
+2. 运行诊断工具:
+   ```bash
+   python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
+   ```
+3. 在 GitHub Issues 中搜索或提问
+
+---
+
 ## 下一步学习
 
 - [用户指南](docs/user-guide.md) - 详细使用说明
@@ -213,18 +280,6 @@ QA/
 - [故障排查](docs/troubleshooting.md) - 常见问题解决方案
 - [术语词典](docs/glossary.md) - 核心术语定义
 - [变更日志](docs/changelog.md) - 版本历史记录
-
----
-
-## 遇到问题？
-
-1. 查看 [故障排查指南](docs/troubleshooting.md)
-2. 运行诊断工具：
-   ```bash
-   python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
-   python3 test-case-generator/scripts/validate_index.py test-case-generator/references/module-index.json
-   ```
-3. 在 GitHub Issues 中搜索或提问
 
 ---
 
