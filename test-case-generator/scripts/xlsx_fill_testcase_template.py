@@ -199,8 +199,45 @@ def _set_formula_cell(row_elem: ET.Element, ref: str, style: str, formula: str) 
     ET.SubElement(cell, _tag("v")).text = ""
 
 
+def _calc_row_height(data: dict) -> float:
+    """Calculate row height based on content length in wrap columns.
+
+    Excel's default row height is 15 points. With wrap text, we need to
+    increase height for multi-line content. This is a heuristic calculation.
+    """
+    base_height = 15.0
+    wrap_columns = ["前置条件（测试点）", "操作步骤", "预期结果"]
+    # Column widths in points (from template)
+    col_widths = {
+        "前置条件（测试点）": 43.0,
+        "操作步骤": 53.0,
+        "预期结果": 60.0,
+    }
+
+    max_lines = 1
+    for col_name in wrap_columns:
+        value = data.get(col_name, "")
+        if value:
+            # Count newlines + estimate wrapped lines
+            lines = value.count('\n') + 1
+            # Estimate additional lines from content length
+            width = col_widths.get(col_name, 50.0)
+            # Rough estimate: 12 chars per line at default font
+            estimated_lines = max(1, len(value) // int(width * 0.8))
+            max_lines = max(max_lines, lines + estimated_lines - 1)
+
+    # Cap at reasonable height (Excel max is 409)
+    return min(base_height * max_lines, 200.0)
+
+
 def _build_data_row(row_num: int, data: dict, sst_root: ET.Element, sst_index: dict[str, int]) -> ET.Element:
-    row_elem = ET.Element(_tag("row"), {"r": str(row_num)})
+    # Calculate appropriate row height for wrapped content
+    row_height = _calc_row_height(data)
+    row_elem = ET.Element(_tag("row"), {
+        "r": str(row_num),
+        "ht": str(row_height),
+        "customHeight": "1"
+    })
 
     number_cell = ET.SubElement(row_elem, _tag("c"), {"r": f"A{row_num}", "s": DATA_STYLE_MAP["A"]})
     ET.SubElement(number_cell, _tag("v")).text = str(int(data["序号"]))
