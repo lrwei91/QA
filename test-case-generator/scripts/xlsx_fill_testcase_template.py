@@ -99,17 +99,38 @@ def _load_json(path: Path) -> object:
 
 
 def _normalize_rows(raw_rows: list[dict]) -> list[dict]:
+    """Normalize raw row data and convert separators to newlines for multi-line fields.
+
+    Converts the following separators to newlines in E/F/G columns:
+    - Full-width semicolon '；' (U+FF1B)
+    - Half-width semicolon ';' (U+003B)
+
+    This ensures that step-by-step content displays properly with wrap text in Excel.
+    """
     rows: list[dict] = []
     for idx, raw in enumerate(raw_rows, start=1):
+        # Get raw values and normalize line endings
+        precondition = str(raw.get("前置条件（测试点）", "") or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+        steps = str(raw.get("操作步骤", "") or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+        expected = str(raw.get("预期结果", "") or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+
+        # Convert semicolons to newlines for step-by-step fields
+        # This ensures each numbered step appears on its own line in Excel
+        precondition = precondition.replace("；", "\n").replace(";", "\n")
+        steps = steps.replace("；", "\n").replace(";", "\n")
+        # For expected results, only convert if it looks like numbered steps (1、xxx；2、xxx)
+        if expected.count("；") > 0 and "1、" in expected:
+            expected = expected.replace("；", "\n").replace(";", "\n")
+
         rows.append(
             {
                 "序号": idx,
                 "平台": str(raw.get("平台", "") or "").strip(),
                 "模块": str(raw.get("模块", "") or "").strip(),
                 "功能点": str(raw.get("功能点", "") or "").strip(),
-                "前置条件（测试点）": str(raw.get("前置条件（测试点）", "") or "").replace("\r\n", "\n").replace("\r", "\n").strip(),
-                "操作步骤": str(raw.get("操作步骤", "") or "").replace("\r\n", "\n").replace("\r", "\n").strip(),
-                "预期结果": str(raw.get("预期结果", "") or "").replace("\r\n", "\n").replace("\r", "\n").strip(),
+                "前置条件（测试点）": precondition,
+                "操作步骤": steps,
+                "预期结果": expected,
                 "测试结果": str(raw.get("测试结果", "") or "").strip(),
                 "备注": str(raw.get("备注", "") or "").strip(),
             }
