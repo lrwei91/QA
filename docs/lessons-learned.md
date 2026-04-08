@@ -1,0 +1,219 @@
+# QA 技能包 - 避坑指南
+
+本文档记录使用 QA 测试用例生成技能包时遇到的典型问题和最佳实践。
+
+---
+
+## 核心原则
+
+1. **路径格式**：索引中的 `rel_path` 始终相对于 `testcases/` 目录
+   - 正确：`generated/文件名.xlsx`
+   - 错误：`testcases/generated/文件名.xlsx`
+
+2. **文件名规范**：
+   - 避免使用空格
+   - 中文文件名使用下划线分隔日期
+   - 格式：`<模块名>_<YYYYMMDD>.xlsx`
+
+3. **索引更新前验证**：
+   - 先用 `os.listdir()` 确认文件实际名称
+   - 再用脚本更新索引
+
+---
+
+## 高频问题速查
+
+### Q1: upsert 脚本报 "file not found" 但文件确实存在
+
+**症状**：
+```
+ERROR: file not found: /path/to/testcases/generated/无 CPF 用户限制功能_20260408.xlsx
+```
+
+**快速解决**：
+```bash
+# 方法：手动创建索引条目而非使用脚本
+python3 -c "
+import json, hashlib
+from pathlib import Path
+from datetime import datetime
+
+index_path = Path('testcases/testcase-index.json')
+with open(index_path, 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+# 用 os.listdir 获取实际文件名
+import os
+files = os.listdir('testcases/generated/')
+target = [f for f in files if '你的关键词' in f][0]
+rel_path = 'generated/' + target
+
+now = datetime.now().astimezone().replace(microsecond=0).isoformat()
+digest = hashlib.sha1(rel_path.encode('utf-8')).hexdigest()[:8]
+
+entry = {
+    'id': f'tc-{rel_path.replace(\"/\", \"-\")}-{digest}',
+    'group_key': f'group-模块名 - 主题名-{hashlib.sha1(\"模块名::主题名\".encode()).hexdigest()[:8]}',
+    'title': '你的主题',
+    'module': '你的模块',
+    'module_ids': ['module-你的模块'],
+    'topic': '你的主题',
+    'platform_scope': ['账服', '客户端'],
+    'format': 'xlsx',
+    'rel_path': rel_path,
+    'template': '',
+    'source_refs': [],
+    'tags': ['你的模块', '你的主题'],
+    'status': 'active',
+    'created_at': now,
+    'updated_at': now
+}
+
+data['entries'].append(entry)
+data['updated_at'] = now
+
+with open(index_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+    f.write('\n')
+
+print('Index updated')
+"
+```
+
+---
+
+### Q2: 索引校验失败 "points to missing file"
+
+**症状**：
+```
+ERROR: entry 'tc-xxx' points to missing file: generated/xxx.xlsx
+```
+
+**原因**：macOS Unicode 规范化（NFD/NFC）问题
+
+**快速解决**：
+```bash
+# 修复 rel_path 路径格式
+python3 -c "
+import json
+from pathlib import Path
+
+index_path = Path('testcases/testcase-index.json')
+with open(index_path, 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+for entry in data.get('entries', []):
+    if entry['rel_path'].startswith('testcases/'):
+        entry['rel_path'] = entry['rel_path'][len('testcases/'):]
+
+with open(index_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+    f.write('\n')
+
+print('Fixed')
+"
+
+# 验证
+python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
+```
+
+---
+
+### Q3: Excel 导出成功但索引损坏
+
+**症状**：
+- Excel 文件正常生成
+- 索引文件包含错误的路径
+
+**预防方案**：
+```bash
+# 标准流程
+# 1. 导出 Excel
+python3 test-case-generator/scripts/xlsx_fill_testcase_template.py \
+    rows.json output.xlsx --template templates/testcase_template.xlsx
+
+# 2. 移动到目标目录
+mv output.xlsx "testcases/generated/模块名_$(date +%Y%m%d).xlsx"
+
+# 3. 手动更新索引（避免脚本问题）
+# 使用上面的 Q1 解决方案
+```
+
+---
+
+## 标准操作流程
+
+### 生成测试用例并导出
+
+```bash
+# 1. 在 Claude Code 中运行
+/qa 生成测试用例
+# 粘贴需求 -> 选择完整用例 -> 选择导出 Excel 并更新索引
+
+# 2. 验证导出结果
+ls -la testcases/generated/模块名_*.xlsx
+
+# 3. 验证索引
+python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
+
+# 4. 如索引失败，手动修复（见 Q1/Q2）
+```
+
+### 补充已有用例
+
+```bash
+# 1. 读取索引
+python3 -c "
+import json
+with open('testcases/testcase-index.json') as f:
+    data = json.load(f)
+for e in data.get('entries', []):
+    print(f\"{e['module']} - {e['title']} [{e['format']}] - {e.get('updated_at', '')[:10]}\")
+"
+
+# 2. 选择要补充的用例文件
+# 3. 生成补充内容并追加
+python3 test-case-generator/scripts/xlsx_append_and_highlight.py \
+    existing.xlsx new_rows.json output.xlsx --highlight
+```
+
+---
+
+## 检查清单
+
+生成/导出测试用例后，依次检查：
+
+- [ ] Excel 文件存在于 `testcases/generated/` 目录
+- [ ] 文件名格式：`<模块名>_<YYYYMMDD>.xlsx`
+- [ ] 索引中 `rel_path` 格式：`generated/文件名.xlsx`
+- [ ] 索引校验通过：`validate_testcase_index.py` 返回 OK
+- [ ] 模块索引校验通过：`validate_index.py` 返回 OK
+
+---
+
+## 常用命令
+
+```bash
+# 验证测试用例索引
+python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
+
+# 验证模块索引
+python3 test-case-generator/scripts/validate_index.py test-case-generator/references/module-index.json
+
+# 验证多语言 JSON
+python3 test-case-generator/scripts/validate_i18n_json.py testcases/i18n/模块/文件.json
+
+# 清理过期文件（先预览）
+python3 test-case-generator/scripts/cleanup_testcase_store.py --dry-run
+
+# 查看索引内容
+python3 -c "import json; print(json.dumps(json.load(open('testcases/testcase-index.json')), ensure_ascii=False, indent=2))"
+```
+
+---
+
+## 更新记录
+
+| 日期 | 内容 |
+|------|------|
+| 2026-04-08 | 初始版本，记录 Unicode 规范化、路径格式、upsert 脚本问题 |

@@ -590,8 +590,190 @@ python3 test-case-generator/scripts/cleanup_testcase_store.py --dry-run
 
 ---
 
+## 高级问题
+
+### 问题 19：upsert_testcase_index.py 无法找到含中文的文件名
+
+**错误信息：**
+```
+ERROR: file not found: /path/to/testcases/generated/无 CPF 用户限制功能_20260408.xlsx
+```
+但文件实际存在于该路径。
+
+**原因：**
+- shell 对中文字符的处理问题
+- 参数传递过程中文件名被截断或转义错误
+
+**解决方案：**
+
+方法 1：在 Python 中直接调用（推荐）
+```bash
+python3 -c "
+import sys
+sys.path.insert(0, 'test-case-generator/scripts')
+from pathlib import Path
+from upsert_testcase_index import main
+import sys as sys_module
+sys_module.argv = [
+    'upsert_testcase_index.py',
+    'testcases/generated/你的文件.xlsx',
+    '--topic', '你的主题',
+    '--module', '你的模块',
+    '--status', 'auto'
+]
+main()
+"
+```
+
+方法 2：确保路径正确引用
+```bash
+# 使用双引号包裹完整路径
+python3 test-case-generator/scripts/upsert_testcase_index.py "testcases/generated/无 CPF 用户限制功能_20260408.xlsx" --topic "xxx" --module "xxx"
+```
+
+方法 3：使用相对路径而非绝对路径
+```bash
+# 在项目目录下执行
+cd /path/to/QA
+python3 test-case-generator/scripts/upsert_testcase_index.py testcases/generated/你的文件.xlsx
+```
+
+---
+
+### 问题 20：macOS Unicode 规范化导致文件路径校验失败
+
+**错误信息：**
+```
+ERROR: entry 'tc-xxx' points to missing file: generated/无 CPF 用户限制功能_20260408.xlsx
+```
+但 `ls` 显示文件确实存在。
+
+**原因：**
+- macOS 文件系统使用 NFD（规范化分解）存储 Unicode 文件名
+- Python 的 `Path.exists()` 在某些情况下使用 NFC（规范化组合）进行检查
+- 中文字符在 NFD 和 NFC 之间可能有不同的字节表示
+
+**验证问题：**
+```bash
+# 检查文件实际存在
+ls -la testcases/generated/ | grep "无 CPF"
+
+# 但 Python 检查失败
+python3 -c "from pathlib import Path; print(Path('testcases/generated/无 CPF 用户限制功能_20260408.xlsx').exists())"
+```
+
+**解决方案：**
+
+方案 1：手动修复索引路径
+```bash
+python3 -c "
+import os
+import json
+from pathlib import Path
+
+# 获取实际文件名（使用 os.listdir 绕过 Unicode 问题）
+files = os.listdir('testcases/generated/')
+target_file = [f for f in files if 'CPF' in f][0]
+rel_path = 'generated/' + target_file
+
+# 修复索引
+index_path = Path('testcases/testcase-index.json')
+with open(index_path, 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+for entry in data.get('entries', []):
+    if 'CPF' in entry.get('rel_path', ''):
+        entry['rel_path'] = rel_path  # 使用实际文件名
+        break
+
+with open(index_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+"
+```
+
+方案 2：确保 rel_path 格式正确
+```bash
+# rel_path 应该是 'generated/xxx.xlsx' 而不是 'testcases/generated/xxx.xlsx'
+python3 -c "
+import json
+from pathlib import Path
+index_path = Path('testcases/testcase-index.json')
+with open(index_path, 'r', encoding='utf-8') as f:
+    data = json.load(f)
+for entry in data.get('entries', []):
+    if entry['rel_path'].startswith('testcases/'):
+        entry['rel_path'] = entry['rel_path'][len('testcases/'):]
+with open(index_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+"
+```
+
+方案 3：使用 NFC 规范化统一路径
+```python
+import unicodedata
+path = unicodedata.normalize('NFC', 'testcases/generated/无 CPF 用户限制功能_20260408.xlsx')
+# 然后使用规范化后的路径
+```
+
+**最佳实践：**
+1. 索引中的 `rel_path` 应始终相对于 `testcases/` 目录（如 `generated/xxx.xlsx`）
+2. 避免在文件名中使用空格，使用下划线或连字符替代
+3. 在创建索引条目前，先用 `os.listdir()` 获取实际文件名
+
+---
+
+### 问题 21：Excel 导出后索引路径格式错误
+
+**现象：**
+- Excel 文件成功导出到 `testcases/generated/`
+- 但索引校验失败，提示文件不存在
+
+**原因：**
+- `rel_path` 被错误地设置为 `testcases/generated/xxx.xlsx`
+- 校验脚本会在 `testcases/` 目录下再次拼接 `testcases/generated/`
+- 正确格式应该是 `generated/xxx.xlsx`
+
+**解决方案：**
+
+修复已有索引：
+```bash
+python3 -c "
+import json
+from pathlib import Path
+
+index_path = Path('testcases/testcase-index.json')
+with open(index_path, 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+# 修复所有以 testcases/ 开头的 rel_path
+fixed = 0
+for entry in data.get('entries', []):
+    rel_path = entry['rel_path']
+    if rel_path.startswith('testcases/'):
+        new_path = rel_path[len('testcases/'):]
+        print(f'Fixing: {rel_path} -> {new_path}')
+        entry['rel_path'] = new_path
+        fixed += 1
+
+# 保存
+with open(index_path, 'w', encoding='utf-8') as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+    f.write('\n')
+
+print(f'Fixed {fixed} entries')
+"
+```
+
+验证修复：
+```bash
+python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
+```
+
+---
+
 ## 更新记录
 
 | 日期 | 版本 | 更新内容 |
 |------|------|---------|
+| 2026-04-08 | 1.1 | 添加 macOS Unicode 规范化问题、upsert 脚本路径问题、索引路径格式问题 |
 | 2026-04-01 | 1.0 | 初始版本 |

@@ -168,7 +168,8 @@ QA/
 ├── docs/
 │   ├── user-guide.md            # 用户指南
 │   ├── contributing.md          # 贡献指南
-│   ├── troubleshooting.md       # 故障排查
+│   ├── troubleshooting.md       # 故障排查指南
+│   ├── lessons-learned.md       # 避坑指南（新增）
 │   ├── glossary.md              # 术语词典
 │   └── changelog.md             # 变更日志
 ├── test-case-generator/         # 技能包核心
@@ -265,11 +266,12 @@ QA/
 **更多帮助:**
 
 1. 查看 [故障排查指南](docs/troubleshooting.md)
-2. 运行诊断工具:
+2. 查看 [避坑指南](docs/lessons-learned.md) - 典型问题和最佳实践
+3. 运行诊断工具:
    ```bash
    python3 test-case-generator/scripts/validate_testcase_index.py testcases/testcase-index.json
    ```
-3. 在 GitHub Issues 中搜索或提问
+4. 在 GitHub Issues 中搜索或提问
 
 ---
 

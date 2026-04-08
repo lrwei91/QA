@@ -3,7 +3,7 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-04-03T16:34:31+08:00",
+  "updated_at": "2026-04-08T11:24:01+08:00",
   "entries": [
     {
       "id": "tc-generated-xlsx-e6c7bbe8",
@@ -88,29 +88,59 @@
       "template": ""
     },
     {
-      "id": "tc-generated-20260330-xlsx-ab9b21d9",
-      "group_key": "group-20260330-e1b7e6bd",
-      "title": "世界杯竞猜活动_冒烟用例_20260330",
+      "id": "tc-generated-20260408-xlsx-5c5c8ef8",
+      "group_key": "group-e6c3afda",
+      "title": "自定义厂家分类图标_20260408",
+      "module": "自定义厂家",
+      "module_ids": [
+        "module-6aa60de8"
+      ],
+      "topic": "自定义厂家分类图标上传功能",
+      "format": "xlsx",
+      "rel_path": "generated/自定义厂家分类图标_20260408.xlsx",
+      "source_refs": [],
+      "tags": [
+        "自定义厂家",
+        "自定义厂家分类图标"
+      ],
+      "status": "active",
+      "created_at": "2026-04-08T10:57:52+08:00",
+      "updated_at": "2026-04-08T10:57:52+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260403-xlsx-supplement",
+      "group_key": "group-world-cup-smoke",
+      "title": "世界杯竞猜活动_冒烟用例_补充",
       "module": "运营活动",
       "module_ids": [
         "module-6b810558"
       ],
-      "topic": "世界杯竞猜活动_冒烟用例_20260330",
+      "topic": "世界杯竞猜客户端冒烟测试用例补充",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_20260330.xlsx",
-      "source_refs": [],
+      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_补充.xlsx",
+      "source_refs": [
+        "需求页面：世界杯 - 客户端.html"
+      ],
       "tags": [
         "运营活动",
-        "世界杯竞猜活动",
+        "世界杯竞猜",
         "冒烟用例",
-        "20260330"
+        "客户端",
+        "赛程查看",
+        "比赛预测",
+        "排行榜"
       ],
       "status": "active",
-      "created_at": "2026-03-30T19:18:43+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
+      "created_at": "2026-04-03T16:34:31+08:00",
+      "updated_at": "2026-04-03T16:34:31+08:00",
       "platform_scope": [
-        "账服",
-        "客户端"
+        "客户端",
+        "账服"
       ],
       "template": ""
     },
@@ -266,36 +296,29 @@
       "template": ""
     },
     {
-      "id": "tc-generated-20260403-xlsx-supplement",
-      "group_key": "group-world-cup-smoke",
-      "title": "世界杯竞猜活动_冒烟用例_补充",
-      "module": "运营活动",
+      "id": "tc-testcases-generated-无CPF用户限制功能_20260408.xlsx-419631cf",
+      "group_key": "group-数据迁移授权 - 无 CPF 用户限制功能-fbdf1f75",
+      "title": "无 CPF 用户限制功能",
+      "module": "数据迁移授权",
       "module_ids": [
-        "module-6b810558"
+        "module-数据迁移授权"
       ],
-      "topic": "世界杯竞猜客户端冒烟测试用例补充",
+      "topic": "无 CPF 用户限制功能",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
       "format": "xlsx",
-      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_补充.xlsx",
-      "source_refs": [
-        "需求页面：世界杯 - 客户端.html"
-      ],
+      "rel_path": "generated/无CPF用户限制功能_20260408.xlsx",
+      "template": "",
+      "source_refs": [],
       "tags": [
-        "运营活动",
-        "世界杯竞猜",
-        "冒烟用例",
-        "客户端",
-        "赛程查看",
-        "比赛预测",
-        "排行榜"
+        "数据迁移授权",
+        "无 CPF 用户限制功能"
       ],
       "status": "active",
-      "created_at": "2026-04-03T16:34:31+08:00",
-      "updated_at": "2026-04-03T16:34:31+08:00",
-      "platform_scope": [
-        "客户端",
-        "账服"
-      ],
-      "template": ""
+      "created_at": "2026-04-08T11:22:30+08:00",
+      "updated_at": "2026-04-08T11:24:01+08:00"
     }
   ]
 }
