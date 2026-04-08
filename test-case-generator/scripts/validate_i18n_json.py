@@ -18,7 +18,7 @@ REQUIRED_LANGUAGE_CODES = [
     'fp-fp',
 ]
 
-REQUIRED_ROOT_KEYS = {'name', 'url', 'preScriptPath', 'languages', 'options'}
+REQUIRED_ROOT_KEYS = {'name', 'url', 'preScriptPath', 'options', 'entries'}
 REQUIRED_OPTION_KEYS = {'matchRule', 'captureRegion'}
 REQUIRED_CAPTURE_KEYS = {'x', 'y', 'width', 'height'}
 
@@ -61,19 +61,32 @@ def analyze_i18n_json(path: Path) -> dict:
     ensure_string(data['url'], 'url')
     ensure_string(data['preScriptPath'], 'preScriptPath')
 
-    languages = data['languages']
-    if not isinstance(languages, dict):
-        raise ValueError("field 'languages' must be an object")
+    # Validate entries array
+    entries = data.get('entries', [])
+    if not isinstance(entries, list):
+        raise ValueError("field 'entries' must be an array")
 
-    missing_langs = [code for code in REQUIRED_LANGUAGE_CODES if code not in languages]
-    extra_langs = [code for code in languages.keys() if code not in REQUIRED_LANGUAGE_CODES]
-    if missing_langs:
-        raise ValueError(f"missing language codes: {', '.join(missing_langs)}")
-    if extra_langs:
-        raise ValueError(f"unexpected language codes: {', '.join(sorted(extra_langs))}")
+    if len(entries) == 0:
+        raise ValueError("field 'entries' must contain at least one entry")
 
-    for code in REQUIRED_LANGUAGE_CODES:
-        ensure_string(languages[code], f'languages.{code}')
+    for i, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            raise ValueError(f"entries[{i}] must be an object")
+        if 'key' not in entry:
+            raise ValueError(f"entries[{i}] missing 'key'")
+        if 'languages' not in entry:
+            raise ValueError(f"entries[{i}] missing 'languages'")
+        if not isinstance(entry['languages'], dict):
+            raise ValueError(f"entries[{i}].languages must be an object")
+
+        # Check required languages in each entry
+        entry_langs = entry['languages']
+        missing_langs = [code for code in REQUIRED_LANGUAGE_CODES if code not in entry_langs]
+        if missing_langs:
+            raise ValueError(f"entries[{i}] missing language codes: {', '.join(missing_langs)}")
+
+        for code in REQUIRED_LANGUAGE_CODES:
+            ensure_string(entry_langs[code], f'entries[{i}].languages.{code}')
 
     options = data['options']
     if not isinstance(options, dict):
@@ -114,6 +127,7 @@ def analyze_i18n_json(path: Path) -> dict:
         'language_codes': list(REQUIRED_LANGUAGE_CODES),
         'is_draft': is_draft,
         'data': data,
+        'entry_count': len(entries),
     }
 
 
@@ -137,7 +151,7 @@ def main() -> int:
         return fail(str(exc))
 
     state = 'draft' if result['is_draft'] else 'active'
-    print(f"OK: validated i18n json ({state}) with {len(result['language_codes'])} languages")
+    print(f"OK: validated i18n json ({state}) with {result['entry_count']} entries and {len(result['language_codes'])} languages")
     return 0
 
 
