@@ -1,0 +1,148 @@
+{
+  "name": "幸运卡片（集福活动）- 多语言校验",
+  "url": "",
+  "preScriptPath": "",
+  "options": {
+    "matchRule": "normalized-exact",
+    "captureRegion": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    }
+  },
+  "entries": [
+    {
+      "key": "UI_LUCKY_CARDS_TITLE",
+      "languages": {
+        "en-us": "Lucky Cards",
+        "id-id": "Kartu Beruntung",
+        "pt-pt": "Cartas da Sorte",
+        "es-es": "Cartas de la Suerte",
+        "bn-bn": "লাকি কার্ডস",
+        "tr-tr": "Şanslı Kartlar",
+        "fp-fp": "Cartes Chanceuses"
+      }
+    },
+    {
+      "key": "UI_LUCKY_CARDS_REWARDS",
+      "languages": {
+        "en-us": "Lucky Cards Rewards",
+        "id-id": "Hadiah Kartu Beruntung",
+        "pt-pt": "Recompensas de Cartas da Sorte",
+        "es-es": "Recompensas de Tarjetas de la Suerte",
+        "bn-bn": "লাকি কার্ড পুরস্কার",
+        "tr-tr": "Şanslı Kartlar Ödülleri",
+        "fp-fp": "Récompenses des Cartes Chanceuses"
+      }
+    },
+    {
+      "key": "UI_COLLECT_ALL_5_CARDS_SHARE",
+      "languages": {
+        "en-us": "Collect all 5 cards share $1,000,000",
+        "id-id": "Kumpulkan semua 5 kartu bagikan $1,000,000",
+        "pt-pt": "Colete todas as 5 cartas e divida $1,000,000",
+        "es-es": "Colecciona las 5 cartas y comparte $1,000,000",
+        "bn-bn": "সব ৫টি কার্ড সংগ্রহ করুন $1,000,000 শেয়ার করুন",
+        "tr-tr": "Tüm 5 kartı topla, $1,000,000 paylaş",
+        "fp-fp": "Collectionnez les 5 cartes partagez $1,000,000"
+      }
+    },
+    {
+      "key": "UI_COMPLETE_TASKS_TO_EARN_CARDS",
+      "languages": {
+        "en-us": "Complete tasks to earn cards",
+        "id-id": "Selesaikan tugas untuk mendapatkan kartu",
+        "pt-pt": "Complete tarefas para ganhar cartas",
+        "es-es": "Completa tareas para ganar cartas",
+        "bn-bn": "কার্ড অর্জন করতে কাজ সম্পূর্ণ করুন",
+        "tr-tr": "Kart kazanmak için görevleri tamamla",
+        "fp-fp": "Terminez les tâches pour gagner des cartes"
+      }
+    },
+    {
+      "key": "UI_DAILY_LOGIN",
+      "languages": {
+        "en-us": "Daily Login",
+        "id-id": "Login Harian",
+        "pt-pt": "Login Diário",
+        "es-es": "Inicio de Sesión Diario",
+        "bn-bn": "প্রতিদিনের লগইন",
+        "tr-tr": "Günlük Giriş",
+        "fp-fp": "Connexion Quotidienne"
+      }
+    },
+    {
+      "key": "UI_BET_AMOUNT",
+      "languages": {
+        "en-us": "Bet Amount",
+        "id-id": "Jumlah Taruhan",
+        "pt-pt": "Valor da Aposta",
+        "es-es": "Monto de la Apuesta",
+        "bn-bn": "বাজি পরিমাণ",
+        "tr-tr": "Bahis Miktarı",
+        "fp-fp": "Montant du Pari"
+      }
+    },
+    {
+      "key": "UI_NEW_DIRECT_TOPUP_MEMBER",
+      "languages": {
+        "en-us": "New Direct top-up member",
+        "id-id": "Member top-up langsung baru",
+        "pt-pt": "Novo membro de recarga direta",
+        "es-es": "Nuevo miembro de recarga directa",
+        "bn-bn": "নতুন সরাসরি রিচার্জ সদস্য",
+        "tr-tr": "Yeni doğrudan yükleme üyesi",
+        "fp-fp": "Nouveau membre de recharge directe"
+      }
+    },
+    {
+      "key": "UI_DETAILED_RULES",
+      "languages": {
+        "en-us": "Detailed Rules",
+        "id-id": "Aturan Detail",
+        "pt-pt": "Regras Detalhadas",
+        "es-es": "Reglas Detalladas",
+        "bn-bn": "বিস্তারিত নিয়ম",
+        "tr-tr": "Detaylı Kurallar",
+        "fp-fp": "Règles Détaillées"
+      }
+    },
+    {
+      "key": "UI_COLLECT_5_TYPES_OF_CARDS",
+      "languages": {
+        "en-us": "Collect 5 types of cards",
+        "id-id": "Kumpulkan 5 jenis kartu",
+        "pt-pt": "Colete 5 tipos de cartas",
+        "es-es": "Colecciona 5 tipos de cartas",
+        "bn-bn": "৫ প্রকারের কার্ড সংগ্রহ করুন",
+        "tr-tr": "5 tür kart topla",
+        "fp-fp": "Collectionnez 5 types de cartes"
+      }
+    },
+    {
+      "key": "UI_WAITING_FOR_DRAW",
+      "languages": {
+        "en-us": "Waiting for the draw",
+        "id-id": "Menundi pengundian",
+        "pt-pt": "Aguardando o sorteio",
+        "es-es": "Esperando el sorteo",
+        "bn-bn": "ড্রয়ের জন্য অপেক্ষা করছে",
+        "tr-tr": "Çekiliş bekleniyor",
+        "fp-fp": "En attente du tirage"
+      }
+    },
+    {
+      "key": "UI_EVERY_SUPER_LUCKY_CARD",
+      "languages": {
+        "en-us": "Every Super Lucky Card earns you a slice of the grand prize",
+        "id-id": "Setiap Kartu Super Beruntung memberi Anda bagian dari hadiah utama",
+        "pt-pt": "Cada Carta Super da Sorte rende uma fatia do prêmio principal",
+        "es-es": "Cada Carta Super de la Suerte te da una parte del premio mayor",
+        "bn-bn": "প্রতিটি সুপার লাকি কার্ড আপনাকে গ্র্যান্ড প্রাইজের একটি অংশ উপার্জন করে",
+        "tr-tr": "Her Süper Şanslı Kart size büyük ödülün bir dilimini kazandırır",
+        "fp-fp": "Chaque Super Carte Chanceuse vous rapporte une part du grand prix"
+      }
+    }
+  ]
+}
