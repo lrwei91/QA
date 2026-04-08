@@ -28,6 +28,7 @@
 
 #### SKILL.md
 - 明确多语言 JSON 中 `key` 字段为可选
+- 删除与 qa.md 重复的章节（Welcome message、Test case type selection、Excel Export Options、Supplement Existing Testcases、Error Handling）
 
 ---
 
