@@ -3,71 +3,8 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-04-08T16:30:00+08:00",
+  "updated_at": "2026-04-08T22:11:18+08:00",
   "entries": [
-    {
-      "id": "tc-generated-20260408-xlsx-lucky-cards-full",
-      "group_key": "group-lucky-cards-full",
-      "title": "幸运卡片（集福活动）- 完整用例",
-      "module": "运营活动",
-      "module_ids": [
-        "module-6b810558"
-      ],
-      "topic": "幸运卡片/集福活动完整测试用例",
-      "format": "xlsx",
-      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 完整用例_20260408.xlsx",
-      "source_refs": [
-        "需求文档：五福合成/幸运卡片活动"
-      ],
-      "tags": [
-        "运营活动",
-        "幸运卡片",
-        "集福活动",
-        "完整用例",
-        "卡片合成",
-        "活动配置",
-        "多语言"
-      ],
-      "status": "active",
-      "created_at": "2026-04-08T16:30:00+08:00",
-      "updated_at": "2026-04-08T16:30:00+08:00",
-      "platform_scope": [
-        "客户端",
-        "账服"
-      ],
-      "template": ""
-    },
-    {
-      "id": "tc-generated-20260408-xlsx-lucky-cards",
-      "group_key": "group-lucky-cards-smoke",
-      "title": "幸运卡片（集福活动）- 冒烟用例",
-      "module": "运营活动",
-      "module_ids": [
-        "module-6b810558"
-      ],
-      "topic": "幸运卡片/集福活动核心流程测试",
-      "format": "xlsx",
-      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 冒烟用例_20260408.xlsx",
-      "source_refs": [
-        "需求文档：五福合成/幸运卡片活动"
-      ],
-      "tags": [
-        "运营活动",
-        "幸运卡片",
-        "集福活动",
-        "冒烟用例",
-        "卡片合成",
-        "活动配置"
-      ],
-      "status": "active",
-      "created_at": "2026-04-08T15:30:00+08:00",
-      "updated_at": "2026-04-08T16:00:00+08:00",
-      "platform_scope": [
-        "客户端",
-        "账服"
-      ],
-      "template": ""
-    },
     {
       "id": "tc-generated-xlsx-e6c7bbe8",
       "group_key": "group-38e8c290",
@@ -124,6 +61,33 @@
       "template": ""
     },
     {
+      "id": "tc-generated-20260408-xlsx-4442fd1c",
+      "group_key": "group-20260408-564744a8",
+      "title": "复充返利活动 - 完整用例_20260408",
+      "module": "复充返利",
+      "module_ids": [
+        "module-06c74ea0"
+      ],
+      "topic": "复充返利活动 - 完整用例_20260408",
+      "format": "xlsx",
+      "rel_path": "generated/复充返利/复充返利活动 - 完整用例_20260408.xlsx",
+      "source_refs": [],
+      "tags": [
+        "复充返利",
+        "复充返利活动",
+        "完整用例"
+      ],
+      "status": "active",
+      "created_at": "2026-04-08T22:11:18+08:00",
+      "updated_at": "2026-04-08T22:11:18+08:00",
+      "platform_scope": [
+        "管理后台",
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
       "id": "tc-generated-2026-03-30-xlsx-98c0cbd1",
       "group_key": "group-2026-03-30-73519006",
       "title": "帐服报表 - 免费旋转数据优化_2026-03-30",
@@ -146,31 +110,6 @@
       "created_at": "2026-03-30T13:45:25+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "账服"
-      ],
-      "template": ""
-    },
-    {
-      "id": "tc-generated-20260408-xlsx-5c5c8ef8",
-      "group_key": "group-e6c3afda",
-      "title": "自定义厂家分类图标_20260408",
-      "module": "自定义厂家",
-      "module_ids": [
-        "module-6aa60de8"
-      ],
-      "topic": "自定义厂家分类图标上传功能",
-      "format": "xlsx",
-      "rel_path": "generated/自定义厂家分类图标_20260408.xlsx",
-      "source_refs": [],
-      "tags": [
-        "自定义厂家",
-        "自定义厂家分类图标"
-      ],
-      "status": "active",
-      "created_at": "2026-04-08T10:57:52+08:00",
-      "updated_at": "2026-04-08T10:57:52+08:00",
-      "platform_scope": [
-        "客户端",
         "账服"
       ],
       "template": ""
@@ -283,6 +222,69 @@
       "template": ""
     },
     {
+      "id": "tc-generated-20260408-xlsx-lucky-cards",
+      "group_key": "group-lucky-cards-smoke",
+      "title": "幸运卡片（集福活动）- 冒烟用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运卡片/集福活动核心流程测试",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 冒烟用例_20260408.xlsx",
+      "source_refs": [
+        "需求文档：五福合成/幸运卡片活动"
+      ],
+      "tags": [
+        "运营活动",
+        "幸运卡片",
+        "集福活动",
+        "冒烟用例",
+        "卡片合成",
+        "活动配置"
+      ],
+      "status": "active",
+      "created_at": "2026-04-08T15:30:00+08:00",
+      "updated_at": "2026-04-08T16:00:00+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260408-xlsx-lucky-cards-full",
+      "group_key": "group-lucky-cards-full",
+      "title": "幸运卡片（集福活动）- 完整用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运卡片/集福活动完整测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 完整用例_20260408.xlsx",
+      "source_refs": [
+        "需求文档：五福合成/幸运卡片活动"
+      ],
+      "tags": [
+        "运营活动",
+        "幸运卡片",
+        "集福活动",
+        "完整用例",
+        "卡片合成",
+        "活动配置",
+        "多语言"
+      ],
+      "status": "active",
+      "created_at": "2026-04-08T16:30:00+08:00",
+      "updated_at": "2026-04-08T16:30:00+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
       "id": "tc-generated-xlsx-9d15e8db",
       "group_key": "group-483f0a7c",
       "title": "洗码活动改造",
@@ -357,31 +359,6 @@
         "客户端"
       ],
       "template": ""
-    },
-    {
-      "id": "tc-testcases-generated-无CPF用户限制功能_20260408.xlsx-419631cf",
-      "group_key": "group-数据迁移授权 - 无 CPF 用户限制功能-fbdf1f75",
-      "title": "无 CPF 用户限制功能",
-      "module": "数据迁移授权",
-      "module_ids": [
-        "module-数据迁移授权"
-      ],
-      "topic": "无 CPF 用户限制功能",
-      "platform_scope": [
-        "账服",
-        "客户端"
-      ],
-      "format": "xlsx",
-      "rel_path": "generated/无CPF用户限制功能_20260408.xlsx",
-      "template": "",
-      "source_refs": [],
-      "tags": [
-        "数据迁移授权",
-        "无 CPF 用户限制功能"
-      ],
-      "status": "active",
-      "created_at": "2026-04-08T11:22:30+08:00",
-      "updated_at": "2026-04-08T11:24:01+08:00"
     }
   ]
 }

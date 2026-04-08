@@ -100,14 +100,16 @@ def generate_from_template(template_xlsx: str, requirements_json: str, output_xl
     ws = wb.active
 
     # Fill metadata if present
-    # Mapping: metadata key -> (row, column)
+    # IMPORTANT: These fields should remain empty unless user explicitly provides them
+    # Per SKILL.md: "默认留空字段，不自动推断填写"
     metadata_mapping = {
-        "测试平台": (2, 2),      # B2
-        "系统&版本": (3, 2),     # B3
-        "文档编写人": (4, 2),    # B4
-        "参考档": (6, 2),        # B6 (merged B6:F6)
-        "测试日期": (2, 5),      # E2
-        "最后更新": (3, 5),      # E3
+        # 以下字段默认留空，不自动填充（符合 SKILL.md 要求）
+        # "测试平台": (2, 2),      # B2 - 默认留空
+        # "系统&版本": (3, 2),     # B3 - 默认留空
+        # "文档编写人": (4, 2),    # B4 - 默认留空
+        # "参考档": (6, 2),        # B6 - 默认留空
+        # "测试日期": (2, 5),      # E2 - 默认留空
+        # "最后更新": (3, 5),      # E3 - 默认留空
     }
 
     for meta_key, (cell_row, cell_col) in metadata_mapping.items():
