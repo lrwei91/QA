@@ -216,6 +216,9 @@ def _build_data_row(row_num: int, data: dict, sst_root: ET.Element, sst_index: d
         "I": data["备注"],
     }
 
+    # Columns that need wrap text (multi-line fields)
+    wrap_columns = ["E", "F", "G"]
+
     for col in ["B", "C", "D", "E", "F", "G", "H", "I"]:
         attrs = {"r": f"{col}{row_num}", "s": DATA_STYLE_MAP[col]}
         value = col_to_value[col]
@@ -223,8 +226,14 @@ def _build_data_row(row_num: int, data: dict, sst_root: ET.Element, sst_index: d
             cell = ET.SubElement(row_elem, _tag("c"), {**attrs, "t": "s"})
             idx = _shared_string_index(sst_root, sst_index, value)
             ET.SubElement(cell, _tag("v")).text = str(idx)
+            # Add wrap text alignment for multi-line fields
+            if col in wrap_columns:
+                ET.SubElement(cell, _tag("alignment"), {"wrapText": "1"})
         else:
-            ET.SubElement(row_elem, _tag("c"), attrs)
+            cell = ET.SubElement(row_elem, _tag("c"), attrs)
+            # Add wrap text alignment for multi-line fields even if empty
+            if col in wrap_columns:
+                ET.SubElement(cell, _tag("alignment"), {"wrapText": "1"})
 
     return row_elem
 

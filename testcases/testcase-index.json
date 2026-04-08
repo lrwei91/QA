@@ -3,7 +3,7 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-04-08T15:30:00+08:00",
+  "updated_at": "2026-04-08T16:00:00+08:00",
   "entries": [
     {
       "id": "tc-generated-20260408-xlsx-lucky-cards",
@@ -15,7 +15,7 @@
       ],
       "topic": "幸运卡片/集福活动核心流程测试",
       "format": "xlsx",
-      "rel_path": "generated/幸运卡片/幸运卡片（集福活动）- 冒烟用例_20260408.xlsx",
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 冒烟用例_20260408.xlsx",
       "source_refs": [
         "需求文档：五福合成/幸运卡片活动"
       ],
@@ -29,7 +29,7 @@
       ],
       "status": "active",
       "created_at": "2026-04-08T15:30:00+08:00",
-      "updated_at": "2026-04-08T15:30:00+08:00",
+      "updated_at": "2026-04-08T16:00:00+08:00",
       "platform_scope": [
         "客户端",
         "账服"
