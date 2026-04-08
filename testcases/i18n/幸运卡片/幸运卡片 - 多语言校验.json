@@ -13,7 +13,7 @@
   },
   "entries": [
     {
-      "key": "UI_LUCKY_1_COLLECT_ALL_5_CARDS_SHARE_XXXX",
+      "key": "",
       "languages": {
         "en-us": "Collect all 5 cards share XXXX",
         "id-id": "Kumpulkan semua 5 kartu bagikan XXXXX",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_2_COMPLETE_TASKS_TO_EARN_CARDS",
+      "key": "",
       "languages": {
         "en-us": "Complete tasks to earn cards",
         "id-id": "Selesaikan tugas untuk mendapatkan kartu",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_3_RECENT_REWARDS",
+      "key": "",
       "languages": {
         "en-us": "Recent Rewards",
         "id-id": "Hadiah Terbaru",
@@ -49,7 +49,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_4_DETAILED_RULES",
+      "key": "",
       "languages": {
         "en-us": "Detailed Rules",
         "id-id": "Aturan Detail",
@@ -61,7 +61,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_5_COLLECT_5_TYPES_OF_CARDS",
+      "key": "",
       "languages": {
         "en-us": "Collect 5 types of cards",
         "id-id": "Kumpulkan 5 jenis kartu",
@@ -73,7 +73,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_6_USE_5_DIFFERENT_CARDS_TO_SYNTH",
+      "key": "",
       "languages": {
         "en-us": "Use 5 different cards to synthesize a super lucky card.",
         "id-id": "Gunakan 5 kartu berbeda untuk menggabungkan kartu super beruntung",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_7_WAITING_FOR_THE_DRAW_AT_XXXXT",
+      "key": "",
       "languages": {
         "en-us": "Waiting for the draw at xxxx(time)",
         "id-id": "Menunggu undian di xxxx（time）",
@@ -97,7 +97,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_8_EVERY_SUPER_LUCKY_CARD_EARNS_Y",
+      "key": "",
       "languages": {
         "en-us": "Every Super Lucky Card earns you a slice of the grand prize — collect more cards to claim a bigger payout!",
         "id-id": "Setiap Kartu Super Lucky memberi Anda sepotong dari hadiah utama — kumpulkan lebih banyak kartu untuk mengklaim pembayaran yang lebih besar!",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_9_RECORD",
+      "key": "",
       "languages": {
         "en-us": "Record",
         "id-id": "Rekaman",
@@ -121,7 +121,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_10_LOGIN_EVERY_DAY_TO_RECEIVE_1_C",
+      "key": "",
       "languages": {
         "en-us": "Login every day to receive 1 card.",
         "id-id": "Login setiap hari untuk mendapatkan 1 kartu",
@@ -133,7 +133,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_11_DAILY_LOGIN",
+      "key": "",
       "languages": {
         "en-us": "Daily Login",
         "id-id": "Masuk Harian",
@@ -145,7 +145,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_12_BET_AMOUNT_XXXX",
+      "key": "",
       "languages": {
         "en-us": "Bet Amount xxxx",
         "id-id": "Jumlah Taruhan xxxx",
@@ -157,7 +157,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_13_ON_THE_DAY_THE_BET_AMOUNT_REAC",
+      "key": "",
       "languages": {
         "en-us": "On the day the Bet Amount reaches xxx, you can receive 1 card.",
         "id-id": "Pada hari jumlah taruhan mencapai xxx, Anda dapat menerima 1 kartu.",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_14_NEW_DIRECTMEMBER_DEPOSIT_AMOU",
+      "key": "",
       "languages": {
         "en-us": "New Direct-Member Deposit Amount xxxx",
         "id-id": "Jumlah Setoran Anggota Langsung Baru xxxx",
@@ -181,7 +181,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_15_NEW_DIRECTMEMBER_DEPOSIT_AMOU",
+      "key": "",
       "languages": {
         "en-us": "New direct-member deposit amount xxxx, you can receive 1 card.",
         "id-id": "Jumlah setoran anggota langsung baru xxxx, Anda dapat menerima 1 kartu.",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_16_NEW_DIRECTMEMBER_BET_AMOUNT_X",
+      "key": "",
       "languages": {
         "en-us": "New Direct-Member Bet Amount xxxx",
         "id-id": "Jumlah taruhan Anggota Langsung baru xxxx",
@@ -205,7 +205,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_17_RECEIVE",
+      "key": "",
       "languages": {
         "en-us": "Receive",
         "id-id": "Terima",
@@ -217,7 +217,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_18_FUSE_NOW",
+      "key": "",
       "languages": {
         "en-us": "Fuse Now",
         "id-id": "Gabungkan Sekarang",
@@ -229,7 +229,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_19_RECEIVED",
+      "key": "",
       "languages": {
         "en-us": "Received",
         "id-id": "Telah diterima",
@@ -241,7 +241,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_20_SHARE",
+      "key": "",
       "languages": {
         "en-us": "Share",
         "id-id": "Bagikan",
@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_21_REDEMPTION_STORE",
+      "key": "",
       "languages": {
         "en-us": "Redemption Store",
         "id-id": "Toko Penukaran",
@@ -265,7 +265,7 @@
       }
     },
     {
-      "key": "UI_LUCKY_22_REDEEM",
+      "key": "",
       "languages": {
         "en-us": "Redeem",
         "id-id": "Tebus",

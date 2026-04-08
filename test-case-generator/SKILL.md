@@ -426,6 +426,8 @@ JSON 固定结构：
 - `options.matchRule`
 - `options.captureRegion.x/y/width/height`
 - `entries` (数组，每个元素包含 `key` 和 `languages`)
+  - `key` (可选)：文案 key，仅在需求文档明确提供时写入，否则留空字符串
+  - `languages` (必填)：包含 7 种标准语言的翻译文案
 
 生成规则：
 

@@ -72,8 +72,9 @@ def analyze_i18n_json(path: Path) -> dict:
     for i, entry in enumerate(entries):
         if not isinstance(entry, dict):
             raise ValueError(f"entries[{i}] must be an object")
-        if 'key' not in entry:
-            raise ValueError(f"entries[{i}] missing 'key'")
+        # 'key' is optional - only validate if present
+        if 'key' in entry and not isinstance(entry['key'], str):
+            raise ValueError(f"entries[{i}].key must be a string")
         if 'languages' not in entry:
             raise ValueError(f"entries[{i}] missing 'languages'")
         if not isinstance(entry['languages'], dict):
