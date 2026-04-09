@@ -6,6 +6,79 @@
 
 ---
 
+## [2.0.0] - 2026-04-10
+
+### 新增
+
+#### Figma MCP 集成
+- **docs/figma-mcp-guide.md**：Figma MCP 配置指南
+  - Token 获取步骤
+  - MCP 服务器配置
+  - 连接验证方法
+- **test-case-generator/skills/figma-reader/SKILL.md**：Figma 设计稿读取技能
+  - 从 Figma 提取文案数据、组件结构、组件状态、交互说明
+  - 支持指定 Frame 节点
+  - 与 testcase-generate 技能集成
+
+#### Axure RP 解析
+- **test-case-generator/scripts/parse_axure_html.py**：Axure HTML 解析脚本
+  - 支持单个 HTML 文件或目录解析
+  - 支持 `--recursive` 递归模式
+  - 输出 `raw` 或 `testcase` 两种格式
+- **test-case-generator/skills/axure-parser/SKILL.md**：Axure 解析技能
+  - 提取页面结构、元件信息、注释说明
+  - 与 testcase-generate 技能集成
+- **docs/axure-export-guide.md**：Axure RP 导出指南
+  - 导出选项配置
+  - 元件注释规范
+  - 交互说明规范
+
+#### /qa 命令增强
+- 支持多源输入流程
+  - 需求文档（PRD/Word）
+  - Axure HTML（自动检测）
+  - Figma 链接（可选）
+- 自动检测 Axure HTML 数据并解析
+
+### 变更
+
+#### 文件命名规范
+- **测试用例文件命名**：从 `<模块>_<YYYYMMDD>.xlsx` 改为 `<模块>/<用例名称>.xlsx`
+  - 不再在文件名中包含日期
+  - 支持子目录组织
+- **更新文档**：
+  - README.md
+  - .claude/commands/qa.md
+  - test-case-generator/skills/testcase-format/SKILL.md
+  - docs/troubleshooting.md
+
+#### README.md 优化
+- 移除 AionUi 图形化界面相关内容
+- 依赖安装步骤前置（Python 依赖从第 4 步调整到第 3 步）
+- 新增 Axure RP 导出快速配置章节
+
+#### 文档更新
+- **test-case-generator/scripts/README.md**：新增 parse_axure_html.py 使用说明
+- **CLAUDE.md**：新增 figma-reader 和 axure-parser 技能说明
+
+### 架构优化
+
+#### 技能拆分
+- 从 monolithic SKILL.md 拆分为 5 个专用技能：
+  - testcase-generate：从需求生成测试用例
+  - testcase-augment：补充已有用例
+  - testcase-analyze：仅分析需求
+  - testcase-i18n：多语言 JSON 校验
+  - testcase-format：Excel 导出与索引更新
+  - figma-reader：Figma 设计稿读取
+  - axure-parser：Axure HTML 解析
+
+#### 目录结构优化
+- docs/figma-mcp-guide.md
+- docs/axure-export-guide.md
+
+---
+
 ## [1.2.0] - 2026-04-08
 
 ### 变更
@@ -112,7 +185,7 @@
   - 定义 27+ 业务模块及其依赖关系
   - 支持模块别名和触发词匹配
 
-#### 脚本工具 (10 个)
+#### 脚本工具 (10 个 → 11 个)
 | 脚本 | 用途 |
 |------|------|
 | `upsert_testcase_index.py` | 新增/更新索引条目 |
@@ -125,6 +198,7 @@
 | `export_testcase_report.py` | 生成覆盖率报告 |
 | `generate_testcase_from_template.py` | 从模板生成用例 |
 | `xlsx_append_and_highlight.py` | Excel 追加标黄 |
+| `parse_axure_html.py` | Axure HTML 解析 (v2.0.0 新增) |
 
 #### 文档体系
 - `README.md`：项目说明
@@ -196,14 +270,13 @@
 
 ---
 
-## [计划中]
+## [未来计划]
 
-### v1.1.0
+### v2.1.0
 
 #### 新增
-- CLI `--help` 支持：所有 10 个脚本使用 argparse 添加帮助信息
+- CLI `--help` 支持：所有 11 个脚本使用 argparse 添加帮助信息
 - `templates/` 目录：统一管理 Excel 和 JSON 模板
-- `CHANGELOG.md`：版本变更日志（本文档）
 
 #### 改进
 - 单元测试覆盖：使用 pytest 为核心脚本编写测试（目标 60%+ 覆盖率）

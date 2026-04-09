@@ -10,11 +10,13 @@
 
 1. 安装 Node.js（运行环境）
 2. 安装 Claude Code（AI 工具）
-3. 配置 API（使用 cc-switch）
-4. 安装 Python 依赖
+3. 安装 Python 依赖
+4. 配置 API（使用 cc-switch）
 5. 开始生成测试用例
 
-**可选**：安装 AionUi 图形化界面
+**可选配置：**
+- 配置 Figma MCP（从 UI 设计稿生成用例）
+- 配置 Axure RP 导出（从原型生成用例）
 
 ---
 
@@ -64,24 +66,7 @@ claude --version
 
 ---
 
-### 3. 配置 API（使用 cc-switch）
-
-Claude Code 需要配置 API 才能使用。
-
-**下载 cc-switch:**
-1. 访问 [cc-switch GitHub 仓库](https://github.com/farion1231/cc-switch)
-2. 下载并安装 cc-switch 应用
-3. 在 cc-switch 中加载你的 API 密钥
-4. 启动 Claude Code
-
-**启动 Claude Code:**
-```bash
-claude
-```
-
----
-
-### 4. 安装 Python 依赖
+### 3. 安装 Python 依赖
 
 QA 技能包需要 Python 依赖来处理 Excel 文件。
 
@@ -101,6 +86,23 @@ pip3 install -r requirements.txt
 python3 -c "import openpyxl, pandas; print('✓ 依赖安装成功')"
 ```
 显示"依赖安装成功"即表示安装完成。
+
+---
+
+### 4. 配置 API（使用 cc-switch）
+
+Claude Code 需要配置 API 才能使用。
+
+**下载 cc-switch:**
+1. 访问 [cc-switch GitHub 仓库](https://github.com/farion1231/cc-switch)
+2. 下载并安装 cc-switch 应用
+3. 在 cc-switch 中加载你的 API 密钥
+4. 启动 Claude Code
+
+**启动 Claude Code:**
+```bash
+claude
+```
 
 ---
 
@@ -132,7 +134,7 @@ python3 -c "import openpyxl, pandas; print('✓ 依赖安装成功')"
    ```
 3. 输入命令:
    ```
-   /qa 生成测试用例
+   /qa 
    ```
 4. 粘贴你的需求文档内容
 5. 选择「生成测试用例」选项
@@ -144,19 +146,64 @@ python3 -c "import openpyxl, pandas; print('✓ 依赖安装成功')"
 
 生成的用例将保存到：
 ```
-testcases/generated/认证中心/用户登录功能优化_YYYYMMDD.xlsx
+testcases/generated/认证中心/用户登录功能优化.xlsx
 ```
 
 ---
 
-## 可选：安装 AionUi 图形化界面
+## 可选：配置 Figma MCP
 
-AionUi 是 Claude Code 的技能管理平台，提供图形化界面。
+Figma MCP 允许从 UI 设计稿直接提取文案和组件信息，用于生成测试用例。
 
-**下载安装:**
-1. 访问 [AionUi GitHub 仓库](https://github.com/iOfficeAI/AionUi)
-2. 下载并安装 AionUi 应用
-3. 启动 AionUi 并加载 QA 技能包
+**快速配置:**
+
+```bash
+# 1. 获取 Figma Token (https://figma.com/settings → Personal access tokens)
+# 2. 添加到环境变量
+export FIGMA_ACCESS_TOKEN="figd_xxxxxxxxxxxxxx"
+
+# 3. 配置 MCP 服务器 (~/.claude/settings.json)
+{
+  "mcpServers": {
+    "figma": {
+      "command": "npx",
+      "args": ["-y", "@figma/mcp-server@latest"],
+      "env": {
+        "FIGMA_ACCESS_TOKEN": "${FIGMA_ACCESS_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+**详细配置指南:** [docs/figma-mcp-guide.md](docs/figma-mcp-guide.md)
+
+**使用方式:**
+```
+/qa 生成测试用例 → 提供需求文档 → 提供 Figma 链接 (可选)
+```
+
+---
+
+## 可选：配置 Axure RP 导出
+
+Axure RP 导出的 HTML 文件可以提取 UI 结构、元件信息和交互说明，用于生成测试用例。
+
+**快速导出:**
+
+1. 在 Axure 中：发布 → 生成 HTML 文件
+2. 勾选选项：
+   - 生成原型说明
+   - 包含元件注释
+   - 包含交互说明
+3. 输出目录：`testcases/axure_export/`
+
+**使用方式:**
+```
+/qa 生成测试用例 → 提供需求文档 → 提供 Axure HTML 目录
+```
+
+**详细指南:** [docs/axure-export-guide.md](docs/axure-export-guide.md)
 
 ---
 
@@ -170,7 +217,9 @@ QA/
 │   ├── contributing.md          # 贡献指南
 │   ├── troubleshooting.md       # 故障排查与避坑指南
 │   ├── glossary.md              # 术语词典
-│   └── changelog.md             # 变更日志
+│   ├── changelog.md             # 变更日志
+│   ├── figma-mcp-guide.md       # Figma MCP 配置指南
+│   └── axure-export-guide.md    # Axure RP 导出指南
 ├── test-case-generator/         # 技能包核心
 │   ├── SKILL.md                 # 技能包规则
 │   ├── references/              # 参考文档
@@ -260,7 +309,8 @@ QA/
 1. **Node.js 未安装**: 执行 `node --version` 检查，未安装请参考步骤 1
 2. **Claude Code 无法启动**: 执行 `claude --version` 检查，未安装请参考步骤 2
 3. **API 配置问题**: 确认 cc-switch 已正确配置 API 密钥
-4. **Python 依赖缺失**: 重新执行步骤 4 安装依赖
+4. **Python 依赖缺失**: 重新执行步骤 3 安装依赖
+5. **Figma MCP 连接失败**: 检查 Token 是否有效，参考 [Figma MCP 配置指南](docs/figma-mcp-guide.md)
 
 **更多帮助:**
 
@@ -285,4 +335,4 @@ QA/
 
 ## 版本
 
-当前版本：v1.0.0 | [变更日志](docs/changelog.md)
+当前版本：v2.0.0 | [变更日志](docs/changelog.md)

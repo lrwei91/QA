@@ -57,15 +57,15 @@
 
 **用途**：关联同一需求/主题下的多个产物
 
-**命名规则**：`<模块>-<主题>-<YYYYMMDD>`
+**命名规则**：`<模块>-<主题>`
 
 **示例**：
-- `personal-center-free-spin-20260401`
-- `task-system-optimization-20260328`
+- `personal-center-free-spin`
+- `task-system-optimization`
 
 **关联关系**：
 ```
-group_key: task-system-optimization-20260328
+group_key: task-system-optimization
 ├── testcase-index.json 中的条目 (测试用例)
 └── i18n-index.json 中的条目 (多语言 JSON)
 ```

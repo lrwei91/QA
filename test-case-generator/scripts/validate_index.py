@@ -23,7 +23,7 @@ REQUIRED_KEYS = {
     'server_signals',
     'reference_file',
 }
-VALID_DOMAINS = {'account-access', 'commerce-ops', 'platform-ops', 'operation-management'}
+VALID_DOMAINS = {'account-access', 'finance-system', 'marketing-activities', 'affiliate-management'}
 VALID_PLATFORMS = {'客户端', '账服'}
 
 
@@ -43,7 +43,7 @@ def main() -> int:
     )
     parser.add_argument(
         'index_path',
-        help='Path to module index file (references/module-index.json)'
+        help='Path to module index file (index-rules/module-index.json)'
     )
     args = parser.parse_args()
 
@@ -92,7 +92,7 @@ def main() -> int:
         if bad_platforms:
             return fail(f"entry '{entry_id}' has invalid platform_scope value(s): {', '.join(sorted(bad_platforms))}")
 
-        ref = Path(index_path.parent.parent / entry['reference_file'])
+        ref = Path(index_path.parent / entry['reference_file'])
         if not ref.exists():
             return fail(f"entry '{entry_id}' points to missing reference file: {entry['reference_file']}")
 

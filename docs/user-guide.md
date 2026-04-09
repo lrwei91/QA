@@ -177,7 +177,7 @@
 
 | 用户指令 | 行为 |
 |----------|------|
-| "导出 Excel" | 写入 `testcases/generated/<模块>/<主题>_<yyyymmdd>.xlsx` |
+| "导出 Excel" | 写入 `testcases/generated/<模块>/<主题>.xlsx` |
 | "保存到桌面" | 写入用户指定路径 |
 | "更新索引" | 调用 `upsert_testcase_index.py` 更新索引 |
 
@@ -212,7 +212,7 @@ python3 test-case-generator/scripts/xlsx_fill_testcase_template.py \
 导出后自动调用：
 ```bash
 python3 test-case-generator/scripts/upsert_testcase_index.py \
-    testcases/generated/<模块>/<主题>_<yyyymmdd>.xlsx
+    testcases/generated/<模块>/<主题>.xlsx
 ```
 
 ---
