@@ -279,7 +279,7 @@ Frame: 主界面
 
 ## 资源文件
 
-- [docs/figma-mcp-guide.md](../../docs/figma-mcp-guide.md) - Figma MCP 配置指南
+- [docs/figma-mcp-guide.md](../../../docs/figma-mcp-guide.md) - Figma MCP 配置指南
 - [test-case-generator/skills/testcase-generate/SKILL.md](../testcase-generate/SKILL.md) - 测试用例生成技能
 
 ## 相关 Skills

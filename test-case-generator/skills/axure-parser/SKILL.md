@@ -332,7 +332,7 @@ python3 test-case-generator/scripts/parse_axure_html.py \
 
 ## 资源文件
 
-- [`parse_axure_html.py`](../../test-case-generator/scripts/parse_axure_html.py) - Axure 解析脚本
+- [`parse_axure_html.py`](../../scripts/parse_axure_html.py) - Axure 解析脚本
 - [`testcase-generate/SKILL.md`](../testcase-generate/SKILL.md) - 测试用例生成技能
 - [`figma-reader/SKILL.md`](../figma-reader/SKILL.md) - Figma 设计稿读取技能
 
