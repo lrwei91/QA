@@ -3,7 +3,7 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-04-08T22:11:18+08:00",
+  "updated_at": "2026-04-09T16:58:08+08:00",
   "entries": [
     {
       "id": "tc-generated-xlsx-e6c7bbe8",
@@ -27,6 +27,35 @@
       "platform_scope": [
         "账服",
         "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260409-xlsx-a8c7f317",
+      "group_key": "group-h5-app-5f99ab1c",
+      "title": "公告管理 - 弹窗公告拆分_20260409",
+      "module": "公告管理",
+      "module_ids": [
+        "module-b8bf4c07"
+      ],
+      "topic": "弹窗公告（h5）和弹窗公告（app）拆分",
+      "format": "xlsx",
+      "rel_path": "generated/公告管理_弹窗公告_20260409.xlsx",
+      "source_refs": [
+        "需求文档：运营管理 - 运营活动 - 公告管理 - 活动公告"
+      ],
+      "tags": [
+        "公告管理",
+        "弹窗公告拆分",
+        "弹窗公告",
+        "H5",
+        "APP"
+      ],
+      "status": "active",
+      "created_at": "2026-04-09T16:58:08+08:00",
+      "updated_at": "2026-04-09T16:58:08+08:00",
+      "platform_scope": [
+        "账服"
       ],
       "template": ""
     },
@@ -109,6 +138,31 @@
       "status": "active",
       "created_at": "2026-03-30T13:45:25+08:00",
       "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260409-xlsx-6f26f8e1",
+      "group_key": "group-66ea9e25",
+      "title": "测试账号管理_20260409",
+      "module": "测试账号管理",
+      "module_ids": [
+        "module-15a6ab1e"
+      ],
+      "topic": "测试账号页面新增字段功能",
+      "format": "xlsx",
+      "rel_path": "generated/测试账号管理_20260409.xlsx",
+      "source_refs": [
+        "需求文档 - 测试账号管理功能"
+      ],
+      "tags": [
+        "测试账号管理"
+      ],
+      "status": "active",
+      "created_at": "2026-04-09T15:04:11+08:00",
+      "updated_at": "2026-04-09T15:04:11+08:00",
       "platform_scope": [
         "账服"
       ],
@@ -253,8 +307,8 @@
       "template": ""
     },
     {
-      "id": "tc-generated-20260408-xlsx-lucky-cards-full",
-      "group_key": "group-lucky-cards-full",
+      "id": "tc-generated-20260408-v2-xlsx-c319c37c",
+      "group_key": "group-303f852a",
       "title": "幸运卡片（集福活动）- 完整用例",
       "module": "运营活动",
       "module_ids": [
@@ -262,22 +316,21 @@
       ],
       "topic": "幸运卡片/集福活动完整测试用例",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 完整用例_20260408.xlsx",
-      "source_refs": [
-        "需求文档：五福合成/幸运卡片活动"
-      ],
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 完整用例_20260408_v2.xlsx",
+      "source_refs": [],
       "tags": [
         "运营活动",
+        "幸运卡片（集福活动",
+        "完整用例",
         "幸运卡片",
         "集福活动",
-        "完整用例",
         "卡片合成",
         "活动配置",
         "多语言"
       ],
       "status": "active",
-      "created_at": "2026-04-08T16:30:00+08:00",
-      "updated_at": "2026-04-08T16:30:00+08:00",
+      "created_at": "2026-04-08T22:35:00+08:00",
+      "updated_at": "2026-04-08T22:35:00+08:00",
       "platform_scope": [
         "客户端",
         "账服"

@@ -4,3 +4,8 @@ node_modules/
 .DS_Store
 .omc/
 tmp/
+.cc-web/
+cc-web/node_modules/
+cc-web/apps/client/dist/
+cc-web/apps/server/dist/
+cc-web/packages/shared/dist/
