@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "store_name": "QA Test Case Store",
+  "root_dir": "outputs",
+  "cases_dir": "generated",
+  "updated_at": "2026-04-11T00:44:35+08:00",
+  "entries": [
+    {
+      "id": "tc-generated-xlsx-e6c7bbe8",
+      "group_key": "group-38e8c290",
+      "title": "分享好礼优化",
+      "module": "全民代管理",
+      "module_ids": [
+        "module-29709a52"
+      ],
+      "topic": "分享好礼优化",
+      "format": "xlsx",
+      "rel_path": "generated/全民代管理/分享好礼优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "全民代管理",
+        "分享好礼"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T01:07:16+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260403-xlsx-6fe3e976",
+      "group_key": "group-31-5ea1dab0",
+      "title": "免费旋转报表与活动记录优化",
+      "module": "厂商活动记录",
+      "module_ids": [
+        "module-37a0db47"
+      ],
+      "topic": "免费旋转数据统计、活动记录净输赢、31 天查询限制",
+      "format": "xlsx",
+      "rel_path": "generated/厂商活动记录/免费旋转报表与活动记录优化_20260403.xlsx",
+      "source_refs": [
+        "需求图片：免费旋转数据统计与活动记录优化"
+      ],
+      "tags": [
+        "厂商活动记录",
+        "免费旋转报表与活动记录",
+        "免费旋转",
+        "一般用户报表",
+        "净输赢",
+        "活动记录"
+      ],
+      "status": "active",
+      "created_at": "2026-04-03T14:19:00+08:00",
+      "updated_at": "2026-04-03T14:19:00+08:00",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-2026-03-30-xlsx-98c0cbd1",
+      "group_key": "group-2026-03-30-73519006",
+      "title": "帐服报表 - 免费旋转数据优化_2026-03-30",
+      "module": "帐服报表",
+      "module_ids": [
+        "module-34585dba"
+      ],
+      "topic": "帐服报表 - 免费旋转数据优化_2026-03-30",
+      "format": "xlsx",
+      "rel_path": "generated/帐服报表/帐服报表 - 免费旋转数据优化_2026-03-30.xlsx",
+      "source_refs": [],
+      "tags": [
+        "帐服报表",
+        "免费旋转数据",
+        "2026",
+        "03",
+        "30"
+      ],
+      "status": "active",
+      "created_at": "2026-03-30T13:45:25+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260403-xlsx-supplement",
+      "group_key": "group-world-cup-smoke",
+      "title": "世界杯竞猜活动_冒烟用例_补充",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "世界杯竞猜客户端冒烟测试用例补充",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_补充.xlsx",
+      "source_refs": [
+        "需求页面：世界杯 - 客户端.html"
+      ],
+      "tags": [
+        "运营活动",
+        "世界杯竞猜",
+        "冒烟用例",
+        "客户端",
+        "赛程查看",
+        "比赛预测",
+        "排行榜"
+      ],
+      "status": "active",
+      "created_at": "2026-04-03T16:34:31+08:00",
+      "updated_at": "2026-04-03T16:34:31+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-82dba900",
+      "group_key": "group-07602359",
+      "title": "任务系统前后端优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "任务系统前后端优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统前后端优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "任务系统"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-3406dc3d",
+      "group_key": "group-89eb0c03",
+      "title": "免费旋转功能优化汇总",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转功能优化汇总",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转功能优化汇总.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-1d3a228b",
+      "group_key": "group-554108bd",
+      "title": "前台显示优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "前台显示优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/前台显示优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "前台显示"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-c31a954a",
+      "group_key": "group-85240dc7",
+      "title": "复充返利活动 - 完整用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "复充返利活动 - 首充后复充触发返利",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/复充返利活动 - 完整用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "复充返利活动",
+        "完整用例",
+        "复充返利",
+        "充值活动",
+        "首充"
+      ],
+      "status": "active",
+      "created_at": "2026-04-11T00:44:35+08:00",
+      "updated_at": "2026-04-11T00:44:35+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260408-xlsx-lucky-cards",
+      "group_key": "group-lucky-cards-smoke",
+      "title": "幸运卡片（集福活动）- 冒烟用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运卡片/集福活动核心流程测试",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 冒烟用例_20260408.xlsx",
+      "source_refs": [
+        "需求文档：五福合成/幸运卡片活动"
+      ],
+      "tags": [
+        "运营活动",
+        "幸运卡片",
+        "集福活动",
+        "冒烟用例",
+        "卡片合成",
+        "活动配置"
+      ],
+      "status": "active",
+      "created_at": "2026-04-08T15:30:00+08:00",
+      "updated_at": "2026-04-08T16:00:00+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-20260408-xlsx-lucky-cards-full",
+      "group_key": "group-lucky-cards-full",
+      "title": "幸运卡片（集福活动）- 完整用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运卡片/集福活动完整测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 完整用例_20260408.xlsx",
+      "source_refs": [
+        "需求文档：五福合成/幸运卡片活动"
+      ],
+      "tags": [
+        "运营活动",
+        "幸运卡片",
+        "集福活动",
+        "完整用例",
+        "卡片合成",
+        "活动配置",
+        "多语言"
+      ],
+      "status": "active",
+      "created_at": "2026-04-08T16:30:00+08:00",
+      "updated_at": "2026-04-08T16:30:00+08:00",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-9d15e8db",
+      "group_key": "group-483f0a7c",
+      "title": "洗码活动改造",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "洗码活动改造",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/洗码活动改造.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "洗码活动"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-e4f30fb5",
+      "group_key": "group-38a36423",
+      "title": "活动周期规则优化-任务系统",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "活动周期规则优化-任务系统",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动周期规则优化-任务系统.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "活动周期规则",
+        "任务系统"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": ""
+    },
+    {
+      "id": "tc-generated-xlsx-0794eb75",
+      "group_key": "group-2c906e08",
+      "title": "锦标赛",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "锦标赛",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/锦标赛.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "锦标赛"
+      ],
+      "status": "active",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-03-31T12:43:40+08:00",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": ""
+    }
+  ]
+}

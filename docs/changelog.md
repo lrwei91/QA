@@ -15,17 +15,17 @@
   - Token 获取步骤
   - MCP 服务器配置
   - 连接验证方法
-- **test-case-generator/skills/figma-reader/SKILL.md**：Figma 设计稿读取技能
+- **engine/skills/figma-reader/SKILL.md**：Figma 设计稿读取技能
   - 从 Figma 提取文案数据、组件结构、组件状态、交互说明
   - 支持指定 Frame 节点
   - 与 testcase-generate 技能集成
 
 #### Axure RP 解析
-- **test-case-generator/scripts/parse_axure_html.py**：Axure HTML 解析脚本
+- **engine/scripts/parse_axure_html.py**：Axure HTML 解析脚本
   - 支持单个 HTML 文件或目录解析
   - 支持 `--recursive` 递归模式
   - 输出 `raw` 或 `testcase` 两种格式
-- **test-case-generator/skills/axure-parser/SKILL.md**：Axure 解析技能
+- **engine/skills/axure-parser/SKILL.md**：Axure 解析技能
   - 提取页面结构、元件信息、注释说明
   - 与 testcase-generate 技能集成
 - **docs/axure-export-guide.md**：Axure RP 导出指南
@@ -49,7 +49,7 @@
 - **更新文档**：
   - README.md
   - .claude/commands/qa.md
-  - test-case-generator/skills/testcase-format/SKILL.md
+  - engine/skills/testcase-format/SKILL.md
   - docs/troubleshooting.md
 
 #### README.md 优化
@@ -58,7 +58,7 @@
 - 新增 Axure RP 导出快速配置章节
 
 #### 文档更新
-- **test-case-generator/scripts/README.md**：新增 parse_axure_html.py 使用说明
+- **engine/scripts/README.md**：新增 parse_axure_html.py 使用说明
 - **CLAUDE.md**：新增 figma-reader 和 axure-parser 技能说明
 
 ### 架构优化
@@ -148,7 +148,7 @@
 ### 修复
 
 #### 索引路径格式
-- 修正 `rel_path` 格式应为 `generated/xxx.xlsx` 而非 `testcases/generated/xxx.xlsx`
+- 修正 `rel_path` 格式应为 `generated/xxx.xlsx` 而非 `outputs/generated/xxx.xlsx`
 - 添加手动修复脚本用于快速修正路径格式
 
 ### 优化
@@ -176,12 +176,12 @@
   - 草稿状态支持
 
 - **双索引结构**
-  - `testcases/testcase-index.json`：测试用例索引
-  - `testcases/i18n-index.json`：多语言 JSON 索引
+  - `outputs/testcase-index.json`：测试用例索引
+  - `outputs/i18n-index.json`：多语言 JSON 索引
   - 通过 `group_key` 关联同一需求下的不同产物
 
 - **模块索引**
-  - `test-case-generator/references/module-index.json`
+  - `engine/references/module-index.json`
   - 定义 27+ 业务模块及其依赖关系
   - 支持模块别名和触发词匹配
 
@@ -203,9 +203,9 @@
 #### 文档体系
 - `README.md`：项目说明
 - `docs/user-guide.md`：5 分钟快速入门
-- `test-case-generator/SKILL.md`：技能包完整规则
-- `test-case-generator/scripts/README.md`：脚本使用手册
-- `test-case-generator/references/`：
+- `engine/SKILL.md`：技能包完整规则
+- `engine/scripts/README.md`：脚本使用手册
+- `engine/references/`：
   - `testcase-store.md`：用例存储规则
   - `output-template.md`：输出模板规范
   - `update-governance.md`：更新治理规则
@@ -215,7 +215,7 @@
 - `docs/troubleshooting.md`：故障排查指南
 
 #### 配置与依赖
-- `test-case-generator/requirements.txt`：Python 依赖定义
+- `engine/requirements.txt`：Python 依赖定义
   - openpyxl >= 3.1.0
   - pandas >= 2.0.0
   - jsonschema >= 4.17.0
@@ -237,10 +237,10 @@
 ### 变更
 
 - 索引结构从单索引拆分为双索引（testcase + i18n）
-- 脚本路径统一为 `test-case-generator/scripts/`
+- 脚本路径统一为 `engine/scripts/`
 - 产物目录结构标准化：
-  - `testcases/generated/`：测试用例
-  - `testcases/i18n/`：多语言 JSON
+  - `outputs/generated/`：测试用例
+  - `outputs/i18n/`：多语言 JSON
 
 ---
 
@@ -285,7 +285,7 @@
 
 #### 文档
 - 补充 TROUBLESHOOTING.md 至 10+ 常见问题
-- 为常见模块补一批真实的 `testcases/i18n/<模块>/<主题>.json`
+- 为常见模块补一批真实的 `outputs/i18n/<模块>/<主题>.json`
 
 ---
 
@@ -318,7 +318,7 @@ MAJOR.MINOR.PATCH
 ## 链接
 
 - [GitHub Repository](https://github.com/...)
-- [技能包文档](test-case-generator/SKILL.md)
+- [技能包文档](engine/SKILL.md)
 - [快速入门](user-guide.md)
 - [贡献指南](contributing.md)
 - [故障排查](troubleshooting.md)

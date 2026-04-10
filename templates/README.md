@@ -16,12 +16,12 @@
 
 **使用脚本**：
 ```bash
-python3 test-case-generator/scripts/generate_testcase_from_template.py \
+python3 engine/scripts/generate_testcase_from_template.py \
     templates/testcase_template.xlsx \
     rows.json \
     output.xlsx
 
-python3 test-case-generator/scripts/xlsx_append_and_highlight.py \
+python3 engine/scripts/xlsx_append_and_highlight.py \
     existing.xlsx \
     new_rows.json \
     output.xlsx \

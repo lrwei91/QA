@@ -14,7 +14,7 @@
 - 测试结果、备注（优先级标签）
 
 存储格式：Excel (.xlsx)
-存储位置：`testcases/generated/<模块>/`
+存储位置：`outputs/generated/<模块>/`
 
 ---
 
@@ -49,7 +49,7 @@
 }
 ```
 
-存储位置：`testcases/i18n/<模块>/`
+存储位置：`outputs/i18n/<模块>/`
 
 ---
 
@@ -76,7 +76,7 @@ group_key: task-system-optimization
 
 **定义**：业务模块的唯一标识符列表
 
-**来源**：`test-case-generator/references/module-index.json`
+**来源**：`engine/references/module-index.json`
 
 **当前已定义模块**（27+）：
 - `personal-center` - 个人中心
@@ -185,7 +185,7 @@ PLATFORM_MAPPING = {
 
 **用途**：测试用例的中心化索引
 
-**位置**：`testcases/testcase-index.json`
+**位置**：`outputs/testcase-index.json`
 
 **结构**：
 ```json
@@ -193,7 +193,7 @@ PLATFORM_MAPPING = {
   "version": "1.0",
   "store_name": "QA-Test-Case-Store",
   "root_dir": ".",
-  "cases_dir": "testcases/generated",
+  "cases_dir": "outputs/generated",
   "updated_at": "2026-04-01T00:00:00Z",
   "entries": [
     {
@@ -205,7 +205,7 @@ PLATFORM_MAPPING = {
       "topic": "<主题>",
       "platform_scope": "客户端 | 账服",
       "format": "xlsx",
-      "rel_path": "testcases/generated/模块/文件.xlsx",
+      "rel_path": "outputs/generated/模块/文件.xlsx",
       "template": "minimax-xlsx",
       "source_refs": [],
       "tags": ["功能测试", "P0"],
@@ -223,7 +223,7 @@ PLATFORM_MAPPING = {
 
 **用途**：多语言校验 JSON 的中心化索引
 
-**位置**：`testcases/i18n-index.json`
+**位置**：`outputs/i18n-index.json`
 
 **结构**：
 ```json
@@ -231,7 +231,7 @@ PLATFORM_MAPPING = {
   "version": "1.0",
   "store_name": "QA-I18N-Store",
   "root_dir": ".",
-  "i18n_dir": "testcases/i18n",
+  "i18n_dir": "outputs/i18n",
   "updated_at": "2026-04-01T00:00:00Z",
   "entries": [
     {
@@ -243,7 +243,7 @@ PLATFORM_MAPPING = {
       "topic": "<主题>",
       "language_codes": ["en-us", "id-id", ...],
       "format": "json",
-      "rel_path": "testcases/i18n/模块/文件.json",
+      "rel_path": "outputs/i18n/模块/文件.json",
       "template": "i18n-schema-v1",
       "source_refs": [],
       "tags": ["多语言", "文案校验"],
@@ -261,7 +261,7 @@ PLATFORM_MAPPING = {
 
 **用途**：业务模块定义与依赖关系索引
 
-**位置**：`test-case-generator/references/module-index.json`
+**位置**：`engine/references/module-index.json`
 
 **结构**：
 ```json

@@ -21,7 +21,7 @@
 ```
 QA/
 ├── .claude/commands/qa.md              # 用户交互入口
-├── test-case-generator/
+├── engine/
 │   ├── skills/                         # 测试用例相关技能
 │   │   ├── testcase-generate/          # 核心生成：需求 → 测试用例
 │   │   ├── testcase-augment/           # 增量补充：分析缺口 → 追加用例
@@ -53,7 +53,7 @@ QA/
 │       ├── validate_testcase_index.py      # 测试用例索引校验
 │       ├── validate_i18n_json.py           # 多语言 JSON 校验
 │       └── ...
-├── testcases/
+├── outputs/
 │   ├── generated/                      # 生成的测试用例 Excel
 │   ├── i18n/                           # 多语言 JSON
 │   ├── testcase-index.json             # 测试用例索引
@@ -160,12 +160,12 @@ Claude 在本仓库中应：
 
 | Skill | 职责 | 触发场景 |
 |-------|------|----------|
-| [`testcase-generate`](test-case-generator/skills/testcase-generate/SKILL.md) | 从需求生成测试用例 | 用户提供 PRD/页面/描述，需要生成用例 |
-| [`testcase-augment`](test-case-generator/skills/testcase-augment/SKILL.md) | 补充已有用例 | 用户提供已有用例，需要补充遗漏 |
-| [`testcase-analyze`](test-case-generator/skills/testcase-analyze/SKILL.md) | 仅分析需求 | 用户只想评估需求质量，不生成用例 |
-| [`testcase-i18n`](test-case-generator/skills/testcase-i18n/SKILL.md) | 多语言 JSON 校验 | 需要校验多语言文案完整性 |
-| [`testcase-format`](test-case-generator/skills/testcase-format/SKILL.md) | Excel 导出与索引更新 | 需要导出 Excel 或更新索引 |
-| [`figma-reader`](test-case-generator/skills/figma-reader/SKILL.md) | Figma 设计稿读取 | 用户提供 Figma 链接，需要提取 UI 数据 |
+| [`testcase-generate`](engine/skills/testcase-generate/SKILL.md) | 从需求生成测试用例 | 用户提供 PRD/页面/描述，需要生成用例 |
+| [`testcase-augment`](engine/skills/testcase-augment/SKILL.md) | 补充已有用例 | 用户提供已有用例，需要补充遗漏 |
+| [`testcase-analyze`](engine/skills/testcase-analyze/SKILL.md) | 仅分析需求 | 用户只想评估需求质量，不生成用例 |
+| [`testcase-i18n`](engine/skills/testcase-i18n/SKILL.md) | 多语言 JSON 校验 | 需要校验多语言文案完整性 |
+| [`testcase-format`](engine/skills/testcase-format/SKILL.md) | Excel 导出与索引更新 | 需要导出 Excel 或更新索引 |
+| [`figma-reader`](engine/skills/figma-reader/SKILL.md) | Figma 设计稿读取 | 用户提供 Figma 链接，需要提取 UI 数据 |
 
 ---
 

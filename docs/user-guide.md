@@ -105,7 +105,7 @@
 ### 第 8 步：导出与索引
 
 若用户要求落盘：
-1. 写入 `testcases/generated/<模块>/<主题>_<日期>.xlsx`
+1. 写入 `outputs/generated/<模块>/<主题>_<日期>.xlsx`
 2. 调用 `upsert_testcase_index.py` 更新索引
 3. 调用 `validate_testcase_index.py` 校验索引
 
@@ -177,7 +177,7 @@
 
 | 用户指令 | 行为 |
 |----------|------|
-| "导出 Excel" | 写入 `testcases/generated/<模块>/<主题>.xlsx` |
+| "导出 Excel" | 写入 `outputs/generated/<模块>/<主题>.xlsx` |
 | "保存到桌面" | 写入用户指定路径 |
 | "更新索引" | 调用 `upsert_testcase_index.py` 更新索引 |
 
@@ -186,7 +186,7 @@
 使用 minimax-xlsx 模板导出：
 
 ```bash
-python3 test-case-generator/scripts/xlsx_fill_testcase_template.py \
+python3 engine/scripts/xlsx_fill_testcase_template.py \
     rows.json output.xlsx \
     --template templates/testcase_template.xlsx
 ```
@@ -211,8 +211,8 @@ python3 test-case-generator/scripts/xlsx_fill_testcase_template.py \
 
 导出后自动调用：
 ```bash
-python3 test-case-generator/scripts/upsert_testcase_index.py \
-    testcases/generated/<模块>/<主题>.xlsx
+python3 engine/scripts/upsert_testcase_index.py \
+    outputs/generated/<模块>/<主题>.xlsx
 ```
 
 ---
@@ -238,7 +238,7 @@ python3 test-case-generator/scripts/upsert_testcase_index.py \
 5. 使用 `upsert_testcase_index.py` 更新索引，复用原条目 id，仅更新 `updated_at`
 
 ```bash
-python3 test-case-generator/scripts/xlsx_append_and_highlight.py \
+python3 engine/scripts/xlsx_append_and_highlight.py \
     existing.xlsx new_rows.json output.xlsx \
     --highlight --highlight-color "FFFF00"
 ```
@@ -302,10 +302,10 @@ python3 test-case-generator/scripts/xlsx_append_and_highlight.py \
 | 脚本 | 用途 | 示例 |
 |------|------|------|
 | `upsert_testcase_index.py` | 新增/更新索引条目 | `python3 upsert_testcase_index.py --all` |
-| `validate_testcase_index.py` | 校验测试用例索引 | `python3 validate_testcase_index.py testcases/testcase-index.json` |
-| `validate_i18n_index.py` | 校验多语言索引 | `python3 validate_i18n_index.py testcases/i18n-index.json` |
-| `validate_i18n_json.py` | 校验单个多语言 JSON | `python3 validate_i18n_json.py testcases/i18n/模块/文件.json` |
-| `validate_index.py` | 校验模块索引 | `python3 validate_index.py test-case-generator/references/module-index.json` |
+| `validate_testcase_index.py` | 校验测试用例索引 | `python3 validate_testcase_index.py outputs/testcase-index.json` |
+| `validate_i18n_index.py` | 校验多语言索引 | `python3 validate_i18n_index.py outputs/i18n-index.json` |
+| `validate_i18n_json.py` | 校验单个多语言 JSON | `python3 validate_i18n_json.py outputs/i18n/模块/文件.json` |
+| `validate_index.py` | 校验模块索引 | `python3 validate_index.py engine/references/module-index.json` |
 | `cleanup_testcase_store.py` | 清理过期/孤立文件 | `python3 cleanup_testcase_store.py --dry-run` |
 | `diff_testcase_indexes.py` | 比较索引差异 | `python3 diff_testcase_indexes.py old.json new.json` |
 | `export_testcase_report.py` | 生成覆盖率报告 | `python3 export_testcase_report.py --output report.html` |

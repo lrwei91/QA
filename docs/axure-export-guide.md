@@ -49,10 +49,10 @@
 ### 3. 选择输出目录
 
 ```
-输出目录：testcases/axure_export/
+输出目录：outputs/axure_export/
 ```
 
-建议将导出目录放在项目的 `testcases/axure_export/` 目录下，便于管理。
+建议将导出目录放在项目的 `outputs/axure_export/` 目录下，便于管理。
 
 ---
 
@@ -154,7 +154,7 @@
 导出后的目录结构如下：
 
 ```
-testcases/axure_export/
+outputs/axure_export/
 ├── index.html              # 原型首页（导航）
 ├── login.html              # 登录页
 ├── home.html               # 首页
@@ -173,27 +173,27 @@ testcases/axure_export/
   ↓
 选择用例类型
   ↓
-提供 Axure 导出 HTML 目录：testcases/axure_export/
+提供 Axure 导出 HTML 目录：outputs/axure_export/
 ```
 
 ### 方式 2：使用解析脚本
 
 ```bash
 # 解析单个文件
-python3 test-case-generator/scripts/parse_axure_html.py \
-    testcases/axure_export/login.html
+python3 engine/scripts/parse_axure_html.py \
+    outputs/axure_export/login.html
 
 # 解析整个目录
-python3 test-case-generator/scripts/parse_axure_html.py \
-    testcases/axure_export/
+python3 engine/scripts/parse_axure_html.py \
+    outputs/axure_export/
 
 # 递归解析（包括子目录）
-python3 test-case-generator/scripts/parse_axure_html.py \
-    testcases/axure_export/ --recursive
+python3 engine/scripts/parse_axure_html.py \
+    outputs/axure_export/ --recursive
 
 # 输出到 JSON 文件
-python3 test-case-generator/scripts/parse_axure_html.py \
-    testcases/axure_export/ \
+python3 engine/scripts/parse_axure_html.py \
+    outputs/axure_export/ \
     --output /tmp/axure_data.json
 ```
 
@@ -322,6 +322,6 @@ python3 test-case-generator/scripts/parse_axure_html.py \
 
 ## 下一步
 
-- [查看 Axure Parser Skill 文档](../test-case-generator/skills/axure-parser/SKILL.md)
-- [查看 Parse Axure HTML 脚本说明](../test-case-generator/scripts/README.md)
+- [查看 Axure Parser Skill 文档](../engine/skills/axure-parser/SKILL.md)
+- [查看 Parse Axure HTML 脚本说明](../engine/scripts/README.md)
 - [返回主文档](../README.md)
