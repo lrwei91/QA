@@ -84,9 +84,15 @@ Figma 设计稿可以帮助识别:
 **第 4 步（可选）：用户提供 Figma 链接后**
 
 调用 `figma-reader` 技能读取设计稿：
+- 使用 Figma REST API `/v1/files/{file_id}/nodes?ids={node_id}` 读取指定节点
 - 提取文案数据
 - 提取组件结构
 - 提取交互说明
+
+**注意：** 必须使用带 `node-id` 参数的链接，例如：
+```
+https://www.figma.com/design/TTCIlEUeIyxXWG9pMIkOp9/web5?node-id=25246:54081
+```
 
 **第 5 步：生成测试用例**
 
@@ -114,6 +120,13 @@ Figma 设计稿可以帮助识别:
 
 导出后将保存到：testcases/generated/<模块>/<用例名称>.xlsx
 ```
+
+**第 7 步：用户选择导出方式后，调用 `testcase-format` skill 执行 Excel 导出**
+
+- 使用 `xlsx_fill_testcase_template.py` 脚本填充模板
+- 使用 `upsert_testcase_index.py` 脚本更新索引
+- 确保样式与 `templates/testcase_template.xlsx` 模板一致
+- 不得手动创建 Excel 文件
 
 ---
 

@@ -13,11 +13,26 @@ description: 读取 Figma 设计稿数据 - 提取文案、组件结构、设计
 
 ## 职责
 
-1. **连接 Figma MCP** - 使用配置的 Figma MCP 服务器读取设计稿
+1. **调用 Figma REST API** - 使用 Figma REST API 读取设计稿（不依赖 MCP）
 2. **提取文案数据** - 所有文本图层的文字内容
 3. **提取组件结构** - Frame/Component 层级关系
 4. **提取设计标注** - 尺寸、颜色、状态等
 5. **输出结构化数据** - 供 `testcase-generate` 使用
+
+## Figma API 调用方式
+
+**使用直接 API 调用，不依赖 MCP 配置：**
+
+```bash
+curl -s \
+  -H "X-Figma-Token: ${FIGMA_ACCESS_TOKEN}" \
+  "https://api.figma.com/v1/files/{file_id}/nodes?ids={node_id}"
+```
+
+**关键点：**
+- 使用 `/nodes` 端点 + `ids` 参数，只读取指定节点
+- 避免读取整个文件（大文件会导致超时）
+- Token 从环境变量 `FIGMA_ACCESS_TOKEN` 获取
 
 ## 输入格式
 
@@ -128,13 +143,25 @@ https://www.figma.com/file/{file_id}/{file_name}?node-id={frame_id}
   - frame_id: 101-201 (可选)
 ```
 
-### 第 2 步：调用 Figma MCP
+### 第 2 步：调用 Figma REST API
 
-使用 MCP 工具读取文件：
-- 获取文件信息
-- 获取指定 Frame 的节点树
-- 获取组件变体信息
-- 获取交互原型数据
+使用 `curl` 或 `Bash` 调用 Figma REST API：
+
+```bash
+# 提取 file_id 和 node_id
+file_id="TTCIlEUeIyxXWG9pMIkOp9"
+node_id="25246:54081"
+
+# 调用 API
+curl -s \
+  -H "X-Figma-Token: ${FIGMA_ACCESS_TOKEN}" \
+  "https://api.figma.com/v1/files/${file_id}/nodes?ids=${node_id}"
+```
+
+**API 端点说明：**
+- `/v1/files/{file_id}/nodes` - 获取指定节点数据
+- `ids` 参数 - 指定要读取的节点 ID（格式：`{page_id}:{node_id}`）
+- 响应包含节点名称、子节点树、文本内容等
 
 ### 第 3 步：数据清洗
 
@@ -153,7 +180,6 @@ Frame: 主界面
 
 【文案数据】
 - 已提取 XX 条文案
-- 多语言文案：XX 组（如包含）
 
 【组件结构】
 - 主要组件：XX 个
@@ -198,8 +224,9 @@ Frame: 主界面
 
 ```json
 {
-  "source": "figma",
+  "source": "figma_api",
   "file_url": "https://www.figma.com/file/xxx",
+  "api_endpoint": "/v1/files/{file_id}/nodes?ids={node_id}",
   "extracted_data": {
     "texts": [...],
     "components": [...],
@@ -224,8 +251,8 @@ Frame: 主界面
 | Token 无效 | Figma Access Token 过期 | 提示用户重新获取 Token |
 | 文件无权限 | Token 对应账号无权访问 | 提示用户申请文件权限 |
 | Frame 不存在 | 指定的 node-id 无效 | 尝试读取首页或提示确认 |
-| MCP 未配置 | 未配置 Figma MCP 服务器 | 引导用户完成 MCP 配置 |
 | 网络超时 | 网络问题导致读取失败 | 建议重试或检查网络 |
+| 响应过大 | 未使用 node-id 参数 | 必须使用 `ids` 参数读取指定节点 |
 
 ### 错误输出格式
 
@@ -244,7 +271,7 @@ Frame: 主界面
 3. 更新环境变量：export FIGMA_ACCESS_TOKEN="新 token"
 4. 重试
 
-如需帮助，请查看：docs/figma-mcp-guide.md
+如需帮助，请查看：docs/figma-api-guide.md
 ```
 
 ## 最佳实践
@@ -279,7 +306,6 @@ Frame: 主界面
 
 ## 资源文件
 
-- [docs/figma-mcp-guide.md](../../../docs/figma-mcp-guide.md) - Figma MCP 配置指南
 - [test-case-generator/skills/testcase-generate/SKILL.md](../testcase-generate/SKILL.md) - 测试用例生成技能
 
 ## 相关 Skills

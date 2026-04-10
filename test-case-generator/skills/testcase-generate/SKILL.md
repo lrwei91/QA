@@ -163,8 +163,14 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 ▎ 1. 导出为 Excel 文件并更新索引文件
 ▎ 2. 仅导出为 Excel 文件
 
-导出后将保存到：testcases/generated/<模块>_<日期>.xlsx
+导出后将保存到：testcases/generated/<模块>/<用例名称>.xlsx
 ```
+
+**用户选择后，必须调用 `testcase-format` skill 执行 Excel 导出**：
+
+- 不得手动创建 Excel 文件
+- 必须使用 `xlsx_fill_testcase_template.py` 脚本
+- 确保样式与 `templates/testcase_template.xlsx` 模板一致
 
 ## 资源文件
 

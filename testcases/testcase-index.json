@@ -3,7 +3,7 @@
   "store_name": "QA Test Case Store",
   "root_dir": "testcases",
   "cases_dir": "generated",
-  "updated_at": "2026-04-08T22:11:18+08:00",
+  "updated_at": "2026-04-10T18:56:08+08:00",
   "entries": [
     {
       "id": "tc-generated-xlsx-e6c7bbe8",
@@ -61,16 +61,16 @@
       "template": ""
     },
     {
-      "id": "tc-generated-20260408-xlsx-4442fd1c",
-      "group_key": "group-20260408-564744a8",
-      "title": "复充返利活动 - 完整用例_20260408",
+      "id": "tc-generated-20260410-xlsx-46e1d8c1",
+      "group_key": "group-f6b206e7",
+      "title": "复充返利活动 - 完整用例_20260410",
       "module": "复充返利",
       "module_ids": [
         "module-06c74ea0"
       ],
-      "topic": "复充返利活动 - 完整用例_20260408",
+      "topic": "复充返利活动 - 完整用例",
       "format": "xlsx",
-      "rel_path": "generated/复充返利/复充返利活动 - 完整用例_20260408.xlsx",
+      "rel_path": "generated/复充返利/复充返利活动 - 完整用例_20260410.xlsx",
       "source_refs": [],
       "tags": [
         "复充返利",
@@ -78,12 +78,12 @@
         "完整用例"
       ],
       "status": "active",
-      "created_at": "2026-04-08T22:11:18+08:00",
-      "updated_at": "2026-04-08T22:11:18+08:00",
+      "created_at": "2026-04-10T18:25:25+08:00",
+      "updated_at": "2026-04-10T18:56:08+08:00",
       "platform_scope": [
-        "管理后台",
         "客户端",
-        "账服"
+        "账服",
+        "管理后台"
       ],
       "template": ""
     },
