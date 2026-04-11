@@ -55,8 +55,12 @@ Claude Code 是基于命令行的 AI 编程工具。
 
 **全局安装:**
 ```bash
-npm install -g @anthropic/claude-code
+npm install -g @anthropic/claude-code / sudo npm install -g @anthropic-ai/claude-code
 ```
+```或者
+curl -fsSL https://claude.ai/install.sh | bash
+```或者
+npm install -g @anthropic-ai/claude-code --registry=https://registry.npmmirror.com
 
 **验证安装:**
 ```bash
