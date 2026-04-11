@@ -225,7 +225,7 @@ final_result = workflow.invoke(result)
 ## 测试
 
 ```bash
-cd test-case-generator
+cd QA
 python3 -c "from workflows import build_qa_workflow; print('OK')"
 ```
 
@@ -403,7 +403,7 @@ result = executor.run(state)
 ### 分层协作 ✅
 
 ```
-用户交互层 (/qa 命令)
+用户交互层 (`/qa` 编排入口)
        ↓
 Claude（当前对话）← AI 能力提供者
        ↑

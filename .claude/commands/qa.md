@@ -1,11 +1,11 @@
 ---
 name: qa
-description: QA 测试用例生成器入口 - 分析需求文档、PRD、接口说明、现有用例和模板，自动生成结构化测试用例；支持 Figma 设计稿读取、Axure HTML 解析补充 UI 细节
+description: QA 工作流编排入口 - 分析需求文档、PRD、接口说明、现有用例和模板，按场景分发到测试用例生成、补充、多语言校验、Figma 读取、Axure 解析等子能力
 ---
 
-# QA Test Case Generator
+# QA Workflow Entry
 
-**完整技能定义：**
+**子能力编排入口：**
 - [`testcase-generate`](../engine/skills/testcase-generate/SKILL.md) - 生成测试用例
 - [`testcase-augment`](../engine/skills/testcase-augment/SKILL.md) - 补充已有用例
 - [`testcase-analyze`](../engine/skills/testcase-analyze/SKILL.md) - 仅分析需求
@@ -186,7 +186,7 @@ https://www.figma.com/design/TTCIlEUeIyxXWG9pMIkOp9/web5?node-id=25246:54081
 注意：必须由用户选择后才能执行导出，不得自动执行。
 ```
 
-**第 7 步：用户选择导出方式后，调用 `testcase-format` skill 执行 Excel 导出**
+**第 7 步：用户选择导出方式后，调用 `testcase-format` 子能力执行 Excel 导出**
 
 - 用户选择选项 1 → 调用 testcase-format，参数包含 `update_index=true`
 - 用户选择选项 2 → 调用 testcase-format，参数包含 `update_index=false`
@@ -374,6 +374,6 @@ python3 -c "import json, openpyxl, pandas" 2>/dev/null \
 ## 项目文档
 
 - [CLAUDE.md](../CLAUDE.md) - 项目总览与核心原则
-- [engine/skills/](../engine/skills/) - Skills 目录
+- [engine/skills/](../engine/skills/) - 子能力目录
 
 **详细流程、测试设计规则、输出规范、质量检查清单等，请阅读各 Skill 文档**

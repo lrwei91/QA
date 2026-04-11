@@ -323,5 +323,5 @@ python3 engine/scripts/parse_axure_html.py \
 ## 下一步
 
 - [查看 Axure Parser Skill 文档](../engine/skills/axure-parser/SKILL.md)
-- [查看 Parse Axure HTML 脚本说明](../engine/scripts/README.md)
+- [查看根目录 README 中的脚本工具说明](../README.md#脚本工具说明)
 - [返回主文档](../README.md)

@@ -441,7 +441,7 @@ git push origin v1.0.0
 
 - Issue 追踪：[GitHub Issues](https://github.com/...)
 - 技能包文档：`engine/SKILL.md`
-- 脚本手册：`engine/scripts/README.md`
+- 脚本说明：已整合至根目录 `README.md` 的「脚本工具说明」章节
 - 快速入门：`user-guide.md`
 
 ---

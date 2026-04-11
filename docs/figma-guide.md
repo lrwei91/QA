@@ -1,8 +1,8 @@
-# Figma MCP 配置指南
+# Figma Reader 配置指南
 
 ## 概述
 
-Figma MCP (Model Context Protocol) 允许 Claude Code 直接读取 Figma 设计稿中的数据，包括：
+Figma Reader 基于 **Figma REST API** 直接读取 Figma 设计稿中的数据，包括：
 - 文案和按钮文本
 - 组件层级和布局
 - 设计标注和状态
@@ -53,60 +53,19 @@ echo $FIGMA_ACCESS_TOKEN
 
 ---
 
-## 步骤三：配置 MCP 服务器
+## 步骤三：验证 Token
 
-### 方式 A：全局配置（推荐）
+Figma Reader 直接通过环境变量中的 `FIGMA_ACCESS_TOKEN` 调用 REST API，无需单独配置 MCP 服务器。
 
-编辑全局配置文件 `~/.claude/settings.json`：
-
-```json
-{
-  "mcpServers": {
-    "figma": {
-      "command": "npx",
-      "args": ["-y", "@figma/mcp-server@latest"],
-      "env": {
-        "FIGMA_ACCESS_TOKEN": "${FIGMA_ACCESS_TOKEN}"
-      }
-    }
-  }
-}
-```
-
-### 方式 B：项目级配置
-
-在项目 `.claude/` 目录下创建 `mcp.json`：
-
-```json
-{
-  "mcpServers": {
-    "figma": {
-      "command": "npx",
-      "args": ["-y", "@figma/mcp-server@latest"],
-      "env": {
-        "FIGMA_ACCESS_TOKEN": "${FIGMA_ACCESS_TOKEN}"
-      }
-    }
-  }
-}
-```
-
----
-
-## 步骤四：验证连接
-
-启动 Claude Code 并测试连接：
+可以先用 curl 验证：
 
 ```bash
-claude
+curl -s \
+  -H "X-Figma-Token: ${FIGMA_ACCESS_TOKEN}" \
+  "https://api.figma.com/v1/me"
 ```
 
-然后输入：
-```
-读取 Figma 文件 https://www.figma.com/file/xxxxxx
-```
-
-如果配置正确，Claude 将能够访问 Figma 设计稿。
+如果返回当前账号信息，说明配置正确。
 
 ---
 
@@ -126,7 +85,7 @@ claude
 
 ### Figma 数据提取
 
-Figma MCP 可以帮助提取：
+Figma Reader 可以帮助提取：
 
 | 数据类型 | 说明 | 测试用例用途 |
 |----------|------|-------------|
@@ -146,8 +105,8 @@ A: 在 Figma Settings 中重新生成 Token，并更新环境变量。
 ### Q: 提示"无法访问文件"？
 A: 确保 Token 对应的账号有该 Figma 文件的访问权限。
 
-### Q: 如何查看 MCP 日志？
-A: 在 Claude Code 中运行 `/mcp status` 查看服务器状态。
+### Q: 如何排查 API 读取失败？
+A: 先检查 `FIGMA_ACCESS_TOKEN` 是否有效，再用 `curl https://api.figma.com/v1/me` 验证账号接口是否可访问。
 
 ### Q: 可以访问哪些 Figma 文件？
 A: Token 持有者有权限访问的所有文件（包括团队文件）。
@@ -156,9 +115,8 @@ A: Token 持有者有权限访问的所有文件（包括团队文件）。
 
 ## 参考资源
 
-- [Figma MCP 官方文档](https://help.figma.com/hc/en-us/articles/32132100833559)
-- [Figma MCP GitHub](https://github.com/mcp/com.figma.mcp/mcp)
-- [Figma MCP Catalog](https://www.figma.com/mcp-catalog/)
+- [Figma API 官方文档](https://www.figma.com/developers/api)
+- [Figma Personal Access Token 说明](https://help.figma.com/hc/en-us/articles/8085703771159)
 
 ---
 

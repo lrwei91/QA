@@ -15,7 +15,7 @@
 5. 开始生成测试用例
 
 **可选配置：**
-- 配置 Figma MCP（从 UI 设计稿生成用例）
+- 配置 Figma Reader（基于 Figma REST API 读取设计稿）
 - 配置 Axure RP 导出（从原型生成用例）
 
 ---
@@ -72,7 +72,7 @@ QA 技能包需要 Python 依赖来处理 Excel 文件。
 
 **进入项目目录:**
 ```bash
-cd /path/to/QA/test-case-generator
+cd /path/to/QA
 ```
 > 提示：将 `/path/to/QA` 替换为你实际的项目路径
 
@@ -151,9 +151,9 @@ outputs/generated/认证中心/用户登录功能优化.xlsx
 
 ---
 
-## 可选：配置 Figma MCP
+## 可选：配置 Figma Reader
 
-Figma MCP 允许从 UI 设计稿直接提取文案和组件信息，用于生成测试用例。
+Figma Reader 使用 **Figma REST API** 直接读取 UI 设计稿中的文案、组件和状态信息，用于生成测试用例。
 
 **快速配置:**
 
@@ -162,21 +162,11 @@ Figma MCP 允许从 UI 设计稿直接提取文案和组件信息，用于生成
 # 2. 添加到环境变量
 export FIGMA_ACCESS_TOKEN="figd_xxxxxxxxxxxxxx"
 
-# 3. 配置 MCP 服务器 (~/.claude/settings.json)
-{
-  "mcpServers": {
-    "figma": {
-      "command": "npx",
-      "args": ["-y", "@figma/mcp-server@latest"],
-      "env": {
-        "FIGMA_ACCESS_TOKEN": "${FIGMA_ACCESS_TOKEN}"
-      }
-    }
-  }
-}
+# 3. 配置环境变量后即可使用
+# Figma Reader 直接调用 REST API，无需额外配置 MCP 服务器
 ```
 
-**详细配置指南:** [docs/figma-mcp-guide.md](docs/figma-mcp-guide.md)
+**详细配置指南:** [docs/figma-guide.md](docs/figma-guide.md)
 
 **使用方式:**
 ```
@@ -219,7 +209,7 @@ QA/
 │   ├── glossary.md              # 术语词典
 │   ├── changelog.md             # 变更日志
 │   ├── workflow-guide.md        # LangGraph 工作流指南
-│   ├── figma-mcp-guide.md       # Figma MCP 配置指南
+│   ├── figma-guide.md       # Figma Reader / REST API 配置指南
 │   └── axure-export-guide.md    # Axure RP 导出指南
 ├── engine/         # 技能包核心
 │   ├── SKILL.md                 # 技能包规则
@@ -264,11 +254,11 @@ QA/
 ## 架构概览
 
 ```
-用户交互层 (/qa 命令)
+用户交互层 (`/qa` 编排入口)
        ↓
 Claude（当前对话）← AI 能力提供者
        ↑
-LangGraph 编排层 ← Python 流程控制
+LangGraph 编排层 ← Python 流程控制 / 子能力分发
        ↓
 Python 脚本层 ← 确定性任务执行
 ```
@@ -293,6 +283,51 @@ Python 脚本层 ← 确定性任务执行
 | 重建索引 | `python3 engine/scripts/upsert_testcase_index.py --all` |
 | 校验测试用例索引 | `python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json` |
 | 校验模块索引 | `python3 engine/scripts/validate_index.py engine/references/module-index.json` |
+
+---
+
+## 脚本工具说明
+
+脚本集中放在 `engine/scripts/`，用于索引维护、Excel 导出、Axure 解析和报告生成。
+
+| 脚本 | 用途 |
+|------|------|
+| `upsert_testcase_index.py` | 新增/更新测试用例索引 |
+| `validate_testcase_index.py` | 校验测试用例索引 |
+| `validate_i18n_index.py` | 校验多语言索引 |
+| `validate_i18n_json.py` | 校验多语言 JSON |
+| `validate_index.py` | 校验模块索引 |
+| `cleanup_testcase_store.py` | 清理过期用例 |
+| `diff_testcase_indexes.py` | 比较索引差异 |
+| `export_testcase_report.py` | 生成覆盖率报告 |
+| `generate_testcase_from_template.py` | 从模板生成用例 |
+| `xlsx_append_and_highlight.py` | Excel 追加标黄 |
+| `parse_axure_html.py` | 解析 Axure HTML |
+
+### 常见脚本示例
+
+```bash
+# 全量重建索引
+python3 engine/scripts/upsert_testcase_index.py --all
+
+# 校验测试用例索引
+python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
+
+# 校验多语言索引
+python3 engine/scripts/validate_i18n_index.py outputs/i18n-index.json
+
+# 校验模块索引
+python3 engine/scripts/validate_index.py engine/references/module-index.json
+
+# 预览清理过期用例
+python3 engine/scripts/cleanup_testcase_store.py --dry-run
+
+# 生成覆盖率报告
+python3 engine/scripts/export_testcase_report.py --output outputs/coverage_report.md
+
+# 解析 Axure HTML
+python3 engine/scripts/parse_axure_html.py outputs/axure_export/ --recursive
+```
 
 ---
 
@@ -381,7 +416,7 @@ result = workflow.invoke(state)
 2. **Claude Code 无法启动**: 执行 `claude --version` 检查，未安装请参考步骤 2
 3. **API 配置问题**: 确认 cc-switch 已正确配置 API 密钥
 4. **Python 依赖缺失**: 重新执行步骤 3 安装依赖
-5. **Figma MCP 连接失败**: 检查 Token 是否有效，参考 [Figma MCP 配置指南](docs/figma-mcp-guide.md)
+5. **Figma Reader 读取失败**: 检查 Token 是否有效，参考 [Figma 配置指南](docs/figma-guide.md)
 
 **更多帮助:**
 

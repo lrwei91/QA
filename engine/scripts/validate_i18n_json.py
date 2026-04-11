@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate multilingual verification JSON files for the test-case-generator skill."""
+"""Validate multilingual verification JSON files for the QA skill set."""
 
 from __future__ import annotations
 

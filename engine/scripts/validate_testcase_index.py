@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate testcase-index.json for the test-case-generator skill."""
+"""Validate testcase-index.json for the QA skill set."""
 
 from __future__ import annotations
 

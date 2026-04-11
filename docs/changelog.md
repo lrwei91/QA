@@ -6,15 +6,34 @@
 
 ---
 
+## [2.1.0] - 2026-04-11
+
+### 变更
+
+#### 文档与结构收口
+- 将 Figma 方案统一为 **Figma Reader + REST API**，移除主文档中的 MCP 主方案表述
+- `/qa` 的定位统一为 **工作流编排入口**，不再描述为旧式总 skill 入口
+- 清理文档中的旧路径与旧命名残留，例如 `test-case-generator`
+- 将 `engine/scripts/README.md` 的脚本说明整合进根目录 `README.md`
+- 删除 `engine/scripts/README.md`，并同步修正文档内全部引用
+- 补充根目录 `README.md` 中的「脚本工具说明」章节，集中维护脚本用法
+
+### 记录
+
+#### 今日 Git 提交
+- `4f50019`：`2.1.0`
+
+---
+
 ## [2.0.0] - 2026-04-10
 
 ### 新增
 
-#### Figma MCP 集成
-- **docs/figma-mcp-guide.md**：Figma MCP 配置指南
+#### Figma Reader 集成
+- **docs/figma-guide.md**：Figma Reader 配置指南
   - Token 获取步骤
-  - MCP 服务器配置
-  - 连接验证方法
+  - REST API 调用说明
+  - Token 验证方法
 - **engine/skills/figma-reader/SKILL.md**：Figma 设计稿读取技能
   - 从 Figma 提取文案数据、组件结构、组件状态、交互说明
   - 支持指定 Frame 节点
@@ -58,7 +77,7 @@
 - 新增 Axure RP 导出快速配置章节
 
 #### 文档更新
-- **engine/scripts/README.md**：新增 parse_axure_html.py 使用说明
+- 根目录 `README.md`：补充 parse_axure_html.py 等脚本使用说明
 - **CLAUDE.md**：新增 figma-reader 和 axure-parser 技能说明
 
 ### 架构优化
@@ -74,7 +93,7 @@
   - axure-parser：Axure HTML 解析
 
 #### 目录结构优化
-- docs/figma-mcp-guide.md
+- docs/figma-guide.md
 - docs/axure-export-guide.md
 
 ---
@@ -204,7 +223,7 @@
 - `README.md`：项目说明
 - `docs/user-guide.md`：5 分钟快速入门
 - `engine/SKILL.md`：技能包完整规则
-- `engine/scripts/README.md`：脚本使用手册
+- 根目录 `README.md`：脚本工具说明
 - `engine/references/`：
   - `testcase-store.md`：用例存储规则
   - `output-template.md`：输出模板规范
