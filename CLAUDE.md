@@ -3,8 +3,8 @@
 ## 🎯 项目目标
 本仓库用于将需求文档（PRD / 页面 / 接口 / 描述）转换为结构化测试用例，并支持：
 - Excel 测试用例生成与追加
-- 多语言 JSON 校验与导出
-- 测试用例索引与复用
+- 功能点查询与索引复用
+- 测试用例同步与快照管理
 
 该项目本质是一个 **测试用例生产流水线**，而不是自动化测试执行框架。
 
@@ -25,8 +25,6 @@ QA/
 │   ├── skills/                         # 测试用例相关技能
 │   │   ├── testcase-generate/          # 核心生成：需求 → 测试用例
 │   │   ├── testcase-augment/           # 增量补充：分析缺口 → 追加用例
-│   │   ├── testcase-analyze/           # 需求分析：模块拆分 → 测试点清单
-│   │   ├── testcase-i18n/              # 多语言处理：JSON 校验 → 一致性检查
 │   │   └── testcase-format/            # 工程化处理：Excel 导出 → 索引更新
 │   ├── references/                     # 规则库
 │   │   ├── index-rules/                # 索引与规则
@@ -51,13 +49,25 @@ QA/
 │       ├── upsert_testcase_index.py        # 新增/更新索引
 │       ├── validate_index.py               # 模块索引校验
 │       ├── validate_testcase_index.py      # 测试用例索引校验
-│       ├── validate_i18n_json.py           # 多语言 JSON 校验
 │       └── ...
+├── knowledge/                          # 知识库管理（基于 llm-wiki）
+│   ├── scripts/                        # 知识库处理脚本
+│   ├── templates/                      # wiki 模板
+│   ├── deps/                           # 依赖工具
+│   │   └── baoyu-url-to-markdown/      # 网页提取工具（需 bun + Chrome）
+│   ├── raw/                            # 原始素材
+│   ├── wiki/                           # 知识库内容
+│   │   ├── entities/                   # 实体页
+│   │   ├── topics/                     # 主题页
+│   │   └── sources/                    # 素材摘要
+│   ├── SKILL.md                        # 知识库能力定义
+│   ├── README.md                       # 快速开始指南
+│   ├── requirements.md                 # 前置依赖安装说明
+│   └── index.md                        # 知识库索引
 ├── outputs/
 │   ├── generated/                      # 生成的测试用例 Excel
-│   ├── i18n/                           # 多语言 JSON
-│   ├── testcase-index.json             # 测试用例索引
-│   └── i18n-index.json                 # 多语言索引
+│   ├── snapshots/                      # 测试用例快照
+│   └── testcase-index.json             # 测试用例索引
 └── templates/
     └── testcase_template.xlsx          # Excel 模板
 ```
@@ -162,10 +172,9 @@ Claude 在本仓库中应：
 |-------|------|----------|
 | [`testcase-generate`](engine/skills/testcase-generate/SKILL.md) | 从需求生成测试用例 | 用户提供 PRD/页面/描述，需要生成用例 |
 | [`testcase-augment`](engine/skills/testcase-augment/SKILL.md) | 补充已有用例 | 用户提供已有用例，需要补充遗漏 |
-| [`testcase-analyze`](engine/skills/testcase-analyze/SKILL.md) | 仅分析需求 | 用户只想评估需求质量，不生成用例 |
-| [`testcase-i18n`](engine/skills/testcase-i18n/SKILL.md) | 多语言 JSON 校验 | 需要校验多语言文案完整性 |
 | [`testcase-format`](engine/skills/testcase-format/SKILL.md) | Excel 导出与索引更新 | 需要导出 Excel 或更新索引 |
 | [`figma-reader`](engine/skills/figma-reader/SKILL.md) | Figma 设计稿读取 | 用户提供 Figma 链接，需要提取 UI 数据 |
+| [`knowledge`](knowledge/SKILL.md) | 知识库管理 | 消化素材/查询知识/深度综合/健康检查 |
 
 ---
 
@@ -178,14 +187,16 @@ Claude 在本仓库中应：
 # 补充已有用例
 /qa → 选择「补充已有用例」→ 选择模块和用例 → 提供补充内容
 
-# 分析需求
-/qa → 选择「仅分析需求」→ 提供需求内容
+# 知识库管理
+/qa → 选择「知识库管理」→ 选择消化素材/查询知识/深度综合/健康检查/知识结晶/查看状态
 
-# 多语言校验
-/qa → 选择「生成多语言校验 JSON」→ 提供多语言文案
+# 同步已生成用例
+/qa → 选择「同步已生成用例」→ 选择同步单个/全部文件
 
 # Figma 设计稿读取
 /qa → 生成测试用例 → 提供 Figma 链接 (可选)
 ```
+
+**前置依赖安装：** 知识库管理功能需要安装 `bun` 和 `Google Chrome`，详见 [knowledge/requirements.md](knowledge/requirements.md)
 
 **Figma MCP 配置：** 使用前需完成 Figma MCP 配置，详见 [docs/figma-mcp-guide.md](docs/figma-mcp-guide.md)
