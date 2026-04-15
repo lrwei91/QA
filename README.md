@@ -85,6 +85,8 @@ cd /path/to/QA
 pip3 install -r requirements.txt
 ```
 
+> 注意：依赖文件位于项目根目录的 `requirements.txt`
+
 **验证安装:**
 ```bash
 python3 -c "import openpyxl, pandas; print('✓ 依赖安装成功')"
@@ -140,13 +142,11 @@ claude
    ```
    /qa 
    ```
-4. 粘贴你的需求文档内容
-5. 选择「生成测试用例」选项
+4. 选择「生成测试用例」选项
+5. 粘贴你的需求文档内容
 
 **导出 Excel:**
-```
-/qa 导出 Excel
-```
+生成完成后，选择「导出为 Excel 文件」选项即可。
 
 生成的用例将保存到：
 ```
@@ -227,10 +227,17 @@ QA/
 │   │   ├── qa_nodes.py          # 节点函数
 │   │   ├── qa_workflow.py       # 工作流构建
 │   │   └── utils.py             # 工具函数
-│   └── scripts/                 # 脚本工具
-│       ├── upsert_testcase_index.py
-│       ├── validate_testcase_index.py
-│       └── ...
+│   ├── scripts/                 # 脚本工具
+│   │   ├── upsert_testcase_index.py
+│   │   ├── validate_testcase_index.py
+│   │   └── ...
+│   └── skills/                  # 技能定义（SKILL.md 文档）
+│       ├── testcase-generate/   # 生成测试用例
+│       ├── testcase-augment/    # 补充已有用例
+│       ├── testcase-format/     # Excel 导出与索引更新
+│       ├── figma-reader/        # Figma 设计稿读取
+│       └── axure-parser/        # Axure HTML 解析
+├── requirements.txt             # Python 依赖
 ├── outputs/                   # 产物仓库
 │   ├── generated/               # 测试用例 Excel
 │   ├── i18n/                    # 多语言校验 JSON

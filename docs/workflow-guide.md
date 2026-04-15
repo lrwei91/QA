@@ -482,6 +482,45 @@ def generate_test_cases(state: QAWorkflowState) -> QAWorkflowState:
 
 ---
 
+## 当前实现说明（Lite 版）
+
+**本项目当前使用 Lite 版 LangGraph 实现，与完整版 AI 工作流引擎的区别如下：**
+
+| 特性 | Lite 版（当前实现） | 完整版（AI 引擎） |
+|------|---------------------|-------------------|
+| AI 能力来源 | 当前对话的 Claude | 通过 API 调用 AI |
+| 节点函数 | 纯 Python，负责数据准备 | 可独立调用 AI |
+| 运行环境 | 必须在 Claude Code 中 | 可独立运行 |
+| API Key 配置 | 不需要 `ANTHROPIC_API_KEY` | 需要配置 API Key |
+
+**工作流程对比：**
+
+```
+【Lite 版】
+LangGraph 节点 → 准备 prompt → Claude（当前对话）→ 返回 JSON → 继续执行
+
+【完整版】
+LangGraph 节点 → 调用 Anthropic API → 解析响应 → 继续执行
+```
+
+**为什么选择 Lite 版？**
+
+1. **简化配置**：用户无需配置 API Key，在 Claude Code 环境中直接使用当前对话的 AI 能力
+2. **流程可控**：Python 节点负责确定性的数据处理，AI 负责创造性的任务生成
+3. **适合当前场景**：本项目定位为"测试用例生产流水线"，而非通用 AI 工作流引擎
+
+**暂不支持的场景：**
+
+- ❌ 脱离 Claude Code 环境独立运行
+- ❌ 批量异步执行多个工作流
+- ❌ 自定义 AI 模型切换
+
+**未来方向：**
+
+如需独立运行，可考虑将节点函数升级为完整版，通过 `ANTHROPIC_API_KEY` 调用 API。
+
+---
+
 ## 文件结构
 
 ```
