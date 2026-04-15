@@ -15,10 +15,39 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 1. **需求解析** - 获取并清洗输入正文，识别需求类型
 2. **模块识别** - 读取 `../../references/index-rules/module-index.json` 匹配候选模块，**必须让用户确认**
 3. **模块确认** - 输出候选模块列表，用户确认或自定义输入后方可继续
-4. **领域知识补充** - 如新活动类型，需补充到 `../../references/domain-knowledge/` 对应文件
+4. **领域知识读取** - 优先读取 `../../knowledge/wiki/entities/<中文名>.md`，如不存在则回退到 `../../references/domain-knowledge/<英文名>.md`
 5. **平台拆分** - 按 `../../references/index-rules/platform-rules.md` 判定客户端/账服
 6. **测试点设计** - 按 `../../references/test-design/testcase-taxonomy.md` 设计用例
 7. **输出结构化用例** - 按 `../../references/test-design/output-template.md` 格式输出
+
+## 知识库路径说明
+
+**领域知识文档读取优先级**：
+
+1. 优先读取新知识库路径：`knowledge/wiki/entities/<中文模块名>.md`
+   - 例：`knowledge/wiki/entities/运营活动.md`
+   - 例：`knowledge/wiki/entities/财务系统.md`
+
+2. 如新知识库路径不存在，回退到旧路径：`engine/references/domain-knowledge/<英文名>.md`
+   - 例：`engine/references/domain-knowledge/marketing-activities.md`
+   - 例：`engine/references/domain-knowledge/finance-system.md`
+
+**模块索引中的 `knowledge_base_file` 字段**：
+
+如果 `module-index.json` 中模块条目包含 `knowledge_base_file` 字段，使用该字段指定的路径：
+
+```json
+{
+  "id": "marketing-activity",
+  "name": "运营活动",
+  "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md",
+  "reference_file": "../domain-knowledge/marketing-activities.md"
+}
+```
+
+读取顺序：
+1. `knowledge_base_file` → 新知识库
+2. `reference_file` → 旧领域知识文档
 
 ## 输入来源
 
@@ -75,19 +104,22 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 
 最匹配的模块可能是（请选择或自定义）：
 
-▎ 1. 运营管理 (marketing-activities) - 匹配度 90%
+▎ 1. 运营管理 (marketing-activity) - 匹配度 90%
    - 触发词：运营活动、充值活动、返利活动
    - 领域：marketing-activities
+   - 知识库：knowledge/wiki/entities/运营活动.md
    - 参考文档：engine/references/domain-knowledge/marketing-activities.md
 
 ▎ 2. 财务系统 (finance-system) - 匹配度 70%
    - 触发词：充值、返利、资金账目
    - 领域：finance-system
+   - 知识库：knowledge/wiki/entities/财务系统.md
    - 参考文档：engine/references/domain-knowledge/finance-system.md
 
 ▎ 3. 厂商活动记录 (vendor-activities) - 匹配度 50%
    - 触发词：FC 活动、FG 活动、锦标赛
    - 领域：marketing-activities
+   - 知识库：knowledge/wiki/entities/运营活动.md
    - 参考文档：engine/references/domain-knowledge/marketing-activities.md
 
 ▎ 4. 自定义输入模块名称
@@ -95,9 +127,19 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 
 **用户确认后，检查领域知识文件：**
 
+1. 优先检查新知识库路径：`knowledge/wiki/entities/<模块中文名>.md`
+2. 如新知识库不存在，检查旧路径：`engine/references/domain-knowledge/<模块英文名>.md`
+
+**领域知识补充规则：**
+
 - 如领域知识文件中不存在该活动类型 → 新增模块说明
 - 如已存在但功能有增量 → 增量更新
 - 如已存在但描述不一致 → 功能修改
+
+**新知识库优先原则：**
+
+- 新增领域知识优先写入 `knowledge/wiki/entities/`
+- 旧 `engine/references/domain-knowledge/` 作为回退备份保留
 
 ---
 
