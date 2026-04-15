@@ -146,6 +146,27 @@ def update_theme_page(theme_path: Path, snapshot: dict, snapshot_file: Path) -> 
     theme_path.write_text(theme_content, encoding='utf-8')
 
 
+def check_submodule_config_and提示 (title: str, module: str) -> Optional[str]:
+    """Check if submodule config exists and return hint if not configured.
+
+    Args:
+        title: Test case title
+        module: Module name
+
+    Returns:
+        Hint message if not configured, None otherwise
+    """
+    config = load_submodule_config()
+    module_config = config.get(module, {})
+
+    if title in module_config:
+        # Already configured
+        return None
+
+    # Not configured - return hint
+    return f"提示：'{module}/{title}' 未配置子文件夹分类，建议添加到 submodule-config.json"
+
+
 def load_submodule_config() -> dict:
     """Load submodule configuration from JSON file.
 
@@ -317,6 +338,24 @@ def main() -> int:
 
     if synced:
         print(f"Successfully synced {len(synced)} file(s)")
+
+        # Check for submodule config hints
+        print("\n子文件夹配置检查：")
+        config_hints = []
+        for xlsx_path, _, _ in synced:
+            module = xlsx_path.parent.name
+            title = xlsx_path.stem
+            hint = check_submodule_config_and提示 (title, module)
+            if hint:
+                config_hints.append(hint)
+
+        if config_hints:
+            print("⚠️  以下用例未配置子文件夹分类：")
+            for hint in config_hints:
+                print(f"  - {hint}")
+            print("\n建议编辑 knowledge/wiki/topics/submodule-config.json 添加分类配置")
+        else:
+            print("✓ 所有用例已配置子文件夹分类")
     else:
         print("No files synced")
 

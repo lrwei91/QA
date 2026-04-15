@@ -588,6 +588,19 @@ for m, es in sorted(modules.items()):
 ▎ 2. 幸运卡片（集福活动）- 2 个快照
 ...
 
+或使用命令查看：
+# 查看指定文件的快照历史
+python3 engine/scripts/view_snapshot_history.py outputs/generated/运营活动/复充返利活动.xlsx
+
+# 查看指定模块的所有快照
+python3 engine/scripts/view_snapshot_history.py --module 运营活动
+
+# 查看所有模块的快照
+python3 engine/scripts/view_snapshot_history.py --all
+
+# 比较两个快照的差异
+python3 engine/scripts/view_snapshot_history.py --compare outputs/snapshots/运营活动/复充返利活动/2026-04-14T20-05-54.json outputs/snapshots/运营活动/复充返利活动/2026-04-15T10-00-00.json
+
 选择后将显示：
 - 快照时间线
 - 版本差异比较

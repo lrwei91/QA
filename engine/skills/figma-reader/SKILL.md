@@ -170,6 +170,41 @@ curl -s \
 - 识别有效组件
 - 提取可读的交互说明
 
+### 第 3.5 步：（可选）保存到知识库
+
+**触发条件**：用户要求将 Figma 解析结果保存到知识库
+
+**保存命令**：
+```bash
+# 保存页面结构到 sources 目录
+python3 engine/scripts/save_figma_to_wiki.py \
+    <figma_json_output> \
+    --type sources \
+    --output knowledge/wiki/sources/
+
+# 保存组件结构到 entities 目录
+python3 engine/scripts/save_figma_to_wiki.py \
+    <figma_json_output> \
+    --type entities \
+    --output knowledge/wiki/entities/
+```
+
+**保存后的知识库结构**：
+```
+knowledge/wiki/sources/
+└── <页面名称>-设计稿.md    # 页面结构、交互说明、状态变化
+
+knowledge/wiki/entities/
+└── UI 组件规范.md          # 组件列表、变体说明
+```
+
+**知识库页面内容**：
+- 页面名称和层级关系
+- 组件结构和列表
+- 组件状态（Default/Hover/Disabled 等）
+- 交互说明（跳转、刷新、弹窗等）
+- Figma 链接引用
+
 ### 第 4 步：输出结果
 
 ```

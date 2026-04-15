@@ -167,6 +167,34 @@ python3 engine/scripts/parse_axure_html.py \
 - 约束条件：XX 条
 ```
 
+### 第 3.5 步：（可选）保存到知识库
+
+**触发条件**：用户要求将 Axure 解析结果保存到知识库
+
+**保存命令**：
+```bash
+# 保存页面结构到 sources 目录
+python3 engine/scripts/save_axure_to_wiki.py \
+    <axure_json_output> \
+    --type sources \
+    --output knowledge/wiki/sources/
+
+# 保存元件列表到 entities 目录
+python3 engine/scripts/save_axure_to_wiki.py \
+    <axure_json_output> \
+    --type entities \
+    --output knowledge/wiki/entities/
+```
+
+**保存后的知识库结构**：
+```
+knowledge/wiki/sources/
+└── <页面名称>.md    # 页面结构、交互说明、约束条件
+
+knowledge/wiki/entities/
+└── UI 组件.md       # 元件列表、组件规范
+```
+
 ### 第 4 步：传递给 testcase-generate
 
 将解析结果传递给 `testcase-generate` 技能：
