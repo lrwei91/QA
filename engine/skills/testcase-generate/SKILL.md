@@ -15,39 +15,18 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 1. **需求解析** - 获取并清洗输入正文，识别需求类型
 2. **模块识别** - 读取 `../../references/index-rules/module-index.json` 匹配候选模块，**必须让用户确认**
 3. **模块确认** - 输出候选模块列表，用户确认或自定义输入后方可继续
-4. **领域知识读取** - 优先读取 `../../knowledge/wiki/entities/<中文名>.md`，如不存在则回退到 `../../references/domain-knowledge/<英文名>.md`
+4. **领域知识读取** - 读取 `../../references/domain-knowledge/<中文名>.md`
 5. **平台拆分** - 按 `../../references/index-rules/platform-rules.md` 判定客户端/账服
 6. **测试点设计** - 按 `../../references/test-design/testcase-taxonomy.md` 设计用例
 7. **输出结构化用例** - 按 `../../references/test-design/output-template.md` 格式输出
 
-## 知识库路径说明
+## 领域知识路径说明
 
-**领域知识文档读取优先级**：
+**单一知识源**：`engine/references/domain-knowledge/<中文名>.md`
 
-1. 优先读取新知识库路径：`knowledge/wiki/entities/<中文模块名>.md`
-   - 例：`knowledge/wiki/entities/运营活动.md`
-   - 例：`knowledge/wiki/entities/财务系统.md`
+例：`engine/references/domain-knowledge/运营活动.md`
 
-2. 如新知识库路径不存在，回退到旧路径：`engine/references/domain-knowledge/<英文名>.md`
-   - 例：`engine/references/domain-knowledge/marketing-activities.md`
-   - 例：`engine/references/domain-knowledge/finance-system.md`
-
-**模块索引中的 `knowledge_base_file` 字段**：
-
-如果 `module-index.json` 中模块条目包含 `knowledge_base_file` 字段，使用该字段指定的路径：
-
-```json
-{
-  "id": "marketing-activity",
-  "name": "运营活动",
-  "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md",
-  "reference_file": "../domain-knowledge/marketing-activities.md"
-}
-```
-
-读取顺序：
-1. `knowledge_base_file` → 新知识库
-2. `reference_file` → 旧领域知识文档
+路径对应规则：模块中文名 → 同名 .md 文件。文件内部使用 module-index.json 中的 module ID（如 `marketing-activities`）标识模块。
 
 ## 输入来源
 
@@ -107,39 +86,33 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 ▎ 1. 运营管理 (marketing-activity) - 匹配度 90%
    - 触发词：运营活动、充值活动、返利活动
    - 领域：marketing-activities
-   - 知识库：knowledge/wiki/entities/运营活动.md
-   - 参考文档：engine/references/domain-knowledge/marketing-activities.md
+   - 知识库：engine/references/domain-knowledge/运营活动.md
+   - 参考文档：engine/references/domain-knowledge/运营活动.md
 
 ▎ 2. 财务系统 (finance-system) - 匹配度 70%
    - 触发词：充值、返利、资金账目
    - 领域：finance-system
-   - 知识库：knowledge/wiki/entities/财务系统.md
-   - 参考文档：engine/references/domain-knowledge/finance-system.md
+   - 知识库：engine/references/domain-knowledge/财务系统.md
+   - 参考文档：engine/references/domain-knowledge/财务系统.md
 
 ▎ 3. 厂商活动记录 (vendor-activities) - 匹配度 50%
    - 触发词：FC 活动、FG 活动、锦标赛
    - 领域：marketing-activities
-   - 知识库：knowledge/wiki/entities/运营活动.md
-   - 参考文档：engine/references/domain-knowledge/marketing-activities.md
+   - 知识库：engine/references/domain-knowledge/运营活动.md
+   - 参考文档：engine/references/domain-knowledge/运营活动.md
 
 ▎ 4. 自定义输入模块名称
 ```
 
 **用户确认后，检查领域知识文件：**
 
-1. 优先检查新知识库路径：`knowledge/wiki/entities/<模块中文名>.md`
-2. 如新知识库不存在，检查旧路径：`engine/references/domain-knowledge/<模块英文名>.md`
+读取 `engine/references/domain-knowledge/<模块中文名>.md`，如不存在则新增该文件。
 
 **领域知识补充规则：**
 
 - 如领域知识文件中不存在该活动类型 → 新增模块说明
 - 如已存在但功能有增量 → 增量更新
 - 如已存在但描述不一致 → 功能修改
-
-**新知识库优先原则：**
-
-- 新增领域知识优先写入 `knowledge/wiki/entities/`
-- 旧 `engine/references/domain-knowledge/` 作为回退备份保留
 
 ---
 
@@ -192,52 +165,6 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 - 同一平台内的用例按功能模块逻辑顺序排列（配置→展示→操作→结果）
 - 序号按排序后的顺序连续递增
 
-## 多语言自动检测
-
-生成测试用例后，自动检查需求内容是否包含多语言文案：
-
-### 检测规则
-
-1. **关键词检测**
-   - 包含 `多语言 `、`国际化 `、`i18n`、` 翻译`、`Translation`、`Localization`
-   - 包含语言代码：`en-us`、`id-id`、`pt-pt`、`es-es`、`bn-bn`、`tr-tr`、`fp-fp`、`hi-in`、`th-th`、`zh-cn`、`zh-hk`、`vi-vn`
-   - 包含文案 key 格式：`UI_`、`Key_`、`STR_` 等前缀
-
-2. **表格格式检测**
-   - 多列表格，表头包含语言名称或语言代码
-   - key-value 对照格式（第一列为 key，后续列为各语言翻译）
-
-3. **提取策略**
-   - 自动识别 key 列和语言列
-   - 提取标准 7 种语言：`en-us`、`id-id`、`pt-pt`、`es-es`、`bn-bn`、`tr-tr`、`fp-fp`
-
-4. **语言完整性检查**
-   - 检查每个 key 是否都包含完整 7 种语言
-   - 如果所有 key 语言完整 → 生成 JSON
-   - 如果有缺失 → 输出缺失清单，不生成 JSON
-
-### 输出
-
-**语言完整时：**
-```
-▎ 检测到需求中包含多语言文案
-  - 已提取 XX 个多语言条目
-  - 语言集合：en-us, id-id, pt-pt, es-es, bn-bn, tr-tr, fp-fp
-  - ✓ 所有条目语言完整，已生成多语言校验 JSON
-  - 文件路径：outputs/i18n/<模块>/<模块>-<功能>.json
-  - 已更新多语言索引 outputs/i18n-index.json
-```
-
-**语言不完整时：**
-```
-▎ 检测到需求中包含多语言文案
-  - 已提取 XX 个多语言条目
-  - 语言不完整，缺少：hi-in, th-th (非标准语言已忽略)
-  - 标准 7 种语言检查：
-    - 有 YY 个条目缺少 zz 语言
-  - 暂不生成 JSON，请补充缺失语言后重试
-```
-
 ## 导出选项
 
 生成测试用例后，输出导出选项：
@@ -268,5 +195,4 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 
 - [`testcase-augment`](../testcase-augment/SKILL.md) - 补充已有用例
 - [`testcase-analyze`](../testcase-analyze/SKILL.md) - 仅分析需求
-- [`testcase-i18n`](../testcase-i18n/SKILL.md) - 多语言 JSON 校验
 - [`testcase-format`](../testcase-format/SKILL.md) - 导出 Excel 与索引更新

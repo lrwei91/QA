@@ -182,17 +182,15 @@ python3 engine/scripts/save_axure_to_wiki.py \
 # 保存元件列表到 entities 目录
 python3 engine/scripts/save_axure_to_wiki.py \
     <axure_json_output> \
-    --type entities \
-    --output knowledge/wiki/entities/
+    --type sources \
+    --output knowledge/wiki/sources/
 ```
 
 **保存后的知识库结构**：
 ```
 knowledge/wiki/sources/
-└── <页面名称>.md    # 页面结构、交互说明、约束条件
-
-knowledge/wiki/entities/
-└── UI 组件.md       # 元件列表、组件规范
+├── <页面名称>.md    # 页面结构、交互说明、约束条件
+└── <页面名称>-组件.md  # 元件列表、组件规范
 ```
 
 ### 第 4 步：传递给 testcase-generate

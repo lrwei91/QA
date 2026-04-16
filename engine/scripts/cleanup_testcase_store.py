@@ -147,7 +147,6 @@ def main():
     base_dir = os.path.abspath(args.base_dir)
     generated_dir = os.path.join(base_dir, "generated")
     index_path = os.path.join(base_dir, "testcase-index.json")
-    i18n_index_path = os.path.join(base_dir, "i18n-index.json")
 
     print(f"Base directory: {base_dir}")
     print(f"Generated directory: {generated_dir}")
@@ -159,7 +158,7 @@ def main():
     total_removed = 0
     all_removed = []
 
-    for index_file in [index_path, i18n_index_path]:
+    for index_file in [index_path]:
         if not os.path.exists(index_file):
             print(f"Index not found: {index_file}")
             continue

@@ -23,7 +23,6 @@
 │   ├── notes/              # 手写笔记
 │   └── assets/             # 图片等附件
 ├── wiki/                   # 知识库主体（AI 写，你看）
-│   ├── entities/           # 实体页（人物、组织、概念）
 │   ├── topics/             # 主题页（研究主题、知识领域）
 │   ├── sources/            # 素材摘要页（每个素材一篇摘要）
 │   ├── comparisons/        # 对比分析页
@@ -35,8 +34,6 @@
 
 ## 页面命名规范
 
-- 实体页：`wiki/entities/{名称}.md`
-  - 例：`wiki/entities/知识构建.md`、`wiki/entities/Transformer.md`
 - 主题页：`wiki/topics/{主题名}.md`
   - 例：`wiki/topics/AI编程工具.md`、`wiki/topics/大语言模型.md`
 - 素材摘要：`wiki/sources/{日期}-{短标题}.md`
@@ -87,8 +84,7 @@ sources: [关联素材列表]
 **完整处理**（素材 > 1000 字）：
 1. 每个新素材**必须**生成摘要页（`wiki/sources/` 下）
 2. 从素材中提取 3-5 个关键概念
-3. 检查是否需要创建新的实体页（`wiki/entities/`）
-4. 检查是否需要创建或更新主题页（`wiki/topics/`）
+3. 检查是否需要创建或更新主题页（`wiki/topics/`）
 5. 更新 `index.md`（添加新条目）
 6. 更新 `log.md`（记录操作）
 7. 更新 `overview.md`（如果知识库全貌有变化）

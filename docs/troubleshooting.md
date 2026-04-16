@@ -10,7 +10,6 @@
 - [环境安装问题](#环境安装问题)
 - [索引校验失败](#索引校验失败)
 - [Excel 导出问题](#excel-导出问题)
-- [多语言 JSON 问题](#多语言-json-问题)
 - [模块匹配问题](#模块匹配问题)
 - [脚本执行错误](#脚本执行错误)
 - [Git 相关问题](#git-相关问题)
@@ -477,143 +476,6 @@ pip3 show openpyxl
 
 ---
 
-## 多语言 JSON 问题
-
-### 问题 13：语言集合不完整
-
-**错误信息：**
-```
-ERROR: Missing language: fp-fp
-```
-
-**原因：**
-- 只提供了部分语言的翻译
-- 漏掉了某个语言
-
-**解决方案：**
-
-必须包含全部 7 种语言：
-```json
-{
-  "languages": {
-    "en-us": { ... },
-    "id-id": { ... },
-    "pt-pt": { ... },
-    "es-es": { ... },
-    "bn-bn": { ... },
-    "tr-tr": { ... },
-    "fp-fp": { ... }
-  }
-}
-```
-
-如果某些语言确实没有文案，可以：
-1. 使用空字符串占位
-2. 标记为 `draft` 状态
-
----
-
-### 问题 14：JSON Schema 校验失败
-
-**错误信息：**
-```
-ValidationError: 'url' is a required property
-```
-
-**原因：**
-- 缺少必填字段（name, url, languages）
-- options 配置错误
-
-**解决方案：**
-
-完整结构：
-```json
-{
-  "name": "个人中心 - 免费旋转记录",
-  "url": "https://example.com/free-spin-record",
-  "preScriptPath": "",
-  "languages": { ... },
-  "options": {
-    "matchRule": "normalized-exact",
-    "captureRegion": { "x": 0, "y": 0, "width": 0, "height": 0 }
-  }
-}
-```
-
-运行校验：
-```bash
-python3 engine/scripts/validate_i18n_json.py \
-    outputs/i18n/模块/文件.json
-```
-
----
-
-### 问题 15：多语言检测逻辑无法识别中文语言名称
-
-**症状：**
-- 多语言 JSON 只提取到少量条目，但网页原型中实际有大量多语言对照内容
-- 验证通过但覆盖不全
-
-**原因：**
-- 原检测逻辑只搜索语言代码（如 `en-us`、`id-id`）
-- 但 Axure 导出的 HTML 中使用的是中文语言名称（如 `英文`、`印尼语`、`巴西葡语`）
-
-**修复方案：**
-```python
-# 新增语言名称映射表
-LANG_MAP = {
-    'en-us': ['英文', '英语', 'en', 'en-us', 'English'],
-    'id-id': ['印尼语', '印度尼西亚语', 'id', 'Indonesian', 'Bahasa'],
-    'pt-pt': ['葡萄牙语', '葡语', '巴西葡语', 'pt', 'Portuguese'],
-    'es-es': ['西班牙语', '西语', 'es', 'Spanish'],
-    'bn-bn': ['孟加拉语', '孟加拉', 'bn', 'Bengali'],
-    'tr-tr': ['土耳其语', '土语', 'tr', 'Turkish'],
-    'fp-fp': ['法语', '法文', 'fr', 'French'],
-}
-
-def detect_language(text):
-    text_lower = text.lower()
-    for lang_code, names in LANG_MAP.items():
-        for name in names:
-            if name.lower() in text_lower:
-                return lang_code
-    return None
-```
-
-**改进提取逻辑：**
-- 按 div 区块分组，确保同一区块内的 7 种语言被归为一个完整条目
-- 去重：使用英文内容作为去重依据
-- `key` 字段改为可选，需求未提供时留空
-
----
-
-### 问题 16：validate_i18n_json.py 验证脚本不支持 entries 格式
-
-**错误信息：**
-```
-ERROR: missing root keys: languages
-```
-
-**原因：**
-- 验证脚本期望根级别有 `languages` 字段
-- 但 SKILL.md 规范使用 `entries` 数组格式
-
-**解决方案：**
-
-更新 `validate_i18n_json.py`：
-1. 修改 `REQUIRED_ROOT_KEYS` 从 `languages` 改为 `entries`
-2. 验证逻辑从检查根级 `languages` 改为遍历 `entries[]` 数组
-3. `key` 字段改为可选（`if 'key' in entry and ...`）
-
-**经验教训：**
-1. 对于 Axure 导出的 HTML 原型文件，优先使用 Python 提取文本，不要直接用 Read 工具
-2. 对于包含特殊字符的文件名，先用 `ls` 确认，再操作
-3. 对于大的 `data.js` 文件，直接解析 HTML 更高效
-4. 多语言检测需要同时支持语言代码和中文语言名称
-5. 多语言 JSON 的 `key` 字段是可选的，需求未提供时留空
-
----
-
 ## 模块匹配问题
 
 ### 问题 17：无法识别主模块
@@ -863,12 +725,10 @@ pip3 list | grep -E "openpyxl|pandas|jsonschema"
 
 # 3. 检查索引格式
 python3 -m json.tool outputs/testcase-index.json > /dev/null && echo "testcase-index.json: OK"
-python3 -m json.tool outputs/i18n-index.json > /dev/null && echo "i18n-index.json: OK"
 python3 -m json.tool engine/references/module-index.json > /dev/null && echo "module-index.json: OK"
 
 # 4. 运行校验脚本
 python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
-python3 engine/scripts/validate_i18n_index.py outputs/i18n-index.json
 python3 engine/scripts/validate_index.py engine/references/module-index.json
 
 # 5. 检查孤立文件
@@ -885,9 +745,6 @@ python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
 
 # 验证模块索引
 python3 engine/scripts/validate_index.py engine/references/module-index.json
-
-# 验证多语言 JSON
-python3 engine/scripts/validate_i18n_json.py outputs/i18n/模块/文件.json
 
 # 清理过期文件（先预览）
 python3 engine/scripts/cleanup_testcase_store.py --dry-run

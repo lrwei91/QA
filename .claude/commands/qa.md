@@ -437,44 +437,16 @@ for m, es in sorted(modules.items()):
 ```
 请选择知识库管理操作：
 
-▎ 1. 消化素材 (ingest) - 将链接/文件/文本整理成 wiki 页面
-▎ 2. 查询知识 (query) - 基于已有知识库回答问题
-▎ 3. 深度综合 (digest) - 跨素材深度分析，生成综述/对比表/时间线
-▎ 4. 健康检查 (lint) - 检测孤立页面、断链、矛盾信息
-▎ 5. 知识结晶 (crystallize) - 将有价值的对话沉淀为知识库页面
-▎ 6. 查看状态 (status) - 查看知识库当前状态和统计
+▎ 1. 查询知识 (query) - 基于已有知识库回答问题
+▎ 2. 深度综合 (digest) - 跨素材深度分析，生成综述/对比表/时间线
+▎ 3. 健康检查 (lint) - 检测孤立页面、断链、矛盾信息
+▎ 4. 知识结晶 (crystallize) - 将有价值的对话沉淀为知识库页面
+▎ 5. 查看状态 (status) - 查看知识库当前状态和统计
 
 知识库位置：knowledge/
 ```
 
-**子选项 1：消化素材**
-
-```
-请提供要消化的素材，支持以下方式：
-
-▎ 1. 直接粘贴 链接/文本
-▎ 2. 提供文件路径，我来读取
-▎ 3. 提供 URL，我来提取网页内容
-
-支持的素材类型：
-- 网页文章、微信公众号、YouTube 视频
-- X/Twitter、知乎、小红书（手动粘贴）
-- PDF、Markdown、纯文本文件
-
-注意：在开始分析前，请确认素材中不包含敏感信息
-（手机号、身份证号、API 密钥、明文密码等）
-```
-
-处理流程：
-1. 隐私自查确认
-2. 提取素材内容
-3. 保存到 `knowledge/raw/` 对应目录
-4. 缓存检查（跳过未变化的素材）
-5. Step 1：结构化分析（JSON 格式）
-6. Step 2：生成 wiki 页面（entities/topics/sources）
-7. 更新 index.md 和 log.md
-
-**子选项 2：查询知识**
+**子选项 1：查询知识**
 
 ```
 请输入要查询的关键词或问题：
@@ -491,7 +463,7 @@ for m, es in sorted(modules.items()):
 3. 引用来源（[[页面名]] 格式）
 4. 如引用≥3 个来源，提示是否保存为持久化页面
 
-**子选项 3：深度综合**
+**子选项 2：深度综合**
 
 ```
 请选择深度分析类型：
@@ -512,7 +484,7 @@ for m, es in sorted(modules.items()):
 3. 生成结构化报告（保存到 knowledge/wiki/synthesis/）
 4. 更新 index.md 和 log.md
 
-**子选项 4：健康检查**
+**子选项 3：健康检查**
 
 ```
 开始知识库健康检查...
@@ -529,7 +501,7 @@ for m, es in sorted(modules.items()):
 2. AI 判断矛盾信息、置信度
 3. 输出报告并询问是否自动修复
 
-**子选项 5：知识结晶**
+**子选项 4：知识结晶**
 
 ```
 请提供要结晶化的对话内容或主题：
@@ -548,7 +520,7 @@ for m, es in sorted(modules.items()):
 3. 生成结晶页面（参考 synthesis-template.md）
 4. 更新 log.md
 
-**子选项 6：查看状态**
+**子选项 5：查看状态**
 
 统计知识库状态，输出：
 - 各分类页面数量（entities/topics/sources/synthesis）
@@ -675,7 +647,6 @@ python3 engine/scripts/sync_testcase_snapshot.py --all
 |------|------|
 | 索引校验 | `python3 engine/scripts/validate_index.py` |
 | 用例索引 | `python3 engine/scripts/validate_testcase_index.py` |
-| 模板生成 | `python3 engine/scripts/generate_testcase_from_template.py` |
 | 清理过期文件 | `python3 engine/scripts/cleanup_testcase_store.py --dry-run` |
 | 索引差异比较 | `python3 engine/scripts/diff_testcase_indexes.py` |
 | 覆盖率报告 | `python3 engine/scripts/export_testcase_report.py` |

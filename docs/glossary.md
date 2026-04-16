@@ -18,41 +18,6 @@
 
 ---
 
-### 多语言校验 JSON (I18N Validation JSON)
-
-用于验证界面多语言文案完整性的 JSON 文件。
-
-**固定语言集合**（7 种）：
-- `en-us` - 英语
-- `id-id` - 印尼语
-- `pt-pt` - 葡萄牙语
-- `es-es` - 西班牙语
-- `bn-bn` - 孟加拉语
-- `tr-tr` - 土耳其语
-- `fp-fp` - 菲律宾语
-
-**JSON 结构**：
-```json
-{
-  "name": "页面/功能名称",
-  "url": "页面 URL",
-  "preScriptPath": "前置脚本路径",
-  "languages": {
-    "en-us": { "title": "...", ... },
-    "id-id": { "title": "...", ... },
-    ...
-  },
-  "options": {
-    "matchRule": "normalized-exact",
-    "captureRegion": { "x": 0, "y": 0, "width": 0, "height": 0 }
-  }
-}
-```
-
-存储位置：`outputs/i18n/<模块>/`
-
----
-
 ### group_key
 
 **用途**：关联同一需求/主题下的多个产物
@@ -66,8 +31,7 @@
 **关联关系**：
 ```
 group_key: task-system-optimization
-├── testcase-index.json 中的条目 (测试用例)
-└── i18n-index.json 中的条目 (多语言 JSON)
+└── testcase-index.json 中的条目 (测试用例)
 ```
 
 ---
@@ -109,7 +73,6 @@ group_key: task-system-optimization
 
 **使用场景**：
 - 测试用例索引中的模块定位
-- 多语言 JSON 的模块分类
 - 依赖关系分析
 
 ---
@@ -219,44 +182,6 @@ PLATFORM_MAPPING = {
 
 ---
 
-### i18n-index.json
-
-**用途**：多语言校验 JSON 的中心化索引
-
-**位置**：`outputs/i18n-index.json`
-
-**结构**：
-```json
-{
-  "version": "1.0",
-  "store_name": "QA-I18N-Store",
-  "root_dir": ".",
-  "i18n_dir": "outputs/i18n",
-  "updated_at": "2026-04-01T00:00:00Z",
-  "entries": [
-    {
-      "id": "<UUID>",
-      "group_key": "<group_key>",
-      "title": "<主题>",
-      "module": "<模块名>",
-      "module_ids": ["<module_id>"],
-      "topic": "<主题>",
-      "language_codes": ["en-us", "id-id", ...],
-      "format": "json",
-      "rel_path": "outputs/i18n/模块/文件.json",
-      "template": "i18n-schema-v1",
-      "source_refs": [],
-      "tags": ["多语言", "文案校验"],
-      "status": "active|deprecated|draft",
-      "created_at": "...",
-      "updated_at": "..."
-    }
-  ]
-}
-```
-
----
-
 ### module-index.json
 
 **用途**：业务模块定义与依赖关系索引
@@ -296,7 +221,7 @@ PLATFORM_MAPPING = {
 |------|------|---------|
 | `active` | 活跃 | 当前有效、正在使用的用例/JSON |
 | `deprecated` | 已废弃 | 需求变更导致不再适用 |
-| `draft` | 草稿 | 配置不完整（如 i18n JSON 缺少 URL） |
+| `draft` | 草稿 | 配置不完整 |
 
 ---
 
@@ -306,13 +231,10 @@ PLATFORM_MAPPING = {
 |------|------|
 | `upsert_testcase_index.py` | 新增/更新索引条目 |
 | `validate_testcase_index.py` | 校验测试用例索引 |
-| `validate_i18n_index.py` | 校验多语言索引 |
-| `validate_i18n_json.py` | 校验单个多语言 JSON |
 | `validate_index.py` | 校验模块索引 |
 | `cleanup_testcase_store.py` | 清理过期/孤立文件 |
 | `diff_testcase_indexes.py` | 比较索引差异 |
 | `export_testcase_report.py` | 生成覆盖率报告 |
-| `generate_testcase_from_template.py` | 从模板生成用例 |
 | `xlsx_append_and_highlight.py` | Excel 追加标黄 |
 
 ---
@@ -325,7 +247,6 @@ PLATFORM_MAPPING = {
 
 **当前模板**：
 - `minimax-xlsx` - 测试用例 Excel 模板
-- `i18n-schema-v1` - 多语言 JSON Schema
 
 ### Source References (源引用)
 
@@ -342,8 +263,6 @@ PLATFORM_MAPPING = {
 **推荐标签**：
 - `功能测试`
 - `P0` / `P1` / `P2` (优先级)
-- `多语言`
-- `文案校验`
 - `回归测试`
 - `冒烟测试`
 

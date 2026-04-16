@@ -1902,8 +1902,7 @@
       "活动配置保存",
       "防刷校验"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "operation-dashboard",
@@ -1950,456 +1949,10 @@
       "指标查询接口",
       "缓存更新"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
-    "id": "operation-log",
-    "name": "操作日志",
-    "domain": "运营活动",
-    "aliases": [
-      "操作日志",
-      "审计日志",
-      "后台日志"
-    ],
-    "trigger_words": [
-      "操作记录",
-      "日志查询",
-      "审计追踪"
-    ],
-    "core_functions": [
-      "操作记录写入",
-      "日志查询与导出",
-      "审计追踪"
-    ],
-    "depends_on": [],
-    "impacted_modules": [
-      "admin-user",
-      "role-permission",
-      "organization"
-    ],
-    "always_check": [
-      "audit-log",
-      "data-integrity"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "日志列表页",
-      "筛选条件",
-      "导出按钮"
-    ],
-    "server_signals": [
-      "日志写入",
-      "日志查询接口",
-      "日志导出"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "notification-center",
-    "name": "消息中心",
-    "domain": "运营活动",
-    "aliases": [
-      "消息通知",
-      "站内信",
-      "推送通知"
-    ],
-    "trigger_words": [
-      "消息推送",
-      "站内信",
-      "通知配置"
-    ],
-    "core_functions": [
-      "消息发送",
-      "消息模板配置",
-      "推送记录"
-    ],
-    "depends_on": [
-      "player-management"
-    ],
-    "impacted_modules": [
-      "operation-management"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "客户端",
-      "账服"
-    ],
-    "client_signals": [
-      "消息列表",
-      "消息详情",
-      "红点提示"
-    ],
-    "server_signals": [
-      "消息发送接口",
-      "模板配置",
-      "推送记录"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "report-system",
-    "name": "报表系统",
-    "domain": "运营活动",
-    "aliases": [
-      "报表",
-      "数据报表",
-      "统计报表"
-    ],
-    "trigger_words": [
-      "报表查询",
-      "数据统计",
-      "导出报表"
-    ],
-    "core_functions": [
-      "报表数据聚合",
-      "统计维度配置",
-      "报表导出"
-    ],
-    "depends_on": [
-      "finance-system",
-      "game-management"
-    ],
-    "impacted_modules": [
-      "operation-management"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "报表列表",
-      "筛选条件",
-      "导出按钮"
-    ],
-    "server_signals": [
-      "数据聚合",
-      "报表查询接口",
-      "导出处理"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "risk-management",
-    "name": "风险管理",
-    "domain": "运营活动",
-    "aliases": [
-      "风控",
-      "风险控制",
-      "异常检测"
-    ],
-    "trigger_words": [
-      "风控规则",
-      "异常检测",
-      "黑名单"
-    ],
-    "core_functions": [
-      "风控规则配置",
-      "异常行为检测",
-      "黑名单管理"
-    ],
-    "depends_on": [
-      "player-management"
-    ],
-    "impacted_modules": [
-      "finance-system",
-      "operation-management"
-    ],
-    "always_check": [
-      "security",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "风控规则配置页",
-      "黑名单列表",
-      "异常告警"
-    ],
-    "server_signals": [
-      "风控规则校验",
-      "异常检测",
-      "黑名单拦截"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "config-management",
-    "name": "配置管理",
-    "domain": "运营活动",
-    "aliases": [
-      "系统配置",
-      "参数配置",
-      "字典管理"
-    ],
-    "trigger_words": [
-      "配置项",
-      "参数设置",
-      "字典配置"
-    ],
-    "core_functions": [
-      "配置项管理",
-      "参数发布",
-      "字典维护"
-    ],
-    "depends_on": [],
-    "impacted_modules": [
-      "operation-management"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "配置列表",
-      "配置编辑",
-      "发布按钮"
-    ],
-    "server_signals": [
-      "配置查询接口",
-      "配置更新",
-      "缓存刷新"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "operation-management",
-    "name": "运营管理",
-    "domain": "运营活动",
-    "aliases": [
-      "运营配置",
-      "活动管理",
-      "运营工具"
-    ],
-    "trigger_words": [
-      "活动配置",
-      "运营工具",
-      "运营位管理"
-    ],
-    "core_functions": [
-      "活动配置管理",
-      "运营位配置",
-      "运营工具"
-    ],
-    "depends_on": [],
-    "impacted_modules": [
-      "marketing-activity"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "活动列表",
-      "活动配置页",
-      "运营位配置"
-    ],
-    "server_signals": [
-      "活动配置接口",
-      "运营位配置",
-      "缓存刷新"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "customer-service",
-    "name": "客服后台",
-    "domain": "运营活动",
-    "aliases": [
-      "客服系统",
-      "工单系统",
-      "客服管理"
-    ],
-    "trigger_words": [
-      "工单",
-      "客服处理",
-      "用户反馈"
-    ],
-    "core_functions": [
-      "工单管理",
-      "用户反馈处理",
-      "客服分配"
-    ],
-    "depends_on": [
-      "player-management"
-    ],
-    "impacted_modules": [
-      "operation-management"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "工单列表",
-      "工单详情",
-      "分配按钮"
-    ],
-    "server_signals": [
-      "工单查询接口",
-      "工单处理",
-      "分配逻辑"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "sms-marketing",
-    "name": "短信营销中心",
-    "domain": "运营活动",
-    "aliases": [
-      "短信营销",
-      "短信群发",
-      "短信模板"
-    ],
-    "trigger_words": [
-      "短信群发",
-      "短信模板",
-      "短信记录"
-    ],
-    "core_functions": [
-      "短信模板管理",
-      "短信群发",
-      "发送记录"
-    ],
-    "depends_on": [
-      "player-management"
-    ],
-    "impacted_modules": [
-      "operation-management"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "模板列表",
-      "群发配置",
-      "发送记录"
-    ],
-    "server_signals": [
-      "模板配置接口",
-      "短信发送",
-      "记录写入"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "email-management",
-    "name": "邮件管理",
-    "domain": "运营活动",
-    "aliases": [
-      "邮件营销",
-      "邮件群发",
-      "邮件模板"
-    ],
-    "trigger_words": [
-      "邮件群发",
-      "邮件模板",
-      "邮件记录"
-    ],
-    "core_functions": [
-      "邮件模板管理",
-      "邮件群发",
-      "发送记录"
-    ],
-    "depends_on": [
-      "player-management"
-    ],
-    "impacted_modules": [
-      "operation-management"
-    ],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "模板列表",
-      "群发配置",
-      "发送记录"
-    ],
-    "server_signals": [
-      "模板配置接口",
-      "邮件发送",
-      "记录写入"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "system-settings",
-    "name": "系统设置",
-    "domain": "运营活动",
-    "aliases": [
-      "系统配置",
-      "基础设置",
-      "全局参数"
-    ],
-    "trigger_words": [
-      "系统参数",
-      "全局配置",
-      "基础设置"
-    ],
-    "core_functions": [
-      "系统参数配置",
-      "全局设置",
-      "基础配置"
-    ],
-    "depends_on": [],
-    "impacted_modules": [],
-    "always_check": [
-      "data-integrity",
-      "audit-log"
-    ],
-    "platform_scope": [
-      "账服"
-    ],
-    "client_signals": [
-      "设置页面",
-      "参数配置",
-      "保存按钮"
-    ],
-    "server_signals": [
-      "参数查询接口",
-      "参数更新",
-      "缓存刷新"
-    ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
-  },
-  {
-    "id": "customer-service",
+    "id": "customer-backend",
     "name": "客户后台",
     "domain": "运营活动",
     "aliases": [
@@ -2449,8 +2002,7 @@
       "备注保存",
       "权限校验"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "account-report",
@@ -2503,11 +2055,10 @@
       "导出任务",
       "数据聚合"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/财务系统.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
-    "id": "report-system",
+    "id": "finance-report",
     "name": "报表",
     "domain": "运营活动",
     "aliases": [
@@ -2558,7 +2109,358 @@
       "统计任务",
       "导出处理"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md",
-    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
+  },
+  {
+    "id": "全民代",
+    "name": "全民代管理",
+    "domain": "代理管理",
+    "aliases": [
+      "全民代管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/全民代管理.md"
+  },
+  {
+    "id": "前端",
+    "name": "前端管理",
+    "domain": "代理管理",
+    "aliases": [
+      "前端管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/前端管理.md"
+  },
+  {
+    "id": "厂商活动记录",
+    "name": "厂商活动记录",
+    "domain": "代理管理",
+    "aliases": [
+      "厂商活动记录"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/厂商活动记录.md"
+  },
+  {
+    "id": "合伙人代理",
+    "name": "合伙人与代理",
+    "domain": "代理管理",
+    "aliases": [
+      "合伙人与代理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/合伙人与代理.md"
+  },
+  {
+    "id": "客户后台",
+    "name": "客户后台",
+    "domain": "运营活动",
+    "aliases": [
+      "客户后台"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/客户后台.md"
+  },
+  {
+    "id": "客服后台",
+    "name": "客服后台",
+    "domain": "运营活动",
+    "aliases": [
+      "客服后台"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/客服后台.md"
+  },
+  {
+    "id": "报表",
+    "name": "报表",
+    "domain": "运营活动",
+    "aliases": [
+      "报表"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/报表.md"
+  },
+  {
+    "id": "渠道",
+    "name": "渠道管理",
+    "domain": "代理管理",
+    "aliases": [
+      "渠道管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/渠道管理.md"
+  },
+  {
+    "id": "游戏及金流记录",
+    "name": "游戏及金流记录",
+    "domain": "代理管理",
+    "aliases": [
+      "游戏及金流记录"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/游戏及金流记录.md"
+  },
+  {
+    "id": "游戏",
+    "name": "游戏管理",
+    "domain": "代理管理",
+    "aliases": [
+      "游戏管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/游戏管理.md"
+  },
+  {
+    "id": "玩家",
+    "name": "玩家管理",
+    "domain": "财务系统",
+    "aliases": [
+      "玩家管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/玩家管理.md"
+  },
+  {
+    "id": "短信营销中心",
+    "name": "短信营销中心",
+    "domain": "运营活动",
+    "aliases": [
+      "短信营销中心"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/短信营销中心.md"
+  },
+  {
+    "id": "系统设置",
+    "name": "系统设置",
+    "domain": "运营活动",
+    "aliases": [
+      "系统设置"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/系统设置.md"
+  },
+  {
+    "id": "邮件",
+    "name": "邮件管理",
+    "domain": "运营活动",
+    "aliases": [
+      "邮件管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/邮件管理.md"
+  },
+  {
+    "id": "配置",
+    "name": "配置管理",
+    "domain": "运营活动",
+    "aliases": [
+      "配置管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/配置管理.md"
+  },
+  {
+    "id": "风险",
+    "name": "风险管理",
+    "domain": "运营活动",
+    "aliases": [
+      "风险管理"
+    ],
+    "trigger_words": [],
+    "core_functions": [],
+    "depends_on": [],
+    "impacted_modules": [],
+    "always_check": [
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [],
+    "server_signals": [],
+    "reference_file": "../domain-knowledge/风险管理.md"
   }
 ]

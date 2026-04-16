@@ -11,7 +11,6 @@
 - [平台拆分规则](#平台拆分规则)
 - [导出与保存](#导出与保存)
 - [增量补充](#增量补充)
-- [多语言 JSON](#多语言-json)
 - [脚本工具](#脚本工具)
 - [模块索引](#模块索引)
 
@@ -27,8 +26,7 @@
                                               ↓
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
 │  更新索引   │ ←  │  导出保存   │ ←  │  质量检查   │
-│  testcase/  │    │  Excel/JSON │    │  去重/控量  │
-│  i18n       │    └─────────────┘    └─────────────┘
+│  testcase/  │    │  Excel     │    │  去重/控量  │
 └─────────────┘
 ```
 
@@ -64,7 +62,6 @@
 - 是否存在已有测试用例需要避重补充
 - 是否存在指定模板、固定区、表头行或导出要求
 - 当前工作区是否存在索引可复用历史产物库
-- 是否存在多语言相关内容，以及是否已给齐固定语言集合
 
 ### 第 4 步：应用模块索引
 
@@ -245,71 +242,17 @@ python3 engine/scripts/xlsx_append_and_highlight.py \
 
 ---
 
-## 多语言 JSON
-
-### 何时生成
-
-当需求、附件或对话中明确出现多语言文案，并且固定语言集合都已提供时，额外输出一份多语言校验 JSON。
-
-### 固定语言集合
-
-| 代码 | 语言 |
-|------|------|
-| `en-us` | 英语 |
-| `id-id` | 印尼语 |
-| `pt-pt` | 葡萄牙语 |
-| `es-es` | 西班牙语 |
-| `bn-bn` | 孟加拉语 |
-| `tr-tr` | 土耳其语 |
-| `fp-fp` | 菲律宾语 |
-
-### JSON 结构
-
-```json
-{
-  "name": "页面/功能名称",
-  "url": "页面 URL",
-  "preScriptPath": "前置脚本路径",
-  "languages": {
-    "en-us": { "title": "...", ... },
-    "id-id": { "title": "...", ... },
-    ...
-  },
-  "options": {
-    "matchRule": "normalized-exact",
-    "captureRegion": {
-      "x": 0, "y": 0, "width": 0, "height": 0
-    }
-  }
-}
-```
-
-### 生成规则
-
-- 只在全部语言值完整时生成 JSON
-- 若缺语言，不自动补翻译，只输出缺失语言清单
-- 若语言完整但验证配置缺失，生成草稿 JSON：
-  - `url=""`
-  - `preScriptPath=""`
-  - `matchRule="normalized-exact"`
-  - `captureRegion={x:0,y:0,width:0,height:0}`
-  - 对应索引条目使用 `status=draft`
-
----
-
 ## 脚本工具
 
 | 脚本 | 用途 | 示例 |
 |------|------|------|
 | `upsert_testcase_index.py` | 新增/更新索引条目 | `python3 upsert_testcase_index.py --all` |
 | `validate_testcase_index.py` | 校验测试用例索引 | `python3 validate_testcase_index.py outputs/testcase-index.json` |
-| `validate_i18n_index.py` | 校验多语言索引 | `python3 validate_i18n_index.py outputs/i18n-index.json` |
-| `validate_i18n_json.py` | 校验单个多语言 JSON | `python3 validate_i18n_json.py outputs/i18n/模块/文件.json` |
 | `validate_index.py` | 校验模块索引 | `python3 validate_index.py engine/references/module-index.json` |
 | `cleanup_testcase_store.py` | 清理过期/孤立文件 | `python3 cleanup_testcase_store.py --dry-run` |
 | `diff_testcase_indexes.py` | 比较索引差异 | `python3 diff_testcase_indexes.py old.json new.json` |
 | `export_testcase_report.py` | 生成覆盖率报告 | `python3 export_testcase_report.py --output report.html` |
-| `generate_testcase_from_template.py` | 从模板生成用例 | `python3 generate_testcase_from_template.py template.xlsx data.json output.xlsx` |
+| `xlsx_fill_testcase_template.py` | 填充 Excel 模板 | `python3 xlsx_fill_testcase_template.py data.json output.xlsx` |
 | `xlsx_append_and_highlight.py` | Excel 追加标黄 | `python3 xlsx_append_and_highlight.py existing.xlsx new.json output.xlsx --highlight` |
 
 ---
@@ -406,4 +349,3 @@ python3 engine/scripts/xlsx_append_and_highlight.py \
 - [ ] 是否存在明显重复或低价值重复
 - [ ] 备注是否标记了用例类型
 - [ ] 若导出 Excel，多行字段是否已开启自动换行
-- [ ] 若需求含多语言内容，是否检查了固定语言集合是否完整

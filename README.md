@@ -1,6 +1,6 @@
 # QA Test Case Generator - 测试用例生成器
 
-> 将需求文档/PRD/接口说明自动转换为结构化测试用例，支持 Excel 导出和多语言校验
+> 将需求文档/PRD/接口说明自动转换为结构化测试用例，支持 Excel 导出
 
 ---
 
@@ -240,9 +240,7 @@ QA/
 ├── requirements.txt             # Python 依赖
 ├── outputs/                   # 产物仓库
 │   ├── generated/               # 测试用例 Excel
-│   ├── i18n/                    # 多语言校验 JSON
-│   ├── testcase-index.json      # 用例索引
-│   └── i18n-index.json          # 多语言索引
+│   └── testcase-index.json      # 用例索引
 └── templates/                   # Excel/JSON 模板
 ```
 
@@ -255,9 +253,9 @@ QA/
 | 需求 → 用例 | 从需求文档/PRD/接口说明自动生成结构化测试用例 |
 | 平台拆分 | 自动识别并拆分为「客户端」和「账服」两侧用例 |
 | Excel 导出 | 使用 minimax-xlsx 模板保真导出，支持标黄追加 |
-| 多语言校验 | 7 种语言文案校验 JSON 生成（en/id/pt/es/bn/tr/fp） |
+| 多语言校验（已移除） | 7 种语言文案校验 JSON 生成（en/id/pt/es/bn/tr/fp） |
 | 增量补充 | 基于已有用例做增量去重补充，避免重复生成 |
-| 索引管理 | 双索引结构管理用例和多语言 JSON，支持关联检索 |
+| 索引管理 | 统一索引管理用例，支持关联检索 |
 | LangGraph 编排 | 基于 LangGraph 的流程编排，支持重试、并行、复杂条件判断 |
 
 ---
@@ -289,7 +287,7 @@ Python 脚本层 ← 确定性任务执行
 |------|------|
 | 生成测试用例 | `/qa 生成测试用例` |
 | 补充已有用例 | `/qa 补充已有用例` |
-| 生成多语言 JSON | `/qa 生成多语言校验 JSON` |
+| 仅分析需求 | `/qa 仅分析需求，不生成用例` |
 | 仅分析需求 | `/qa 仅分析需求，不生成用例` |
 | 重建索引 | `python3 engine/scripts/upsert_testcase_index.py --all` |
 | 校验测试用例索引 | `python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json` |
@@ -305,13 +303,11 @@ Python 脚本层 ← 确定性任务执行
 |------|------|
 | `upsert_testcase_index.py` | 新增/更新测试用例索引 |
 | `validate_testcase_index.py` | 校验测试用例索引 |
-| `validate_i18n_index.py` | 校验多语言索引 |
-| `validate_i18n_json.py` | 校验多语言 JSON |
 | `validate_index.py` | 校验模块索引 |
 | `cleanup_testcase_store.py` | 清理过期用例 |
 | `diff_testcase_indexes.py` | 比较索引差异 |
 | `export_testcase_report.py` | 生成覆盖率报告 |
-| `generate_testcase_from_template.py` | 从模板生成用例 |
+| `xlsx_fill_testcase_template.py` | Excel 模板填充 |
 | `xlsx_append_and_highlight.py` | Excel 追加标黄 |
 | `parse_axure_html.py` | 解析 Axure HTML |
 
@@ -323,9 +319,6 @@ python3 engine/scripts/upsert_testcase_index.py --all
 
 # 校验测试用例索引
 python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
-
-# 校验多语言索引
-python3 engine/scripts/validate_i18n_index.py outputs/i18n-index.json
 
 # 校验模块索引
 python3 engine/scripts/validate_index.py engine/references/module-index.json
@@ -350,7 +343,7 @@ python3 engine/scripts/parse_axure_html.py outputs/axure_export/ --recursive
 
 | 工作流 | 用途 | 流程图 |
 |--------|------|--------|
-| Generate | 生成测试用例 | `parse_input → [read_figma] → generate_test_cases → [check_i18n] → export_excel` |
+| Generate | 生成测试用例 | `parse_input → [read_figma] → generate_test_cases → export_excel` |
 | Augment | 补充已有用例 | `load_existing_cases → analyze_gaps → generate_augment_cases → append_to_excel` |
 | Analyze | 需求分析 | `parse_input → analyze_requirements → output_analysis` |
 
@@ -393,29 +386,6 @@ result = workflow.invoke(state)
 |------|------|------|--------|----------|----------|----------|----------|------|
 | 1 | 客户端 | 认证中心 | 手机号格式校验 | 已进入登录页 | 1、输入非 11 位手机号<br>2、点击获取验证码 | 1、提示"手机号格式错误"<br>2、不发送验证码 | | 【功能测试】【P0】 |
 | 2 | 账服 | 认证中心 | 验证码校验 | 1、手机号已发送验证码<br>2、验证码在有效期内 | 1、输入正确验证码<br>2、点击登录 | 1、登录成功<br>2、返回 token | | 【功能测试】【P0】 |
-
-### 多语言 JSON 结构
-
-```json
-{
-  "name": "个人中心 - 免费旋转记录",
-  "url": "https://example.com/free-spin-record",
-  "preScriptPath": "",
-  "languages": {
-    "en-us": { "title": "Free Spin Record", ... },
-    "id-id": { "title": "Catatan Putaran Gratis", ... },
-    "pt-pt": { "title": "Registo de Rodadas Grátis", ... },
-    "es-es": { "title": "Registro de Tiradas Gratis", ... },
-    "bn-bn": { "title": "ফ্রি স্পিন রেকর্ড", ... },
-    "tr-tr": { "title": "Ücretsiz Dönüş Kaydı", ... },
-    "fp-fp": { "title": "Tala ng Libreng Spin", ... }
-  },
-  "options": {
-    "matchRule": "normalized-exact",
-    "captureRegion": { "x": 0, "y": 0, "width": 0, "height": 0 }
-  }
-}
-```
 
 ---
 

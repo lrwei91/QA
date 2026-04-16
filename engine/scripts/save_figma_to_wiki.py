@@ -5,7 +5,7 @@ save_figma_to_wiki.py — Save Figma design data to knowledge base.
 
 Usage:
     python3 save_figma_to_wiki.py <figma_json> --type sources --output knowledge/wiki/sources/
-    python3 save_figma_to_wiki.py <figma_json> --type entities --output knowledge/wiki/entities/
+    python3 save_figma_to_wiki.py <figma_json> --type sources --output knowledge/wiki/sources/
 
 This script:
 1. Reads Figma API response JSON

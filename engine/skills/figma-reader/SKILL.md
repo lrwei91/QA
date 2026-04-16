@@ -185,17 +185,15 @@ python3 engine/scripts/save_figma_to_wiki.py \
 # 保存组件结构到 entities 目录
 python3 engine/scripts/save_figma_to_wiki.py \
     <figma_json_output> \
-    --type entities \
-    --output knowledge/wiki/entities/
+    --type sources \
+    --output knowledge/wiki/sources/
 ```
 
 **保存后的知识库结构**：
 ```
 knowledge/wiki/sources/
-└── <页面名称>-设计稿.md    # 页面结构、交互说明、状态变化
-
-knowledge/wiki/entities/
-└── UI 组件规范.md          # 组件列表、变体说明
+├── <页面名称>-设计稿.md    # 页面结构、交互说明、状态变化
+└── <页面名称>-组件规范.md  # 组件列表、变体说明
 ```
 
 **知识库页面内容**：
@@ -346,4 +344,3 @@ Frame: 主界面
 ## 相关 Skills
 
 - [`testcase-generate`](../testcase-generate/SKILL.md) - 从需求生成测试用例
-- [`testcase-i18n`](../testcase-i18n/SKILL.md) - 多语言 JSON 校验（可从 Figma 提取多语言文案）

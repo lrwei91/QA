@@ -3,10 +3,110 @@
   "store_name": "QA Test Case Store",
   "root_dir": "outputs",
   "cases_dir": "generated",
-  "updated_at": "2026-04-14T19:17:38+08:00",
+  "updated_at": "2026-04-16T15:18:19+08:00",
   "entries": [
     {
-      "id": "tc-generated-xlsx-e6c7bbe8",
+      "id": "tc-generated-uid-1-xlsx-57cb350a",
+      "group_key": "group-uid-0b0289d8",
+      "title": "全名代佣金记录表单新增下级uid",
+      "module": "全民代管理",
+      "module_ids": [
+        "module-29709a52"
+      ],
+      "topic": "全名代佣金记录表单新增下级uid",
+      "format": "xlsx",
+      "rel_path": "generated/全民代管理/全民代管理/全名代佣金记录表单新增下级uid 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "全民代管理",
+        "全名代佣金记录表单新增下级uid"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-uid-xlsx-337e327b",
+      "group_key": "group-uid-0b0289d8",
+      "title": "全名代佣金记录表单新增下级uid",
+      "module": "全民代管理",
+      "module_ids": [
+        "module-29709a52"
+      ],
+      "topic": "全名代佣金记录表单新增下级uid",
+      "format": "xlsx",
+      "rel_path": "generated/全民代管理/全民代管理/全名代佣金记录表单新增下级uid.xlsx",
+      "source_refs": [],
+      "tags": [
+        "全民代管理",
+        "全名代佣金记录表单新增下级uid"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-94b5def9",
+      "group_key": "group-75bbaedd",
+      "title": "全民代分享好礼优化",
+      "module": "全民代管理",
+      "module_ids": [
+        "module-29709a52"
+      ],
+      "topic": "全民代分享好礼优化",
+      "format": "xlsx",
+      "rel_path": "generated/全民代管理/全民代管理/全民代分享好礼优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "全民代管理",
+        "全民代分享好礼"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-1fc1f9e8",
+      "group_key": "group-57f56276",
+      "title": "全民代新增批量导入查询",
+      "module": "全民代管理",
+      "module_ids": [
+        "module-29709a52"
+      ],
+      "topic": "全民代新增批量导入查询",
+      "format": "xlsx",
+      "rel_path": "generated/全民代管理/全民代管理/全民代新增批量导入查询.xlsx",
+      "source_refs": [],
+      "tags": [
+        "全民代管理",
+        "全民代新增批量导入查询"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-42668fb3",
       "group_key": "group-38e8c290",
       "title": "分享好礼优化",
       "module": "全民代管理",
@@ -15,112 +115,2923 @@
       ],
       "topic": "分享好礼优化",
       "format": "xlsx",
-      "rel_path": "generated/全民代管理/分享好礼优化.xlsx",
+      "rel_path": "generated/全民代管理/分享好礼/分享好礼优化.xlsx",
       "source_refs": [],
       "tags": [
         "全民代管理",
         "分享好礼"
       ],
       "status": "active",
-      "created_at": "2026-03-28T01:07:16+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
+      "platform_scope": [
+        "平台",
+        "后端",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-7c023df4",
+      "group_key": "group-559ec3b5",
+      "title": "高级搜索功能",
+      "module": "其他",
+      "module_ids": [
+        "module-1a26edf9"
+      ],
+      "topic": "高级搜索功能",
+      "format": "xlsx",
+      "rel_path": "generated/其他/高级搜索功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "其他",
+        "高级搜索"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "后台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-pwa-pwa-18-xlsx-5724b3ab",
+      "group_key": "group-pwa-18-e670a59f",
+      "title": "PWA落地页新增18+样式",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "PWA落地页新增18+样式",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/PWA/PWA落地页新增18+样式.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "PWA落地页新增18+样式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:01+08:00"
+    },
+    {
+      "id": "tc-generated-pwa-pwa-xlsx-50c10986",
+      "group_key": "group-pwa-c09857f3",
+      "title": "pwa引导新增强制开关",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "pwa引导新增强制开关",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/PWA/pwa引导新增强制开关.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "pwa引导新增强制开关"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "账服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-ui-xlsx-7826fee5",
+      "group_key": "group-e535deed",
+      "title": "广播前端增加显隐控制-测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "广播前端增加显隐控制-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/UI 组件/广播前端增加显隐控制.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "广播前端增加显隐控制"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增广播开关验证",
+        "广播前端增加显隐控制验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:45+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-ui-xlsx-b17f5377",
+      "group_key": "group-7db2e174",
+      "title": "悬浮自定义入口优化测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "悬浮自定义入口优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/UI 组件/悬浮自定义入口优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "悬浮自定义入口优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-ui-xlsx-ccd53ba4",
+      "group_key": "group-b786aa58",
+      "title": "活动侧边栏新增红点",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "活动侧边栏新增红点",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/UI 组件/活动侧边栏新增红点.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "活动侧边栏新增红点"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-web-we5-xlsx-56ef0a75",
+      "group_key": "group-we5-a739b458",
+      "title": "we5首充登录模式弹窗顯示優化-测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "we5首充登录模式弹窗顯示優化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/Web 端/we5首充登录模式弹窗顯示優化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "we5首充登录模式弹窗顯示優化"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "首充登录赠送模式弹窗验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-web-web2-xlsx-d9dc6cda",
+      "group_key": "group-web2-dd3bac2e",
+      "title": "web2首充登录模式弹窗宝箱优化-测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "web2首充登录模式弹窗宝箱优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/Web 端/web2首充登录模式弹窗宝箱优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "web2首充登录模式弹窗宝箱"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "首次充值登录赠送优化验证",
+        "首次充值赠送弹窗优化验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-web-web5-fb-xlsx-9bceeab9",
+      "group_key": "group-web5-fb-1aaed6de",
+      "title": "web5 FB悬浮入口设置测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "web5 FB悬浮入口设置测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/Web 端/web5 FB悬浮入口设置.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "web5 FB悬浮入口设置测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0e8c54d5",
+      "group_key": "group-1a3a51dc",
+      "title": "自定义厂家分类图标",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "自定义厂家分类图标",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/大厅分类/自定义厂家/自定义厂家分类图标.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "自定义厂家分类图标"
+      ],
+      "status": "active",
       "platform_scope": [
         "账服",
         "客户端"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
     },
     {
-      "id": "tc-generated-20260403-xlsx-6fe3e976",
-      "group_key": "group-31-5ea1dab0",
+      "id": "tc-generated-1-xlsx-db8ae8e6",
+      "group_key": "group-78ec3ac8",
+      "title": "自定义皮肤-底部导航栏优化测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "自定义皮肤-底部导航栏优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/自定义皮肤/自定义皮肤-底部导航栏优化 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "自定义皮肤",
+        "底部导航栏优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "自定义皮肤-底部导航栏"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-82a2e004",
+      "group_key": "group-3d6db380",
+      "title": "自定义皮肤增加游戏入口排版样式 --测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "自定义皮肤增加游戏入口排版样式 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/自定义皮肤/自定义皮肤增加游戏入口排版样式 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "自定义皮肤增加游戏入口排版样式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服 - 前端管理 - 自定义皮肤 - 游戏入口图",
+        "客户端 - 游戏入口图"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:02+08:00"
+    },
+    {
+      "id": "tc-generated-banner-xlsx-0c839ec6",
+      "group_key": "group-banner-d42357da",
+      "title": "自定义皮肤新增Banner高度选项",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "自定义皮肤新增Banner高度选项",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/自定义皮肤/自定义皮肤新增Banner高度选项.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "自定义皮肤新增Banner高度选项"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-ffed8ca5",
+      "group_key": "group-db09f0a3",
+      "title": "自定义皮肤新增侧边栏样式测试用例",
+      "module": "前端管理",
+      "module_ids": [
+        "module-dadc0d54"
+      ],
+      "topic": "自定义皮肤新增侧边栏样式测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/前端管理/自定义皮肤/自定义皮肤新增侧边栏样式.xlsx",
+      "source_refs": [],
+      "tags": [
+        "前端管理",
+        "自定义皮肤新增侧边栏样式测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-8f81529c",
+      "group_key": "group-65118b3f",
       "title": "免费旋转报表与活动记录优化",
       "module": "厂商活动记录",
       "module_ids": [
         "module-37a0db47"
       ],
-      "topic": "免费旋转数据统计、活动记录净输赢、31 天查询限制",
+      "topic": "免费旋转报表与活动记录优化",
       "format": "xlsx",
-      "rel_path": "generated/厂商活动记录/免费旋转报表与活动记录优化_20260403.xlsx",
-      "source_refs": [
-        "需求图片：免费旋转数据统计与活动记录优化"
-      ],
-      "tags": [
-        "厂商活动记录",
-        "免费旋转报表与活动记录",
-        "免费旋转",
-        "一般用户报表",
-        "净输赢",
-        "活动记录"
-      ],
-      "status": "active",
-      "created_at": "2026-04-03T14:19:00+08:00",
-      "updated_at": "2026-04-03T14:19:00+08:00",
-      "platform_scope": [
-        "账服"
-      ],
-      "template": ""
-    },
-    {
-      "id": "tc-generated-2026-03-30-xlsx-98c0cbd1",
-      "group_key": "group-2026-03-30-73519006",
-      "title": "帐服报表 - 免费旋转数据优化_2026-03-30",
-      "module": "帐服报表",
-      "module_ids": [
-        "module-34585dba"
-      ],
-      "topic": "帐服报表 - 免费旋转数据优化_2026-03-30",
-      "format": "xlsx",
-      "rel_path": "generated/帐服报表/帐服报表 - 免费旋转数据优化_2026-03-30.xlsx",
+      "rel_path": "generated/厂商活动记录/免费旋转/免费旋转报表与活动记录优化.xlsx",
       "source_refs": [],
       "tags": [
-        "帐服报表",
-        "免费旋转数据",
-        "2026",
-        "03",
-        "30"
+        "厂商活动记录",
+        "免费旋转报表与活动记录"
       ],
       "status": "active",
-      "created_at": "2026-03-30T13:45:25+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "账服"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
     },
     {
-      "id": "tc-generated-20260403-xlsx-supplement",
-      "group_key": "group-world-cup-smoke",
-      "title": "世界杯竞猜活动_冒烟用例_补充",
-      "module": "运营活动",
+      "id": "tc-generated-xlsx-c62969ad",
+      "group_key": "group-37cd329f",
+      "title": "下级代理相关风控规则优化测试用例",
+      "module": "合伙人与代理",
       "module_ids": [
-        "module-6b810558"
+        "module-c3031e75"
       ],
-      "topic": "世界杯竞猜客户端冒烟测试用例补充",
+      "topic": "下级代理相关风控规则优化测试用例",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/世界杯竞猜活动_冒烟用例_补充.xlsx",
-      "source_refs": [
-        "需求页面：世界杯 - 客户端.html"
-      ],
+      "rel_path": "generated/合伙人与代理/代理风控/下级代理相关风控规则优化.xlsx",
+      "source_refs": [],
       "tags": [
-        "运营活动",
-        "世界杯竞猜",
-        "冒烟用例",
-        "客户端",
-        "赛程查看",
-        "比赛预测",
-        "排行榜"
+        "合伙人与代理",
+        "下级代理相关风控规则优化测试用例"
       ],
       "status": "active",
-      "created_at": "2026-04-03T16:34:31+08:00",
-      "updated_at": "2026-04-03T16:34:31+08:00",
       "platform_scope": [
-        "客户端",
+        "平台",
         "账服"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
     },
     {
-      "id": "tc-generated-xlsx-82dba900",
+      "id": "tc-generated-xlsx-ddd10875",
+      "group_key": "group-2854d4b2",
+      "title": "付费率代理风控优化测试用例",
+      "module": "合伙人与代理",
+      "module_ids": [
+        "module-c3031e75"
+      ],
+      "topic": "付费率代理风控优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/合伙人与代理/代理风控/付费率代理风控优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "合伙人与代理",
+        "付费率代理风控优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-ff0f0da3",
+      "group_key": "group-7852828e",
+      "title": "负贡献代理风控优化测试用例",
+      "module": "合伙人与代理",
+      "module_ids": [
+        "module-c3031e75"
+      ],
+      "topic": "负贡献代理风控优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/合伙人与代理/代理风控/负贡献代理风控优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "合伙人与代理",
+        "负贡献代理风控优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:46+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-177ed172",
+      "group_key": "group-5b66f7f5",
+      "title": "风险用户同代理支持自动出风控测试用例",
+      "module": "合伙人与代理",
+      "module_ids": [
+        "module-c3031e75"
+      ],
+      "topic": "风险用户同代理支持自动出风控测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/合伙人与代理/代理风控/风险用户同代理支持自动出风控.xlsx",
+      "source_refs": [],
+      "tags": [
+        "合伙人与代理",
+        "风险用户同代理支持自动出风控测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-58672f6f",
+      "group_key": "group-a031e579",
+      "title": "客服工单优化",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服工单优化",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服工单优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服工单"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服",
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-035c13e1",
+      "group_key": "group-ff31c868",
+      "title": "客服总台优化",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台优化",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-10d3c640",
+      "group_key": "group-e820d050",
+      "title": "客服总台充值提现记录新增首充首出筛选项 测试用例",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台充值提现记录新增首充首出筛选项 测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台充值提现记录新增首充首出筛选项 .xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台充值提现记录新增首充首出筛选项 测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:03+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-84312421",
+      "group_key": "group-69ce1ff0",
+      "title": "客服总台全民代列表优化测试用例",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台全民代列表优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台全民代列表优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台全民代列表优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客服总台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-87609d34",
+      "group_key": "group-a68f805e",
+      "title": "客服总台出款类型字段补充",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台出款类型字段补充",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台出款类型字段补充.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台出款类型字段补充"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-edf509f5",
+      "group_key": "group-43726737",
+      "title": "客服总台同步帐服全民代开关模块测试用例",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台同步帐服全民代开关模块测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台同步帐服全民代开关模块.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台同步帐服全民代开关模块测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客服总台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-43923329",
+      "group_key": "group-4065d861",
+      "title": "客服总台新增支付通道开关编辑功能测试用例",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台新增支付通道开关编辑功能测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台新增支付通道开关编辑功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台新增支付通道开关编辑功能测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-5e8d3985",
+      "group_key": "group-10464bb3",
+      "title": "客服总台新增用户详情编辑功能",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台新增用户详情编辑功能",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台新增用户详情编辑功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台新增用户详情编辑"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客服总台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:47+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-f0c540cb",
+      "group_key": "group-613fd1e0",
+      "title": "客服总台新增站内信功能",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台新增站内信功能",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台新增站内信功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台新增站内信"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客服总台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-202cbda6",
+      "group_key": "group-39d1f5e8",
+      "title": "客服总台有关数据统计的页面加上权限",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台有关数据统计的页面加上权限",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台有关数据统计的页面加上权限.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台有关数据统计的页面加上权限"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-371b66fe",
+      "group_key": "group-4f25b573",
+      "title": "客服总台玩家列表查询优化 用例",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台玩家列表查询优化 用例",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台玩家列表查询优化 用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台玩家列表查询优化 用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "客服总台-玩家列表",
+        "客服总台-玩家列表-批量操作"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-aa334bf2",
+      "group_key": "group-d8c9382e",
+      "title": "客服总台用户详情新增日报表功能测试用例",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台用户详情新增日报表功能测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台用户详情新增日报表功能 .xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台用户详情新增日报表功能测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:04+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-82654691",
+      "group_key": "group-8b9978d7",
+      "title": "客服总台站内信新增发送金币上限配置",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台站内信新增发送金币上限配置",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台站内信新增发送金币上限配置.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台站内信新增发送金币上限配置"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-c6b93488",
+      "group_key": "group-9721b470",
+      "title": "客服总台线上入款线上出款新增统计",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "客服总台线上入款线上出款新增统计",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/客服总台/客服总台线上入款线上出款新增统计.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "客服总台线上入款线上出款新增统计"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-94b85709",
+      "group_key": "group-ca26603e",
+      "title": "限制弹窗聚合聊天保底优化优化",
+      "module": "客户后台",
+      "module_ids": [
+        "module-caebb4d2"
+      ],
+      "topic": "限制弹窗聚合聊天保底优化优化",
+      "format": "xlsx",
+      "rel_path": "generated/客户后台/聊天功能/限制弹窗聚合聊天保底优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "客户后台",
+        "限制弹窗聚合聊天保底"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服后台-配置管理",
+        "账服后台-配置管理/AI后台-第三方平台配置"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-506de2ba",
+      "group_key": "group-90edde5e",
+      "title": "整体数据概览与留存报表优化--测试用例",
+      "module": "报表",
+      "module_ids": [
+        "module-ca53e6a3"
+      ],
+      "topic": "整体数据概览与留存报表优化--测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/报表/整体数据概览与留存报表优化--测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "报表",
+        "整体数据概览与留存报表"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "整体数据概览",
+        "日报表",
+        "用户留存报表"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-89114300",
+      "group_key": "group-e7d7db8a",
+      "title": "游戏留存报表测试用例",
+      "module": "报表",
+      "module_ids": [
+        "module-ca53e6a3"
+      ],
+      "topic": "游戏留存报表测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/报表/游戏留存报表新增字段 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "报表",
+        "游戏留存报表测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0958a150",
+      "group_key": "group-1d3e194e",
+      "title": "玩家报表字段新增-测试用例",
+      "module": "报表",
+      "module_ids": [
+        "module-ca53e6a3"
+      ],
+      "topic": "玩家报表字段新增-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/报表/玩家报表字段新增.xlsx",
+      "source_refs": [],
+      "tags": [
+        "报表",
+        "玩家报表字段新增"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增“最后访问域名”验证",
+        "旧数据验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:48+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-8baa268c",
+      "group_key": "group-30d8b1ac",
+      "title": "用户留存报表优化测试用例",
+      "module": "报表",
+      "module_ids": [
+        "module-ca53e6a3"
+      ],
+      "topic": "用户留存报表优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/报表/用户留存报表.xlsx",
+      "source_refs": [],
+      "tags": [
+        "报表",
+        "用户留存报表优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-2bdb5113",
+      "group_key": "group-ed91c008",
+      "title": "用户留存报表与渠道留存报表优化测试用例",
+      "module": "报表",
+      "module_ids": [
+        "module-ca53e6a3"
+      ],
+      "topic": "用户留存报表与渠道留存报表优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/报表/用户留存报表与渠道留存报表优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "报表",
+        "用户留存报表与渠道留存报表优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:05+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-a47d4eef",
+      "group_key": "group-15bd1a0c",
+      "title": "设备型号分析报表增加壳包打点",
+      "module": "报表",
+      "module_ids": [
+        "module-ca53e6a3"
+      ],
+      "topic": "设备型号分析报表增加壳包打点",
+      "format": "xlsx",
+      "rel_path": "generated/报表/设备型号分析报表增加壳包打点.xlsx",
+      "source_refs": [],
+      "tags": [
+        "报表",
+        "设备型号分析报表增加壳包打点"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-690b520c",
+      "group_key": "group-979cd006",
+      "title": "注册渠道赠送字段删除、变更测试用例",
+      "module": "渠道管理",
+      "module_ids": [
+        "module-756aec1a"
+      ],
+      "topic": "注册渠道赠送字段删除、变更测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/渠道管理/渠道管理/注册渠道赠送字段删除、变更.xlsx",
+      "source_refs": [],
+      "tags": [
+        "渠道管理",
+        "注册渠道赠送字段删除、变更测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0db01a55",
+      "group_key": "group-0a8f462f",
+      "title": "渠道后台字段同步渠道数据测试用例",
+      "module": "渠道管理",
+      "module_ids": [
+        "module-756aec1a"
+      ],
+      "topic": "渠道后台字段同步渠道数据测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/渠道管理/渠道管理/渠道后台字段同步渠道数据.xlsx",
+      "source_refs": [],
+      "tags": [
+        "渠道管理",
+        "渠道后台字段同步渠道数据测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "渠道后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-16878948",
+      "group_key": "group-962fcbb7",
+      "title": "冷热排行榜优化-测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "冷热排行榜优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/冷热排行榜/冷热排行榜优化-测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "冷热排行榜"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-b7f97661",
+      "group_key": "group-b530754f",
+      "title": "冷热排行榜展示优化 测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "冷热排行榜展示优化 测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/冷热排行榜/冷热排行榜展示优化 测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "冷热排行榜展示优化 测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后端",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:49+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-8b4ae0ef",
+      "group_key": "group-f60981a4",
+      "title": "热冷排行榜功能--测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "热冷排行榜功能--测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/冷热排行榜/热冷排行榜功能--测试用例 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "热冷排行榜"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-pc-xlsx-3318053d",
+      "group_key": "group-pc-4e69fd88",
+      "title": "PC版增加游戏入口大图模式 --测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "PC版增加游戏入口大图模式 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/PC版增加游戏入口大图模式 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "PC版增加游戏入口大图模式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "游戏入口",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:06+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-e923ede6",
+      "group_key": "group-7308e24a",
+      "title": "体育内嵌模块添加爬取模式-测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "体育内嵌模块添加爬取模式-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/体育内嵌模块添加爬取模式-测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "体育内嵌模块添加爬取模式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0f2a9fb3",
+      "group_key": "group-7a3c999f",
+      "title": "大厅分类-视频宣传模块 测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "大厅分类-视频宣传模块 测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/大厅分类-视频宣传模块 测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "大厅分类",
+        "视频宣传模块 测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台",
+        "前端显示"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-cb411e30",
+      "group_key": "group-9c7ce28e",
+      "title": "大厅分类新增体育嵌入模块-测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "大厅分类新增体育嵌入模块-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/大厅分类新增体育嵌入模块-测试用例 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "大厅分类新增体育嵌入模块"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "大厅分类",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-3b3dad10",
+      "group_key": "group-c229ab9f",
+      "title": "大厅分类添加新增分类功能 测试用例化",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "大厅分类添加新增分类功能 测试用例化",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/大厅分类添加新增分类功能 测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "大厅分类添加新增分类功能 测试用例化"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服后台-系统设置-菜单的显隐",
+        "账服后台-前端管理-大厅分类",
+        "账服后台-前端管理-大厅分类-新增窗口",
+        "账服后台-前端管理-大厅分类/客户端大厅",
+        "账服后台-前端管理-大厅分类-删除按钮"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-ac49791c",
+      "group_key": "group-1a132675",
+      "title": "大厅新增返回顶部按钮 --测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "大厅新增返回顶部按钮 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/大厅新增返回顶部按钮 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "大厅新增返回顶部按钮"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服 - 前端管理 - 自定义皮肤-按钮",
+        "账服 - 前端管理 - 自定义皮肤-按钮（不展示）/客户端",
+        "账服 - 前端管理 - 自定义皮肤-按钮（图标显示）/客户端",
+        "账服 - 前端管理 - 自定义皮肤-按钮（文本显示）/客户端",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-001de85b",
+      "group_key": "group-fde7b0df",
+      "title": "游戏入口图标排列新增横向排列",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "游戏入口图标排列新增横向排列",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/游戏入口图标排列新增横向排列-测试用例 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "游戏入口图标排列新增横向排列"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服后台",
+        "Web5客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:50+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-df705b7c",
+      "group_key": "group-fde7b0df",
+      "title": "游戏入口图标排列新增横向排列",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "游戏入口图标排列新增横向排列",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/游戏入口图标排列新增横向排列-测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "游戏入口图标排列新增横向排列"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服后台",
+        "Web5客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-cefde01f",
+      "group_key": "group-fbcb6698",
+      "title": "视频引流增加引导弹窗测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "视频引流增加引导弹窗测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/视频引流增加引导弹窗 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "视频引流增加引导弹窗测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:07+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-35374ae9",
+      "group_key": "group-78fe2575",
+      "title": "视频引流大厅测试用例",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "视频引流大厅测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/大厅游戏入口/视频引流大厅.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "视频引流大厅测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "菜单的显隐",
+        "权限",
+        "配置管理",
+        "视频引流",
+        "运营活动-打码量配置",
+        "金币赠送开关显隐",
+        "玩家详情",
+        "报表-数据整体概览",
+        "报表-赠送金币报表",
+        "游戏及金流记录-用户金币记录",
+        "客户端底部导航栏",
+        "绑定弹窗",
+        "双钱包"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-f808226e",
+      "group_key": "group-52ba3ac9",
+      "title": "自定义厂商优化",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "自定义厂商优化",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/自定义厂家/自定义厂商优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "自定义厂商"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-af0b53dc",
+      "group_key": "group-8844c522",
+      "title": "自定义厂家分类图标",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "自定义厂家分类图标",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/自定义厂家/自定义厂家分类图标.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "自定义厂家分类图标"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-4a1be561",
+      "group_key": "group-e97ef96a",
+      "title": "运营总台-厂商管理同步优化（运营总台游戏码新增设置沟选）",
+      "module": "游戏管理",
+      "module_ids": [
+        "module-57197d19"
+      ],
+      "topic": "运营总台-厂商管理同步优化（运营总台游戏码新增设置沟选）",
+      "format": "xlsx",
+      "rel_path": "generated/游戏管理/自定义厂家/运营总台-厂商管理同步优化_副本.xlsx",
+      "source_refs": [],
+      "tags": [
+        "游戏管理",
+        "运营总台",
+        "厂商管理同步优化（运营总台游戏码新增设置沟选"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "运营总台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-cpf-cpf-2-xlsx-dbc4897a",
+      "group_key": "group-cpf-b1f8e0d0",
+      "title": "CPF前台黑名单功能-测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "CPF前台黑名单功能-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/CPF 管控/CPF前台黑名单功能--测试用例 2.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "CPF前台黑名单"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "巴西相关配置-CPF前台黑名单",
+        "巴西相关配置-CPF白名单",
+        "玩家列表-用户详情",
+        "注册页",
+        "个人中心",
+        "充提弹窗",
+        "强制弹窗"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-cpf-cpf-3-xlsx-4b089c00",
+      "group_key": "group-cpf-b1f8e0d0",
+      "title": "CPF前台黑名单功能-测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "CPF前台黑名单功能-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/CPF 管控/CPF前台黑名单功能--测试用例 3.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "CPF前台黑名单"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "巴西相关配置-CPF前台黑名单",
+        "巴西相关配置-CPF白名单",
+        "玩家列表-用户详情",
+        "注册页",
+        "个人中心",
+        "充提弹窗",
+        "强制弹窗"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:51+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-cpf-cpf-xlsx-0621a5c6",
+      "group_key": "group-cpf-df067c9e",
+      "title": "CPF白名单功能-测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "CPF白名单功能-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/CPF 管控/CPF白名单功能--测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "CPF白名单"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "巴西相关配置-CPF白名单",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-cpf-cpf-xlsx-8609f13c",
+      "group_key": "group-cpf-4e78f342",
+      "title": "充值回调CPF优化 --测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "充值回调CPF优化 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/CPF 管控/充值回调CPF优化 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "充值回调CPF"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "巴西相关配置",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:08+08:00"
+    },
+    {
+      "id": "tc-generated-cpf-cpf-1-xlsx-aed0673a",
+      "group_key": "group-cpf-38a0322a",
+      "title": "无CPF用户限制功能 --测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "无CPF用户限制功能 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/CPF 管控/无CPF用户限制功能 --测试用例 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "无CPF用户限制"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "运营管理",
+        "玩家管理 - 玩家列表",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-cpf-cpf-xlsx-257c8dde",
+      "group_key": "group-cpf-82838c11",
+      "title": "线上入款新增回调CPF异常订单判断 --测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "线上入款新增回调CPF异常订单判断 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/CPF 管控/线上入款新增回调CPF异常订单判断 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "线上入款新增回调CPF异常订单判断"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台",
+        "客服总台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-pc-vip-xlsx-8298c237",
+      "group_key": "group-pc-vip-b29ef4a1",
+      "title": "PC端保级状态下VIP样式优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "PC端保级状态下VIP样式优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/PC端保级状态下VIP样式优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "PC端保级状态下VIP样式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-f44a3c92",
+      "group_key": "group-vip-6fdd3a79",
+      "title": "VIP升级动画权益展示规则优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP升级动画权益展示规则优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP升级动画权益展示规则优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP升级动画权益展示规则"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-44b1aad7",
+      "group_key": "group-vip-4b22dcc4",
+      "title": "VIP升级弹窗样式优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP升级弹窗样式优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP升级弹窗样式优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP升级弹窗样式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-858316c2",
+      "group_key": "group-vip-53ce3ab6",
+      "title": "VIP新模式显隐规则优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP新模式显隐规则优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP新模式显隐规则优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP新模式显隐规则"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-b339b63c",
+      "group_key": "group-vip-8ea7a27d",
+      "title": "VIP板块样式优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP板块样式优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP板块样式优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP板块样式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:52+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-56cef242",
+      "group_key": "group-vip-cd1eb1a8",
+      "title": "VIP模块结构更改二期",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP模块结构更改二期",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP模块结构更改二期.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP模块结构更改二期"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "帐服后台",
+        "客户端",
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-a56f9d1f",
+      "group_key": "group-vip-1ac465c4",
+      "title": "VIP等级手动编辑功能优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP等级手动编辑功能优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP等级手动编辑功能优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP等级手动编辑"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-14b77d42",
+      "group_key": "group-vip-34eb4a30",
+      "title": "VIP等级编辑模块操作优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "VIP等级编辑模块操作优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/VIP等级编辑模块操作优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "VIP等级编辑模块操作"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-f3492016",
+      "group_key": "group-vip-d4abdb0f",
+      "title": "前端vip权益模糊化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "前端vip权益模糊化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/前端vip权益模糊化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "前端vip权益模糊化"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "后台管理",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-b61e1650",
+      "group_key": "group-vip-a36276e6",
+      "title": "客户端VIP显示文本优化",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "客户端VIP显示文本优化",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/客户端VIP显示文本优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "客户端VIP显示文本"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:09+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-41e47be6",
+      "group_key": "group-vip-c94e8bc5",
+      "title": "新增VIP等级变更记录",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "新增VIP等级变更记录",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/新增VIP等级变更记录.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "新增VIP等级变更记录"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "帐服后台",
+        "客服总台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-vip-vip-xlsx-f7917ab8",
+      "group_key": "group-vip-0fd72a15",
+      "title": "渠道注册赠送VIP弹窗交互优化测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "渠道注册赠送VIP弹窗交互优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/VIP/渠道注册赠送VIP弹窗交互优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "渠道注册赠送VIP弹窗交互优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-6d2c2e21",
+      "group_key": "group-146bfa21",
+      "title": "个人中心游戏记录新增字段",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "个人中心游戏记录新增字段",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/玩家管理/个人中心游戏记录新增字段.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "个人中心游戏记录新增字段"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-15ccdf49",
+      "group_key": "group-0be7f0ce",
+      "title": "新增玩家行为查询需求-测试用例",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "新增玩家行为查询需求-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/玩家管理/玩家行为报表/新增玩家行为查询需求.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "新增玩家行为查询需求"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增“生涯充值次数”验证",
+        "新增“渠道”验证",
+        "新增“首次参与活动”验证",
+        "新增“首次到二次参与活动”验证",
+        "新增“首次到二次是否提现过”验证",
+        "新增“首次到二次充值前余额”验证",
+        "新增“二次到三次参与活动”验证",
+        "新增“二次到三次是否提现过”验证",
+        "新增“二次到三次充值前余额”验证",
+        "新增“生涯充值次数”筛选项验证",
+        "新增“渠道”筛选项验证",
+        "导出验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-9561c5c7",
+      "group_key": "group-7073048f",
+      "title": "玩家详情>冻结金币补上操作日志",
+      "module": "玩家管理",
+      "module_ids": [
+        "module-b82c7446"
+      ],
+      "topic": "玩家详情>冻结金币补上操作日志",
+      "format": "xlsx",
+      "rel_path": "generated/玩家管理/玩家管理/玩家详情冻结金币补上操作日志.xlsx",
+      "source_refs": [],
+      "tags": [
+        "玩家管理",
+        "玩家详情>冻结金币补上操作日志"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-7d6e72d5",
+      "group_key": "group-e8a3d2c2",
+      "title": "短信邮件请求频率限制优化",
+      "module": "短信营销中心",
+      "module_ids": [
+        "module-d3c6e322"
+      ],
+      "topic": "短信邮件请求频率限制优化",
+      "format": "xlsx",
+      "rel_path": "generated/短信营销中心/验证码通知/短信邮件请求频率限制优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "短信营销中心",
+        "短信邮件请求频率限制"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-32f01f3c",
+      "group_key": "group-bff541b9",
+      "title": "验证码记录增加统计内容用例",
+      "module": "短信营销中心",
+      "module_ids": [
+        "module-d3c6e322"
+      ],
+      "topic": "验证码记录增加统计内容用例",
+      "format": "xlsx",
+      "rel_path": "generated/短信营销中心/验证码通知/验证码记录增加统计内容.xlsx",
+      "source_refs": [],
+      "tags": [
+        "短信营销中心",
+        "验证码记录增加统计内容用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服后台-报表-验证码统计报表"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:53+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-6acb16b5",
+      "group_key": "group-7d7db31f",
+      "title": "验证码记录错误描述优化",
+      "module": "短信营销中心",
+      "module_ids": [
+        "module-d3c6e322"
+      ],
+      "topic": "验证码记录错误描述优化",
+      "format": "xlsx",
+      "rel_path": "generated/短信营销中心/验证码通知/验证码记录错误描述优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "短信营销中心",
+        "验证码记录错误描述"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "客户端大厅-登录界面",
+        "账服后台-报表-验证码记录",
+        "客户端大厅-个人中心界面"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-5a66876e",
+      "group_key": "group-db3238c1",
+      "title": "站点地图优化",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "站点地图优化",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/站点地图优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "站点地图"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-8d3097ed",
+      "group_key": "group-2e50568a",
+      "title": "站点地图新增默认数据配置开关",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "站点地图新增默认数据配置开关",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/站点地图新增默认数据配置开关.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "站点地图新增默认数据配置开关"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-bf511583",
+      "group_key": "group-85a6e450",
+      "title": "系统设置&权限，导出，导入优化",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "系统设置&权限，导出，导入优化",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/系统设置&权限，导出，导入优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "系统设置&权限，导出，导入"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-api-xlsx-5aab20fb",
+      "group_key": "group-api-8d49d46a",
+      "title": "邮箱验证API配置优化",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "邮箱验证API配置优化",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/邮箱验证API配置优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "邮箱验证API配置"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:10+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-11d1a280",
+      "group_key": "group-b722f9ad",
+      "title": "预周期配置优化",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "预周期配置优化",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/预周期配置优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "预周期配置"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-12-31-xlsx-92ef2df5",
+      "group_key": "group-12-31-71b45197",
+      "title": "默认客服需支持配置聚合聊天链接-12.31优化",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "默认客服需支持配置聚合聊天链接-12.31优化",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/默认客服需支持配置聚合聊天链接-12.31优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "默认客服需支持配置聚合聊天链接",
+        "12.31"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服后台-前端管理-黑白名单-前台黑名单",
+        "账服后台-运营管理-配置管理-玩家坐标控制",
+        "账服后台-前端管理-黑白名单-VPN限制",
+        "账服后台-游戏管理-厂家列表-更多功能-停用账服",
+        "AI后台-转人工控制台",
+        "env文件配置",
+        "客户端多语言测试",
+        "账服后台-运营管理-客服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-e8323740",
+      "group_key": "group-5fefccc7",
+      "title": "默认客服需支持配置聚合聊天链接",
+      "module": "系统设置",
+      "module_ids": [
+        "module-e976eab5"
+      ],
+      "topic": "默认客服需支持配置聚合聊天链接",
+      "format": "xlsx",
+      "rel_path": "generated/系统设置/系统配置/默认客服需支持配置聚合聊天链接.xlsx",
+      "source_refs": [],
+      "tags": [
+        "系统设置",
+        "默认客服需支持配置聚合聊天链接"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "账服后台-前端管理-黑白名单-前台黑名单",
+        "账服后台-运营管理-配置管理-玩家坐标控制",
+        "账服后台-前端管理-黑白名单-VPN限制",
+        "账服后台-游戏管理-厂家列表-更多功能-停用账服",
+        "AI后台-转人工控制台",
+        "env文件配置",
+        "客户端多语言测试"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-f2180063",
+      "group_key": "group-eb438ac6",
+      "title": "免费旋转数据优化",
+      "module": "认证内容",
+      "module_ids": [
+        "module-3276ee37"
+      ],
+      "topic": "免费旋转数据优化",
+      "format": "xlsx",
+      "rel_path": "generated/认证内容/一般用户报表/免费旋转数据优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "认证内容",
+        "免费旋转数据"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-6db63487",
+      "group_key": "group-xxxx-f2a74c6b",
+      "title": "XXXX测试用例",
+      "module": "认证内容",
+      "module_ids": [
+        "module-3276ee37"
+      ],
+      "topic": "XXXX测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/认证内容/登录安装/快捷登录优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "认证内容",
+        "XXXX测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-9-xlsx-b6d426ae",
+      "group_key": "group-9-33d43f22",
+      "title": "9套支付密钥加密测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "9套支付密钥加密测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/9套支付密钥加密.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "9套支付密钥加密测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "公共服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-web2-xlsx-0733f509",
+      "group_key": "group-web2-5d816b42",
+      "title": "web2提现界面功能优化测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "web2提现界面功能优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/web2提现界面功能优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "web2提现界面功能优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:54+08:00",
+      "updated_at": "2026-04-16T15:18:11+08:00"
+    },
+    {
+      "id": "tc-generated-2-xlsx-1557e50f",
+      "group_key": "group-0d7806f4",
+      "title": "【帐服总台】帐服总台新增警报中心测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "【帐服总台】帐服总台新增警报中心测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/【帐服总台】帐服总台新增警报中心测试用例 2.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "帐服总台】帐服总台新增警报中心测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "总台",
+        "警报后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:55+08:00",
+      "updated_at": "2026-04-16T15:18:12+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-8df156ce",
+      "group_key": "group-09cbef36",
+      "title": "九套前端新增充值历史记录页面测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "九套前端新增充值历史记录页面测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/九套前端新增充值历史记录页面.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "九套前端新增充值历史记录页面测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "公共服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:55+08:00",
+      "updated_at": "2026-04-16T15:18:12+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-8beab696",
+      "group_key": "group-7566e19f",
+      "title": "代付订单新增历史同信息兑换成功字段测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "代付订单新增历史同信息兑换成功字段测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/代付订单新增历史同信息兑换成功字段.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "代付订单新增历史同信息兑换成功字段测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:55+08:00",
+      "updated_at": "2026-04-16T15:18:12+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-fe0fab7e",
+      "group_key": "group-eb7c6949",
+      "title": "代收代付通道删除功能优化测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "代收代付通道删除功能优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/代收代付通道删除功能优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "代收代付通道删除功能优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:12+08:00"
+    },
+    {
+      "id": "tc-generated-v2-xlsx-b1ca16f5",
+      "group_key": "group-v2-bca08ee1",
+      "title": "代收代付通道删除功能优化V2测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "代收代付通道删除功能优化V2测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/代收代付通道删除功能优化V2.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "代收代付通道删除功能优化V2测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "公共服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:12+08:00"
+    },
+    {
+      "id": "tc-generated-v2-0202-xlsx-7311b6a8",
+      "group_key": "group-v2-bca08ee1",
+      "title": "代收代付通道删除功能优化V2测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "代收代付通道删除功能优化V2测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/代收代付通道删除功能优化V2调整0202.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "代收代付通道删除功能优化V2测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "公共服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-80132240",
+      "group_key": "group-3db60728",
+      "title": "充值界面文案优化",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "充值界面文案优化",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/充值界面文案优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "充值界面文案"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "大厅充值界面"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-247a9ce1",
+      "group_key": "group-41c9f6b8",
+      "title": "充值默认值可以配置为空测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "充值默认值可以配置为空测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/充值默认值可以配置为空.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "充值默认值可以配置为空测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-4601c9c0",
+      "group_key": "group-4c5ca8e2",
+      "title": "墨西哥重复订单优化 --测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "墨西哥重复订单优化 --测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/墨西哥重复订单优化 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "墨西哥重复订单"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-1def1643",
+      "group_key": "group-aee4fe2f",
+      "title": "尼日利亚监管系统优化-测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "尼日利亚监管系统优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/尼日利亚监管系统优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "尼日利亚监管系统"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "Pending状态数据不上报验证",
+        "历史数据处理验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:56+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-6e60396e",
+      "group_key": "group-f2061fc1",
+      "title": "帳服行事历套件选择时间调整测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "帳服行事历套件选择时间调整测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/帳服行事历套件选择时间调整.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "帳服行事历套件选择时间调整测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:57+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-b853cfde",
+      "group_key": "group-85a03288",
+      "title": "打款手续费向下取整测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "打款手续费向下取整测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/打款手续费向下取整.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "打款手续费向下取整测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:57+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-001568dc",
+      "group_key": "group-371dcafe",
+      "title": "提现增设名字规范检验开关测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "提现增设名字规范检验开关测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/提现增设名字规范检验开关.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "提现增设名字规范检验开关测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:57+08:00",
+      "updated_at": "2026-04-16T15:18:13+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-208031a5",
+      "group_key": "group-a711d691",
+      "title": "支付+代付通道新增删除功能测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "支付+代付通道新增删除功能测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/支付+代付通道新增删除功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "支付+代付通道新增删除功能测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "客户端",
+        "公共服",
+        "公共服客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:57+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-c417b2d5",
+      "group_key": "group-24c8056b",
+      "title": "新增提款需要满足条件--测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "新增提款需要满足条件--测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/新增提款需要满足条件--测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "新增提款需要满足条件"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:57+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0047140f",
+      "group_key": "group-16adcaba",
+      "title": "智利-充值与【积分兑换】对应信息同步功能--测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "智利-充值与【积分兑换】对应信息同步功能--测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/智利-充值与【积分兑换】对应信息同步功能 --测试用例.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "智利",
+        "充值与【积分兑换】对应信息同步"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "模块",
+        "后台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:57+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0fc4b0f6",
+      "group_key": "group-299a9711",
+      "title": "活动周期规则优化-测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "活动周期规则优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/活动周期规则优化-普通充值.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "活动周期规则"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "按钮显示验证",
+        "新增验证",
+        "配置验证",
+        "修改生效时间验证",
+        "复制验证",
+        "删除验证",
+        "列表验证",
+        "大厅显示验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-efa7c31a",
+      "group_key": "group-3e1e35f7",
+      "title": "线上出款导出字段新增风控类型测试用例",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "线上出款导出字段新增风控类型测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/线上出款导出字段新增风控类型.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "线上出款导出字段新增风控类型测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-e9795d42",
+      "group_key": "group-5b557c0a",
+      "title": "账服后台查询及导出模块功能优化",
+      "module": "财务系统",
+      "module_ids": [
+        "module-c3a2ab46"
+      ],
+      "topic": "账服后台查询及导出模块功能优化",
+      "format": "xlsx",
+      "rel_path": "generated/财务系统/账服后台查询及导出模块功能优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "财务系统",
+        "账服后台查询及导出模块"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "帐服后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-34d8d346",
       "group_key": "group-07602359",
       "title": "任务系统前后端优化",
       "module": "运营活动",
@@ -129,20 +3040,611 @@
       ],
       "topic": "任务系统前后端优化",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/任务系统前后端优化.xlsx",
+      "rel_path": "generated/运营活动/任务系统/任务系统前后端优化.xlsx",
       "source_refs": [],
       "tags": [
         "运营活动",
         "任务系统"
       ],
       "status": "active",
-      "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "客户端",
         "账服"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-9a4b03b1",
+      "group_key": "group-07602359",
+      "title": "任务系统前后端优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "任务系统前后端优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/任务系统前后端优化_1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "任务系统"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "客户端",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-80271880",
+      "group_key": "group-aa4f0b5a",
+      "title": "任务系统选择游戏规则优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "任务系统选择游戏规则优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/任务系统选择游戏规则优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "任务系统选择游戏规则"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "大厅"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-a133cca5",
+      "group_key": "group-554108bd",
+      "title": "前台显示优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "前台显示优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/前台显示优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "前台显示"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-1c54a399",
+      "group_key": "group-1dc45ee1",
+      "title": "双钱包奖金任务改造",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "双钱包奖金任务改造",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/双钱包奖金任务改造.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "双钱包奖金任务"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-6969a76f",
+      "group_key": "group-4d3c4bc9",
+      "title": "发送任务优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "发送任务优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/发送任务优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "发送任务"
+      ],
+      "status": "active",
+      "platform_scope": [],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:14+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-5c163e07",
+      "group_key": "group-cdfa7e3f",
+      "title": "支持游客访问任务页面",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "支持游客访问任务页面",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/支持游客访问任务页面.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "支持游客访问任务页面"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-49bb77f2",
+      "group_key": "group-38a36423",
+      "title": "活动周期规则优化-任务系统",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "活动周期规则优化-任务系统",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/活动周期规则优化-任务系统.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "活动周期规则",
+        "任务系统"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "大厅"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-cc41daae",
+      "group_key": "group-38a36423",
+      "title": "活动周期规则优化-任务系统",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "活动周期规则优化-任务系统",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/活动周期规则优化-任务系统_1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "活动周期规则",
+        "任务系统"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "大厅"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-fa21b3c3",
+      "group_key": "group-ca2b1f94",
+      "title": "流失引导任务优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "流失引导任务优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/流失引导任务优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "流失引导任务"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-14642d22",
+      "group_key": "group-ec19e69c",
+      "title": "自动化邮件召回任务优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "自动化邮件召回任务优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/自动化邮件召回任务优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "自动化邮件召回任务"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-0a5bd1fb",
+      "group_key": "group-2b550ff9",
+      "title": "邮件>流失引导任务功能优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "邮件>流失引导任务功能优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/任务系统/邮件流失引导任务功能优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "邮件>流失引导任务"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-9b6b942f",
+      "group_key": "group-9a63f6b5",
+      "title": "免费旋转下分失败支持批量补发",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转下分失败支持批量补发",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转下分失败支持批量补发.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转下分失败支持批量补发"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-232d8406",
+      "group_key": "group-cb52d08e",
+      "title": "免费旋转切换模式优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转切换模式优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转切换模式优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转切换模式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-2-xlsx-b98981da",
+      "group_key": "group-89eb0c03",
+      "title": "免费旋转功能优化汇总",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转功能优化汇总",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转功能优化汇总 2.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:58+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-61a3f34b",
+      "group_key": "group-89eb0c03",
+      "title": "免费旋转功能优化汇总",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转功能优化汇总",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转功能优化汇总.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-7a528d03",
+      "group_key": "group-496fc32b",
+      "title": "免费旋转打码量逻辑调整",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转打码量逻辑调整",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转打码量逻辑调整 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转打码量逻辑调整"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服/客户端",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-70aa3f8f",
+      "group_key": "group-496fc32b",
+      "title": "免费旋转打码量逻辑调整",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转打码量逻辑调整",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转打码量逻辑调整.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转打码量逻辑调整"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服/客户端",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-31d36f57",
+      "group_key": "group-061a0ff6",
+      "title": "免费旋转支持单一直通模式",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转支持单一直通模式",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转支持单一直通模式.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转支持单一直通模式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-2ee576bc",
+      "group_key": "group-9204ba6c",
+      "title": "免费旋转赠送金币报表新增明细",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "免费旋转赠送金币报表新增明细",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/免费旋转赠送金币报表新增明细.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "免费旋转赠送金币报表新增明细"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-e045c014",
+      "group_key": "group-b55cccd1",
+      "title": "双钱包免费旋转调整",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "双钱包免费旋转调整",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/双钱包免费旋转调整.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "双钱包免费旋转调整"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服/客户端",
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:15+08:00"
+    },
+    {
+      "id": "tc-generated-sprib-xlsx-b2a34ab8",
+      "group_key": "group-sprib-b29d4102",
+      "title": "对接Sprib厂家免费旋转",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "对接Sprib厂家免费旋转",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/对接Sprib厂家免费旋转.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "对接Sprib厂家免费旋转"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "大厅"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-8cf3f078",
+      "group_key": "group-237ee624",
+      "title": "站内信支持赠送免费旋转-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "站内信支持赠送免费旋转-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/站内信支持赠送免费旋转 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "站内信支持赠送免费旋转"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "发送站内信支持赠送免费旋转验证",
+        "用户站内信查询列表新增免费旋转字段验证",
+        "列表新增免费旋转字段验证",
+        "站内信领取验证",
+        "删除站内信验证",
+        "客户端免费旋转增加站内信奖励类型验证",
+        "Bonus History站内信多语言修改验证",
+        "赠送金币报表免费旋转增加站内信奖励类型验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-ac11a920",
+      "group_key": "group-e883d1d2",
+      "title": "运营活动补上免费旋转",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "运营活动补上免费旋转",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/免费旋转/运营活动补上免费旋转.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "运营活动补上免费旋转"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "账服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
     },
     {
       "id": "tc-generated-xlsx-3406dc3d",
@@ -161,16 +3663,17 @@
         "免费旋转"
       ],
       "status": "active",
-      "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
         "账服",
-        "客户端"
+        "客户端",
+        "平台"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-03-28T00:08:03+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
     },
     {
-      "id": "tc-generated-xlsx-1d3a228b",
+      "id": "tc-generated-xlsx-658c9045",
       "group_key": "group-554108bd",
       "title": "前台显示优化",
       "module": "运营活动",
@@ -179,111 +3682,723 @@
       ],
       "topic": "前台显示优化",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/前台显示优化.xlsx",
+      "rel_path": "generated/运营活动/前台显示/前台显示优化.xlsx",
       "source_refs": [],
       "tags": [
         "运营活动",
         "前台显示"
       ],
       "status": "active",
-      "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "账服",
+        "平台",
         "客户端"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
     },
     {
-      "id": "tc-generated-xlsx-4d9649b8",
-      "group_key": "group-b20bc0b7",
-      "title": "复充返利活动",
+      "id": "tc-generated-xlsx-39e07887",
+      "group_key": "group-bfe59a03",
+      "title": "客户端个人中心显示调整-测试用例",
       "module": "运营活动",
       "module_ids": [
         "module-6b810558"
       ],
-      "topic": "复充返利活动",
+      "topic": "客户端个人中心显示调整-测试用例",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/复充返利活动.xlsx",
+      "rel_path": "generated/运营活动/前台显示/客户端个人中心显示调整.xlsx",
       "source_refs": [],
       "tags": [
         "运营活动",
-        "复充返利活动"
+        "客户端个人中心显示调整"
       ],
       "status": "active",
-      "created_at": "2026-04-14T19:17:38+08:00",
-      "updated_at": "2026-04-14T19:17:38+08:00",
+      "platform_scope": [
+        "用例名称",
+        "个人中心显示调整验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:02:59+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-f381b292",
+      "group_key": "group-28bc6ace",
+      "title": "客户端搜索功能优化测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "客户端搜索功能优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/前台显示/客户端搜索功能优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "客户端搜索功能优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-b2eddd66",
+      "group_key": "group-f6abde9f",
+      "title": "幸运卡片（集福活动）",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运卡片（集福活动）",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "幸运卡片（集福活动"
+      ],
+      "status": "active",
       "platform_scope": [
         "账服",
         "客户端"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
     },
     {
-      "id": "tc-generated-20260408-xlsx-lucky-cards",
-      "group_key": "group-lucky-cards-smoke",
-      "title": "幸运卡片（集福活动）- 冒烟用例",
+      "id": "tc-generated-xlsx-e59e9871",
+      "group_key": "group-8bca6cfb",
+      "title": "幸运转盘优化",
       "module": "运营活动",
       "module_ids": [
         "module-6b810558"
       ],
-      "topic": "幸运卡片/集福活动核心流程测试",
+      "topic": "幸运转盘优化",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 冒烟用例_20260408.xlsx",
-      "source_refs": [
-        "需求文档：五福合成/幸运卡片活动"
-      ],
+      "rel_path": "generated/运营活动/幸运转盘/幸运转盘优化.xlsx",
+      "source_refs": [],
       "tags": [
         "运营活动",
-        "幸运卡片",
-        "集福活动",
-        "冒烟用例",
-        "卡片合成",
-        "活动配置"
+        "幸运转盘"
       ],
       "status": "active",
-      "created_at": "2026-04-08T15:30:00+08:00",
-      "updated_at": "2026-04-08T16:00:00+08:00",
       "platform_scope": [
-        "客户端",
-        "账服"
+        "平台",
+        "帐服/客户端"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
     },
     {
-      "id": "tc-generated-20260408-xlsx-lucky-cards-full",
-      "group_key": "group-lucky-cards-full",
-      "title": "幸运卡片（集福活动）- 完整用例",
+      "id": "tc-generated-xlsx-1e58ecac",
+      "group_key": "group-5826ee2c",
+      "title": "幸运转盘支持导入导出配置-测试用例",
       "module": "运营活动",
       "module_ids": [
         "module-6b810558"
       ],
-      "topic": "幸运卡片/集福活动完整测试用例",
+      "topic": "幸运转盘支持导入导出配置-测试用例",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/幸运卡片/幸运卡片（集福活动）- 完整用例_20260408.xlsx",
-      "source_refs": [
-        "需求文档：五福合成/幸运卡片活动"
-      ],
+      "rel_path": "generated/运营活动/幸运转盘/幸运转盘支持导入导出配置.xlsx",
+      "source_refs": [],
       "tags": [
         "运营活动",
-        "幸运卡片",
-        "集福活动",
-        "完整用例",
-        "卡片合成",
-        "活动配置",
-        "多语言"
+        "幸运转盘支持导入导出配置"
       ],
       "status": "active",
-      "created_at": "2026-04-08T16:30:00+08:00",
-      "updated_at": "2026-04-08T16:30:00+08:00",
       "platform_scope": [
-        "客户端",
-        "账服"
+        "用例名称",
+        "导出配置验证",
+        "导入配置验证"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
     },
     {
-      "id": "tc-generated-xlsx-9d15e8db",
+      "id": "tc-generated-xlsx-94e6a7e2",
+      "group_key": "group-06f2dbfa",
+      "title": "幸运转盘旋转次数增加一个配置-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运转盘旋转次数增加一个配置-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运转盘/幸运转盘旋转次数增加一个配置.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "幸运转盘旋转次数增加一个配置"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增次数限制配置验证",
+        "周期预配置下新增次数限制配置验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-a2a08437",
+      "group_key": "group-352a4e38",
+      "title": "幸运转盘旋转次数增加一个配置优化-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运转盘旋转次数增加一个配置优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运转盘/幸运转盘旋转次数增加一个配置优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "幸运转盘旋转次数增加一个配置"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增次数限制配置验证",
+        "周期预配置下新增次数限制配置验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-614a5555",
+      "group_key": "group-9014134c",
+      "title": "幸运轮盘背景图可自定义更换-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运轮盘背景图可自定义更换-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运转盘/幸运轮盘背景图可自定义更换.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "幸运轮盘背景图可自定义更换"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "后台幸运转盘样式调整",
+        "样式配置验证",
+        "客户端幸运转盘样式验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-2add2acb",
+      "group_key": "group-f4171542",
+      "title": "幸运轮盘背景图模版设计--万圣主题",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "幸运轮盘背景图模版设计--万圣主题",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运转盘/幸运轮盘背景图模版设计--万圣主题.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "幸运轮盘背景图模版设计",
+        "万圣主题"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增万圣主题模板验证",
+        "客户端幸运转盘样式验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-3-xlsx-e25aef9c",
+      "group_key": "group-3-1adbc22b",
+      "title": "邀3转盘清零逻辑优化测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "邀3转盘清零逻辑优化测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/幸运转盘/邀3转盘清零逻辑优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "邀3转盘清零逻辑优化测试用例"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:16+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-ae7c7c54",
+      "group_key": "group-ba9ffcfe",
+      "title": "亏损返还支持设定小数点后一位",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "亏损返还支持设定小数点后一位",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/洗码活动/亏损返还支持设定小数点后一位.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "亏损返还支持设定小数点后一位"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-fc6e399d",
+      "group_key": "group-bd8e3452",
+      "title": "亏损返还新增亏损档位梯度模式",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "亏损返还新增亏损档位梯度模式",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/洗码活动/亏损返还新增亏损档位梯度模式 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "亏损返还新增亏损档位梯度模式"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-5a48ab0d",
+      "group_key": "group-d474eeea",
+      "title": "体育投注返还活动与亏损返还整合",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "体育投注返还活动与亏损返还整合",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/洗码活动/体育投注返还活动与亏损返还整合.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "体育投注返还活动与亏损返还整合"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-cocos12-xlsx-b19a15a1",
+      "group_key": "group-cocos12-ad4eb284",
+      "title": "一元购同步cocos12-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "一元购同步cocos12-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/一元购同步cocos12.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "一元购同步cocos12"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "活动入口显示验证",
+        "活动页显示验证",
+        "购买流程验证",
+        "中奖流程验证",
+        "个人中心-一元购收货信息验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-50e59754",
+      "group_key": "group-531911cd",
+      "title": "一元购新增导出功能-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "一元购新增导出功能-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/一元购新增导出功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "一元购新增导出"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增导出验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-8282678e",
+      "group_key": "group-4ce75de4",
+      "title": "一圆购活动优化--指定用户中奖",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "一圆购活动优化--指定用户中奖",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/一圆购活动优化--指定用户中奖.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "一圆购活动",
+        "指定用户中奖"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增指定中奖验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-f20a1e82",
+      "group_key": "group-9d0b6f5d",
+      "title": "二充追加活动的优化需求-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "二充追加活动的优化需求-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/二充追加活动的优化需求.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "二充追加活动的优化需求"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "充值追加活动优化验证",
+        "活动记录优化验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:00+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-3cfb4050",
+      "group_key": "group-be92e0bb",
+      "title": "会员日自动派送需求-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "会员日自动派送需求-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/会员日自动派送需求.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "会员日自动派送需求"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增验证",
+        "编辑验证",
+        "取消验证",
+        "复制验证",
+        "详情验证",
+        "发送列表查询验证",
+        "富文本编辑器部分功能显隐验证",
+        "活动总报表列表验证",
+        "领取明细验证",
+        "活动总报表查询验证",
+        "VIP等级总表列表验证",
+        "VIP等级总表查询验证",
+        "活动明细表列表验证",
+        "活动明细表查询验证",
+        "客户端验证",
+        "双钱包奖金任务时间验证",
+        "双钱包会员日赠送验证",
+        "客服总台会员日赠送验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-e4771f36",
+      "group_key": "group-6d178826",
+      "title": "加倍领取活动-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "加倍领取活动-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/加倍领取活动.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "加倍领取活动"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "活动配置验证",
+        "活动记录验证",
+        "站内信新增奖励加倍验证",
+        "领取金币时奖励加倍弹窗验证",
+        "右侧活动悬浮验证",
+        "充值验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-133d875e",
+      "group_key": "group-7ff15f69",
+      "title": "回归活动新增礼包码兑换入口",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "回归活动新增礼包码兑换入口",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/回归活动新增礼包码兑换入口.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "回归活动新增礼包码兑换入口"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-4ed767b5",
+      "group_key": "group-adbc82df",
+      "title": "新增新开活动标签",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "新增新开活动标签",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/新增新开活动标签.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "新增新开活动标签"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "账服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-88592dcc",
+      "group_key": "group-a6d77121",
+      "title": "新增限时召回活动-测试用例",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "新增限时召回活动-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/新增限时召回活动.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "新增限时召回活动"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "活动配置验证",
+        "活动记录验证",
+        "每期活动统计验证",
+        "召回用户数据统计验证",
+        "菜单显示验证",
+        "限时召回验证",
+        "双钱包环境限时召回验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:17+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-a1e5e816",
+      "group_key": "group-9cb8b0bf",
+      "title": "新洗码活动",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "新洗码活动",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/新洗码活动.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "新洗码活动"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服",
+        "客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:18+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-cbe9be55",
+      "group_key": "group-7881a42b",
+      "title": "活动周期规则优化-亏损返还",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "活动周期规则优化-亏损返还",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/活动周期规则优化-亏损返还.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "活动周期规则",
+        "亏损返还"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:18+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-60c07abf",
+      "group_key": "group-e32ed5ad",
+      "title": "首充活动优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "首充活动优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/首充活动优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "首充活动"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "账服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:01+08:00",
+      "updated_at": "2026-04-16T15:18:18+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-394768fa",
+      "group_key": "group-e97df10c",
+      "title": "首充签到逻辑优化",
+      "module": "运营活动",
+      "module_ids": [
+        "module-6b810558"
+      ],
+      "topic": "首充签到逻辑优化",
+      "format": "xlsx",
+      "rel_path": "generated/运营活动/活动运营/首充签到逻辑优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "运营活动",
+        "首充签到逻辑"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "帐服",
+        "帐服/客户端"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:18+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-7ca38401",
       "group_key": "group-483f0a7c",
       "title": "洗码活动改造",
       "module": "运营活动",
@@ -292,49 +4407,50 @@
       ],
       "topic": "洗码活动改造",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/洗码活动改造.xlsx",
+      "rel_path": "generated/运营活动/游戏优惠/新洗码活动/洗码活动改造.xlsx",
       "source_refs": [],
       "tags": [
         "运营活动",
         "洗码活动"
       ],
       "status": "active",
-      "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "账服",
-        "客户端"
+        "平台",
+        "客户端",
+        "账服"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:18+08:00"
     },
     {
-      "id": "tc-generated-xlsx-e4f30fb5",
-      "group_key": "group-38a36423",
-      "title": "活动周期规则优化-任务系统",
+      "id": "tc-generated-xlsx-de61dfd4",
+      "group_key": "group-fb2c6699",
+      "title": "红包统计明细-测试用例",
       "module": "运营活动",
       "module_ids": [
         "module-6b810558"
       ],
-      "topic": "活动周期规则优化-任务系统",
+      "topic": "红包统计明细-测试用例",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/活动周期规则优化-任务系统.xlsx",
+      "rel_path": "generated/运营活动/红包活动/红包统计明细.xlsx",
       "source_refs": [],
       "tags": [
         "运营活动",
-        "活动周期规则",
-        "任务系统"
+        "红包统计明细"
       ],
       "status": "active",
-      "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-30T19:50:41+08:00",
       "platform_scope": [
-        "账服",
-        "客户端"
+        "用例名称",
+        "检查红包1领取明细记录是否正确",
+        "检查红包2领取明细记录是否正确"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:18+08:00"
     },
     {
-      "id": "tc-generated-xlsx-0794eb75",
+      "id": "tc-generated-xlsx-02d948a2",
       "group_key": "group-2c906e08",
       "title": "锦标赛",
       "module": "运营活动",
@@ -343,20 +4459,223 @@
       ],
       "topic": "锦标赛",
       "format": "xlsx",
-      "rel_path": "generated/运营活动/锦标赛.xlsx",
+      "rel_path": "generated/运营活动/锦标赛/锦标赛.xlsx",
       "source_refs": [],
       "tags": [
         "运营活动",
         "锦标赛"
       ],
       "status": "active",
-      "created_at": "2026-03-28T00:08:03+08:00",
-      "updated_at": "2026-03-31T12:43:40+08:00",
       "platform_scope": [
-        "账服",
-        "客户端"
+        "运营活动",
+        "客户端",
+        "账服"
       ],
-      "template": ""
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-3-25-1-xlsx-7c8acb79",
+      "group_key": "group-3-25-887bc6db",
+      "title": "站内信优化3.25-测试用例",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "站内信优化3.25-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/站内信优化3.25 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "站内信优化3.25"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "富文本编辑器验证",
+        "单条删除验证",
+        "旧站内信兼容验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-3659e133",
+      "group_key": "group-cda130b9",
+      "title": "站内信发送金币逻辑优化-测试用例",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "站内信发送金币逻辑优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/站内信发送金币逻辑优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "站内信发送金币逻辑"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增VIP等级筛选项验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-db718a33",
+      "group_key": "group-3f078448",
+      "title": "站内信发金币奖励新增限制-测试用例",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "站内信发金币奖励新增限制-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/站内信发金币奖励新增限制.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "站内信发金币奖励新增限制"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "新增“站内信发送金币上限”验证",
+        "发送站内信验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-db39ff93",
+      "group_key": "group-4a28f126",
+      "title": "站内信选择玩家功能优化-测试用例",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "站内信选择玩家功能优化-测试用例",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/站内信选择玩家功能优化 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "站内信选择玩家"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "用例名称",
+        "收件方新增玩家(按条件)验证"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-db8d7089",
+      "group_key": "group-c9afee4d",
+      "title": "自动化短信营销功能",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "自动化短信营销功能",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/自动化短信营销功能.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "自动化短信营销"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-1-xlsx-e1d1906a",
+      "group_key": "group-04a3e998",
+      "title": "邮件功能优化",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "邮件功能优化",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/邮件功能优化 1.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "邮件"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-aaa3f0b2",
+      "group_key": "group-c31c0187",
+      "title": "邮件管理 - 发送记录优化",
+      "module": "邮件管理",
+      "module_ids": [
+        "module-943cce8f"
+      ],
+      "topic": "邮件管理 - 发送记录优化",
+      "format": "xlsx",
+      "rel_path": "generated/邮件管理/站内信/邮件管理 - 发送记录优化.xlsx",
+      "source_refs": [],
+      "tags": [
+        "邮件管理",
+        "发送记录"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "账服"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:02+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
+    },
+    {
+      "id": "tc-generated-xlsx-149a2ea1",
+      "group_key": "group-9c867ce5",
+      "title": "运营公告功能整合",
+      "module": "配置管理",
+      "module_ids": [
+        "module-9ecf700c"
+      ],
+      "topic": "运营公告功能整合",
+      "format": "xlsx",
+      "rel_path": "generated/配置管理/运营公告功能整合.xlsx",
+      "source_refs": [],
+      "tags": [
+        "配置管理",
+        "运营公告功能整合"
+      ],
+      "status": "active",
+      "platform_scope": [
+        "平台",
+        "账服",
+        "账服/客户端",
+        "代理后台"
+      ],
+      "template": "",
+      "created_at": "2026-04-16T14:03:03+08:00",
+      "updated_at": "2026-04-16T15:18:19+08:00"
     }
   ]
 }

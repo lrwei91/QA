@@ -139,7 +139,7 @@ bash knowledge/scripts/adapter-state.sh check web_article
 
 本知识库是 QA 测试用例生成系统的组成部分：
 
-1. **领域知识来源**：`knowledge/wiki/entities/` 和 `knowledge/wiki/topics/` 为测试用例生成提供领域知识
+1. **领域知识来源**：`engine/references/domain-knowledge/` 为测试用例生成提供领域知识
 2. **需求文档沉淀**：PRD、Axure、Figma 等需求文档可通过 ingest 工作流转化为知识库
 3. **测试用例复用**：知识库中的实体和主题可用于测试用例的模块归属判断
 

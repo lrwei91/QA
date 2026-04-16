@@ -36,11 +36,9 @@ python3 engine/scripts/xlsx_append_and_highlight.py \
 
 ---
 
-### 2. i18n_schema.json (计划中)
+### 2. i18n_schema.json
 
-**用途**：多语言 JSON Schema 模板
-
-**状态**：v1.1.0 版本实现
+**状态**：已移除多语言功能
 
 ---
 

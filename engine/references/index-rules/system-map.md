@@ -85,7 +85,7 @@
 - 需求涉及游戏配置、厂家、点数、外部游戏、体育游戏时：
   - 主模块通常落在 `game-management`
   - 关联检查 `game-golden-flow`、`report-system`、`finance-system`
-- 需求涉及运营活动、公告、广播、多语言、站点地图、客服时：
+- 需求涉及运营活动、公告、广播、站点地图、客服时：
   - 主模块通常落在 `operation-management`
   - 关联检查 `notification-center`、`report-system`、`frontend-management`
 

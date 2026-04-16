@@ -23,7 +23,7 @@ REQUIRED_KEYS = {
     'server_signals',
     'reference_file',
 }
-VALID_DOMAINS = {'account-access', 'finance-system', 'marketing-activities', 'affiliate-management'}
+VALID_DOMAINS = {'账号访问', '财务系统', '运营活动', '代理管理'}
 VALID_PLATFORMS = {'客户端', '账服'}
 
 

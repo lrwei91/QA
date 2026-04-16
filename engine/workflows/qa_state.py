@@ -11,7 +11,7 @@ class QAWorkflowState(TypedDict, total=False):
     """测试用例生成工作流状态"""
 
     # 输入阶段
-    workflow_type: Literal["generate", "augment", "analyze", "i18n"]
+    workflow_type: Literal["generate", "augment", "analyze"]
     case_type: Literal["smoke", "full"]
     input_content: str
     input_source: Literal["text", "file", "url", "axure_dir"]
@@ -23,7 +23,6 @@ class QAWorkflowState(TypedDict, total=False):
 
     # 生成阶段
     test_cases: Optional[List[Dict[str, Any]]]
-    i18n_json: Optional[Dict[str, Any]]
 
     # 输出阶段
     excel_path: Optional[str]
@@ -41,9 +40,7 @@ class QAWorkflowState(TypedDict, total=False):
     new_cases: Optional[List[Dict[str, Any]]]
 
     # 内部字段
-    _i18n_detected: bool
     _prompt_for_claude: str
-    _i18n_missing: List[str]
     _analysis_mode: bool
     _augment_mode: bool
     _analysis_result: Dict[str, Any]

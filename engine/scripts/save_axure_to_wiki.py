@@ -5,7 +5,7 @@ save_axure_to_wiki.py — Save Axure HTML parse data to knowledge base.
 
 Usage:
     python3 save_axure_to_wiki.py <axure_json> --type sources --output knowledge/wiki/sources/
-    python3 save_axure_to_wiki.py <axure_json> --type entities --output knowledge/wiki/entities/
+    python3 save_axure_to_wiki.py <axure_json> --type sources --output knowledge/wiki/sources/
 
 This script:
 1. Reads Axure HTML parser JSON output

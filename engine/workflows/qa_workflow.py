@@ -17,12 +17,11 @@ def build_qa_workflow() -> StateGraph:
     流程：
     1. parse_input: 解析输入内容
     2. [条件分支] 是否需要读取 Figma?
-    3. [条件分支] 是否包含多语言？
-    4. export_excel → END
+    3. generate_test_cases → export_excel → END
     """
     from .qa_nodes import (
         parse_input, read_figma, generate_test_cases,
-        check_i18n, export_excel, should_read_figma, has_i18n,
+        export_excel, should_read_figma,
     )
 
     workflow = StateGraph(QAWorkflowState)
@@ -30,7 +29,6 @@ def build_qa_workflow() -> StateGraph:
     workflow.add_node("parse_input", parse_input)
     workflow.add_node("read_figma", read_figma)
     workflow.add_node("generate_test_cases", generate_test_cases)
-    workflow.add_node("check_i18n", check_i18n)
     workflow.add_node("export_excel", export_excel)
 
     workflow.set_entry_point("parse_input")
@@ -42,14 +40,7 @@ def build_qa_workflow() -> StateGraph:
     )
 
     workflow.add_edge("read_figma", "generate_test_cases")
-
-    workflow.add_conditional_edges(
-        "generate_test_cases",
-        has_i18n,
-        {True: "check_i18n", False: "export_excel"}
-    )
-
-    workflow.add_edge("check_i18n", "export_excel")
+    workflow.add_edge("generate_test_cases", "export_excel")
     workflow.add_edge("export_excel", END)
 
     return workflow.compile()

@@ -154,8 +154,6 @@ description: 仅分析需求质量与测试风险，不生成完整测试用例 
 
 - 需要生成完整测试用例 → [`testcase-generate`](../testcase-generate/SKILL.md)
 - 需要补充已有用例 → [`testcase-augment`](../testcase-augment/SKILL.md)
-- 需要多语言校验 → [`testcase-i18n`](../testcase-i18n/SKILL.md)
-
 ## 资源文件
 
 - `../../references/index-rules/module-index.json` - 模块索引

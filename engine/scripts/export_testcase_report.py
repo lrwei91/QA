@@ -37,7 +37,7 @@ def load_index(index_path: str) -> tuple:
         return None, f"Error reading: {e}"
 
 
-def generate_report(index_data: dict, i18n_index_data: dict = None) -> dict:
+def generate_report(index_data: dict) -> dict:
     """Generate comprehensive report from index data."""
     testcases = index_data.get("testcases", [])
 
@@ -55,7 +55,6 @@ def generate_report(index_data: dict, i18n_index_data: dict = None) -> dict:
             "statuses": defaultdict(int)
         }),
         "tags": defaultdict(int),
-        "i18n": None
     }
 
     # Process testcases
@@ -105,25 +104,6 @@ def generate_report(index_data: dict, i18n_index_data: dict = None) -> dict:
             "testcases": data["testcases"]
         }
     report["modules"] = modules_dict
-
-    # Process i18n index if provided
-    if i18n_index_data:
-        i18n_entries = i18n_index_data.get("entries", [])
-        report["i18n"] = {
-            "total": len(i18n_entries),
-            "by_status": defaultdict(int),
-            "by_language_count": defaultdict(int)
-        }
-
-        for entry in i18n_entries:
-            status = entry.get("status", "unknown")
-            lang_codes = entry.get("language_codes", [])
-
-            report["i18n"]["by_status"][status] += 1
-            report["i18n"]["by_language_count"][len(lang_codes)] += 1
-
-        report["i18n"]["by_status"] = dict(report["i18n"]["by_status"])
-        report["i18n"]["by_language_count"] = dict(report["i18n"]["by_language_count"])
 
     return report
 
@@ -190,21 +170,6 @@ def format_markdown(report: dict) -> str:
             lines.append(f"| {tag} | {count} |")
         lines.append("")
 
-    # i18n
-    if report["i18n"]:
-        i18n = report["i18n"]
-        lines.append("## 多语言覆盖")
-        lines.append("")
-        lines.append(f"- **总条目数**: {i18n['total']}")
-        lines.append("")
-        lines.append("### 按状态分布")
-        lines.append("")
-        lines.append("| 状态 | 数量 |")
-        lines.append("|------|------|")
-        for status, count in sorted(i18n["by_status"].items()):
-            lines.append(f"| {status} | {count} |")
-        lines.append("")
-
     return "\n".join(lines)
 
 
@@ -268,12 +233,6 @@ def main():
         default="outputs/testcase-index.json",
         help="Path to testcase index (default: outputs/testcase-index.json)"
     )
-    parser.add_argument(
-        "--i18n-index",
-        default="outputs/i18n-index.json",
-        help="Path to i18n index (default: outputs/i18n-index.json)"
-    )
-
     args = parser.parse_args()
 
     index_data, error = load_index(args.index)
@@ -281,9 +240,7 @@ def main():
         print(f"ERROR: {error}", file=sys.stderr)
         sys.exit(1)
 
-    i18n_index_data, _ = load_index(args.i18n_index)
-
-    report = generate_report(index_data, i18n_index_data)
+    report = generate_report(index_data)
 
     if args.format == "json":
         output = json.dumps(report, indent=2, ensure_ascii=False)

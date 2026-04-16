@@ -87,7 +87,6 @@
   - testcase-generate：从需求生成测试用例
   - testcase-augment：补充已有用例
   - testcase-analyze：仅分析需求
-  - testcase-i18n：多语言 JSON 校验
   - testcase-format：Excel 导出与索引更新
   - figma-reader：Figma 设计稿读取
   - axure-parser：Axure HTML 解析
@@ -194,9 +193,8 @@
   - Schema 校验
   - 草稿状态支持
 
-- **双索引结构**
+- **单索引结构**
   - `outputs/testcase-index.json`：测试用例索引
-  - `outputs/i18n-index.json`：多语言 JSON 索引
   - 通过 `group_key` 关联同一需求下的不同产物
 
 - **模块索引**
@@ -209,13 +207,11 @@
 |------|------|
 | `upsert_testcase_index.py` | 新增/更新索引条目 |
 | `validate_testcase_index.py` | 校验测试用例索引 |
-| `validate_i18n_index.py` | 校验多语言索引 |
-| `validate_i18n_json.py` | 校验单个多语言 JSON |
 | `validate_index.py` | 校验模块索引 |
 | `cleanup_testcase_store.py` | 清理过期/孤立文件 |
 | `diff_testcase_indexes.py` | 比较索引差异 |
 | `export_testcase_report.py` | 生成覆盖率报告 |
-| `generate_testcase_from_template.py` | 从模板生成用例 |
+| `xlsx_fill_testcase_template.py` | Excel 模板填充 |
 | `xlsx_append_and_highlight.py` | Excel 追加标黄 |
 | `parse_axure_html.py` | Axure HTML 解析 (v2.0.0 新增) |
 
@@ -255,20 +251,18 @@
 
 ### 变更
 
-- 索引结构从单索引拆分为双索引（testcase + i18n）
+- 索引结构简化为单索引（testcase）
 - 脚本路径统一为 `engine/scripts/`
 - 产物目录结构标准化：
   - `outputs/generated/`：测试用例
-  - `outputs/i18n/`：多语言 JSON
 
 ---
 
 ### 已验证
 
-- [x] 双索引结构迁移完成
-- [x] 多语言 JSON 校验脚本可正常工作
-- [x] `upsert_testcase_index.py` 可同时处理 testcase 和 i18n JSON
-- [x] 两份索引和多语言 JSON 的端到端验证通过
+- [x] 索引结构迁移完成
+- [x] `upsert_testcase_index.py` 可正常处理测试用例
+- [x] 索引和测试用例的端到端验证通过
 - [x] 10 个脚本的 README 文档完成
 - [x] 快速入门文档完成
 
@@ -300,11 +294,11 @@
 #### 改进
 - 单元测试覆盖：使用 pytest 为核心脚本编写测试（目标 60%+ 覆盖率）
 - 模块 ID 对齐：将 `module_ids` 从目录级占位对齐到真实业务模块索引
-- 增量生成脚本：从需求文本直接生成 i18n JSON 的执行脚本
+- 增量生成脚本：从需求文本直接生成测试用例的执行脚本
 
 #### 文档
 - 补充 TROUBLESHOOTING.md 至 10+ 常见问题
-- 为常见模块补一批真实的 `outputs/i18n/<模块>/<主题>.json`
+- 为常见模块补一批真实的测试用例文件
 
 ---
 

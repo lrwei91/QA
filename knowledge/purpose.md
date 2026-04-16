@@ -4,7 +4,6 @@
 
 将需求文档（PRD / 页面 / 接口 / 描述）转换为结构化测试用例，并支持：
 - Excel 测试用例生成与追加
-- 多语言 JSON 校验与导出
 - 测试用例索引与复用
 
 ## 关键问题
@@ -55,7 +54,6 @@
 **包含**：
 - 从需求文档生成结构化测试用例
 - 测试用例的增量补充和更新
-- 多语言文案校验
 - 测试用例索引管理
 
 **不包含**：
@@ -68,6 +66,5 @@
 ## 使用说明
 
 本知识库与 QA 项目的 `engine/references/` 目录协同工作：
-- 领域知识存储在 `knowledge/wiki/entities/`（中文命名）
+- 领域知识存储在 `engine/references/domain-knowledge/`（单一知识源）
 - 核心规则和模板存储在 `engine/references/`
-- `testcase-generate` skill 优先读取新知识库，失败时回退到旧结构

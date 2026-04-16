@@ -47,13 +47,13 @@ def parse_args():
 使用示例:
   python3 upsert_testcase_index.py --all
   python3 upsert_testcase_index.py outputs/generated/模块/用例.xlsx
-  python3 upsert_testcase_index.py outputs/i18n/模块/主题.json
+  python3 upsert_testcase_index.py outputs/generated/模块/用例.xlsx
         '''
     )
     parser.add_argument(
         'file_path',
         nargs='?',
-        help='测试用例或多语言 JSON 文件路径'
+        help='测试用例文件路径'
     )
     parser.add_argument(
         '--all',
@@ -217,11 +217,11 @@ logging.error('校验失败：%(reason)s', {'reason': '...'})
 **示例：**
 
 ```
-feat(index): 添加 i18n 索引支持
+feat(index): 添加测试用例索引支持
 
-- 新增 i18n-index.json 索引文件
-- 修改 upsert_testcase_index.py 支持双索引分流
-- 添加 validate_i18n_index.py 校验脚本
+- 新增 testcase-index.json 索引文件
+- 修改 upsert_testcase_index.py 支持索引更新
+- 添加 validate_testcase_index.py 校验脚本
 
 Fixes: #123
 ```
@@ -322,19 +322,7 @@ python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
 # ✓ platform_scope 值规范
 ```
 
-**2. 多语言 JSON 校验**
-
-```bash
-# 测试单个 JSON 文件
-python3 engine/scripts/validate_i18n_json.py outputs/i18n/个人中心/个人中心 - 免费旋转记录.json
-
-# 期望输出：
-# ✓ 必填字段完整
-# ✓ 7 种语言齐全
-# ✓ options 配置合法
-```
-
-**3. 模块索引校验**
+**2. 模块索引校验**
 
 ```bash
 # 测试模块索引
@@ -410,8 +398,7 @@ MAJOR.MINOR.PATCH
 
 **v1.0.0（初始版本）**
 - [x] 测试用例生成
-- [x] 多语言 JSON 生成
-- [x] 双索引结构
+- [x] 索引结构
 - [x] 10 个管理脚本
 - [x] 基础文档
 

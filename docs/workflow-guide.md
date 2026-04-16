@@ -57,7 +57,7 @@ errors = result.get("errors", [])
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `workflow_type` | `"generate"/"augment"/"analyze"/"i18n"` | 工作流类型 |
+| `workflow_type` | `"generate"/"augment"/"analyze"` | 工作流类型 |
 | `case_type` | `"smoke"/"full"` | 用例类型（仅 generate 模式） |
 | `input_content` | `str` | 输入内容 |
 | `input_source` | `"text"/"file"/"url"/"axure_dir"` | 输入来源 |
@@ -65,7 +65,6 @@ errors = result.get("errors", [])
 | `axure_data` | `dict` | Axure 解析结果 |
 | `figma_data` | `dict` | Figma 读取结果 |
 | `test_cases` | `list[dict]` | 测试用例 |
-| `i18n_json` | `dict` | 多语言 JSON |
 | `excel_path` | `str` | Excel 路径 |
 | `errors` | `list` | 错误列表 |
 
@@ -82,11 +81,8 @@ parse_input
     │                                   ↓
     No                           generate_test_cases
     └───────────────────────────────────┘
-                                      ↓
-                              [has i18n?] ──Yes──→ check_i18n
-                                      │                 ↓
-                                      No                │
-                                      └────────→ export_excel → END
+                                              ↓
+                                    export_excel → END
 ```
 
 ### Augment Workflow (补充已有用例)
@@ -110,7 +106,6 @@ parse_input → analyze_requirements → output_analysis → END
 | 解析输入 | `parse_input()` | 读取文件、解析 Axure HTML、处理文本 |
 | 读取 Figma | `read_figma()` | 调用 Figma REST API，提取文案/组件/状态 |
 | 生成用例 | `generate_test_cases()` | 准备 prompt，由 Claude 生成测试用例 |
-| 多语言校验 | `check_i18n()` | 多语言数据提取、校验、JSON 生成 |
 | 导出 Excel | `export_excel()` | 导出 Excel 文件，更新索引 |
 
 ---
@@ -120,7 +115,6 @@ parse_input → analyze_requirements → output_analysis → END
 | 函数 | 判断 |
 |------|------|
 | `should_read_figma()` | 是否有 Figma URL |
-| `has_i18n()` | 是否检测到多语言 |
 | `has_test_cases()` | 是否生成了用例 |
 
 ---
@@ -158,7 +152,6 @@ parse_input → analyze_requirements → output_analysis → END
 │  │  │  - parse_input (读取文件/解析 Axure)         │ │  │
 │  │  │  - read_figma (调用 Figma API)              │ │  │
 │  │  │  - generate_test_cases (准备 prompt)        │ │  │
-│  │  │  - check_i18n (多语言校验)                   │ │  │
 │  │  │  - export_excel (导出 Excel)                │ │  │
 │  │  └─────────────────────────────────────────────┘ │  │
 │  └───────────────────────────────────────────────────┘  │
@@ -421,7 +414,6 @@ Python 脚本层 ← 确定性任务执行
 | `parse_input` | 读取文件、解析 Axure HTML | ❌ |
 | `read_figma` | 调用 Figma REST API | ❌ |
 | `generate_test_cases` | **准备 prompt**（给 Claude 用） | ❌ |
-| `check_i18n` | 多语言数据提取、校验 | ❌ |
 | `export_excel` | 导出 Excel 文件 | ❌ |
 
 ### `generate_test_cases` 的真正实现
@@ -447,7 +439,6 @@ def generate_test_cases(state: QAWorkflowState) -> QAWorkflowState:
     return {
         **state,
         "_prompt_for_claude": prompt,
-        "_i18n_detected": detect_i18n(...)
     }
 ```
 
@@ -462,7 +453,7 @@ def generate_test_cases(state: QAWorkflowState) -> QAWorkflowState:
                       ↓
 3. 解析 JSON，更新 state["test_cases"]
                       ↓
-4. 继续运行工作流 → check_i18n → export_excel
+4. 继续运行工作流 → export_excel
 ```
 
 ---

@@ -13,7 +13,6 @@
 | `__init__.py` | 包导出 | ✅ 完成 |
 | `testcase_generate.py` | 测试用例生成函数 | 🧪 实验中 |
 | `testcase_format.py` | Excel 导出与索引更新 | 🧪 实验中 |
-| `testcase_i18n.py` | 多语言校验 | 🧪 实验中 |
 | `figma_reader.py` | Figma 设计稿读取 | 🧪 实验中 |
 
 ## 与生产流程的关系

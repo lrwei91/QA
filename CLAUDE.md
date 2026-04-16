@@ -34,11 +34,12 @@ QA/
 │   │   ├── test-design/                # 测试设计
 │   │   │   ├── testcase-taxonomy.md    # 测试覆盖分类
 │   │   │   └── output-template.md      # 输出模板
-│   │   ├── domain-knowledge/           # 领域知识
-│   │   ├── module-account-access.md    # 账号访问领域：认证/账号/权限/组织/KYC
-│   │   ├── finance-system.md           # 充值提现领域：充值/提现/支付/账目
-│   │   ├── marketing-activities.md     # 运营活动领域：任务/锦标赛/充值活动/洗码
-│   │   └── affiliate-management.md     # 全民代领域：代理/佣金/团队/ROI
+│   │   ├── domain-knowledge/           # 领域知识（单一知识源）
+│   │   │   ├── 运营活动.md             # 运营活动领域：任务/锦标赛/充值活动/洗码
+│   │   │   ├── 财务系统.md             # 充值提现领域：充值/提现/支付/账目
+│   │   │   ├── 账号访问.md             # 账号访问领域：认证/账号/权限/组织/KYC
+│   │   │   ├── 代理管理.md             # 全民代领域：代理/佣金/团队/ROI
+│   │   │   └── ...                     # 共 24 个领域文件
 │   │   └── engineering/                # 工程规范
 │   │       ├── testcase-store.md       # 工作区索引约定
 │   │       ├── update-governance.md    # 更新治理
@@ -57,7 +58,6 @@ QA/
 │   │   └── baoyu-url-to-markdown/      # 网页提取工具（需 bun + Chrome）
 │   ├── raw/                            # 原始素材
 │   ├── wiki/                           # 知识库内容
-│   │   ├── entities/                   # 实体页
 │   │   ├── topics/                     # 主题页
 │   │   └── sources/                    # 素材摘要
 │   ├── SKILL.md                        # 知识库能力定义

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create or update testcase and i18n indexes for validation artifacts."""
+"""Create or update testcase indexes for validation artifacts."""
 
 from __future__ import annotations
 
@@ -11,12 +11,6 @@ from datetime import datetime
 from pathlib import Path
 
 from openpyxl import load_workbook
-
-# Add script directory to path for sibling imports when running from workspace root
-import sys
-import os
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from validate_i18n_json import analyze_i18n_json
 
 VALID_EXTENSIONS = {
     '.md': 'md',
@@ -31,10 +25,7 @@ GENERIC_TAG_STOPWORDS = {'测试', '测试用例', '测试案例', '用例'}
 GENERIC_SUFFIXES = ['汇总', '优化', '改造', '功能', '前后端']
 GENERIC_DATE_PATTERN = re.compile(r'^\d{4}[-_]?(\d{2})?[-_]?(\d{2})?$')
 CASES_DIR = 'generated'
-I18N_DIR = 'i18n'
-LEGACY_INDEX_NAME = 'index.json'
 TESTCASE_INDEX_NAME = 'testcase-index.json'
-I18N_INDEX_NAME = 'i18n-index.json'
 
 
 def now_iso() -> str:
@@ -54,38 +45,29 @@ def stable_slug(text: str, prefix: str) -> str:
     return f'{prefix}-{digest}'
 
 
-def default_index_data(index_type: str, index_path: Path) -> dict:
-    if index_type == 'testcase':
-        return {
-            'version': 1,
-            'store_name': 'QA Test Case Store',
-            'root_dir': index_path.parent.name,
-            'cases_dir': CASES_DIR,
-            'updated_at': now_iso(),
-            'entries': [],
-        }
+def default_testcase_index(index_type: str, index_path: Path) -> dict:
     return {
         'version': 1,
-        'store_name': 'QA I18N JSON Store',
+        'store_name': 'QA Test Case Store',
         'root_dir': index_path.parent.name,
-        'i18n_dir': I18N_DIR,
+        'cases_dir': CASES_DIR,
         'updated_at': now_iso(),
         'entries': [],
     }
 
 
-def normalize_index_data(index_data: dict, index_type: str, index_path: Path) -> dict:
+def normalize_index_data(index_data: dict, index_path: Path) -> dict:
     data = dict(index_data)
-    defaults = default_index_data(index_type, index_path)
+    defaults = default_testcase_index('testcase', index_path)
     for key, value in defaults.items():
         data.setdefault(key, value)
     return data
 
 
-def load_index(index_path: Path, index_type: str) -> dict:
+def load_index(index_path: Path) -> dict:
     if not index_path.exists():
-        return default_index_data(index_type, index_path)
-    return normalize_index_data(json.loads(index_path.read_text(encoding='utf-8')), index_type, index_path)
+        return default_testcase_index('testcase', index_path)
+    return normalize_index_data(json.loads(index_path.read_text(encoding='utf-8')), index_path)
 
 
 def dump_index(index_path: Path, data: dict) -> None:
@@ -120,8 +102,6 @@ def infer_xlsx_metadata(path: Path) -> dict:
         'topic': title,
         'artifact_type': 'testcase',
         'platform_scope': platform_scope,
-        'language_codes': [],
-        'status': None,
     }
 
 
@@ -131,21 +111,14 @@ def infer_text_metadata(path: Path) -> dict:
         'topic': path.stem,
         'artifact_type': 'testcase',
         'platform_scope': [],
-        'language_codes': [],
-        'status': None,
     }
 
 
-def infer_i18n_json_metadata(path: Path) -> dict:
-    analysis = analyze_i18n_json(path)
-    return {
-        'title': analysis['name'],
-        'topic': analysis['name'],
-        'artifact_type': 'i18n-json',
-        'platform_scope': [],
-        'language_codes': analysis['language_codes'],
-        'status': 'draft' if analysis['is_draft'] else None,
-    }
+def infer_artifact_metadata(path: Path) -> dict:
+    file_format = VALID_EXTENSIONS[path.suffix.lower()]
+    if file_format == 'xlsx':
+        return infer_xlsx_metadata(path)
+    return infer_text_metadata(path)
 
 
 def dedupe_keep_order(items: list[str]) -> list[str]:
@@ -194,7 +167,6 @@ def derive_tags(module: str, title: str, extra_tags: list[str]) -> list[str]:
             continue
         if len(cleaned) < 2:
             continue
-        # Filter out date-like patterns (e.g., "2026", "03", "30", "2026-03-30")
         if GENERIC_DATE_PATTERN.match(cleaned):
             continue
         candidates.append(cleaned)
@@ -206,10 +178,6 @@ def infer_module(rel_path: Path) -> str:
     parts = rel_path.parts
     if len(parts) >= 2 and parts[0] == CASES_DIR:
         return parts[1]
-    if len(parts) >= 3 and parts[0] == I18N_DIR:
-        return parts[1]
-    if len(parts) >= 2 and parts[0] == I18N_DIR:
-        return infer_module_from_name(rel_path.stem)
     if len(parts) >= 2:
         return parts[-2]
     return infer_module_from_name(rel_path.stem)
@@ -219,20 +187,11 @@ def build_group_key(module: str, topic: str) -> str:
     return stable_slug(f'{module}::{topic}', 'group')
 
 
-def infer_artifact_metadata(path: Path) -> dict:
-    file_format = VALID_EXTENSIONS[path.suffix.lower()]
-    if file_format == 'xlsx':
-        return infer_xlsx_metadata(path)
-    if file_format == 'json':
-        return infer_i18n_json_metadata(path)
-    return infer_text_metadata(path)
-
-
 def build_entry(
     path: Path,
     store_root: Path,
     args: argparse.Namespace,
-) -> tuple[str, dict]:
+) -> dict:
     rel_path = path.relative_to(store_root)
     file_format = VALID_EXTENSIONS[path.suffix.lower()]
     inferred = infer_artifact_metadata(path)
@@ -242,7 +201,7 @@ def build_entry(
     module_ids = args.module_ids or [stable_slug(module, 'module')]
     status = args.status if args.status != 'auto' else (inferred.get('status') or 'active')
     tags = derive_tags(module, title, args.tags)
-    base_entry = {
+    return {
         'id': stable_slug(rel_path.as_posix(), 'tc'),
         'group_key': build_group_key(module, topic),
         'title': title,
@@ -254,59 +213,40 @@ def build_entry(
         'source_refs': dedupe_keep_order(args.source_refs),
         'tags': tags,
         'status': status,
+        'platform_scope': dedupe_keep_order(args.platform_scope or inferred.get('platform_scope', [])),
+        'template': args.template or '',
         'created_at': now_iso(),
         'updated_at': now_iso(),
     }
 
-    if inferred['artifact_type'] == 'testcase':
-        base_entry.update(
-            {
-                'platform_scope': dedupe_keep_order(args.platform_scope or inferred['platform_scope']),
-                'template': args.template or '',
-            }
-        )
-        return 'testcase', base_entry
 
-    base_entry.update(
-        {
-            'language_codes': dedupe_keep_order(inferred['language_codes']),
-            'template': args.template or '',
-        }
-    )
-    return 'i18n-json', base_entry
-
-
-def merge_entry(index_type: str, existing: dict | None, new_entry: dict) -> dict:
+def merge_entry(existing: dict | None, new_entry: dict) -> dict:
     if not existing:
         return new_entry
 
     merged = dict(new_entry)
     merged['id'] = existing.get('id', new_entry['id'])
     merged['created_at'] = existing.get('created_at') or new_entry['created_at']
-    merged['source_refs'] = dedupe_keep_order(existing.get('source_refs', []) + new_entry['source_refs'])
+    merged['source_refs'] = dedupe_keep_order(existing.get('source_refs', []) + new_entry.get('source_refs', []))
     merged['tags'] = dedupe_keep_order(new_entry['tags'])
     merged['module_ids'] = dedupe_keep_order(new_entry['module_ids'])
-    if index_type == 'testcase':
-        merged['platform_scope'] = dedupe_keep_order(existing.get('platform_scope', []) + new_entry['platform_scope'])
-    else:
-        merged['language_codes'] = dedupe_keep_order(new_entry['language_codes'])
+    merged['platform_scope'] = dedupe_keep_order(existing.get('platform_scope', []) + new_entry.get('platform_scope', []))
     return merged
 
 
 def collect_files(store_root: Path, args: argparse.Namespace) -> list[Path]:
     if args.all:
+        root_dir = store_root / CASES_DIR
+        if not root_dir.exists():
+            return []
         files = []
-        for root_name in [CASES_DIR, I18N_DIR]:
-            root_dir = store_root / root_name
-            if not root_dir.exists():
+        for path in sorted(root_dir.rglob('*')):
+            if not path.is_file():
                 continue
-            for path in sorted(root_dir.rglob('*')):
-                if not path.is_file():
-                    continue
-                if path.name.startswith('.'):
-                    continue
-                if path.suffix.lower() in VALID_EXTENSIONS:
-                    files.append(path.resolve())
+            if path.name.startswith('.'):
+                continue
+            if path.suffix.lower() in VALID_EXTENSIONS:
+                files.append(path.resolve())
         return files
 
     return [Path(item).resolve() for item in args.files]
@@ -314,19 +254,14 @@ def collect_files(store_root: Path, args: argparse.Namespace) -> list[Path]:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description='Create or update testcase-index.json and i18n-index.json for validation artifacts.'
+        description='Create or update testcase-index.json for validation artifacts.'
     )
     parser.add_argument('files', nargs='*', help='Artifact files to upsert into the indexes')
-    parser.add_argument('--all', action='store_true', help='Scan the whole cases_dir and i18n_dir and upsert all supported files')
+    parser.add_argument('--all', action='store_true', help='Scan the whole cases_dir and upsert all supported files')
     parser.add_argument(
         '--testcase-index',
         default=f'outputs/{TESTCASE_INDEX_NAME}',
         help=f'Path to testcase index file. Defaults to outputs/{TESTCASE_INDEX_NAME}',
-    )
-    parser.add_argument(
-        '--i18n-index',
-        default=f'outputs/{I18N_INDEX_NAME}',
-        help=f'Path to i18n index file. Defaults to outputs/{I18N_INDEX_NAME}',
     )
     parser.add_argument('--title', help='Override entry title')
     parser.add_argument('--topic', help='Override entry topic')
@@ -340,57 +275,6 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_legacy_entries(store_root: Path) -> tuple[dict[str, dict], dict[str, dict]]:
-    legacy_path = store_root / LEGACY_INDEX_NAME
-    if not legacy_path.exists():
-        return {}, {}
-
-    try:
-        data = json.loads(legacy_path.read_text(encoding='utf-8'))
-    except json.JSONDecodeError:
-        return {}, {}
-
-    testcase_entries: dict[str, dict] = {}
-    i18n_entries: dict[str, dict] = {}
-    for entry in data.get('entries', []):
-        rel_path = entry.get('rel_path')
-        artifact_type = entry.get('artifact_type')
-        if not isinstance(rel_path, str) or not rel_path:
-            continue
-        migrated = dict(entry)
-        if artifact_type == 'i18n-json':
-            migrated.pop('artifact_type', None)
-            migrated.pop('platform_scope', None)
-            i18n_entries[rel_path] = migrated
-        else:
-            migrated.pop('artifact_type', None)
-            migrated.pop('language_codes', None)
-            testcase_entries[rel_path] = migrated
-    return testcase_entries, i18n_entries
-
-
-def build_existing_maps(store_root: Path, testcase_index_path: Path, i18n_index_path: Path) -> tuple[dict[str, dict], dict[str, dict]]:
-    legacy_testcase_entries, legacy_i18n_entries = load_legacy_entries(store_root)
-
-    if testcase_index_path.exists():
-        testcase_entries = {
-            entry['rel_path']: entry
-            for entry in load_index(testcase_index_path, 'testcase').get('entries', [])
-        }
-    else:
-        testcase_entries = legacy_testcase_entries
-
-    if i18n_index_path.exists():
-        i18n_entries = {
-            entry['rel_path']: entry
-            for entry in load_index(i18n_index_path, 'i18n-json').get('entries', [])
-        }
-    else:
-        i18n_entries = legacy_i18n_entries
-
-    return testcase_entries, i18n_entries
-
-
 def main() -> int:
     args = parse_args()
     if args.status not in VALID_STATUSES | {'auto'}:
@@ -400,10 +284,6 @@ def main() -> int:
         return fail('provide at least one artifact file or use --all')
 
     testcase_index_path = Path(args.testcase_index).resolve()
-    i18n_index_path = Path(args.i18n_index).resolve()
-    if testcase_index_path.parent != i18n_index_path.parent:
-        return fail('testcase-index and i18n-index must be under the same testcases root')
-
     store_root = testcase_index_path.parent.resolve()
     files = collect_files(store_root, args)
     if not files:
@@ -419,53 +299,33 @@ def main() -> int:
             path.relative_to(store_root)
         except ValueError:
             return fail(f'file is outside testcase store root: {path}')
-        if path.suffix.lower() == '.json':
-            try:
-                analyze_i18n_json(path)
-            except ValueError as exc:
-                return fail(f'invalid i18n json {path}: {exc}')
 
-    testcase_index = load_index(testcase_index_path, 'testcase')
-    i18n_index = load_index(i18n_index_path, 'i18n-json')
-    existing_testcase_entries, existing_i18n_entries = build_existing_maps(store_root, testcase_index_path, i18n_index_path)
-    updated_testcase_entries: dict[str, dict] = {}
-    updated_i18n_entries: dict[str, dict] = {}
+    testcase_index = load_index(testcase_index_path)
+    existing_entries = {
+        entry['rel_path']: entry
+        for entry in testcase_index.get('entries', [])
+    }
+    updated_entries: dict[str, dict] = {}
 
     for path in files:
-        index_type, new_entry = build_entry(path, store_root, args)
-        if index_type == 'testcase':
-            existing = existing_testcase_entries.get(new_entry['rel_path'])
-            updated_testcase_entries[new_entry['rel_path']] = merge_entry('testcase', existing, new_entry)
-        else:
-            existing = existing_i18n_entries.get(new_entry['rel_path'])
-            updated_i18n_entries[new_entry['rel_path']] = merge_entry('i18n-json', existing, new_entry)
+        new_entry = build_entry(path, store_root, args)
+        existing = existing_entries.get(new_entry['rel_path'])
+        updated_entries[new_entry['rel_path']] = merge_entry(existing, new_entry)
 
-    for rel_path, entry in existing_testcase_entries.items():
-        if rel_path in updated_testcase_entries:
+    for rel_path, entry in existing_entries.items():
+        if rel_path in updated_entries:
             continue
         target = (store_root / rel_path).resolve()
         if target.exists():
-            updated_testcase_entries[rel_path] = entry
+            updated_entries[rel_path] = entry
 
-    for rel_path, entry in existing_i18n_entries.items():
-        if rel_path in updated_i18n_entries:
-            continue
-        target = (store_root / rel_path).resolve()
-        if target.exists():
-            updated_i18n_entries[rel_path] = entry
-
-    testcase_index['entries'] = [updated_testcase_entries[key] for key in sorted(updated_testcase_entries)]
+    testcase_index['entries'] = [updated_entries[key] for key in sorted(updated_entries)]
     testcase_index['updated_at'] = now_iso()
     dump_index(testcase_index_path, testcase_index)
 
-    i18n_index['entries'] = [updated_i18n_entries[key] for key in sorted(updated_i18n_entries)]
-    i18n_index['updated_at'] = now_iso()
-    dump_index(i18n_index_path, i18n_index)
-
     print(
         f'Updated {len(files)} artifact file(s): '
-        f'{len(updated_testcase_entries)} testcase entries -> {testcase_index_path}, '
-        f'{len(updated_i18n_entries)} i18n entries -> {i18n_index_path}'
+        f'{len(updated_entries)} testcase entries -> {testcase_index_path}'
     )
     return 0
 
