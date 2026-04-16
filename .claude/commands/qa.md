@@ -344,23 +344,28 @@ https://www.figma.com/design/TTCIlEUeIyxXWG9pMIkOp9/web5?node-id=25246:54081
 测试用例已生成，请选择导出方式：
 
 ▎ 1. 导出为 Excel 文件并更新索引文件
+   - 自动同时生成 MD 文档（knowledge/wiki/testcases/）
    - 使用 xlsx_fill_testcase_template.py 填充模板
    - 使用 upsert_testcase_index.py 更新索引
 
 ▎ 2. 仅导出为 Excel 文件
+   - 自动同时生成 MD 文档（knowledge/wiki/testcases/）
    - 使用 xlsx_fill_testcase_template.py 填充模板
    - 不更新索引文件
 
-导出后将保存到：outputs/generated/<模块>/<用例名称>.xlsx
+双输出：
+- MD 文档：knowledge/wiki/testcases/<模块>/<用例名称>.md
+- Excel 文件：outputs/generated/<模块>/<用例名称>.xlsx
 
 注意：必须由用户选择后才能执行导出，不得自动执行。
 ```
 
-**第 7 步：用户选择导出方式后，调用 `testcase-format` 子能力执行 Excel 导出**
+**第 7 步：用户选择导出方式后，调用 `testcase-format` 子能力执行导出**
 
 - 用户选择选项 1 → 调用 testcase-format，参数包含 `update_index=true`
 - 用户选择选项 2 → 调用 testcase-format，参数包含 `update_index=false`
-- 使用 `xlsx_fill_testcase_template.py` 脚本填充模板
+- MD 导出：使用 `generate_testcase_md.py` 脚本，输出到 `knowledge/wiki/testcases/`
+- Excel 导出：使用 `xlsx_fill_testcase_template.py` 脚本，输出到 `outputs/generated/`
 - 如用户选择更新索引，使用 `upsert_testcase_index.py` 脚本更新索引
 - 确保样式与 `templates/testcase_template.xlsx` 模板一致
 - 不得手动创建 Excel 文件
