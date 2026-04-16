@@ -248,7 +248,7 @@ python3 engine/scripts/xlsx_append_and_highlight.py \
 |------|------|------|
 | `upsert_testcase_index.py` | 新增/更新索引条目 | `python3 upsert_testcase_index.py --all` |
 | `validate_testcase_index.py` | 校验测试用例索引 | `python3 validate_testcase_index.py outputs/testcase-index.json` |
-| `validate_index.py` | 校验模块索引 | `python3 validate_index.py engine/references/module-index.json` |
+| `validate_index.py` | 校验模块索引 | `python3 validate_index.py knowledge/rules/module-index.json` |
 | `cleanup_testcase_store.py` | 清理过期/孤立文件 | `python3 cleanup_testcase_store.py --dry-run` |
 | `diff_testcase_indexes.py` | 比较索引差异 | `python3 diff_testcase_indexes.py old.json new.json` |
 | `export_testcase_report.py` | 生成覆盖率报告 | `python3 export_testcase_report.py --output report.html` |

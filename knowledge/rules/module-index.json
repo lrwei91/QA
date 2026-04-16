@@ -56,7 +56,7 @@
       "登录失败锁定",
       "token 刷新"
     ],
-    "reference_file": "../domain-knowledge/账号访问.md"
+    "reference_file": "../wiki/domain/账号访问.md"
   },
   {
     "id": "admin-user",
@@ -117,7 +117,7 @@
       "角色绑定处理",
       "组织绑定处理"
     ],
-    "reference_file": "../domain-knowledge/账号访问.md"
+    "reference_file": "../wiki/domain/账号访问.md"
   },
   {
     "id": "role-permission",
@@ -178,7 +178,7 @@
       "缓存刷新",
       "授权变更生效"
     ],
-    "reference_file": "../domain-knowledge/账号访问.md"
+    "reference_file": "../wiki/domain/账号访问.md"
   },
   {
     "id": "organization",
@@ -232,7 +232,7 @@
       "组织范围下发",
       "组织变更同步"
     ],
-    "reference_file": "../domain-knowledge/账号访问.md"
+    "reference_file": "../wiki/domain/账号访问.md"
   },
   {
     "id": "product-catalog",
@@ -290,7 +290,7 @@
       "发布状态写库",
       "上下架任务"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "marketing-banner",
@@ -346,7 +346,7 @@
       "链接配置保存",
       "排序生效"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "order-management",
@@ -405,7 +405,7 @@
       "状态流转写库",
       "备注保存"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "refund-approval",
@@ -465,7 +465,7 @@
       "消息通知触发",
       "审批日志留痕"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "dashboard",
@@ -522,7 +522,7 @@
       "权限过滤",
       "时间维度计算"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "operation-log",
@@ -571,7 +571,7 @@
       "脱敏规则",
       "失败补偿"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "notification-center",
@@ -626,7 +626,7 @@
       "发送回执",
       "失败落库"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "report-system",
@@ -703,7 +703,7 @@
       "缓存刷新",
       "权限过滤"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "finance-system",
@@ -768,7 +768,7 @@
       "金币修正写库",
       "转账事务处理"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "player-management",
@@ -840,7 +840,7 @@
       "VIP 等级变更",
       "标签关联处理"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "game-golden-flow",
@@ -888,7 +888,7 @@
       "聚合统计",
       "数据同步"
     ],
-    "reference_file": "../domain-knowledge/代理管理.md"
+    "reference_file": "../wiki/domain/代理管理.md"
   },
   {
     "id": "vendor-activities",
@@ -951,7 +951,7 @@
       "状态更新",
       "厂商回调处理"
     ],
-    "reference_file": "../domain-knowledge/代理管理.md"
+    "reference_file": "../wiki/domain/代理管理.md"
   },
   {
     "id": "affiliate-management",
@@ -1017,7 +1017,7 @@
       "金币转换处理",
       "排行榜聚合"
     ],
-    "reference_file": "../domain-knowledge/代理管理.md"
+    "reference_file": "../wiki/domain/代理管理.md"
   },
   {
     "id": "partner-agent",
@@ -1075,7 +1075,7 @@
       "转账事务处理",
       "佣金汇总统计"
     ],
-    "reference_file": "../domain-knowledge/代理管理.md"
+    "reference_file": "../wiki/domain/代理管理.md"
   },
   {
     "id": "channel-management",
@@ -1129,7 +1129,7 @@
       "汇总统计计算",
       "Telegram 接口对接"
     ],
-    "reference_file": "../domain-knowledge/代理管理.md"
+    "reference_file": "../wiki/domain/代理管理.md"
   },
   {
     "id": "risk-management",
@@ -1194,7 +1194,7 @@
       "黑白名单拦截",
       "IP 区域限制"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "config-management",
@@ -1235,7 +1235,7 @@
       "缓存刷新",
       "配置变更日志"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "frontend-management",
@@ -1306,7 +1306,7 @@
       "版本管理",
       "多语言支持"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "game-management",
@@ -1369,7 +1369,7 @@
       "异常记录",
       "厂商回调"
     ],
-    "reference_file": "../domain-knowledge/代理管理.md"
+    "reference_file": "../wiki/domain/代理管理.md"
   },
   {
     "id": "operation-management",
@@ -1461,7 +1461,7 @@
       "返利资格判定",
       "返利发放"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "customer-service",
@@ -1519,7 +1519,7 @@
       "客服状态更新",
       "API 对接"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "sms-marketing",
@@ -1568,7 +1568,7 @@
       "状态回执",
       "失败重试"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "email-management",
@@ -1624,7 +1624,7 @@
       "失败重试",
       "邮箱验证逻辑"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "kyc-certification",
@@ -1707,7 +1707,7 @@
       "税收计算",
       "报表聚合"
     ],
-    "reference_file": "../domain-knowledge/认证内容.md"
+    "reference_file": "../wiki/domain/认证内容.md"
   },
   {
     "id": "system-settings",
@@ -1762,7 +1762,7 @@
       "日志写入",
       "公告发布"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "personal-center",
@@ -1820,7 +1820,7 @@
       "绑定验证码发送",
       "记录查询接口"
     ],
-    "reference_file": "../domain-knowledge/账号访问.md"
+    "reference_file": "../wiki/domain/账号访问.md"
   },
   {
     "id": "marketing-activity",
@@ -1902,7 +1902,7 @@
       "活动配置保存",
       "防刷校验"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "operation-dashboard",
@@ -1949,7 +1949,7 @@
       "指标查询接口",
       "缓存更新"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "customer-backend",
@@ -2002,7 +2002,7 @@
       "备注保存",
       "权限校验"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "account-report",
@@ -2055,7 +2055,7 @@
       "导出任务",
       "数据聚合"
     ],
-    "reference_file": "../domain-knowledge/财务系统.md"
+    "reference_file": "../wiki/domain/财务系统.md"
   },
   {
     "id": "finance-report",
@@ -2109,7 +2109,7 @@
       "统计任务",
       "导出处理"
     ],
-    "reference_file": "../domain-knowledge/运营活动.md"
+    "reference_file": "../wiki/domain/运营活动.md"
   },
   {
     "id": "全民代",
@@ -2131,7 +2131,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/全民代管理.md"
+    "reference_file": "../wiki/domain/全民代管理.md"
   },
   {
     "id": "前端",
@@ -2153,7 +2153,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/前端管理.md"
+    "reference_file": "../wiki/domain/前端管理.md"
   },
   {
     "id": "厂商活动记录",
@@ -2175,7 +2175,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/厂商活动记录.md"
+    "reference_file": "../wiki/domain/厂商活动记录.md"
   },
   {
     "id": "合伙人代理",
@@ -2197,7 +2197,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/合伙人与代理.md"
+    "reference_file": "../wiki/domain/合伙人与代理.md"
   },
   {
     "id": "客户后台",
@@ -2219,7 +2219,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/客户后台.md"
+    "reference_file": "../wiki/domain/客户后台.md"
   },
   {
     "id": "客服后台",
@@ -2241,7 +2241,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/客服后台.md"
+    "reference_file": "../wiki/domain/客服后台.md"
   },
   {
     "id": "报表",
@@ -2263,7 +2263,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/报表.md"
+    "reference_file": "../wiki/domain/报表.md"
   },
   {
     "id": "渠道",
@@ -2285,7 +2285,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/渠道管理.md"
+    "reference_file": "../wiki/domain/渠道管理.md"
   },
   {
     "id": "游戏及金流记录",
@@ -2307,7 +2307,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/游戏及金流记录.md"
+    "reference_file": "../wiki/domain/游戏及金流记录.md"
   },
   {
     "id": "游戏",
@@ -2329,7 +2329,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/游戏管理.md"
+    "reference_file": "../wiki/domain/游戏管理.md"
   },
   {
     "id": "玩家",
@@ -2351,7 +2351,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/玩家管理.md"
+    "reference_file": "../wiki/domain/玩家管理.md"
   },
   {
     "id": "短信营销中心",
@@ -2373,7 +2373,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/短信营销中心.md"
+    "reference_file": "../wiki/domain/短信营销中心.md"
   },
   {
     "id": "系统设置",
@@ -2395,7 +2395,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/系统设置.md"
+    "reference_file": "../wiki/domain/系统设置.md"
   },
   {
     "id": "邮件",
@@ -2417,7 +2417,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/邮件管理.md"
+    "reference_file": "../wiki/domain/邮件管理.md"
   },
   {
     "id": "配置",
@@ -2439,7 +2439,7 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/配置管理.md"
+    "reference_file": "../wiki/domain/配置管理.md"
   },
   {
     "id": "风险",
@@ -2461,6 +2461,6 @@
     ],
     "client_signals": [],
     "server_signals": [],
-    "reference_file": "../domain-knowledge/风险管理.md"
+    "reference_file": "../wiki/domain/风险管理.md"
   }
 ]

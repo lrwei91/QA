@@ -219,24 +219,6 @@ QA/
 │   ├── axure-export-guide.md    # Axure 导出指南
 │   └── testcase-sync.md         # 测试用例自动同步机制
 ├── engine/                      # 技能包核心
-│   ├── references/              # 规则库
-│   │   ├── index-rules/         # 索引与平台规则
-│   │   │   ├── module-index.json    # 模块索引 (51 业务模块)
-│   │   │   ├── platform-rules.md    # 客户端/账服划分规则
-│   │   │   └── system-map.md       # 跨模块联动规则
-│   │   ├── domain-knowledge/    # 领域知识（21 个领域文件）
-│   │   │   ├── 运营活动.md
-│   │   │   ├── 财务系统.md
-│   │   │   ├── 账号访问.md
-│   │   │   ├── 代理管理.md
-│   │   │   └── ...
-│   │   ├── test-design/         # 测试设计规范
-│   │   │   ├── testcase-taxonomy.md  # 测试覆盖分类
-│   │   │   └── output-template.md   # 输出模板
-│   │   └── engineering/          # 工程规范
-│   │       ├── testcase-store.md    # 存储规则
-│   │       ├── update-governance.md # 更新治理
-│   │       └── domain-template.md   # 领域文档模板
 │   ├── workflows/               # LangGraph 流程编排
 │   │   ├── qa_state.py
 │   │   ├── qa_nodes.py
@@ -260,14 +242,28 @@ QA/
 │       ├── testcase-format/     # Excel 导出与索引
 │       ├── figma-reader/        # Figma 设计稿读取
 │       └── axure-parser/        # Axure HTML 解析
-├── knowledge/                   # 知识库
+├── knowledge/                   # 知识库（llm-wiki）
 │   ├── SKILL.md                # 知识库能力定义
 │   ├── README.md               # 知识库使用指南
 │   ├── requirements.md         # 前置依赖说明
 │   ├── index.md                # 知识库索引
 │   ├── wiki/
-│   │   └── topics/             # 知识主题页
-│   │       └── README.md       # 主题页组织说明
+│   │   ├── domain/             # 领域知识（21 个文件）
+│   │   │   ├── 运营活动.md
+│   │   │   ├── 财务系统.md
+│   │   │   ├── 账号访问.md
+│   │   │   └── ...
+│   │   ├── testcases/          # MD 测试用例文档
+│   │   └── topics/             # 测试主题页
+│   ├── rules/                  # 规则
+│   │   ├── module-index.json   # 模块索引 (51 业务模块)
+│   │   ├── platform-rules.md   # 客户端/账服划分规则
+│   │   ├── system-map.md       # 跨模块联动规则
+│   │   ├── testcase-taxonomy.md # 测试覆盖分类
+│   │   ├── output-template.md  # 输出模板
+│   │   ├── testcase-store.md   # 存储规则
+│   │   ├── update-governance.md # 更新治理
+│   │   └── domain-template.md  # 领域文档模板
 │   └── templates/              # wiki 模板
 ├── outputs/                    # 产物仓库
 │   ├── generated/              # 测试用例 Excel
@@ -326,7 +322,7 @@ Python 脚本层 ← 确定性任务执行
 | 同步已生成用例 | `/qa 同步已生成用例` |
 | 重建索引 | `python3 engine/scripts/upsert_testcase_index.py --all` |
 | 校验测试用例索引 | `python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json` |
-| 校验模块索引 | `python3 engine/scripts/validate_index.py engine/references/module-index.json` |
+| 校验模块索引 | `python3 engine/scripts/validate_index.py knowledge/rules/module-index.json` |
 
 ---
 
@@ -362,7 +358,7 @@ python3 engine/scripts/upsert_testcase_index.py --all
 python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
 
 # 校验模块索引
-python3 engine/scripts/validate_index.py engine/references/index-rules/module-index.json
+python3 engine/scripts/validate_index.py knowledge/rules/index-rules/module-index.json
 
 # 预览清理过期用例
 python3 engine/scripts/cleanup_testcase_store.py --dry-run

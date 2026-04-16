@@ -22,9 +22,9 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 
 ## 领域知识路径说明
 
-**单一知识源**：`engine/references/domain-knowledge/<中文名>.md`
+**单一知识源**：`knowledge/domain-knowledge/<中文名>.md`
 
-例：`engine/references/domain-knowledge/运营活动.md`
+例：`knowledge/domain-knowledge/运营活动.md`
 
 路径对应规则：模块中文名 → 同名 .md 文件。文件内部使用 module-index.json 中的 module ID（如 `marketing-activities`）标识模块。
 
@@ -86,27 +86,27 @@ description: 从需求文档/PRD/页面/接口说明生成结构化测试用例 
 ▎ 1. 运营管理 (marketing-activity) - 匹配度 90%
    - 触发词：运营活动、充值活动、返利活动
    - 领域：marketing-activities
-   - 知识库：engine/references/domain-knowledge/运营活动.md
-   - 参考文档：engine/references/domain-knowledge/运营活动.md
+   - 知识库：knowledge/domain-knowledge/运营活动.md
+   - 参考文档：knowledge/domain-knowledge/运营活动.md
 
 ▎ 2. 财务系统 (finance-system) - 匹配度 70%
    - 触发词：充值、返利、资金账目
    - 领域：finance-system
-   - 知识库：engine/references/domain-knowledge/财务系统.md
-   - 参考文档：engine/references/domain-knowledge/财务系统.md
+   - 知识库：knowledge/domain-knowledge/财务系统.md
+   - 参考文档：knowledge/domain-knowledge/财务系统.md
 
 ▎ 3. 厂商活动记录 (vendor-activities) - 匹配度 50%
    - 触发词：FC 活动、FG 活动、锦标赛
    - 领域：marketing-activities
-   - 知识库：engine/references/domain-knowledge/运营活动.md
-   - 参考文档：engine/references/domain-knowledge/运营活动.md
+   - 知识库：knowledge/domain-knowledge/运营活动.md
+   - 参考文档：knowledge/domain-knowledge/运营活动.md
 
 ▎ 4. 自定义输入模块名称
 ```
 
 **用户确认后，检查领域知识文件：**
 
-读取 `engine/references/domain-knowledge/<模块中文名>.md`，如不存在则新增该文件。
+读取 `knowledge/domain-knowledge/<模块中文名>.md`，如不存在则新增该文件。
 
 **领域知识补充规则：**
 

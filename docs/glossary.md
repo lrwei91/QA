@@ -40,7 +40,7 @@ group_key: task-system-optimization
 
 **定义**：业务模块的唯一标识符列表
 
-**来源**：`engine/references/module-index.json`
+**来源**：`knowledge/rules/module-index.json`
 
 **当前已定义模块**（27+）：
 - `personal-center` - 个人中心
@@ -186,7 +186,7 @@ PLATFORM_MAPPING = {
 
 **用途**：业务模块定义与依赖关系索引
 
-**位置**：`engine/references/module-index.json`
+**位置**：`knowledge/rules/module-index.json`
 
 **结构**：
 ```json

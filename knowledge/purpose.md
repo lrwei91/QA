@@ -65,6 +65,6 @@
 
 ## 使用说明
 
-本知识库与 QA 项目的 `engine/references/` 目录协同工作：
-- 领域知识存储在 `engine/references/domain-knowledge/`（单一知识源）
-- 核心规则和模板存储在 `engine/references/`
+本知识库统一使用 llm-wiki 结构：
+- 领域知识存储在 `knowledge/wiki/domain/`（单一知识源）
+- 核心规则存储在 `knowledge/rules/`

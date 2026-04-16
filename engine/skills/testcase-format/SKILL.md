@@ -303,8 +303,8 @@ python3 engine/scripts/sync_testcase_snapshot.py \
 
 ## 资源文件
 
-- `../../references/test-design/output-template.md` - 输出模板
-- `../../references/engineering/testcase-store.md` - 工作区索引约定
+- `../../../knowledge/rules/output-template.md` - 输出模板
+- `../../../knowledge/rules/testcase-store.md` - 工作区索引约定
 
 ## 相关 Skills
 

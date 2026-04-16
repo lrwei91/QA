@@ -261,7 +261,7 @@ Figma 设计稿可以帮助识别:
 ▎ 1. {模块 1 名称} ({module_id}) - 匹配度 XX%
    - 触发词：xxx, xxx
    - 领域：{domain}
-   - 参考文档：engine/references/domain-knowledge/{domain}.md
+   - 参考文档：knowledge/domain-knowledge/{domain}.md
 
 ▎ 2. {模块 2 名称} ({module_id}) - 匹配度 XX%
    ...

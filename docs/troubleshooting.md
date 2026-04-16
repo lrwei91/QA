@@ -208,12 +208,12 @@ ERROR: Duplicate module ID: personal-center
 
 **解决方案：**
 
-1. 打开 `engine/references/module-index.json`
+1. 打开 `knowledge/rules/module-index.json`
 2. 搜索重复的 `id` 字段
 3. 删除重复条目，保留一份正确的
 4. 重新运行校验：
 ```bash
-python3 engine/scripts/validate_index.py engine/references/module-index.json
+python3 engine/scripts/validate_index.py knowledge/rules/module-index.json
 ```
 
 ---
@@ -509,7 +509,7 @@ pip3 show openpyxl
 3. 重新运行索引校验：
 ```bash
 python3 engine/scripts/validate_index.py \
-    engine/references/module-index.json
+    knowledge/rules/module-index.json
 ```
 
 ---
@@ -725,11 +725,11 @@ pip3 list | grep -E "openpyxl|pandas|jsonschema"
 
 # 3. 检查索引格式
 python3 -m json.tool outputs/testcase-index.json > /dev/null && echo "testcase-index.json: OK"
-python3 -m json.tool engine/references/module-index.json > /dev/null && echo "module-index.json: OK"
+python3 -m json.tool knowledge/rules/module-index.json > /dev/null && echo "module-index.json: OK"
 
 # 4. 运行校验脚本
 python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
-python3 engine/scripts/validate_index.py engine/references/module-index.json
+python3 engine/scripts/validate_index.py knowledge/rules/module-index.json
 
 # 5. 检查孤立文件
 python3 engine/scripts/cleanup_testcase_store.py --dry-run
@@ -744,7 +744,7 @@ python3 engine/scripts/cleanup_testcase_store.py --dry-run
 python3 engine/scripts/validate_testcase_index.py outputs/testcase-index.json
 
 # 验证模块索引
-python3 engine/scripts/validate_index.py engine/references/module-index.json
+python3 engine/scripts/validate_index.py knowledge/rules/module-index.json
 
 # 清理过期文件（先预览）
 python3 engine/scripts/cleanup_testcase_store.py --dry-run
