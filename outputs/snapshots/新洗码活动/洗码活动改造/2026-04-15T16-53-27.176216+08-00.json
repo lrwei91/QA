@@ -1,0 +1,1002 @@
+{
+  "version": 1,
+  "snapshot_at": "2026-04-15T16:53:27.176216+08:00",
+  "source_file": "outputs/generated/运营活动/游戏优惠/新洗码活动/洗码活动改造.xlsx",
+  "metadata": {
+    "title": "洗码活动改造",
+    "module": "新洗码活动",
+    "platform_scope": [
+      "客户端",
+      "账服"
+    ],
+    "total_cases": 61,
+    "extra_metadata": {}
+  },
+  "testcases": [
+    {
+      "id": 1,
+      "platform": "客户端",
+      "module": "/",
+      "function": "功能入口",
+      "precondition": "1、已启用新洗码活动",
+      "steps": "1、点击左侧洗码菜单",
+      "expected": "1、进入新洗码页\n2、页面内容加载正常\n3、新洗码和旧洗码共用一个入口",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 2,
+      "platform": "",
+      "module": "",
+      "function": "活动界面元素",
+      "precondition": "1、已启用新洗码活动",
+      "steps": "1、 活动进行中",
+      "expected": "1、显示倒计时，格式时分秒\n2、显示已洗码奖励和动画效果\n3、显示最大、最小值\n4、显示可领取的奖励\n5、显示阶段奖励比例（统一&VIP）\n6、显示新游内容（根据后台配置）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 3,
+      "platform": "",
+      "module": "",
+      "function": "活动状态",
+      "precondition": "1、已启用新洗码活动",
+      "steps": "1、 活动进行中",
+      "expected": "1、显示倒计时，格式时分秒",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 4,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "",
+      "steps": "1、 活动已结束",
+      "expected": "1、显示文本【Betting bonus has ended】\n2、已满足最低奖励额的金币自动划转到可领取奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 5,
+      "platform": "",
+      "module": "",
+      "function": "奖励领取",
+      "precondition": "1、已启用新洗码活动",
+      "steps": "1、配置为实时发放\n2、配置为手动领取",
+      "expected": "1、已满足最低奖励额的金币自动划转到可领取奖励，可随时领取\n2、有领取按钮",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 6,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "",
+      "steps": "1、配置为活动结束后发放\n2、配置为手动领取",
+      "expected": "1、已满足最低奖励额的金币自动划转到可领取奖励，进行中时无法领取\n2、有领取按钮",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 7,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "",
+      "steps": "1、配置为实时发放\n2、配置为自动领取",
+      "expected": "1、已满足最低奖励额的金币自动划转到可领取奖励，自动领取\n2、无领取按钮",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 8,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "",
+      "steps": "1、配置为活动结束后发放\n2、配置为自动领取",
+      "expected": "1、已满足最低奖励额的金币自动划转到可领取奖励，进行中时无法领取\n2、活动结束自动发放\n3、无领取按钮",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 9,
+      "platform": "",
+      "module": "",
+      "function": "阶段奖励",
+      "precondition": "1、已启用新洗码活动",
+      "steps": "1、配置为VIP奖励",
+      "expected": "1、显示当前后台配置的所有VIP等级和对应的比例\n2、玩家当前VIP等级高亮显示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 10,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "",
+      "steps": "1、配置为统一奖励",
+      "expected": "1、显示统一的奖励比例",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 11,
+      "platform": "",
+      "module": "",
+      "function": "个人中心-奖励历史记录新增新洗码活动",
+      "precondition": "1、领取新洗码活动奖励",
+      "steps": "1、查看个人中心bonus history",
+      "expected": "1、显示【bouns bets】和对应的值",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 12,
+      "platform": "账服",
+      "module": "配置管理",
+      "function": "原游戏洗码权限整合成一个权限",
+      "precondition": "1、更新版本前将所有原洗码活动权限都勾上",
+      "steps": "1、版本更新后",
+      "expected": "1、所有洗码权限统一整合为【游戏洗码】\n2、权限为勾选状态\n3、可以正常操作【游戏洗码】活动的任意配置，提示无权限",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 13,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、更新版本前将所有原洗码活动权限取消勾选一个",
+      "steps": "1、版本更新后",
+      "expected": "1、所有洗码权限统一整合为【游戏洗码】\n2、权限为未勾选状态\n3、无法可以正常操作【游戏洗码】活动的任意配置，提示无权限",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 14,
+      "platform": "",
+      "module": "",
+      "function": "新增新洗码活动权限",
+      "precondition": "1、更新版本后",
+      "steps": "/",
+      "expected": "1、【运营管理>运营活动-游戏优惠中】中新增【新洗码活动】\n2、初始化状态为未勾选状态\n3、无法可以正常操作【新洗码活动】的任意配置，提示无权限",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 15,
+      "platform": "",
+      "module": "运营活动-游戏优惠-新洗码活动",
+      "function": "游戏优惠新增新洗码活动",
+      "precondition": "1、更新版本后",
+      "steps": "/",
+      "expected": "1、新增【新洗码活动】，功能包括\n     a、活动开关\n     b、活动记录\n     c、活动设置\n     d、游戏设置\n     e、周期预配置",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 16,
+      "platform": "",
+      "module": "",
+      "function": "游戏洗码和新洗码活动开关互斥",
+      "precondition": "1、更新版本后",
+      "steps": "1、开启【游戏洗码】开关\n2、尝试开启【新洗码活动】",
+      "expected": "1、提示无法同时打开两个活动，文本【当前游戏洗码为开启状态，如需开启新洗码活动，需要先关闭游戏洗码开关】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 17,
+      "platform": "",
+      "module": "运营活动-游戏优惠-新洗码活动-活动设置",
+      "function": "单字段验证-活动模式",
+      "precondition": "/",
+      "steps": "1、切换单周期/每日循环/周期循环",
+      "expected": "1、下方时间字段的联动变化\n     a、单周期：活动开始结束时间和活动展示开始结束时间\n     b、每日循环：活动持续范围（时间）\n     c、周期循环：活动持续范围（周几+时间）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 18,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-时间设置",
+      "precondition": "/",
+      "steps": "1、修改时间",
+      "expected": "1、 开始时间 > 结束时间的边界",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 19,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-打码倍数",
+      "precondition": "/",
+      "steps": "/",
+      "expected": "1、允许为0，0为允许直接提现\n2、负数、小数无法输入",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 20,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-赠送奖金上限",
+      "precondition": "/",
+      "steps": "/",
+      "expected": "1、允许为空，0为无上限\n2、（前端验证）客户端显示正确\n3、（前端验证）实时发放客户端显示最大进度值",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 21,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-赠送奖金下限",
+      "precondition": "/",
+      "steps": "/",
+      "expected": "1、允许为空，无下限\n2、（前端验证）客户端显示正确\n3、（前端验证）活动结束后发放发放客户端显示最大进度值",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 22,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-发放形式",
+      "precondition": "/",
+      "steps": "1、切换发送状态",
+      "expected": "1、自动领取：【奖励发放N小时后不可领取奖励】和【超过领取截止时间未领取是否自动派发】字段不显示\n2、手动领取：显示【奖励发放N小时后不可领取奖励】和【超过领取截止时间未领取是否自动派发】字段\n3、\"自动派发\"与\"发放形式=实时发放\"的互斥",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 23,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-奖励发放N小时后不可领取奖励",
+      "precondition": "/",
+      "steps": "1、输入数值",
+      "expected": "1、允许为0，0为不过期\n2、防呆：如果活动模式为【单周期】，则领取时间需要在活动展示时间区间内",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 24,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-超过领取截止时间未领取是否自动派发",
+      "precondition": "/",
+      "steps": "1、切换状态",
+      "expected": "1、（前端验证）自动派发：超时未领取时，系统会自动派发奖励，玩家剩余金币正确增加\n2、（前端验证）不派发：超时未领取时，系统不会派发奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 25,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、站内信配置中配置标题和内容",
+      "steps": "1、触发自动派发流程",
+      "expected": "1、系统自动派发奖励\n2、站内信中收到信信息，内容同后台配置",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 26,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-返还比例",
+      "precondition": "/",
+      "steps": "1、切换VIP等级梯度和统一比例",
+      "expected": "1、输入框必填\n2、（前端验证）活动页显示的返还比例内容正确",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 27,
+      "platform": "",
+      "module": "",
+      "function": "单字段验证-活动说明文本",
+      "precondition": "/",
+      "steps": "1、配置文本",
+      "expected": "1、（前端验证）内容显示正确",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 28,
+      "platform": "",
+      "module": "运营活动-游戏优惠-新洗码活动-游戏设置",
+      "function": "初始化状态",
+      "precondition": "1、更新版本后",
+      "steps": "/",
+      "expected": "1、默认为全部不勾选\n2、玩任意游戏不会累计洗码奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 29,
+      "platform": "",
+      "module": "",
+      "function": "增加游戏",
+      "precondition": "1、添加游戏A\\B\\C",
+      "steps": "1、进游戏A\\B\\C消耗金币",
+      "expected": "1、累计洗码奖励和消费金币一致",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 30,
+      "platform": "",
+      "module": "",
+      "function": "删除游戏",
+      "precondition": "1、删除游戏A",
+      "steps": "1、进游戏A\\B\\C消耗金币",
+      "expected": "1、累计洗码奖励和在B/C游戏中消费金币一致\n2、A游戏中消费的金币不计入洗码奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 31,
+      "platform": "",
+      "module": "运营活动-游戏优惠-新洗码活动-活动记录",
+      "function": "检查活动记录",
+      "precondition": "/",
+      "steps": "1、进入统计表页面",
+      "expected": "1、无数据时，显示无数据空列表\n2、有数据时，显示展示数据（包含活动序号、周期开始时间、周期结束时间、返还方式、返还比例、返还总用户数、总计打码量（赠送用户总计打码）、总返还奖励（周期内返还用户总计奖励）、奖励总领取额（周期内返还用户总计奖励被领取额）、人数领取比例（实际领取人数/总用户数）、发放形式、明细）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 32,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、进入统计表页面\n2、有新洗码数据",
+      "steps": "/",
+      "expected": "1、默认显示所有活动期数的数据\n2、奖励总领取额（周期内返还用户总计奖励被领取额）字段数据和实际领取的积分值一致",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 33,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "/",
+      "steps": "1、导出本页/全部数据",
+      "expected": "1、自动下载zip格式文件\n2、表格内数据和后台数据一致无缺漏",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 34,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "/",
+      "steps": "1、进入总明细表页面",
+      "expected": "1、无数据时，显示无数据空列表\n2、有数据时，显示展示数据（包含活动序号、周期开始时间、周期结束时间、返还方式、返还比例、用户UID、打码量、奖励额、奖金金币、奖励比例、发放形式、领取状态）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 35,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、进入总明细表页面\n2、有新洗码数",
+      "steps": "/",
+      "expected": "1、发放形式符合活动配置（手动领取&自动领取）\n2、领取状态符合当前玩家的实际状态（未领取&已领取&已过期）\n3、预期值奖励显示在【奖励额】处\n4、奖励金币字段显示具体的奖励值（已领取）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 36,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "/",
+      "steps": "1、导出本页/全部数据",
+      "expected": "1、自动下载zip格式文件\n2、表格内数据和后台数据一致无缺漏",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 37,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "/",
+      "steps": "1、进入单期明细表页面",
+      "expected": "1、无数据时，显示无数据空列表\n2、有数据时、显示展示数据（包含序号、周期开始时间、周期结束时间、返还方式、返还比例、用户UID、打码量、奖励额、奖金金币、奖励比例、发放形式、领取状态）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 38,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、进入单期明细表页面\n2、有新洗码数据",
+      "steps": "/",
+      "expected": "1、发放形式符合活动配置（手动领取&自动领取）\n2、领取状态符合当前玩家的实际状态（未领取&已领取&已过期）\n3、预期值奖励显示在【奖励额】处\n4、奖励金币字段显示具体的奖励值（已领取）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 39,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "/",
+      "steps": "1、导出本页/全部数据",
+      "expected": "1、自动下载zip格式文件\n2、表格内数据和后台数据一致无缺漏",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 40,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "/",
+      "steps": "1、进入预期表页面",
+      "expected": "1、无数据时，显示无数据空列表\n2、有数据时、显示展示数据（包含序号、返还方式、返还比例、用户UID、打码量、预期奖励额、预期奖励比例、发放形式）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 41,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、活动正在进行中",
+      "steps": "/",
+      "expected": "1、列表中显示参与当前活动的玩家的详细数据\n2、玩家当前获取的奖励统一显示在【预期奖励值】字段",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 42,
+      "platform": "",
+      "module": "运营活动-游戏优惠-新洗码活动-周期预配置",
+      "function": "新洗码新增【周期预配置】功能",
+      "precondition": "1、进入新洗码",
+      "steps": "/",
+      "expected": "1、有【周期预配置】按钮",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 43,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、点击【周期预配置】按钮",
+      "steps": "/",
+      "expected": "1、弹窗显示\n2、模块包含筛选项、列表模块\n3、默认数据为空",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 44,
+      "platform": "",
+      "module": "",
+      "function": "筛选功能",
+      "precondition": "1、展开【周期预配置】弹窗\n2、确保列表中有数据",
+      "steps": "1、配置生效时间区间选择数据的配置生效时间\n2、状态选择【待执行】\n3、点击【搜索】",
+      "expected": "1、列表中显示的数据符合筛选条件",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 45,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【操作菜单】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有状态不同的周期配置",
+      "steps": "/",
+      "expected": "1、状态为【待执行】的配置，操作菜单显示配置、删除、修改生效时间、复制\n2、状态为【已执行】的配置，操作菜单显示详情和复制和删除",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 46,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【删除】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有状态不同的周期配置",
+      "steps": "1、点击【删除】按钮",
+      "expected": "1、任意类型的周期任务都可以删除\n2、删除时有二次确认\n3、删除成功后列表中的数据要刷新",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 47,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【详情】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【详情】按钮",
+      "expected": "1、弹窗打开新界面\n2、新洗码列表中为这个配置中已有的配置\n3、任意修改配置的行为都被禁止，会提示【非等待状态不允许修改配置】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 48,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【配置】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【配置】按钮",
+      "expected": "1、弹窗打开新界面\n2、新洗码列表中为这个配置中已有的配置\n3、允许修改任意配置（增、删、改）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 49,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【配置】按钮\n2、在新标签中等待到该配置生效",
+      "expected": "1、任意修改配置的行为都被禁止，会提示【非等待状态不允许修改配置】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 50,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【修改生效时间】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【修改生效时间】按钮",
+      "expected": "1、弹窗【配置生效时间】\n2、可编辑配置生效时间和备注\n3、点击【确定】生效",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 51,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【修改生效时间】按钮\n2、在弹窗中等待到该配置生效",
+      "expected": "1、修改时间的行为被禁止，会提示【非等待状态不允许修改配置】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 52,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【复制】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、选择任意周期任务，点击【复制】按钮",
+      "expected": "1、弹窗【复制】窗口\n2、可编辑配置生效时间、备注\n3、tips1=您当前是复制配置项，保存后会复制现有条目配置，可在列表页再次修改。\n4、tips2=复制配置内容期号：x（x=选择复制的那一期周期任务的期号）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 53,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、输入配置生效时候（比如2026-01-18 08:47:31）\n2、输入备注（比如新洗码周期测试）\n3、点击确定",
+      "expected": "1、弹窗打开新界面\n2、新洗码列表中的数据继承复制的那一期任务中的数据，可以新增配置",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 54,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、输入配置生效时候（输入一个已经过去的时间）\n3、点击确定",
+      "expected": "1、提示【时间不能小于当前时间】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 55,
+      "platform": "",
+      "module": "",
+      "function": "验证周期任务覆盖",
+      "precondition": "1、新增洗码配置",
+      "steps": "1、创建新号\n2、进入游戏消耗金币",
+      "expected": "1、洗码值有正常增加，数值正确，奖励领取正确",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 56,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、新增洗码配置\n2、在周期预配置任务中配置生效时间和新的洗码配置（需和之前的任务不一致）",
+      "steps": "1、等待周期预配置生效时间\n2、创建新号\n3、进入游戏消耗金币",
+      "expected": "1、每日任务列表中的数据被替换为新的洗码配置\n2、洗码值有正常增加，数值正确，奖励领取正确",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 57,
+      "platform": "",
+      "module": "报表",
+      "function": "玩家报表",
+      "precondition": "1、更新版本后",
+      "steps": "1、进行新洗码活动获取洗码值",
+      "expected": "1、领取洗码奖励\n1、洗码值累加在赠送金币中",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 58,
+      "platform": "",
+      "module": "",
+      "function": "赠送金币报表",
+      "precondition": "1、更新版本后",
+      "steps": "1、进行新洗码活动获取洗码值",
+      "expected": "1、取洗码奖励\n1、洗码奖励和消费金币一致\n2、类型新增【新洗码活动】和【新洗码活动(自动发放)】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 59,
+      "platform": "",
+      "module": "",
+      "function": "玩家详情",
+      "precondition": "1、更新版本后",
+      "steps": "1、进行新洗码活动获取洗码值",
+      "expected": "1、取洗码奖励\n1、洗码奖励和消费金币一致\n2、类型新增【新洗码活动】和【新洗码活动(自动发放)】",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 60,
+      "platform": "",
+      "module": "运营活动-游戏优惠-洗码活动-活动设置",
+      "function": "游戏类型比例编辑",
+      "precondition": "1、更新版本后",
+      "steps": "1、修改VIP等级对应的比例",
+      "expected": "1、VIP功能处的游戏类型比例同步修改",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 61,
+      "platform": "",
+      "module": "玩家管理-VIP等级",
+      "function": "游戏类型比例编辑",
+      "precondition": "1、更新版本后",
+      "steps": "1、修改VIP等级对应的比例",
+      "expected": "1、洗码功能处的游戏类型比例同步修改",
+      "result": "Pass",
+      "remark": ""
+    }
+  ],
+  "test_point_summary": {
+    "server_side": [
+      "原游戏洗码权限整合成一个权限"
+    ],
+    "client_side": [
+      "功能入口"
+    ],
+    "all_points": [
+      {
+        "id": 1,
+        "point": "功能入口",
+        "module": "/"
+      },
+      {
+        "id": 2,
+        "point": "活动界面元素",
+        "module": ""
+      },
+      {
+        "id": 3,
+        "point": "活动状态",
+        "module": ""
+      },
+      {
+        "id": 4,
+        "point": "用例 #4",
+        "module": ""
+      },
+      {
+        "id": 5,
+        "point": "奖励领取",
+        "module": ""
+      },
+      {
+        "id": 6,
+        "point": "用例 #6",
+        "module": ""
+      },
+      {
+        "id": 7,
+        "point": "用例 #7",
+        "module": ""
+      },
+      {
+        "id": 8,
+        "point": "用例 #8",
+        "module": ""
+      },
+      {
+        "id": 9,
+        "point": "阶段奖励",
+        "module": ""
+      },
+      {
+        "id": 10,
+        "point": "用例 #10",
+        "module": ""
+      },
+      {
+        "id": 11,
+        "point": "个人中心-奖励历史记录新增新洗码活动",
+        "module": ""
+      },
+      {
+        "id": 12,
+        "point": "原游戏洗码权限整合成一个权限",
+        "module": "配置管理"
+      },
+      {
+        "id": 13,
+        "point": "用例 #13",
+        "module": ""
+      },
+      {
+        "id": 14,
+        "point": "新增新洗码活动权限",
+        "module": ""
+      },
+      {
+        "id": 15,
+        "point": "游戏优惠新增新洗码活动",
+        "module": "运营活动-游戏优惠-新洗码活动"
+      },
+      {
+        "id": 16,
+        "point": "游戏洗码和新洗码活动开关互斥",
+        "module": ""
+      },
+      {
+        "id": 17,
+        "point": "单字段验证-活动模式",
+        "module": "运营活动-游戏优惠-新洗码活动-活动设置"
+      },
+      {
+        "id": 18,
+        "point": "单字段验证-时间设置",
+        "module": ""
+      },
+      {
+        "id": 19,
+        "point": "单字段验证-打码倍数",
+        "module": ""
+      },
+      {
+        "id": 20,
+        "point": "单字段验证-赠送奖金上限",
+        "module": ""
+      },
+      {
+        "id": 21,
+        "point": "单字段验证-赠送奖金下限",
+        "module": ""
+      },
+      {
+        "id": 22,
+        "point": "单字段验证-发放形式",
+        "module": ""
+      },
+      {
+        "id": 23,
+        "point": "单字段验证-奖励发放N小时后不可领取奖励",
+        "module": ""
+      },
+      {
+        "id": 24,
+        "point": "单字段验证-超过领取截止时间未领取是否自动派发",
+        "module": ""
+      },
+      {
+        "id": 25,
+        "point": "用例 #25",
+        "module": ""
+      },
+      {
+        "id": 26,
+        "point": "单字段验证-返还比例",
+        "module": ""
+      },
+      {
+        "id": 27,
+        "point": "单字段验证-活动说明文本",
+        "module": ""
+      },
+      {
+        "id": 28,
+        "point": "初始化状态",
+        "module": "运营活动-游戏优惠-新洗码活动-游戏设置"
+      },
+      {
+        "id": 29,
+        "point": "增加游戏",
+        "module": ""
+      },
+      {
+        "id": 30,
+        "point": "删除游戏",
+        "module": ""
+      },
+      {
+        "id": 31,
+        "point": "检查活动记录",
+        "module": "运营活动-游戏优惠-新洗码活动-活动记录"
+      },
+      {
+        "id": 32,
+        "point": "用例 #32",
+        "module": ""
+      },
+      {
+        "id": 33,
+        "point": "用例 #33",
+        "module": ""
+      },
+      {
+        "id": 34,
+        "point": "用例 #34",
+        "module": ""
+      },
+      {
+        "id": 35,
+        "point": "用例 #35",
+        "module": ""
+      },
+      {
+        "id": 36,
+        "point": "用例 #36",
+        "module": ""
+      },
+      {
+        "id": 37,
+        "point": "用例 #37",
+        "module": ""
+      },
+      {
+        "id": 38,
+        "point": "用例 #38",
+        "module": ""
+      },
+      {
+        "id": 39,
+        "point": "用例 #39",
+        "module": ""
+      },
+      {
+        "id": 40,
+        "point": "用例 #40",
+        "module": ""
+      },
+      {
+        "id": 41,
+        "point": "用例 #41",
+        "module": ""
+      },
+      {
+        "id": 42,
+        "point": "新洗码新增【周期预配置】功能",
+        "module": "运营活动-游戏优惠-新洗码活动-周期预配置"
+      },
+      {
+        "id": 43,
+        "point": "用例 #43",
+        "module": ""
+      },
+      {
+        "id": 44,
+        "point": "筛选功能",
+        "module": ""
+      },
+      {
+        "id": 45,
+        "point": "周期预配置弹窗功能验证【操作菜单】",
+        "module": ""
+      },
+      {
+        "id": 46,
+        "point": "周期预配置弹窗功能验证【删除】",
+        "module": ""
+      },
+      {
+        "id": 47,
+        "point": "周期预配置弹窗功能验证【详情】",
+        "module": ""
+      },
+      {
+        "id": 48,
+        "point": "周期预配置弹窗功能验证【配置】",
+        "module": ""
+      },
+      {
+        "id": 49,
+        "point": "用例 #49",
+        "module": ""
+      },
+      {
+        "id": 50,
+        "point": "周期预配置弹窗功能验证【修改生效时间】",
+        "module": ""
+      },
+      {
+        "id": 51,
+        "point": "用例 #51",
+        "module": ""
+      },
+      {
+        "id": 52,
+        "point": "周期预配置弹窗功能验证【复制】",
+        "module": ""
+      },
+      {
+        "id": 53,
+        "point": "用例 #53",
+        "module": ""
+      },
+      {
+        "id": 54,
+        "point": "用例 #54",
+        "module": ""
+      },
+      {
+        "id": 55,
+        "point": "验证周期任务覆盖",
+        "module": ""
+      },
+      {
+        "id": 56,
+        "point": "用例 #56",
+        "module": ""
+      },
+      {
+        "id": 57,
+        "point": "玩家报表",
+        "module": "报表"
+      },
+      {
+        "id": 58,
+        "point": "赠送金币报表",
+        "module": ""
+      },
+      {
+        "id": 59,
+        "point": "玩家详情",
+        "module": ""
+      },
+      {
+        "id": 60,
+        "point": "游戏类型比例编辑",
+        "module": "运营活动-游戏优惠-洗码活动-活动设置"
+      }
+    ]
+  },
+  "statistics": {
+    "server_side_count": 1,
+    "client_side_count": 1
+  }
+}

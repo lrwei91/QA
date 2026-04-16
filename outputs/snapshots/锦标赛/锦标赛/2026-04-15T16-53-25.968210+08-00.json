@@ -1,0 +1,2268 @@
+{
+  "version": 1,
+  "snapshot_at": "2026-04-15T16:53:25.968210+08:00",
+  "source_file": "outputs/generated/运营活动/锦标赛/锦标赛.xlsx",
+  "metadata": {
+    "title": "锦标赛",
+    "module": "锦标赛",
+    "platform_scope": [
+      "运营活动",
+      "客户端",
+      "账服"
+    ],
+    "total_cases": 139,
+    "extra_metadata": {}
+  },
+  "testcases": [
+    {
+      "id": 1,
+      "platform": "",
+      "module": "系统设置",
+      "function": "运营活动新增锦标赛权限",
+      "precondition": "1、更新版本后",
+      "steps": "/",
+      "expected": "1、【运营管理>运营活动】中新增【锦标赛】\n2、初始化状态为未勾选状态\n3、无法可以正常操作【锦标赛】的任意配置，提示无权限",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 2,
+      "platform": "运营活动",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表-显示字段验证",
+      "precondition": "",
+      "steps": "查看列表展示的字段",
+      "expected": "显示：锦标赛名称、锦标赛标题（英）、比赛周期类型、比赛时间、奖池金币、奖池旋转次数、锦标赛类型、最小投注金额、锦标赛状态、参与游戏数、是否展示、大厅分类展示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 3,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-按名称搜索",
+      "precondition": "",
+      "steps": "1、在搜索区域的锦标赛名称输入框中输入关键字（如\"周循环\"）\n2、点击\"搜索\"按钮",
+      "expected": "列表中只显示包含输入关键字的锦标赛记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 4,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-按类型筛选",
+      "precondition": "",
+      "steps": "1、在锦标赛类型下拉框中选择特定类型（如\"周循环\"）\n2、点击\"搜索\"按钮",
+      "expected": "列表中只显示选中类型的锦标赛记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 5,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-按标题搜索",
+      "precondition": "",
+      "steps": "1、在搜索区域的锦标赛标题输入框中输入关键字（如\"周循环\"）\n2、点击\"搜索\"按钮",
+      "expected": "列表中只显示包含输入关键字的锦标赛记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 6,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-按状态筛选",
+      "precondition": "",
+      "steps": "1、在锦标赛状态下拉框中选择特定状态（如\"进行中\"）\n2、点击\"搜索\"按钮",
+      "expected": "列表中只显示选中状态的锦标赛记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 7,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表展示-分页展示",
+      "precondition": "",
+      "steps": "1、查看当前页列表\n2、点击下一页或跳转至指定页",
+      "expected": "能够正确切换页面，每页显示正确数量的记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 8,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-关键字为空",
+      "precondition": "",
+      "steps": "1、保持搜索条件为空\n2、点击\"搜索\"按钮",
+      "expected": "显示所有锦标赛记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 9,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-不存在的结果",
+      "precondition": "",
+      "steps": "1、输入不存在的关键字（如\"测试不存在的名称12345\"）\n2、点击\"搜索\"按钮",
+      "expected": "列表显示为空",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 10,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表查询-特殊字符搜索",
+      "precondition": "",
+      "steps": "1、输入特殊字符（如\"<>&\")\n2、点击\"搜索\"按钮",
+      "expected": "系统正常处理，不报错的显示查询结果",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 11,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "是否展示",
+      "precondition": "已启动锦标赛",
+      "steps": "1、开启展示",
+      "expected": "（前端验证）显示展示的锦标赛",
+      "result": "Pass",
+      "remark": "未启用或者已结束的锦标赛无法开启展示"
+    },
+    {
+      "id": 12,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "大厅分类展示",
+      "precondition": "已启动锦标赛",
+      "steps": "1、开启展示",
+      "expected": "（前端验证）显示展示的锦标赛",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 13,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-基础信息填写",
+      "precondition": "",
+      "steps": "1、输入锦标赛名称（如\"测试锦标赛\"）\n2、输入锦标赛标题\n3、选择报名方式（手动报名/自动报名）\n4、选择奖励派发方式（手动领取/自动派发）\n5、选择比赛周期类型\n6、设置比赛时间（包括比赛创建时间和结算时间）\n7、选择锦标赛类型（子配置根据类型决定，类型分为下注金额、下注次数、中奖金额、中奖倍率、下注（积分）金额）\n8、点击\"下一步\"",
+      "expected": "基础信息&比赛规则验证通过，进入奖励配置页面",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 14,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-奖励配置",
+      "precondition": "",
+      "steps": "1、点击\"添加奖励档位\"\n2、设置排名\n3、设置金币奖励数量和打码倍数\n4、设置免费旋转次数和打码倍数\n5、点击\"下一步\"",
+      "expected": "奖励配置验证通过，进入游戏添加页面",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 15,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-游戏配置",
+      "precondition": "",
+      "steps": "1、点击\"添加游戏\"\n2、在弹窗中选择游戏（如FG-Lucky Cat）\n3、设置排序号\n4、设置积分倍数\n5、点击确定",
+      "expected": "游戏添加成功，显示在游戏列表中",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 16,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-游戏配置-游戏搜索",
+      "precondition": "",
+      "steps": "1、在游戏类型下拉框中选择特定类型（如\"游戏名称\"）\n2、输入游戏名称（如Lucky Cat）\n2、点击\"搜索\"按钮",
+      "expected": "列表中只显示搜索到的游戏记录（精确搜索，区分大小写）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 17,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-游戏配置-批量删除",
+      "precondition": "",
+      "steps": "1、勾选多个列表中已有的游戏\n2、点击\"批量删除\"",
+      "expected": "游戏列表中对应的游戏被删除",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 18,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-说明配置",
+      "precondition": "",
+      "steps": "1、填写锦标赛详细说明\n2、填写奖励详细说明\n3、点击\"创建完成\"",
+      "expected": "锦标赛创建成功，系统提示创建成功",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 19,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-必填项为空验证",
+      "precondition": "",
+      "steps": "1、不填写任何必填信息\n2、直接点击\"下一步\"或\"创建完成\"",
+      "expected": "系统提示必填项不能为空，如锦标赛名称、标题等",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 20,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-奖池金币为负数",
+      "precondition": "",
+      "steps": "1、填写基本信息\n2、在奖池金币字段输入负数（如-100）\n3、尝试提交",
+      "expected": "自动修正为正整数",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 21,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-奖池金币和免费旋转为0",
+      "precondition": "",
+      "steps": "1、填写基本信息\n2、在奖池金币字段输入0\n3、在免费旋转字段输入0\n4、尝试提交",
+      "expected": "系统提示金币和免费旋转次数不能同时为 0",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 22,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-未添加奖励档位",
+      "precondition": "",
+      "steps": "1、不添加任何奖励档位\n2、直接点击\"下一步\"",
+      "expected": "系统提示请配置奖励规则",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 23,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-未添加游戏",
+      "precondition": "",
+      "steps": "1、不添加任何游戏\n2、点击\"创建完成\"",
+      "expected": "系统提示必须添加至少一个参与游戏",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 24,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-比赛时间过期",
+      "precondition": "",
+      "steps": "1、周期类型选择\"指定时间段\"\n2、添加已过期的比赛时间\n3、点击\"创建完成\"",
+      "expected": "提示指定时间段的比赛时间（结束）需大于当前时间",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 25,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-多个奖励档位",
+      "precondition": "",
+      "steps": "1、添加多个奖励档位（如1-10名）\n2、分别设置每个档位的奖励\n3、完成创建",
+      "expected": "多个奖励档位创建成功",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 26,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-多个奖励档位递减",
+      "precondition": "",
+      "steps": "1、添加第一个档位，奖励设为10000金币，10免费旋转\n2、添加第一个档位，奖励设为10000金币，10免费旋转\n3、添加第一个档位，奖励设为10000金币，10免费旋转\n4、尝试保存",
+      "expected": "系统提示后续档位金币或免费旋转次数不能高于前面档位",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 27,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-奖励档位排名重复",
+      "precondition": "",
+      "steps": "1、添加第一个档位，排名设为1\n2、添加第二个档位，排名也设为1\n3、添加第三个档位，排名也设为1\n4、尝试保存",
+      "expected": "系统提示至少需要配置前 3 名的奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 28,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-奖励档位区间",
+      "precondition": "",
+      "steps": "1、添加第一个档位，排名设为1-100并配置奖励\n2、尝试保存",
+      "expected": "1、锦标赛创建成功\n2、（前端验证）符合条件的参与者在锦标赛结束后都能获得配置中的奖励",
+      "result": "Pass",
+      "remark": "非平分"
+    },
+    {
+      "id": 29,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-删除奖励档位",
+      "precondition": "",
+      "steps": "1、点击某个奖励档位的删除按钮\n2、确认删除",
+      "expected": "该奖励档位被删除",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 30,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-删除游戏",
+      "precondition": "",
+      "steps": "1、点击某个游戏的删除按钮\n2、确认删除",
+      "expected": "该游戏从列表中移除",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 31,
+      "platform": "",
+      "module": "创建锦标赛",
+      "function": "创建锦标赛-积分倍数设置",
+      "precondition": "",
+      "steps": "1、添加游戏\n2、设置积分倍数为2.0\n3、完成创建",
+      "expected": "1、游戏积分倍数设置成功\n2、（前端验证）指定游戏标签上显示积分倍率",
+      "result": "Pass",
+      "remark": "结算积分时乘以的倍数"
+    },
+    {
+      "id": 32,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "",
+      "steps": "",
+      "expected": "",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 33,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛编辑",
+      "precondition": "",
+      "steps": "1、在锦标赛列表中找到目标记录\n2、点击\"编辑\"按钮\n3、修改部分信息（如奖池金币）\n4、保存",
+      "expected": "锦标赛信息更新成功，列表中显示更新后的信息",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 34,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛复制",
+      "precondition": "",
+      "steps": "1、在锦标赛列表中找到目标记录\n2、点击\"复制\"按钮\n3、点击\"创建完成\"",
+      "expected": "系统生成一条新的锦标赛记录，信息与原记录相同",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 35,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛删除",
+      "precondition": "",
+      "steps": "1、在锦标赛列表中找到目标记录\n2、点击\"删除\"按钮\n3、确认删除",
+      "expected": "锦标赛记录被删除，列表中不再显示，删除有二次验证",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 36,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛启用",
+      "precondition": "",
+      "steps": "1、在锦标赛列表中找到目标记录\n2、点击\"启用\"按钮",
+      "expected": "提示\"启用成功\"，锦标赛状态变为\"进行中\"，有二次验证",
+      "result": "Pass",
+      "remark": "状态为\"未开始\"才能启用"
+    },
+    {
+      "id": 37,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛取消",
+      "precondition": "",
+      "steps": "1、在锦标赛列表中找到目标记录\n2、点击\"结束\"按钮",
+      "expected": "提示文本，锦标赛状态变为\"已结束\"",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 38,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛取消-是否提前结算",
+      "precondition": "",
+      "steps": "1、结算弹窗中选择\"提前结算\"",
+      "expected": "提示\"关闭成功\"，锦标赛状态变为\"已结束\"，奖励提前结算",
+      "result": "Pass",
+      "remark": "不走结算延迟"
+    },
+    {
+      "id": 39,
+      "platform": "",
+      "module": "锦标赛操作",
+      "function": "锦标赛取消-是否提前结算",
+      "precondition": "",
+      "steps": "1、结算弹窗中选择\"不结算\"",
+      "expected": "提示\"关闭成功\"，锦标赛状态变为\"已结束\"，奖励不结算",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 40,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-数据查看",
+      "precondition": "",
+      "steps": "1、在锦标赛列表中找到目标记录\n2、点击\"数据\"按钮",
+      "expected": "显示锦标赛期数、比啥时间、报名人数、参与人数、实际派发金币、实际派发旋转次数",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 41,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-数据查看-详情",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情页面\n2、点击\"查看详情\"按钮\n3、查看详情信息",
+      "expected": "显示玩家UID、排名、总积分、状态、实际派发金币、实际派发旋转次数、奖励领取状态",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 42,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-数据查看-玩家UID查询",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情页-查看详情\n2、在玩家UID输入框中输入具体玩家UID\n3、点击\"搜索\"",
+      "expected": "列表只显示指定玩家UID的记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 43,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-排名区间筛选",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情页-查看详情\n2、输入排名区间（如1-10）\n3、点击\"搜索\"",
+      "expected": "列表只显示排名在指定区间的玩家",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 44,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-无效玩家ID查询",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情页-查看详情\n2、输入不存在的玩家ID（如999999999）\n3、点击\"搜索\"",
+      "expected": "列表显示为空",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 45,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-玩家状态筛选",
+      "precondition": "",
+      "steps": "1、在玩家状态选择特定状态（如\"正常\"）\n2、点击\"搜索\"",
+      "expected": "列表中只显示选中状态的玩家记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 46,
+      "platform": "",
+      "module": "锦标赛数据",
+      "function": "锦标赛数据-奖励领取状态筛选",
+      "precondition": "",
+      "steps": "1、在奖励领取状态选择特定状态（如\"已领取\"）\n2、点击\"搜索\"",
+      "expected": "列表中只显示奖励领取状态的玩家记录",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 47,
+      "platform": "",
+      "module": "玩家管理",
+      "function": "锦标赛数据-玩家禁赛",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情-查看详情\n2、找到目标玩家记录\n3、点击\"禁赛\"按钮\n4、确认禁赛",
+      "expected": "玩家状态变为\"禁赛\"，操作列显示\"解除禁赛\"",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 48,
+      "platform": "",
+      "module": "玩家管理",
+      "function": "锦标赛数据-玩家解除禁赛",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情-查看详情\n2、找到禁赛状态的目标玩家\n3、点击\"解除禁赛\"按钮\n4、确认",
+      "expected": "玩家状态变为\"正常\"，操作列显示\"禁赛\"",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 49,
+      "platform": "",
+      "module": "玩家管理",
+      "function": "玩家详情查看",
+      "precondition": "",
+      "steps": "1、进入锦标赛详情-查看详情\n2、点击目标玩家的\"查看\"按钮",
+      "expected": "跳转到玩家详情页面，显示玩家比赛详情",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 50,
+      "platform": "",
+      "module": "玩家管理",
+      "function": "玩家详情-游戏记录查看",
+      "precondition": "",
+      "steps": "1、默认显示\"游戏记录\"标签\n2、查看游戏记录列表",
+      "expected": "显示订单号、房间号、游戏名称、游戏类型、活动类型、下注额、结算额、盈亏、税收、打码量、下注时间、结算时间、结算状态、积分倍数",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 51,
+      "platform": "",
+      "module": "玩家管理",
+      "function": "玩家详情-积分明细查看",
+      "precondition": "",
+      "steps": "1、在玩家详情页面点击\"积分明细\"标签\n2、查看积分明细列表",
+      "expected": "显示结算时间、结算积分、总积分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 52,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-新增配置",
+      "precondition": "",
+      "steps": "1、进入锦标赛大厅展示配置页面\n2、填写标题\n3、选择锦标赛分区：大类分类\n4、上传图标：75*75 jpg格式图片",
+      "expected": "1、配置保存成功\n2、大厅首页显示该锦标赛",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 53,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-编辑配置",
+      "precondition": "",
+      "steps": "1、点击\"编辑\"按钮\n2、修改标题为：Updated Tournament\n3、修改图标为新的75*75 png图片\n4、点击保存",
+      "expected": "1、配置更新成功\n2、大厅展示同步更新",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 54,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-大厅首页显示开关",
+      "precondition": "",
+      "steps": "1、找到大厅展示配置\n2、将\"大厅首页显示\"开关设置为开启状态\n3、保存配置",
+      "expected": "1、开关状态保存成功\n2、该锦标赛在大厅首页分类下展示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 55,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-大厅头部显示开关",
+      "precondition": "",
+      "steps": "1、找到大厅展示配置\n2、将\"大厅头部显示\"开关设置为开启状态\n3、保存配置",
+      "expected": "1、开关状态保存成功\n2、该锦标赛在大厅顶部分类下方展示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 56,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-标题为空验证",
+      "precondition": "",
+      "steps": "1、进入锦标赛大厅展示配置页面\n2、点击\"添加锦标赛\"按钮\n3、不填写标题，直接上传图标并保存",
+      "expected": "1、系统提示标题不能为空\n2、保存失败\n3、页面停留在编辑状态",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 57,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-图标为空验证",
+      "precondition": "",
+      "steps": "1、进入锦标赛大厅展示配置页面\n2、填写标题Test Tournament\n3、不上传图标，直接保存",
+      "expected": "1、系统提示图标不能为空\n2、保存失败\n3、页面停留在编辑状态",
+      "result": "Pass",
+      "remark": "初始化"
+    },
+    {
+      "id": 58,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-锦标赛分区为空验证",
+      "precondition": "",
+      "steps": "1、进入锦标赛大厅展示配置页面\n2、填写标题和上传图标\n3、不选择锦标赛分区，直接保存",
+      "expected": "1、系统提示锦标赛分区为必填项\n2、保存失败",
+      "result": "Pass",
+      "remark": "初始化"
+    },
+    {
+      "id": 59,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "大厅展示配置-图标尺寸和格式验证",
+      "precondition": "1、用户已登录系统\n2、准备不同尺寸的图标文件",
+      "steps": "1、进入锦标赛大厅展示配置页面\n2、填写标题\n3、上传非标准尺寸图标（如100*50）",
+      "expected": "1、非标准尺寸：系统应能接受并显示\n2、支持格式：.jpg/.png",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 60,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "配置项默认值验证",
+      "precondition": "",
+      "steps": "1、进入锦标赛大厅展示配置页面\n2、查看各配置项的默认值",
+      "expected": "1、大厅首页显示：默认关闭\n2、大厅头部显示：默认关闭\n3、标题：默认为空\n4、锦标赛分区在大厅：默认为空\n5、大厅图标：默认为空",
+      "result": "Pass",
+      "remark": "初始化"
+    },
+    {
+      "id": 61,
+      "platform": "",
+      "module": "锦标赛大厅展示配置",
+      "function": "标题多语言配置",
+      "precondition": "1、用户已登录系统\n2、系统支持多语言",
+      "steps": "1、添加大厅展示配置\n2、分别填写不同语言的标题\n3、保存配置",
+      "expected": "1、各语言版本标题保存成功\n2、根据用户语言环境显示对应标题",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 62,
+      "platform": "",
+      "module": "锦标赛-侧边栏导航",
+      "function": "自定义皮肤侧边栏新增锦标赛",
+      "precondition": "",
+      "steps": "1、将锦标赛添加到侧边栏",
+      "expected": "1、（前端验证）锦标赛开启状态下，侧边栏显示锦标赛入口",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 63,
+      "platform": "",
+      "module": "报表-赠送金币报表",
+      "function": "新增锦标赛类型",
+      "precondition": "",
+      "steps": "1、获取锦标赛奖励",
+      "expected": "1、查看报表中数据和实际数据是否一致",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 64,
+      "platform": "",
+      "module": "运营管理-配置管理-奖励任务时间",
+      "function": "新增锦标赛类型",
+      "precondition": "",
+      "steps": "1、编辑时间（默认为0）",
+      "expected": "1、（前端验证）双钱包环境显示锦标赛任务",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 65,
+      "platform": "客户端",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表展示-进行中列表",
+      "precondition": "1、后台配置开启多个锦标赛活动\n2、至少有一个锦标赛处于活跃中（未开始或进行中）",
+      "steps": "1、进入锦标赛列表页面\n2、查看进行中列表",
+      "expected": "1、列表展示所有活跃中的锦标赛\n2、按照截止时间倒序排列\n3、显示锦标赛标题、奖池、图片、截止时间/开始时间\n4、状态显示为\"活跃中\"或\"未开始\"",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 66,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表展示-已结束列表",
+      "precondition": "后台配置有已结束的锦标赛",
+      "steps": "1、进入锦标赛列表页面\n2、切换到已结束列表",
+      "expected": "1、展示已结束的锦标赛\n2、显示\"已结束\"标识\n3、周期循环的锦标赛显示最近一期已结束的比赛",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 67,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表-权重排序",
+      "precondition": "后台配置了锦标赛的权重",
+      "steps": "进入锦标赛列表页面",
+      "expected": "权重高的锦标赛优先展示在前面",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 68,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表-单个锦标赛直接跳转",
+      "precondition": "后台仅开启1个锦标赛",
+      "steps": "进入锦标赛列表页面",
+      "expected": "不展示列表，直接进入该锦标赛详情页",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 69,
+      "platform": "",
+      "module": "锦标赛列表",
+      "function": "锦标赛列表-无数据展示",
+      "precondition": "后台未开启任何锦标赛",
+      "steps": "进入锦标赛列表页面",
+      "expected": "显示空状态或无数据提示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 70,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-基本信息展示",
+      "precondition": "存在一个进行中的锦标赛",
+      "steps": "点击锦标赛进入详情页",
+      "expected": "显示：锦标赛标题、奖池信息（格式正确）、图片、倒计时（进行中）、参与游戏数量",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 71,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-详细规则展开/收起",
+      "precondition": "锦标赛详情页有规则说明",
+      "steps": "点击\"详细规则\"按钮",
+      "expected": "点击后展开规则内容，再次点击收起",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 72,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-详细规则内容",
+      "precondition": "",
+      "steps": "后台配置",
+      "expected": "显示后台配置",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 73,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-排行榜展示",
+      "precondition": "锦标赛已有玩家参与",
+      "steps": "进入锦标赛详情页，查看排行榜区域",
+      "expected": "1、默认显示前5名玩家\n2、显示排名、玩家昵称（最后3位隐藏为*）、积分\n3、玩家头像正确显示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 74,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-排行榜查看全部",
+      "precondition": "排行榜有超过5名的玩家",
+      "steps": "点击\"查看全部\"按钮",
+      "expected": "1、展开完整排行榜\n2、分页显示（每页10个）\n3、自己排名高亮显示\n4、仅显示奖励对应的玩家名次",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 75,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-参与游戏列表",
+      "precondition": "锦标赛配置了参与游戏",
+      "steps": "在详情页滚动查看参与游戏区域",
+      "expected": "1、显示参与游戏的列表\n2、下滑自动加载更多\n3、只有1、2、3个游戏时显示优化\n4、积分倍数大于1时显示特殊提示（右上角标签）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 76,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-手动报名",
+      "precondition": "1、锦标赛类型为手动报名\n2、用户未报名",
+      "steps": "点击\"立即加入\"按钮",
+      "expected": "1、成功报名\n2、按钮消失，显示文本\"已参与此项锦标赛\"",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 77,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-自动报名提示",
+      "precondition": "锦标赛类型为自动报名",
+      "steps": "进入自动报名类型的锦标赛详情页",
+      "expected": "显示\"满足条件自动参与\"提示文字",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 78,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-已报名状态",
+      "precondition": "",
+      "steps": "进入已报名的锦标赛详情页",
+      "expected": "1、显示\"已参与此项锦标赛\"\n2、显示当前玩家排名和积分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 79,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-奖励说明展示",
+      "precondition": "锦标赛配置了奖励",
+      "steps": "在详情页查看奖励说明区域",
+      "expected": "1、显示排行奖励列表\n2、奖励类型正确显示（纯金币/纯免费旋转/金币+免费旋转）\n3、显示奖励说明文字",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 80,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-未开始状态",
+      "precondition": "锦标赛未到达开始时间",
+      "steps": "进入未开始的锦标赛详情页",
+      "expected": "1、显示开始时间（格式：时:分 日/月/年）\n2、不显示倒计时\n3、如果天数为0时，不显示天数部分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 81,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-已结束状态",
+      "precondition": "锦标赛已结束",
+      "steps": "进入已结束的锦标赛详情页",
+      "expected": "1、显示\"已结束\"标识\n2、显示最终排行榜\n3、显示奖励发放状态",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 82,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-结算中状态",
+      "precondition": "锦标赛已结束但奖励未发放",
+      "steps": "进入结算中的锦标赛详情页",
+      "expected": "1、显示\"结算中\"提示\n2、显示\"奖励正在结算当中，请耐心等待\"\n3、排行榜数据暂不显示或显示提示",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 83,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-手动领取奖励",
+      "precondition": "1、奖励类型为手动领取\n2、奖励已派发\n3、用户有可领取的奖励",
+      "steps": "1、进入有可领取奖励的锦标赛详情页\n2、点击\"领取\"按钮",
+      "expected": "1、成功领取奖励\n2、状态变为\"已领取\"\n3、红点提示消失",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 84,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-自动发放奖励",
+      "precondition": "奖励类型为自动发放",
+      "steps": "奖励发放后查看详情页",
+      "expected": "1、不显示领取入口\n2、奖励通过站内信发放",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 85,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-奖池格式展示",
+      "precondition": "锦标赛配置不同类型奖池",
+      "steps": "分别查看纯金币、纯免费旋转、金币+免费旋转类型的锦标赛",
+      "expected": "1、纯金币：显示货币符号+金额\n2、纯免费旋转：显示免费旋转数量\n3、金币+免费旋转：同时显示两者",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 86,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-积分类型展示",
+      "precondition": "不同积分计算类型",
+      "steps": "查看不同积分类型的锦标赛详情",
+      "expected": "1、下注金额=积分：显示\"下注金额 = 积分\"\n2、下注次数=积分：显示\"下注次数 = 积分\"\n3、中奖金额=积分：显示\"中奖金额 = 积分\"\n4、中奖倍数=积分：显示\"中奖倍数 = 积分\"\n5、下注金额满XXX=1积分：显示具体规则",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 87,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-最小投注金额验证",
+      "precondition": "锦标赛配置了最小投注金额",
+      "steps": "1、配置最小投注为R$5.00\n2、进行低于5.00的投注",
+      "expected": "低于最小投注金额的订单不计算积分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 88,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-最低中奖倍数验证",
+      "precondition": "积分类型为中奖倍数且配置了最低中奖倍数",
+      "steps": "1、配置最低中奖倍数为1.5倍\n2、中奖倍数低于1.5倍",
+      "expected": "低于最低中奖倍数的订单不计算积分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 89,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-积分小数位处理",
+      "precondition": "积分计算产生小数",
+      "steps": "",
+      "expected": "积分仅保留2位小数，第三位忽略",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 90,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-账户异常禁赛",
+      "precondition": "用户账户存在异常被后台禁赛",
+      "steps": "使用被禁赛账户进入锦标赛",
+      "expected": "1、显示\"账户异常，您无法参与赛事\"\n2、参与无法获得积分\n3、不显示排行榜个人信息",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 91,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-重复报名",
+      "precondition": "用户已报名锦标赛",
+      "steps": "再次点击报名按钮",
+      "expected": "提示已报名",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 92,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-排行榜积分相同排名",
+      "precondition": "排行榜有多名玩家积分相同",
+      "steps": "查看排行榜",
+      "expected": "积分相同时，先报名的玩家排名更高",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 93,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-周期循环赛手动报名",
+      "precondition": "锦标赛为周期循环（每日/每周/每月）且需手动报名",
+      "steps": "1、报名当前期锦标赛\n2、下一期开始后查看",
+      "expected": "每期都需要重新报名",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 94,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-多语言展示",
+      "precondition": "系统支持多语言",
+      "steps": "切换不同语言查看锦标赛",
+      "expected": "所有文字按对应语言显示（标题、规则、奖励说明等）",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 95,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-时间格式验证",
+      "precondition": "不同状态下的时间显示",
+      "steps": "",
+      "expected": "1、开始时间格式：时:分 日/月/年\n2、倒计时格式：天数 时:分:秒\n3、已结束显示\"已结束\"\n4、如果天数为0时，不显示天数部分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 96,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-玩家昵称隐藏",
+      "precondition": "查看排行榜",
+      "steps": "在排行榜中查看玩家昵称",
+      "expected": "玩家昵称最后3个字符使用*隐藏",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 97,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-双倍积分游戏",
+      "precondition": "配置了双倍积分的指定游戏",
+      "steps": "在支持双倍积分的游戏中投注",
+      "expected": "指定游戏享受双倍积分",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 98,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-跳转参与游戏",
+      "precondition": "1、锦标赛配置了参与游戏列表\n2、未参与赛事（手动报名）",
+      "steps": "点击参与游戏中的某个游戏",
+      "expected": "1、弹窗提示文本\n2、确认后自动点击参与\n3、跳转到对应游戏页面",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 99,
+      "platform": "",
+      "module": "锦标赛详情",
+      "function": "锦标赛详情页-跳转参与游戏",
+      "precondition": "1、锦标赛配置了参与游戏列表\n2、已参与赛事",
+      "steps": "点击参与游戏中的某个游戏",
+      "expected": "跳转到对应游戏页面",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 100,
+      "platform": "",
+      "module": "个人中心",
+      "function": "奖金历史中新增锦标赛",
+      "precondition": "领取锦标赛奖励",
+      "steps": "1、查看奖金历史中数据",
+      "expected": "1、新增锦标赛数据",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 101,
+      "platform": "",
+      "module": "",
+      "function": "奖金历史中新增锦标赛（双钱包）",
+      "precondition": "领取锦标赛奖励",
+      "steps": "1、查看奖金历史中数据",
+      "expected": "1、新增锦标赛数据",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 102,
+      "platform": "",
+      "module": "免费旋转活动",
+      "function": "活动列表新增锦标赛",
+      "precondition": "",
+      "steps": "1、查看免费旋转活动列表",
+      "expected": "1、有锦标赛活动且有奖励可领取\n2、赠送的免费旋转次数、有效时间、子游戏同后台配置一致",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 103,
+      "platform": "",
+      "module": "",
+      "function": "跳转锦标赛",
+      "precondition": "",
+      "steps": "点击跳转按钮",
+      "expected": "成功跳转锦标赛列表页",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 104,
+      "platform": "",
+      "module": "站内信",
+      "function": "自动发送站内信",
+      "precondition": "1、锦标赛为自动派奖",
+      "steps": "1、参与锦标赛\n2、获得可以领取奖励的排名",
+      "expected": "赛事结束后，收到站内信",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 105,
+      "platform": "",
+      "module": "",
+      "function": "同时领取金币和免费旋转",
+      "precondition": "",
+      "steps": "点击领取按钮",
+      "expected": "成功领取奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 106,
+      "platform": "",
+      "module": "",
+      "function": "同时领取多个锦标赛奖励",
+      "precondition": "",
+      "steps": "点击一键领取",
+      "expected": "成功领取所有奖励",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 107,
+      "platform": "",
+      "module": "红点",
+      "function": "侧边栏红点显示",
+      "precondition": "1、锦标赛为手动派发",
+      "steps": "1、参与锦标赛\n2、获得可以领取奖励的排名",
+      "expected": "赛事结算结束后，侧边栏显示红点",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 108,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、侧边栏有红点",
+      "steps": "1、领取对应奖励",
+      "expected": "红点消失",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 109,
+      "platform": "",
+      "module": "",
+      "function": "锦标赛分页显示",
+      "precondition": "1、锦标赛为手动派发",
+      "steps": "1、参与锦标赛\n2、获得可以领取奖励的排名",
+      "expected": "赛事结算结束后，已结束分页显示红点",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 110,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、已结束分页有红点",
+      "steps": "1、领取对应奖励",
+      "expected": "红点消失",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 111,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、已结束分页有红点",
+      "steps": "1、后台关闭对应锦标赛展示",
+      "expected": "红点消失",
+      "result": "Pass",
+      "remark": ""
+    },
+    {
+      "id": 112,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单金币奖励 - 站内信下发",
+      "precondition": "1、锦标赛奖励类型为自动派发\n2、奖励仅配置金币（无免费旋转）\n3、用户获得获奖排名",
+      "steps": "1、锦标赛结束\n2、系统自动派发奖励\n3、用户查看站内信",
+      "expected": "1、收到站内信，显示奖励金币数量\n2、金币已自动发放到账户\n3、站内信状态为\"已读\"",
+      "result": "",
+      "remark": "【功能测试】【P0】"
+    },
+    {
+      "id": 113,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单金币奖励 - 站内信展示格式",
+      "precondition": "1、用户有未读的金币奖励站内信",
+      "steps": "1、进入站内信列表\n2、查看金币奖励信内容",
+      "expected": "1、显示奖励类型图标（金币）\n2、显示金币数量（格式：R$ X,XXX.XX）\n3、显示来源\"锦标赛奖励\"\n4、显示时间戳",
+      "result": "",
+      "remark": "【功能测试】【P1】"
+    },
+    {
+      "id": 114,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单金币奖励 - 一键领取入口",
+      "precondition": "1、奖励类型为手动领取\n2、站内信包含金币奖励",
+      "steps": "1、打开站内信\n2、查看领取入口",
+      "expected": "1、显示\"领取奖励\"按钮\n2、按钮显示可领取金币数量",
+      "result": "",
+      "remark": "【功能测试】【P0】"
+    },
+    {
+      "id": 115,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单金币奖励 - 领取后状态变更",
+      "precondition": "1、用户点击领取金币奖励",
+      "steps": "1、系统处理领取请求\n2、更新站内信状态",
+      "expected": "1、金币发放成功\n2、站内信状态变为\"已领取\"\n3、按钮变为\"已领取\"",
+      "result": "",
+      "remark": "【功能测试】【P0】"
+    },
+    {
+      "id": 116,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 站内信下发",
+      "precondition": "1、锦标赛奖励类型为自动派发\n2、奖励仅配置免费旋转（无金币）\n3、用户获得获奖排名",
+      "steps": "1、锦标赛结束\n2、系统自动派发奖励\n3、用户查看站内信",
+      "expected": "1、收到站内信，显示免费旋转次数\n2、显示有效期限\n3、免费旋转已添加到账户\n4、站内信状态为\"已读\"",
+      "result": "",
+      "remark": "【功能测试】【P0】Bug 场景"
+    },
+    {
+      "id": 117,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 站内信展示格式",
+      "precondition": "1、用户有未读的免费旋转奖励站内信",
+      "steps": "1、进入站内信列表\n2、查看免费旋转奖励信内容",
+      "expected": "1、显示奖励类型图标（旋转）\n2、显示旋转次数（格式：XX 次）\n3、显示有效期限\n4、显示来源\"锦标赛奖励\"\n5、显示时间戳",
+      "result": "",
+      "remark": "【功能测试】【P1】"
+    },
+    {
+      "id": 118,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 一键领取入口",
+      "precondition": "1、奖励类型为手动领取\n2、站内信仅包含免费旋转奖励\n3、用户未领取",
+      "steps": "1、打开站内信\n2、查看领取入口",
+      "expected": "1、显示\"领取奖励\"按钮\n2、按钮显示可领取旋转次数\n3、按钮可点击",
+      "result": "",
+      "remark": "【功能测试】【P0】Bug 场景"
+    },
+    {
+      "id": 119,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 领取后状态变更",
+      "precondition": "1、用户点击领取免费旋转奖励",
+      "steps": "1、系统处理领取请求\n2、更新站内信状态",
+      "expected": "1、免费旋转发放成功\n2、站内信状态变为\"已领取\"\n3、按钮变为\"已领取\"",
+      "result": "",
+      "remark": "【功能测试】【P0】Bug 场景"
+    },
+    {
+      "id": 120,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 领取失败场景",
+      "precondition": "1、奖励已过期\n2、用户尝试领取",
+      "steps": "1、点击\"领取奖励\"按钮",
+      "expected": "1、提示\"奖励已过期，无法领取\"\n2、站内信状态不变\n3、按钮置灰或消失",
+      "result": "",
+      "remark": "【异常测试】【P1】"
+    },
+    {
+      "id": 121,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 重复领取",
+      "precondition": "1、奖励已领取\n2、用户再次尝试领取",
+      "steps": "1、点击\"领取奖励\"按钮（如果仍显示）",
+      "expected": "1、提示\"奖励已领取\"\n2、不重复发放\n3、按钮状态为\"已领取\"",
+      "result": "",
+      "remark": "【异常测试】【P1】"
+    },
+    {
+      "id": 122,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "混合奖励 - 金币 + 免费旋转同时下发",
+      "precondition": "1、奖励类型为自动派发\n2、奖励配置金币 + 免费旋转\n3、用户获得获奖排名",
+      "steps": "1、锦标赛结束\n2、系统自动派发奖励\n3、用户查看站内信",
+      "expected": "1、收到站内信，同时显示金币和旋转次数\n2、两项奖励都已发放到账户\n3、站内信状态为\"已读\"",
+      "result": "",
+      "remark": "【功能测试】【P0】"
+    },
+    {
+      "id": 123,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "混合奖励 - 站内信展示格式",
+      "precondition": "1、用户有未读的混合奖励站内信",
+      "steps": "1、进入站内信列表\n2、查看混合奖励信内容",
+      "expected": "1、同时显示金币图标和旋转图标\n2、分别显示金币数量和旋转次数\n3、显示有效期限（针对旋转）\n4、显示来源\"锦标赛奖励\"",
+      "result": "",
+      "remark": "【功能测试】【P1】"
+    },
+    {
+      "id": 124,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "混合奖励 - 一键领取入口",
+      "precondition": "1、奖励类型为手动领取\n2、站内信包含金币 + 免费旋转\n3、用户未领取",
+      "steps": "1、打开站内信\n2、查看领取入口",
+      "expected": "1、显示\"领取奖励\"按钮\n2、按钮显示金币数量和旋转次数\n3、按钮可点击",
+      "result": "",
+      "remark": "【功能测试】【P0】"
+    },
+    {
+      "id": 125,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "混合奖励 - 领取后状态变更",
+      "precondition": "1、用户点击领取混合奖励",
+      "steps": "1、系统处理领取请求\n2、同时发放金币和免费旋转",
+      "expected": "1、两项奖励都发放成功\n2、站内信状态变为\"已领取\"\n3、按钮变为\"已领取\"",
+      "result": "",
+      "remark": "【功能测试】【P0】"
+    },
+    {
+      "id": 126,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "混合奖励 - 部分领取失败",
+      "precondition": "1、金币可发放\n2、免费旋转已过期或配置异常",
+      "steps": "1、用户点击领取混合奖励",
+      "expected": "1、金币发放成功\n2、免费旋转发放失败，提示具体原因\n3、站内信状态标记为\"部分领取\"\n4、用户可单独重试免费旋转",
+      "result": "",
+      "remark": "【异常测试】【P0】"
+    },
+    {
+      "id": 127,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "纯金币奖励 - 余额不足时派发",
+      "precondition": "1、系统奖池金币不足\n2、用户应获得金币奖励",
+      "steps": "1、锦标赛结束\n2、系统尝试自动派发",
+      "expected": "1、派发失败，记录错误日志\n2、站内信状态为\"派发失败\"\n3、支持后续补发",
+      "result": "",
+      "remark": "【异常测试】【P1】"
+    },
+    {
+      "id": 128,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "纯免费旋转奖励 - 旋转次数为 0",
+      "precondition": "1、后台配置奖励时旋转次数设为 0\n2、用户获得获奖排名",
+      "steps": "1、锦标赛结束\n2、系统派发奖励",
+      "expected": "1、站内信显示旋转次数为 0\n2、提示\"奖励无效\"\n3、不生成领取记录",
+      "result": "",
+      "remark": "【异常测试】【P2】"
+    },
+    {
+      "id": 129,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "免费旋转奖励 - 有效期限校验",
+      "precondition": "1、免费旋转奖励已过期\n2、用户尝试领取",
+      "steps": "1、打开站内信\n2、点击\"领取奖励\"",
+      "expected": "1、提示\"奖励已过期\"\n2、按钮置灰或消失\n3、站内信状态变为\"已过期\"",
+      "result": "",
+      "remark": "【异常测试】【P1】"
+    },
+    {
+      "id": 130,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "免费旋转奖励 - 游戏限制校验",
+      "precondition": "1、免费旋转限定特定游戏\n2、该游戏已下架或维护中",
+      "steps": "1、用户尝试领取免费旋转",
+      "expected": "1、提示\"该游戏暂不可用\"\n2、支持延期或更换游戏\n3、记录异常日志",
+      "result": "",
+      "remark": "【异常测试】【P2】"
+    },
+    {
+      "id": 131,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "免费旋转奖励 - 领取上限校验",
+      "precondition": "1、用户当日免费旋转领取已达上限\n2、尝试领取锦标赛奖励",
+      "steps": "1、点击\"领取奖励\"按钮",
+      "expected": "1、提示\"今日领取已达上限\"\n2、不发放奖励\n3、提示明日再试",
+      "result": "",
+      "remark": "【异常测试】【P2】"
+    },
+    {
+      "id": 132,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 后台配置验证",
+      "precondition": "1、创建锦标赛\n2、奖励类型选择\"手动领取\"\n3、仅配置免费旋转次数，金币设为 0",
+      "steps": "1、保存锦标赛配置\n2、启用锦标赛",
+      "expected": "1、配置保存成功\n2、系统记录奖励类型为\"纯免费旋转\"\n3、无报错",
+      "result": "",
+      "remark": "【Bug 回归】【P0】"
+    },
+    {
+      "id": 133,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 站内信可达性",
+      "precondition": "1、用户获得纯免费旋转奖励排名\n2、锦标赛已结束",
+      "steps": "1、用户登录\n2、进入站内信列表",
+      "expected": "1、站内信正常展示\n2、显示免费旋转奖励内容\n3、无加载错误",
+      "result": "",
+      "remark": "【Bug 回归】【P0】"
+    },
+    {
+      "id": 134,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 领取按钮状态",
+      "precondition": "1、站内信仅含免费旋转奖励\n2、奖励未领取",
+      "steps": "1、打开该站内信\n2、检查领取按钮",
+      "expected": "1、按钮正常显示\n2、按钮文本为\"领取奖励\"\n3、按钮可点击（非置灰）",
+      "result": "",
+      "remark": "【Bug 回归】【P0】"
+    },
+    {
+      "id": 135,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 领取接口响应",
+      "precondition": "1、用户点击领取按钮\n2、奖励仅含免费旋转",
+      "steps": "1、调用领取接口\n2、检查返回结果",
+      "expected": "1、接口返回成功\n2、奖励发放成功\n3、无\"奖励为空\"类错误",
+      "result": "",
+      "remark": "【Bug 回归】【P0】"
+    },
+    {
+      "id": 136,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 数据库落库验证",
+      "precondition": "1、用户领取纯免费旋转奖励",
+      "steps": "1、检查奖励领取记录表\n2、检查用户免费旋转余额表",
+      "expected": "1、领取记录完整（包含旋转次数）\n2、用户余额正确增加\n3、站内信状态更新为\"已领取\"",
+      "result": "",
+      "remark": "【Bug 回归】【P0】"
+    },
+    {
+      "id": 137,
+      "platform": "客户端",
+      "module": "站内信",
+      "function": "单免费旋转奖励 - 领取后 UI 刷新",
+      "precondition": "1、用户领取成功后",
+      "steps": "1、查看站内信列表\n2、查看该站内信详情",
+      "expected": "1、列表显示\"已领取\"标签\n2、详情按钮变为\"已领取\"\n3、无加载中或错误状态",
+      "result": "",
+      "remark": "【Bug 回归】【P1】"
+    },
+    {
+      "id": 138,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "纯金币 vs 纯旋转 - 奖励类型识别",
+      "precondition": "1、分别配置纯金币、纯旋转、混合奖励",
+      "steps": "1、三种奖励分别派发\n2、检查站内信生成逻辑",
+      "expected": "1、三种奖励类型正确识别\n2、站内信内容正确填充\n3、无类型混淆",
+      "result": "",
+      "remark": "【Bug 回归】【P1】"
+    },
+    {
+      "id": 139,
+      "platform": "账服",
+      "module": "站内信",
+      "function": "免费旋转奖励 - 并发领取测试",
+      "precondition": "1、多名用户同时领取免费旋转奖励",
+      "steps": "1、并发调用领取接口\n2、检查各自奖励发放",
+      "expected": "1、所有用户都成功领取\n2、无数据竞争\n3、各自记录独立",
+      "result": "",
+      "remark": "【Bug 回归】【P2】"
+    }
+  ],
+  "test_point_summary": {
+    "server_side": [
+      "单金币奖励 - 站内信下发",
+      "单金币奖励 - 领取后状态变更",
+      "单免费旋转奖励 - 站内信下发",
+      "单免费旋转奖励 - 领取后状态变更",
+      "单免费旋转奖励 - 领取失败场景",
+      "单免费旋转奖励 - 重复领取",
+      "混合奖励 - 金币 + 免费旋转同时下发",
+      "混合奖励 - 领取后状态变更",
+      "混合奖励 - 部分领取失败",
+      "纯金币奖励 - 余额不足时派发",
+      "纯免费旋转奖励 - 旋转次数为 0",
+      "免费旋转奖励 - 有效期限校验",
+      "免费旋转奖励 - 游戏限制校验",
+      "免费旋转奖励 - 领取上限校验",
+      "单免费旋转奖励 - 后台配置验证",
+      "单免费旋转奖励 - 领取接口响应",
+      "单免费旋转奖励 - 数据库落库验证",
+      "纯金币 vs 纯旋转 - 奖励类型识别",
+      "免费旋转奖励 - 并发领取测试"
+    ],
+    "client_side": [
+      "锦标赛列表展示-进行中列表",
+      "单金币奖励 - 站内信展示格式",
+      "单金币奖励 - 一键领取入口",
+      "单免费旋转奖励 - 站内信展示格式",
+      "单免费旋转奖励 - 一键领取入口",
+      "混合奖励 - 站内信展示格式",
+      "混合奖励 - 一键领取入口",
+      "单免费旋转奖励 - 站内信可达性",
+      "单免费旋转奖励 - 领取按钮状态",
+      "单免费旋转奖励 - 领取后 UI 刷新"
+    ],
+    "all_points": [
+      {
+        "id": 1,
+        "point": "运营活动新增锦标赛权限",
+        "module": "系统设置"
+      },
+      {
+        "id": 2,
+        "point": "锦标赛列表-显示字段验证",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 3,
+        "point": "锦标赛列表查询-按名称搜索",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 4,
+        "point": "锦标赛列表查询-按类型筛选",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 5,
+        "point": "锦标赛列表查询-按标题搜索",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 6,
+        "point": "锦标赛列表查询-按状态筛选",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 7,
+        "point": "锦标赛列表展示-分页展示",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 8,
+        "point": "锦标赛列表查询-关键字为空",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 9,
+        "point": "锦标赛列表查询-不存在的结果",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 10,
+        "point": "锦标赛列表查询-特殊字符搜索",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 11,
+        "point": "是否展示",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 12,
+        "point": "大厅分类展示",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 13,
+        "point": "创建锦标赛-基础信息填写",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 14,
+        "point": "创建锦标赛-奖励配置",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 15,
+        "point": "创建锦标赛-游戏配置",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 16,
+        "point": "创建锦标赛-游戏配置-游戏搜索",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 17,
+        "point": "创建锦标赛-游戏配置-批量删除",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 18,
+        "point": "创建锦标赛-说明配置",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 19,
+        "point": "创建锦标赛-必填项为空验证",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 20,
+        "point": "创建锦标赛-奖池金币为负数",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 21,
+        "point": "创建锦标赛-奖池金币和免费旋转为0",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 22,
+        "point": "创建锦标赛-未添加奖励档位",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 23,
+        "point": "创建锦标赛-未添加游戏",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 24,
+        "point": "创建锦标赛-比赛时间过期",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 25,
+        "point": "创建锦标赛-多个奖励档位",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 26,
+        "point": "创建锦标赛-多个奖励档位递减",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 27,
+        "point": "创建锦标赛-奖励档位排名重复",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 28,
+        "point": "创建锦标赛-奖励档位区间",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 29,
+        "point": "创建锦标赛-删除奖励档位",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 30,
+        "point": "创建锦标赛-删除游戏",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 31,
+        "point": "创建锦标赛-积分倍数设置",
+        "module": "创建锦标赛"
+      },
+      {
+        "id": 32,
+        "point": "用例 #32",
+        "module": ""
+      },
+      {
+        "id": 33,
+        "point": "锦标赛编辑",
+        "module": "锦标赛操作"
+      },
+      {
+        "id": 34,
+        "point": "锦标赛复制",
+        "module": "锦标赛操作"
+      },
+      {
+        "id": 35,
+        "point": "锦标赛删除",
+        "module": "锦标赛操作"
+      },
+      {
+        "id": 36,
+        "point": "锦标赛启用",
+        "module": "锦标赛操作"
+      },
+      {
+        "id": 37,
+        "point": "锦标赛取消",
+        "module": "锦标赛操作"
+      },
+      {
+        "id": 38,
+        "point": "锦标赛取消-是否提前结算",
+        "module": "锦标赛操作"
+      },
+      {
+        "id": 40,
+        "point": "锦标赛数据-数据查看",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 41,
+        "point": "锦标赛数据-数据查看-详情",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 42,
+        "point": "锦标赛数据-数据查看-玩家UID查询",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 43,
+        "point": "锦标赛数据-排名区间筛选",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 44,
+        "point": "锦标赛数据-无效玩家ID查询",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 45,
+        "point": "锦标赛数据-玩家状态筛选",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 46,
+        "point": "锦标赛数据-奖励领取状态筛选",
+        "module": "锦标赛数据"
+      },
+      {
+        "id": 47,
+        "point": "锦标赛数据-玩家禁赛",
+        "module": "玩家管理"
+      },
+      {
+        "id": 48,
+        "point": "锦标赛数据-玩家解除禁赛",
+        "module": "玩家管理"
+      },
+      {
+        "id": 49,
+        "point": "玩家详情查看",
+        "module": "玩家管理"
+      },
+      {
+        "id": 50,
+        "point": "玩家详情-游戏记录查看",
+        "module": "玩家管理"
+      },
+      {
+        "id": 51,
+        "point": "玩家详情-积分明细查看",
+        "module": "玩家管理"
+      },
+      {
+        "id": 52,
+        "point": "大厅展示配置-新增配置",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 53,
+        "point": "大厅展示配置-编辑配置",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 54,
+        "point": "大厅展示配置-大厅首页显示开关",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 55,
+        "point": "大厅展示配置-大厅头部显示开关",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 56,
+        "point": "大厅展示配置-标题为空验证",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 57,
+        "point": "大厅展示配置-图标为空验证",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 58,
+        "point": "大厅展示配置-锦标赛分区为空验证",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 59,
+        "point": "大厅展示配置-图标尺寸和格式验证",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 60,
+        "point": "配置项默认值验证",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 61,
+        "point": "标题多语言配置",
+        "module": "锦标赛大厅展示配置"
+      },
+      {
+        "id": 62,
+        "point": "自定义皮肤侧边栏新增锦标赛",
+        "module": "锦标赛-侧边栏导航"
+      },
+      {
+        "id": 63,
+        "point": "新增锦标赛类型",
+        "module": "报表-赠送金币报表"
+      },
+      {
+        "id": 65,
+        "point": "锦标赛列表展示-进行中列表",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 66,
+        "point": "锦标赛列表展示-已结束列表",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 67,
+        "point": "锦标赛列表-权重排序",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 68,
+        "point": "锦标赛列表-单个锦标赛直接跳转",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 69,
+        "point": "锦标赛列表-无数据展示",
+        "module": "锦标赛列表"
+      },
+      {
+        "id": 70,
+        "point": "锦标赛详情页-基本信息展示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 71,
+        "point": "锦标赛详情页-详细规则展开/收起",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 72,
+        "point": "锦标赛详情页-详细规则内容",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 73,
+        "point": "锦标赛详情页-排行榜展示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 74,
+        "point": "锦标赛详情页-排行榜查看全部",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 75,
+        "point": "锦标赛详情页-参与游戏列表",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 76,
+        "point": "锦标赛详情页-手动报名",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 77,
+        "point": "锦标赛详情页-自动报名提示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 78,
+        "point": "锦标赛详情页-已报名状态",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 79,
+        "point": "锦标赛详情页-奖励说明展示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 80,
+        "point": "锦标赛详情页-未开始状态",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 81,
+        "point": "锦标赛详情页-已结束状态",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 82,
+        "point": "锦标赛详情页-结算中状态",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 83,
+        "point": "锦标赛详情页-手动领取奖励",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 84,
+        "point": "锦标赛详情页-自动发放奖励",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 85,
+        "point": "锦标赛详情页-奖池格式展示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 86,
+        "point": "锦标赛详情页-积分类型展示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 87,
+        "point": "锦标赛详情页-最小投注金额验证",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 88,
+        "point": "锦标赛详情页-最低中奖倍数验证",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 89,
+        "point": "锦标赛详情页-积分小数位处理",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 90,
+        "point": "锦标赛详情页-账户异常禁赛",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 91,
+        "point": "锦标赛详情页-重复报名",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 92,
+        "point": "锦标赛详情页-排行榜积分相同排名",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 93,
+        "point": "锦标赛详情页-周期循环赛手动报名",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 94,
+        "point": "锦标赛详情页-多语言展示",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 95,
+        "point": "锦标赛详情页-时间格式验证",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 96,
+        "point": "锦标赛详情页-玩家昵称隐藏",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 97,
+        "point": "锦标赛详情页-双倍积分游戏",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 98,
+        "point": "锦标赛详情页-跳转参与游戏",
+        "module": "锦标赛详情"
+      },
+      {
+        "id": 100,
+        "point": "奖金历史中新增锦标赛",
+        "module": "个人中心"
+      },
+      {
+        "id": 101,
+        "point": "奖金历史中新增锦标赛（双钱包）",
+        "module": ""
+      },
+      {
+        "id": 102,
+        "point": "活动列表新增锦标赛",
+        "module": "免费旋转活动"
+      },
+      {
+        "id": 103,
+        "point": "跳转锦标赛",
+        "module": ""
+      },
+      {
+        "id": 104,
+        "point": "自动发送站内信",
+        "module": "站内信"
+      },
+      {
+        "id": 105,
+        "point": "同时领取金币和免费旋转",
+        "module": ""
+      },
+      {
+        "id": 106,
+        "point": "同时领取多个锦标赛奖励",
+        "module": ""
+      },
+      {
+        "id": 107,
+        "point": "侧边栏红点显示",
+        "module": "红点"
+      },
+      {
+        "id": 108,
+        "point": "用例 #108",
+        "module": ""
+      },
+      {
+        "id": 109,
+        "point": "锦标赛分页显示",
+        "module": ""
+      },
+      {
+        "id": 110,
+        "point": "用例 #110",
+        "module": ""
+      },
+      {
+        "id": 111,
+        "point": "用例 #111",
+        "module": ""
+      },
+      {
+        "id": 112,
+        "point": "单金币奖励 - 站内信下发",
+        "module": "站内信"
+      },
+      {
+        "id": 113,
+        "point": "单金币奖励 - 站内信展示格式",
+        "module": "站内信"
+      },
+      {
+        "id": 114,
+        "point": "单金币奖励 - 一键领取入口",
+        "module": "站内信"
+      },
+      {
+        "id": 115,
+        "point": "单金币奖励 - 领取后状态变更",
+        "module": "站内信"
+      },
+      {
+        "id": 116,
+        "point": "单免费旋转奖励 - 站内信下发",
+        "module": "站内信"
+      },
+      {
+        "id": 117,
+        "point": "单免费旋转奖励 - 站内信展示格式",
+        "module": "站内信"
+      },
+      {
+        "id": 118,
+        "point": "单免费旋转奖励 - 一键领取入口",
+        "module": "站内信"
+      },
+      {
+        "id": 119,
+        "point": "单免费旋转奖励 - 领取后状态变更",
+        "module": "站内信"
+      },
+      {
+        "id": 120,
+        "point": "单免费旋转奖励 - 领取失败场景",
+        "module": "站内信"
+      },
+      {
+        "id": 121,
+        "point": "单免费旋转奖励 - 重复领取",
+        "module": "站内信"
+      },
+      {
+        "id": 122,
+        "point": "混合奖励 - 金币 + 免费旋转同时下发",
+        "module": "站内信"
+      },
+      {
+        "id": 123,
+        "point": "混合奖励 - 站内信展示格式",
+        "module": "站内信"
+      },
+      {
+        "id": 124,
+        "point": "混合奖励 - 一键领取入口",
+        "module": "站内信"
+      },
+      {
+        "id": 125,
+        "point": "混合奖励 - 领取后状态变更",
+        "module": "站内信"
+      },
+      {
+        "id": 126,
+        "point": "混合奖励 - 部分领取失败",
+        "module": "站内信"
+      },
+      {
+        "id": 127,
+        "point": "纯金币奖励 - 余额不足时派发",
+        "module": "站内信"
+      },
+      {
+        "id": 128,
+        "point": "纯免费旋转奖励 - 旋转次数为 0",
+        "module": "站内信"
+      },
+      {
+        "id": 129,
+        "point": "免费旋转奖励 - 有效期限校验",
+        "module": "站内信"
+      },
+      {
+        "id": 130,
+        "point": "免费旋转奖励 - 游戏限制校验",
+        "module": "站内信"
+      },
+      {
+        "id": 131,
+        "point": "免费旋转奖励 - 领取上限校验",
+        "module": "站内信"
+      },
+      {
+        "id": 132,
+        "point": "单免费旋转奖励 - 后台配置验证",
+        "module": "站内信"
+      },
+      {
+        "id": 133,
+        "point": "单免费旋转奖励 - 站内信可达性",
+        "module": "站内信"
+      },
+      {
+        "id": 134,
+        "point": "单免费旋转奖励 - 领取按钮状态",
+        "module": "站内信"
+      },
+      {
+        "id": 135,
+        "point": "单免费旋转奖励 - 领取接口响应",
+        "module": "站内信"
+      },
+      {
+        "id": 136,
+        "point": "单免费旋转奖励 - 数据库落库验证",
+        "module": "站内信"
+      },
+      {
+        "id": 137,
+        "point": "单免费旋转奖励 - 领取后 UI 刷新",
+        "module": "站内信"
+      },
+      {
+        "id": 138,
+        "point": "纯金币 vs 纯旋转 - 奖励类型识别",
+        "module": "站内信"
+      },
+      {
+        "id": 139,
+        "point": "免费旋转奖励 - 并发领取测试",
+        "module": "站内信"
+      }
+    ]
+  },
+  "statistics": {
+    "server_side_count": 19,
+    "client_side_count": 10
+  }
+}

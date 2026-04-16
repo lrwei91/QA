@@ -2,7 +2,7 @@
   {
     "id": "auth-center",
     "name": "认证中心",
-    "domain": "account-access",
+    "domain": "账号访问",
     "aliases": [
       "登录",
       "认证",
@@ -56,12 +56,12 @@
       "登录失败锁定",
       "token 刷新"
     ],
-    "reference_file": "../domain-knowledge/module-account-access.md"
+    "reference_file": "../domain-knowledge/账号访问.md"
   },
   {
     "id": "admin-user",
     "name": "后台账号管理",
-    "domain": "account-access",
+    "domain": "账号访问",
     "aliases": [
       "管理员",
       "后台账号",
@@ -117,12 +117,12 @@
       "角色绑定处理",
       "组织绑定处理"
     ],
-    "reference_file": "../domain-knowledge/module-account-access.md"
+    "reference_file": "../domain-knowledge/账号访问.md"
   },
   {
     "id": "role-permission",
     "name": "角色权限",
-    "domain": "account-access",
+    "domain": "账号访问",
     "aliases": [
       "权限",
       "角色",
@@ -178,12 +178,12 @@
       "缓存刷新",
       "授权变更生效"
     ],
-    "reference_file": "../domain-knowledge/module-account-access.md"
+    "reference_file": "../domain-knowledge/账号访问.md"
   },
   {
     "id": "organization",
     "name": "组织架构",
-    "domain": "account-access",
+    "domain": "账号访问",
     "aliases": [
       "组织",
       "部门",
@@ -232,12 +232,12 @@
       "组织范围下发",
       "组织变更同步"
     ],
-    "reference_file": "../domain-knowledge/module-account-access.md"
+    "reference_file": "../domain-knowledge/账号访问.md"
   },
   {
     "id": "product-catalog",
     "name": "商品中心",
-    "domain": "finance-system",
+    "domain": "财务系统",
     "aliases": [
       "商品",
       "商品管理",
@@ -290,12 +290,12 @@
       "发布状态写库",
       "上下架任务"
     ],
-    "reference_file": "../domain-knowledge/finance-system.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
     "id": "marketing-banner",
     "name": "banner 投放",
-    "domain": "finance-system",
+    "domain": "财务系统",
     "aliases": [
       "banner",
       "广告位",
@@ -346,12 +346,12 @@
       "链接配置保存",
       "排序生效"
     ],
-    "reference_file": "../domain-knowledge/finance-system.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
     "id": "order-management",
     "name": "订单管理",
-    "domain": "finance-system",
+    "domain": "财务系统",
     "aliases": [
       "订单",
       "订单管理",
@@ -405,12 +405,12 @@
       "状态流转写库",
       "备注保存"
     ],
-    "reference_file": "../domain-knowledge/finance-system.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
     "id": "refund-approval",
     "name": "退款审批",
-    "domain": "finance-system",
+    "domain": "财务系统",
     "aliases": [
       "退款",
       "退款审批",
@@ -465,12 +465,12 @@
       "消息通知触发",
       "审批日志留痕"
     ],
-    "reference_file": "../domain-knowledge/finance-system.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
     "id": "dashboard",
     "name": "运营看板",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "看板",
       "统计",
@@ -522,12 +522,12 @@
       "权限过滤",
       "时间维度计算"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "operation-log",
     "name": "操作日志",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "日志",
       "操作日志",
@@ -571,12 +571,12 @@
       "脱敏规则",
       "失败补偿"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "notification-center",
     "name": "消息中心",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "通知",
       "消息",
@@ -626,12 +626,12 @@
       "发送回执",
       "失败落库"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "report-system",
     "name": "报表系统",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "报表",
       "数据概览",
@@ -703,12 +703,12 @@
       "缓存刷新",
       "权限过滤"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "finance-system",
     "name": "财务系统",
-    "domain": "finance-system",
+    "domain": "财务系统",
     "aliases": [
       "财务",
       "充值",
@@ -768,12 +768,12 @@
       "金币修正写库",
       "转账事务处理"
     ],
-    "reference_file": "../domain-knowledge/finance-system.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
     "id": "player-management",
     "name": "玩家管理",
-    "domain": "finance-system",
+    "domain": "财务系统",
     "aliases": [
       "玩家",
       "用户管理",
@@ -840,12 +840,12 @@
       "VIP 等级变更",
       "标签关联处理"
     ],
-    "reference_file": "../domain-knowledge/finance-system.md"
+    "reference_file": "../domain-knowledge/财务系统.md"
   },
   {
     "id": "game-golden-flow",
     "name": "游戏及金流记录",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "游戏记录",
       "金币变化",
@@ -888,12 +888,12 @@
       "聚合统计",
       "数据同步"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/代理管理.md"
   },
   {
     "id": "vendor-activities",
     "name": "厂商活动记录",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "厂商活动",
       "FC 活动",
@@ -951,12 +951,12 @@
       "状态更新",
       "厂商回调处理"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/代理管理.md"
   },
   {
     "id": "affiliate-management",
     "name": "全民代管理",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "全民代",
       "代理",
@@ -1017,12 +1017,12 @@
       "金币转换处理",
       "排行榜聚合"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/代理管理.md"
   },
   {
     "id": "partner-agent",
     "name": "合伙人与代理",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "合伙人",
       "代理",
@@ -1075,12 +1075,12 @@
       "转账事务处理",
       "佣金汇总统计"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/代理管理.md"
   },
   {
     "id": "channel-management",
     "name": "渠道管理",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "渠道",
       "渠道数据",
@@ -1129,12 +1129,12 @@
       "汇总统计计算",
       "Telegram 接口对接"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/代理管理.md"
   },
   {
     "id": "risk-management",
     "name": "风险管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "风控",
       "风险管理",
@@ -1194,12 +1194,12 @@
       "黑白名单拦截",
       "IP 区域限制"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "config-management",
     "name": "配置管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "系统配置",
       "参数配置",
@@ -1235,12 +1235,12 @@
       "缓存刷新",
       "配置变更日志"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "frontend-management",
     "name": "前端管理",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "大厅管理",
       "APP 管理",
@@ -1306,12 +1306,12 @@
       "版本管理",
       "多语言支持"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "game-management",
     "name": "游戏管理",
-    "domain": "affiliate-management",
+    "domain": "代理管理",
     "aliases": [
       "游戏配置",
       "厂家管理",
@@ -1369,12 +1369,12 @@
       "异常记录",
       "厂商回调"
     ],
-    "reference_file": "../domain-knowledge/affiliate-management.md"
+    "reference_file": "../domain-knowledge/代理管理.md"
   },
   {
     "id": "operation-management",
     "name": "运营管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "运营活动",
       "公告管理",
@@ -1461,12 +1461,12 @@
       "返利资格判定",
       "返利发放"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "customer-service",
     "name": "客服后台",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "客服",
       "工单",
@@ -1519,12 +1519,12 @@
       "客服状态更新",
       "API 对接"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "sms-marketing",
     "name": "短信营销中心",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "短信",
       "短信营销",
@@ -1568,12 +1568,12 @@
       "状态回执",
       "失败重试"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "email-management",
     "name": "邮件管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "邮件",
       "邮件营销",
@@ -1624,12 +1624,12 @@
       "失败重试",
       "邮箱验证逻辑"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "kyc-certification",
     "name": "认证内容",
-    "domain": "account-access",
+    "domain": "账号访问",
     "aliases": [
       "认证",
       "KYC",
@@ -1707,12 +1707,12 @@
       "税收计算",
       "报表聚合"
     ],
-    "reference_file": "../domain-knowledge/module-account-access.md"
+    "reference_file": "../domain-knowledge/认证内容.md"
   },
   {
     "id": "system-settings",
     "name": "系统设置",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "系统管理",
       "用户管理",
@@ -1762,12 +1762,12 @@
       "日志写入",
       "公告发布"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md"
+    "reference_file": "../domain-knowledge/运营活动.md"
   },
   {
     "id": "personal-center",
     "name": "个人中心",
-    "domain": "account-access",
+    "domain": "账号访问",
     "aliases": [
       "个人中心",
       "用户中心",
@@ -1820,12 +1820,12 @@
       "绑定验证码发送",
       "记录查询接口"
     ],
-    "reference_file": "../domain-knowledge/module-account-access.md"
+    "reference_file": "../domain-knowledge/账号访问.md"
   },
   {
     "id": "marketing-activity",
     "name": "运营活动",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "运营活动",
       "充值活动",
@@ -1902,13 +1902,13 @@
       "活动配置保存",
       "防刷校验"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "operation-dashboard",
     "name": "运营看板",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "运营看板",
       "数据看板",
@@ -1950,13 +1950,13 @@
       "指标查询接口",
       "缓存更新"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "operation-log",
     "name": "操作日志",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "操作日志",
       "审计日志",
@@ -1995,13 +1995,13 @@
       "日志查询接口",
       "日志导出"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "notification-center",
     "name": "消息中心",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "消息通知",
       "站内信",
@@ -2041,13 +2041,13 @@
       "模板配置",
       "推送记录"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "report-system",
     "name": "报表系统",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "报表",
       "数据报表",
@@ -2087,13 +2087,13 @@
       "报表查询接口",
       "导出处理"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "risk-management",
     "name": "风险管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "风控",
       "风险控制",
@@ -2133,13 +2133,13 @@
       "异常检测",
       "黑名单拦截"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "config-management",
     "name": "配置管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "系统配置",
       "参数配置",
@@ -2176,13 +2176,13 @@
       "配置更新",
       "缓存刷新"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "operation-management",
     "name": "运营管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "运营配置",
       "活动管理",
@@ -2219,13 +2219,13 @@
       "运营位配置",
       "缓存刷新"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "customer-service",
     "name": "客服后台",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "客服系统",
       "工单系统",
@@ -2264,13 +2264,13 @@
       "工单处理",
       "分配逻辑"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "sms-marketing",
     "name": "短信营销中心",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "短信营销",
       "短信群发",
@@ -2309,13 +2309,13 @@
       "短信发送",
       "记录写入"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "email-management",
     "name": "邮件管理",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "邮件营销",
       "邮件群发",
@@ -2354,13 +2354,13 @@
       "邮件发送",
       "记录写入"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   },
   {
     "id": "system-settings",
     "name": "系统设置",
-    "domain": "marketing-activities",
+    "domain": "运营活动",
     "aliases": [
       "系统配置",
       "基础设置",
@@ -2395,7 +2395,170 @@
       "参数更新",
       "缓存刷新"
     ],
-    "reference_file": "../domain-knowledge/marketing-activities.md",
+    "reference_file": "../domain-knowledge/运营活动.md",
+    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
+  },
+  {
+    "id": "customer-service",
+    "name": "客户后台",
+    "domain": "运营活动",
+    "aliases": [
+      "客服后台",
+      "客户管理",
+      "客服系统",
+      "客户管理后台"
+    ],
+    "trigger_words": [
+      "客户列表",
+      "客服工单",
+      "客户详情",
+      "在线客服"
+    ],
+    "core_functions": [
+      "客户信息管理",
+      "客服工单处理",
+      "客户查询与筛选",
+      "客户备注与标签"
+    ],
+    "depends_on": [
+      "player-management"
+    ],
+    "impacted_modules": [
+      "operation-log",
+      "notification-center"
+    ],
+    "always_check": [
+      "permission",
+      "data-integrity",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服",
+      "客户端"
+    ],
+    "client_signals": [
+      "客户列表页",
+      "客户详情页",
+      "工单处理页",
+      "筛选栏",
+      "备注输入框"
+    ],
+    "server_signals": [
+      "客户查询接口",
+      "工单处理接口",
+      "备注保存",
+      "权限校验"
+    ],
+    "reference_file": "../domain-knowledge/运营活动.md",
+    "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
+  },
+  {
+    "id": "account-report",
+    "name": "帐服报表",
+    "domain": "财务系统",
+    "aliases": [
+      "帐服报表",
+      "账务报表",
+      "财务报表",
+      "后台报表"
+    ],
+    "trigger_words": [
+      "报表统计",
+      "数据导出",
+      "盈亏分析",
+      "资金流水"
+    ],
+    "core_functions": [
+      "报表数据展示",
+      "统计与筛选",
+      "数据导出",
+      "报表筛选与排序"
+    ],
+    "depends_on": [
+      "finance-system",
+      "game-golden-flow"
+    ],
+    "impacted_modules": [
+      "dashboard",
+      "operation-log"
+    ],
+    "always_check": [
+      "data-integrity",
+      "reporting",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服"
+    ],
+    "client_signals": [
+      "报表列表页",
+      "筛选条件",
+      "导出按钮",
+      "数据表格",
+      "图表展示"
+    ],
+    "server_signals": [
+      "报表数据查询",
+      "统计接口",
+      "导出任务",
+      "数据聚合"
+    ],
+    "reference_file": "../domain-knowledge/财务系统.md",
+    "knowledge_base_file": "../../knowledge/wiki/entities/财务系统.md"
+  },
+  {
+    "id": "report-system",
+    "name": "报表",
+    "domain": "运营活动",
+    "aliases": [
+      "报表系统",
+      "数据报表",
+      "统计报表",
+      "分析报表"
+    ],
+    "trigger_words": [
+      "数据统计",
+      "报表分析",
+      "趋势图",
+      "数据导出"
+    ],
+    "core_functions": [
+      "报表数据展示",
+      "统计维度筛选",
+      "图表与趋势",
+      "数据导出"
+    ],
+    "depends_on": [
+      "dashboard",
+      "game-golden-flow"
+    ],
+    "impacted_modules": [
+      "operation-dashboard",
+      "operation-log"
+    ],
+    "always_check": [
+      "data-integrity",
+      "reporting",
+      "audit-log"
+    ],
+    "platform_scope": [
+      "账服",
+      "客户端"
+    ],
+    "client_signals": [
+      "报表页面",
+      "筛选栏",
+      "图表展示",
+      "导出按钮",
+      "数据表格"
+    ],
+    "server_signals": [
+      "报表查询接口",
+      "数据聚合",
+      "统计任务",
+      "导出处理"
+    ],
+    "reference_file": "../domain-knowledge/运营活动.md",
     "knowledge_base_file": "../../knowledge/wiki/entities/运营活动.md"
   }
 ]

@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "snapshot_at": "2026-04-15T16:53:22.257005+08:00",
+  "source_file": "outputs/generated/运营活动/任务系统/活动周期规则优化-任务系统.xlsx",
+  "metadata": {
+    "title": "活动周期规则优化-任务系统",
+    "module": "任务系统",
+    "platform_scope": [
+      "大厅",
+      "账服"
+    ],
+    "total_cases": 20,
+    "extra_metadata": {}
+  },
+  "testcases": [
+    {
+      "id": 1,
+      "platform": "账服",
+      "module": "运营管理-运营活动-系统任务",
+      "function": "任务系统新增【周期预配置】功能",
+      "precondition": "1、进入任务系统",
+      "steps": "/",
+      "expected": "1、有【周期预配置】按钮",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 2,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、点击【周期预配置】按钮",
+      "steps": "/",
+      "expected": "1、弹窗显示\n2、模块包含筛选项、新增按钮、列表模块\n3、自动生成一条已经在运行中的配置，作为默认生成第一条（状态为：初始化生成）",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 3,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【筛选】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、确保列表中无数据（初始化数据默认存在）",
+      "steps": "1、配置生效时间不选\n2、状态筛选为【初始化】\n3、点击【搜索】",
+      "expected": "1、列表中显示初始化数据",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 4,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、确保列表中有数据（包含初始化和其他已执行和待执行数据）",
+      "steps": "1、配置生效时间区间选择数据的配置生效时间\n2、状态选择【待执行】\n3、点击【搜索】",
+      "expected": "1、列表中显示的数据符合筛选条件",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 5,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【新增】",
+      "precondition": "1、展开【周期预配置】弹窗",
+      "steps": "1、点击【新增】按钮",
+      "expected": "1、弹窗显示\n2、模块包含tips、配置生效时间、备注",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 6,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已展开【新增】弹窗",
+      "steps": "1、输入配置生效时候（比如2026-01-18 08:47:31）\n2、输入备注（比如任务系统周期测试）\n3、点击确定",
+      "expected": "1、浏览器打开一个新标签https://xxx/task.task_system_cf/index.html?activity_plan_period_id=x（id=期号）\n2、任务系统列表中默认为空，可以新增配置（每日、区间、成就、7day）\n3、总开关配置默认为关，可修改（开或者关）\n4、可以修改弹窗设置",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 7,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已展开【新增】弹窗",
+      "steps": "1、输入配置生效时候（输入一个已经过去的时间）\n3、点击确定",
+      "expected": "1、提示【时间不能小于当前时间】",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 8,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已展开【新增】弹窗",
+      "steps": "1、输入配置生效时候（输入一个当前已存在任务一样的时间）\n3、点击确定",
+      "expected": "1、提示【生效时间已存在，请勿重复添加】",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 9,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【操作菜单】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有状态不同的周期配置",
+      "steps": "/",
+      "expected": "1、状态为【初始化】的配置，操作菜单显示详情和复制\n2、状态为【待执行】的配置，操作菜单显示配置、删除、修改生效时间、复制\n3、状态为【已执行】的配置，操作菜单显示详情和复制和删除",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 10,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【删除】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有状态不同的周期配置",
+      "steps": "1、点击【删除】按钮",
+      "expected": "1、除了状态为【初始化】的数据无法删除，其他类型的周期任务都可以删除\n2、删除时有二次确认\n3、删除成功后列表中的数据要刷新",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 11,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【详情】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【详情】按钮",
+      "expected": "1、浏览器打开一个新标签https://xxx/task.task_system_cf/index.html?activity_plan_period_id=x（id=期号）\n2、任务系统列表中为这个配置中已有的配置\n3、任意修改配置的行为都被禁止，会提示【非等待状态不允许修改配置】",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 12,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【配置】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【配置】按钮",
+      "expected": "1、浏览器打开一个新标签https://xxx/task.task_system_cf/index.html?activity_plan_period_id=x（id=期号）\n2、任务系统列表中为这个配置中已有的配置\n3、允许修改任意配置（增、删、改）",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 13,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【配置】按钮\n2、在新标签中等待到该配置生效",
+      "expected": "1、任意修改配置的行为都被禁止，会提示【非等待状态不允许修改配置】",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 14,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【修改生效时间】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【修改生效时间】按钮",
+      "expected": "1、弹窗【配置生效时间】\n2、可编辑配置生效时间和备注\n3、点击【确定】生效",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 15,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、点击【修改生效时间】按钮\n2、在弹窗中等待到该配置生效",
+      "expected": "1、修改时间的行为被禁止，会提示【非等待状态不允许修改配置】",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 16,
+      "platform": "",
+      "module": "",
+      "function": "周期预配置弹窗功能验证【复制】",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、选择任意周期任务，点击【复制】按钮",
+      "expected": "1、弹窗【复制】窗口\n2、可编辑配置生效时间、备注\n3、tips1=您当前是复制配置项，保存后会复制现有条目配置，可在列表页再次修改。\n4、tips2=复制配置内容期号：x（x=选择复制的那一期周期任务的期号）",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 17,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、输入配置生效时候（比如2026-01-18 08:47:31）\n2、输入备注（比如任务系统周期测试）\n3、点击确定",
+      "expected": "1、浏览器打开一个新标签https://xxx/task.task_system_cf/index.html?activity_plan_period_id=x（id=期号）\n2、任务系统列表中的数据继承复制的那一期任务中的数据，可以新增配置（每日、区间、成就、7day）",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 18,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、展开【周期预配置】弹窗\n2、已有相关的数据",
+      "steps": "1、输入配置生效时候（输入一个已经过去的时间）\n3、点击确定",
+      "expected": "1、提示【时间不能小于当前时间】",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 19,
+      "platform": "大厅",
+      "module": "/",
+      "function": "验证周期任务覆盖",
+      "precondition": "1、新增每日任务配置",
+      "steps": "1、创建新号\n2、完成每日任务",
+      "expected": "1、任务正常完成，奖励可领取",
+      "result": "pass",
+      "remark": ""
+    },
+    {
+      "id": 20,
+      "platform": "",
+      "module": "",
+      "function": "",
+      "precondition": "1、新增每日任务配置\n2、在周期预配置任务中配置生效时间和新的每日任务（需和之前的任务不一致）",
+      "steps": "1、等待周期预配置生效时间\n2、创建新号\n3、查看每日任务",
+      "expected": "1、每日任务列表中的数据被替换为新的每日任务\n2、任务正常完成，奖励可领取",
+      "result": "pass",
+      "remark": ""
+    }
+  ],
+  "test_point_summary": {
+    "server_side": [
+      "任务系统新增【周期预配置】功能"
+    ],
+    "client_side": [],
+    "all_points": [
+      {
+        "id": 1,
+        "point": "任务系统新增【周期预配置】功能",
+        "module": "运营管理-运营活动-系统任务"
+      },
+      {
+        "id": 2,
+        "point": "用例 #2",
+        "module": ""
+      },
+      {
+        "id": 3,
+        "point": "周期预配置弹窗功能验证【筛选】",
+        "module": ""
+      },
+      {
+        "id": 4,
+        "point": "用例 #4",
+        "module": ""
+      },
+      {
+        "id": 5,
+        "point": "周期预配置弹窗功能验证【新增】",
+        "module": ""
+      },
+      {
+        "id": 6,
+        "point": "用例 #6",
+        "module": ""
+      },
+      {
+        "id": 7,
+        "point": "用例 #7",
+        "module": ""
+      },
+      {
+        "id": 8,
+        "point": "用例 #8",
+        "module": ""
+      },
+      {
+        "id": 9,
+        "point": "周期预配置弹窗功能验证【操作菜单】",
+        "module": ""
+      },
+      {
+        "id": 10,
+        "point": "周期预配置弹窗功能验证【删除】",
+        "module": ""
+      },
+      {
+        "id": 11,
+        "point": "周期预配置弹窗功能验证【详情】",
+        "module": ""
+      },
+      {
+        "id": 12,
+        "point": "周期预配置弹窗功能验证【配置】",
+        "module": ""
+      },
+      {
+        "id": 13,
+        "point": "用例 #13",
+        "module": ""
+      },
+      {
+        "id": 14,
+        "point": "周期预配置弹窗功能验证【修改生效时间】",
+        "module": ""
+      },
+      {
+        "id": 15,
+        "point": "用例 #15",
+        "module": ""
+      },
+      {
+        "id": 16,
+        "point": "周期预配置弹窗功能验证【复制】",
+        "module": ""
+      },
+      {
+        "id": 17,
+        "point": "用例 #17",
+        "module": ""
+      },
+      {
+        "id": 18,
+        "point": "用例 #18",
+        "module": ""
+      },
+      {
+        "id": 19,
+        "point": "验证周期任务覆盖",
+        "module": "/"
+      },
+      {
+        "id": 20,
+        "point": "用例 #20",
+        "module": ""
+      }
+    ]
+  },
+  "statistics": {
+    "server_side_count": 1,
+    "client_side_count": 0
+  }
+}

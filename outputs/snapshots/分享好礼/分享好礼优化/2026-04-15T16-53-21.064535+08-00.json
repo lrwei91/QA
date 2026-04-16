@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "snapshot_at": "2026-04-15T16:53:21.064535+08:00",
+  "source_file": "outputs/generated/全民代管理/分享好礼/分享好礼优化.xlsx",
+  "metadata": {
+    "title": "分享好礼优化",
+    "module": "分享好礼",
+    "platform_scope": [
+      "后端",
+      "客户端"
+    ],
+    "total_cases": 13,
+    "extra_metadata": {}
+  },
+  "testcases": [
+    {
+      "id": 1,
+      "platform": "后端",
+      "module": "分享好礼",
+      "function": "手动领取开关默认关闭验证",
+      "precondition": "1、后台开关默认值为0（关闭）",
+      "steps": "1、进入分享好礼页面\n2、等待宝箱奖励达到领取条件\n3、观察奖励是否自动发放",
+      "expected": "1、宝箱奖励达标后自动发放到用户佣金账户（bonus）\n2、无需用户手动操作",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 2,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "手动领取开关开启操作",
+      "precondition": "1、后台设置为1（开启）",
+      "steps": "1、进入全民代页面\n2、等待宝箱奖励达到领取条件",
+      "expected": "1、宝箱奖励达标后需用户手动操作点击领取\n2、宝箱状态变更为已领取状态",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 3,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "开关关闭时二次确认弹窗验证",
+      "precondition": "1、当前开关状态为开启\n2、存在待领取的宝箱奖励",
+      "steps": "1、进入分享好礼页面\n2、点击宝箱奖励开关将其关闭\n3、观察弹窗提示\n4、点击确认",
+      "expected": "1、弹出二次确认弹窗\n2、弹窗提示用户确认关闭手动领取模式\n3、确认后开关状态变为关闭\n4、待领取状态消失，恢复自动发放逻辑",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 4,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "二次确认弹窗取消操作",
+      "precondition": "1、当前开关状态为关闭",
+      "steps": "1、进入分享好礼页面\n2、点击开启开关\n3、在二次确认弹窗中点击取消\n4、观察开关状态",
+      "expected": "1、弹窗关闭\n2、开关状态保持关闭\n3、无任何数据变更",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 5,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "开关状态权限验证",
+      "precondition": "1、用户无权限",
+      "steps": "1、进入分享好礼页面",
+      "expected": "1、不显示分享好礼宝箱相关的功能",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 6,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "领取后奖励明细记录查询",
+      "precondition": "1、开关已开启\n2、已成功领取宝箱奖励",
+      "steps": "1、进入全民代管理\n2、查看已领取分享好礼记录\n3、查看用户佣金账户（bonus）明细",
+      "expected": "1、显示领取时间、金额等明细\n2、用户佣金账户（bonus）记录与领取金额一致",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 7,
+      "platform": "客户端",
+      "module": "分享好礼",
+      "function": "手动领取待领取状态显示",
+      "precondition": "1、开关已开启\n2、存在达到领取条件的宝箱奖励",
+      "steps": "1、进入全民代\n2、查看宝箱奖励区域\n3、确认宝箱奖励状态",
+      "expected": "1、宝箱奖励显示为待领取状态\n2、显示可领取的奖励金额",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 8,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "手动领取可领取宝箱奖励",
+      "precondition": "1、开关已开启\n2、存在待领取的宝箱奖励",
+      "steps": "1、进入全民代\n2、点击领取可领取宝箱奖励\n3、观察领取结果提示",
+      "expected": "1、弹出领取成功提示\n2、可领取宝箱奖励状态更新\n3、奖励金额发放到用户佣金账户（bonus）\n4、待领取状态消失，变更为已领取",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 9,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "手动领取多个可领取宝箱奖励",
+      "precondition": "1、开关已开启\n2、存在多个待领取的宝箱奖励",
+      "steps": "1、进入全民代\n2、点击领取可领取宝箱奖励\n3、观察领取结果提示",
+      "expected": "1、弹出领取成功提示\n2、一次性领取所有可领取的宝箱奖励\n3、可领取宝箱奖励状态更新\n4、奖励金额发放到用户佣金账户（bonus）\n5、待领取状态消失，变更为已领取\n6、后台奖励合并为一条记录",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 10,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "领取成功提示",
+      "precondition": "1、语言设置为 en-us（英语）\n2、开关已开启\n3、存在待领取宝箱奖励",
+      "steps": "1、设置系统语言为英语\n2、进入全民代\n3、手动领取宝箱奖励\n4、观察提示信息",
+      "expected": "提示信息显示：Reward has been claimed. Please check your Bonus account",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 11,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "手动领取奖励到账验证",
+      "precondition": "1、开关已开启\n2、存在待领取宝箱奖励\n3、记录当前用户佣金账户（bonus）余额",
+      "steps": "1、进入全民代\n2、手动领取宝箱奖励\n3、进入用户佣金账户（bonus）查看余额\n4、对比领取前后余额变化",
+      "expected": "1、奖励成功发放到用户佣金账户（bonus）\n2、用户余额增加，金额与宝箱奖励一致\n3、领取记录可查询",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 12,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "重复点击领取验证",
+      "precondition": "1、开关已开启\n2、存在待领取宝箱奖励",
+      "steps": "1、进入全民代\n2、快速连续多次点击可领取的宝箱\n3、观察领取结果和账户变化",
+      "expected": "1、系统防重复提交处理\n2、只成功领取一次\n3、用户佣金账户（bonus）只增加应得奖励金额\n4、无重复发放问题",
+      "result": "",
+      "remark": ""
+    },
+    {
+      "id": 13,
+      "platform": "",
+      "module": "分享好礼",
+      "function": "从开启切换到关闭状态数据一致性",
+      "precondition": "1、开关已开启\n2、存在待领取宝箱奖励",
+      "steps": "1、进入全民代\n2、不领取奖励，切换为自动领取\n3、观察待领取奖励处理",
+      "expected": "1、开关关闭后待领取奖励按原逻辑自动处理，需刷新页面（自动领取为定时任务，需等待触发，不会立刻执行）\n2、奖励不会丢失\n3、最终奖励正确发放",
+      "result": "",
+      "remark": ""
+    }
+  ],
+  "test_point_summary": {
+    "server_side": [],
+    "client_side": [
+      "手动领取待领取状态显示"
+    ],
+    "all_points": [
+      {
+        "id": 1,
+        "point": "手动领取开关默认关闭验证",
+        "module": "分享好礼"
+      },
+      {
+        "id": 2,
+        "point": "手动领取开关开启操作",
+        "module": "分享好礼"
+      },
+      {
+        "id": 3,
+        "point": "开关关闭时二次确认弹窗验证",
+        "module": "分享好礼"
+      },
+      {
+        "id": 4,
+        "point": "二次确认弹窗取消操作",
+        "module": "分享好礼"
+      },
+      {
+        "id": 5,
+        "point": "开关状态权限验证",
+        "module": "分享好礼"
+      },
+      {
+        "id": 6,
+        "point": "领取后奖励明细记录查询",
+        "module": "分享好礼"
+      },
+      {
+        "id": 7,
+        "point": "手动领取待领取状态显示",
+        "module": "分享好礼"
+      },
+      {
+        "id": 8,
+        "point": "手动领取可领取宝箱奖励",
+        "module": "分享好礼"
+      },
+      {
+        "id": 9,
+        "point": "手动领取多个可领取宝箱奖励",
+        "module": "分享好礼"
+      },
+      {
+        "id": 10,
+        "point": "领取成功提示",
+        "module": "分享好礼"
+      },
+      {
+        "id": 11,
+        "point": "手动领取奖励到账验证",
+        "module": "分享好礼"
+      },
+      {
+        "id": 12,
+        "point": "重复点击领取验证",
+        "module": "分享好礼"
+      },
+      {
+        "id": 13,
+        "point": "从开启切换到关闭状态数据一致性",
+        "module": "分享好礼"
+      }
+    ]
+  },
+  "statistics": {
+    "server_side_count": 0,
+    "client_side_count": 1
+  }
+}

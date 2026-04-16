@@ -23,22 +23,71 @@ from typing import Optional
 
 from openpyxl import load_workbook
 
-# Column mapping for testcase template (starting from row 8)
-# 序号 | 平台 | 模块 | 功能点 | 前置条件 | 操作步骤 | 预期结果 | 测试结果 | 备注
-COLUMN_MAP = {
-    'id': 1,      # A: 序号
-    'platform': 2,  # B: 平台
-    'module': 3,    # C: 模块
-    'function': 4,  # D: 功能点
-    'precondition': 5,  # E: 前置条件（测试点）
-    'steps': 6,         # F: 操作步骤
-    'expected': 7,      # G: 预期结果
-    'result': 8,        # H: 测试结果
-    'remark': 9,        # I: 备注
+# Standard column names (possible variations)
+COLUMN_NAME_VARIANTS = {
+    'id': ['序号', 'ID', '编号'],
+    'platform': ['平台', '测试平台', '端'],
+    'module': ['模块', '功能模块', '系统'],
+    'function': ['功能点', '功能', '测试功能'],
+    'precondition': ['前置条件', '前置条件（测试点）', '测试点', '前提条件'],
+    'steps': ['操作步骤', '步骤', '操作', '测试步骤'],
+    'expected': ['预期结果', '预期', '期望结果', '预计结果'],
+    'result': ['测试结果', '结果', '实际结果'],
+    'remark': ['备注', '注释', '说明'],
 }
 
-HEADER_ROW = 7  # Data starts from row 8 (1-indexed)
+# Standard column order (0-indexed)
+STANDARD_COLUMNS = ['id', 'platform', 'module', 'function', 'precondition', 'steps', 'expected', 'result', 'remark']
+
 METADATA_ROW = 2  # Metadata starts from row 2
+
+
+def detect_header_row(ws, max_search_row: int = 15) -> tuple[int, dict[str, int]]:
+    """Detect the header row and column mapping.
+
+    Args:
+        ws: Worksheet object
+        max_search_row: Maximum row to search for header
+
+    Returns:
+        tuple: (header_row_index, column_map)
+        - header_row_index: 1-indexed row number where header is found
+        - column_map: dict mapping field names to column indices (1-indexed)
+    """
+    # Search for the header row by looking for "序号" or "平台"
+    header_row = None
+    for row in range(1, min(max_search_row + 1, ws.max_row + 1)):
+        row_values = [str(ws.cell(row, col).value or '') for col in range(1, 15)]
+        # Check if this row contains header keywords
+        if any(h in row_values for h in ['序号', '平台']):
+            header_row = row
+            # Build column mapping
+            column_map = {}
+            for col_idx, value in enumerate(row_values, start=1):
+                value = value.strip()
+                for field_name, variants in COLUMN_NAME_VARIANTS.items():
+                    if value in variants and field_name not in column_map:
+                        column_map[field_name] = col_idx
+            # Fill in missing columns with defaults based on standard order
+            if 'id' in column_map:
+                base_col = column_map['id']
+                for i, field in enumerate(STANDARD_COLUMNS):
+                    if field not in column_map:
+                        expected_col = base_col + i
+                        if expected_col <= len(row_values):
+                            column_map[field] = expected_col
+            return header_row, column_map
+
+    # Fallback: assume standard format with header at row 7 or 8
+    for row in [7, 8]:
+        if row <= ws.max_row:
+            first_cell = str(ws.cell(row, 1).value or '')
+            if '序号' in first_cell:
+                column_map = {field: idx + 1 for idx, field in enumerate(STANDARD_COLUMNS)}
+                return row, column_map
+
+    # Last resort: use default mapping
+    return 8, {field: idx + 1 for idx, field in enumerate(STANDARD_COLUMNS)}
 
 
 def extract_metadata(ws, max_row: int = 7) -> dict:
@@ -87,27 +136,37 @@ def extract_testcases_from_xlsx(xlsx_path: Path) -> tuple[list[dict], dict]:
     wb = load_workbook(xlsx_path, read_only=True, data_only=False)
     ws = wb.active
 
-    # Extract metadata from top section
-    metadata = extract_metadata(ws, max_row=HEADER_ROW)
+    # Detect header row and column mapping
+    header_row, column_map = detect_header_row(ws)
 
-    # Extract testcase data starting from row 8
+    # Extract metadata from top section
+    metadata = extract_metadata(ws, max_row=header_row)
+
+    # Extract testcase data starting from row after header
     testcases = []
-    for row in range(HEADER_ROW + 1, ws.max_row + 1):
+    for row in range(header_row + 1, ws.max_row + 1):
         # Skip empty rows
-        first_cell = ws.cell(row, COLUMN_MAP['id'])
-        if not first_cell.value:
+        first_cell = ws.cell(row, column_map.get('id', 1))
+        first_value = first_cell.value
+        if not first_value:
+            continue
+        # Skip non-numeric ID values (like "序号" header itself)
+        try:
+            if isinstance(first_value, str) and not first_value.strip().isdigit():
+                continue
+        except Exception:
             continue
 
         testcase = {
-            'id': int(first_cell.value) if first_cell.value else len(testcases) + 1,
-            'platform': str(ws.cell(row, COLUMN_MAP['platform']).value or '').strip(),
-            'module': str(ws.cell(row, COLUMN_MAP['module']).value or '').strip(),
-            'function': str(ws.cell(row, COLUMN_MAP['function']).value or '').strip(),
-            'precondition': str(ws.cell(row, COLUMN_MAP['precondition']).value or '').strip(),
-            'steps': str(ws.cell(row, COLUMN_MAP['steps']).value or '').strip(),
-            'expected': str(ws.cell(row, COLUMN_MAP['expected']).value or '').strip(),
-            'result': str(ws.cell(row, COLUMN_MAP['result']).value or '').strip(),
-            'remark': str(ws.cell(row, COLUMN_MAP['remark']).value or '').strip(),
+            'id': int(float(first_value)) if first_value else len(testcases) + 1,
+            'platform': str(ws.cell(row, column_map.get('platform', 2)).value or '').strip(),
+            'module': str(ws.cell(row, column_map.get('module', 3)).value or '').strip(),
+            'function': str(ws.cell(row, column_map.get('function', 4)).value or '').strip(),
+            'precondition': str(ws.cell(row, column_map.get('precondition', 5)).value or '').strip(),
+            'steps': str(ws.cell(row, column_map.get('steps', 6)).value or '').strip(),
+            'expected': str(ws.cell(row, column_map.get('expected', 7)).value or '').strip(),
+            'result': str(ws.cell(row, column_map.get('result', 8)).value or '').strip(),
+            'remark': str(ws.cell(row, column_map.get('remark', 9)).value or '').strip(),
         }
         testcases.append(testcase)
 
